@@ -36,4 +36,4 @@ class CustomComponent extends React.Component {
   }
 }
 
-module.exports = CustomComponent;
+export default CustomComponent;

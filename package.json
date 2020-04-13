@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "idyll --template _local.html"
+    "start": "idyll --template _local.html",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "idyll": {
     "css": "styles.css",
@@ -22,5 +24,13 @@
     "idyll-d3-component": "^2.0.0",
     "parametric-components": "^2.0.2",
     "parametric-styles": "^2.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "babel-loader": "^8.1.0"
   }
 }

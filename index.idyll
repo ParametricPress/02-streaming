@@ -8,8 +8,8 @@
 [Nav fullWidth:true /]
 
 [Header
-  title:`["Article", "Title"]`
-  longTitle:`["The Full", "Article Title"]`
+  title:`["Digital", "Footprints"]`
+  longTitle:`["Digital", "Footprints"]`
   date:"May 15, 2020"
   dek:"TK TK A punchy description of why we should read your article."
   fullWidth:true
@@ -23,6 +23,8 @@
   source:`"https://github.com/ParametricPress/02-" + parametricSlug `
 /]
 
+# 0.1 g
+ The amount of CO2 you've released by loading this article
 
  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tortor nunc, elementum eu ex vitae, lobortis fringilla ligula. Nunc sed nisl auctor dolor viverra dapibus sit amet et magna. Phasellus vestibulum dictum facilisis. Phasellus ut suscipit justo, ac vulputate nisi. Proin eu leo non nunc viverra egestas vitae eu augue. Vestibulum non massa in nulla interdum viverra. Vestibulum sit amet libero iaculis, maximus magna quis, dapibus lacus.
 
@@ -54,6 +56,9 @@ Integer viverra neque ut tristique laoreet. Vestibulum malesuada molestie sapien
 
 Quisque non laoreet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc euismod consectetur odio, at facilisis leo congue at. Nam vitae est nunc. Ut consequat molestie erat id interdum. Quisque rhoncus, tortor a accumsan aliquet, augue odio porta lorem, vulputate egestas felis ante vitae neque. Proin nulla sapien, interdum et lorem quis, semper facilisis sapien. Donec erat sem, interdum id efficitur eget, efficitur sit amet eros. Aenean at nisl eu dui maximus convallis. Etiam varius odio vel laoreet maximus. Duis ac lacus lorem. Aliquam rutrum dapibus sapien non porttitor.
 
+# Header 1
+## Header 2
+### Header 3
 
 [AuthorBio]
 

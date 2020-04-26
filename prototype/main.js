@@ -70,7 +70,7 @@ function loadPlayer(container, videoId){
 }
 
 function displaySizeLoop(){
-    if (player.getPlayerState() == YT.PlayerState.PLAYING){
+    if (player.getPlayerState() === YT.PlayerState.PLAYING){
         display_size_data();
         (function(send) {
 

@@ -5,7 +5,8 @@
   "scripts": {
     "start": "idyll --template _local.html",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build": "idyll build --output docs"
   },
   "idyll": {
     "css": "styles.css",

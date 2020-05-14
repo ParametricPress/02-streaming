@@ -23,6 +23,8 @@
   source:`"https://github.com/ParametricPress/02-" + parametricSlug `
 /]
 
+[MediaPickerContainer /]
+
 # 0.1 g
  The amount of CO2 you've released by loading this article
 

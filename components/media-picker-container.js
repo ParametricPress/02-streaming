@@ -1,8 +1,8 @@
+const React = require('react');
+
 import MediaPickerCarousel from './media-picker-carousel';
 import MediaPickerPacketViz from './media-picker-packet-viz';
 import MediaPickerSettings from './media-picker-settings';
-
-const React = require('react');
 
 class MediaPickerContainer extends React.Component {
   constructor(props) {

@@ -4,6 +4,7 @@ const d3 = require('d3');
 
 class MediaPickerGrid extends D3Component {
   initialize(node, props) {
+    console.log(props);
     const svg = (this.svg = d3.select(node).append('svg'));
     svg
       .style('width', '100%')
@@ -11,40 +12,34 @@ class MediaPickerGrid extends D3Component {
 
     const colorScale = d3.scaleLinear()
       .range(["white", "#69b3a2"])
-      .domain([1,100]);
-    
-    // dummy data
-    const data = d3.csv('../data/dummy-data.csv', function(d) {
-      // convert strings to numbers
-      d.time0 = +d.time0;
-      d.time1 = +d.time1;
-      d.time2 = +d.time2;
-      d.time3 = +d.time3;
-      d.time4 = +d.time4;
-      d.time5 = +d.time5;
-      d.time6 = +d.time6;
-      d.time7 = +d.time7;
-    }).then(function(data) {
-      data.forEach(function(d) {
-        
-      });
-    });
+      .domain([0, 1.0]);
 
+    const margin = {top: 30, right: 30, bottom: 30, left: 30};
+    const width = 450 - margin.left - margin.right;
+    const height = 450 - margin.top - margin.bottom;
+
+    const x = d3.scaleBand()
+      .range([ 0, width ])
+      .domain(['time0','time1','time2','time3','time4','time5','time6','time7'])
+      .padding(0.02);
+    const y = d3.scaleBand()
+      .range([ height, 0 ])
+      .domain(['movie trailer', 'animation', 'slideshow', 'song 1', 'song 2', 'song 3', 'website 1', 'website 2'])
+      .padding(0.02);
+    
     svg.selectAll()
-      .data(data)
+      .data(props.data)
       .enter()
       .append("rect")
-      .attr("x", function(d) { return })
+      .attr("x", function(d) { return x(d.time) })
+      .attr("y", function(d) { return y(d.media) })
+      .attr("width", x.bandwidth() )
+      .attr("height", y.bandwidth() )
+      .style("fill", function(d) { return colorScale(d.value)} )
   }
 
   update(props, oldProps) {
-  
-  }
-
-  processData() {
-    // dummy data
-    const data = d3.csv('../data/dummy-data.csv');
-    return data;
+    // TODO
   }
 }
 

@@ -9,24 +9,24 @@ movie trailer,time6,0.4
 movie trailer,time7,0.1
 animation,time0,0.5
 animation,time1,0.7
-animation,time2,0.6
+animation,time2,0.2
 animation,time3,0.3
 animation,time4,0.2
 animation,time5,0.1
 animation,time6,0.4
-animation,time7,0.1
+animation,time7,0.2
 slideshow,time0,0.5
 slideshow,time1,0.7
 slideshow,time2,0.6
 slideshow,time3,0.3
-slideshow,time4,0.0.7
+slideshow,time4,0.7
 slideshow,time5,0.1
 slideshow,time6,0.4
 slideshow,time7,0.1
 song 1,time0,0.5
 song 1,time1,0.7
-song 1,time2,0.6
-song 1,time3,0.3
+song 1,time2,0.2
+song 1,time3,0.6
 song 1,time4,0.2
 song 1,time5,0.1
 song 1,time6,0.4
@@ -36,9 +36,9 @@ song 2,time1,0.7
 song 2,time2,0.6
 song 2,time3,0.3
 song 2,time4,0.2
-song 2,time5,0.1
+song 2,time5,0.3
 song 2,time6,0.4
-song 2,time7,0.1
+song 2,time7,0.6
 song 3,time0,0.5
 song 3,time1,0.7
 song 3,time2,0.6
@@ -58,8 +58,8 @@ website 1,time7,0.1
 website 2,time0,0.5
 website 2,time1,0.7
 website 2,time2,0.6
-website 2,time3,0.3
+website 2,time3,0.5
 website 2,time4,0.2
 website 2,time5,0.1
 website 2,time6,0.4
-website 2,time7,0.1
+website 2,time7,0.2

@@ -8,7 +8,7 @@ class MediaPickerGrid extends D3Component {
     const svg = (this.svg = d3.select(node).append('svg'));
     svg
       .style('width', '100%')
-      .style('height', 'auto');
+      .style('height', '450px');
 
     const colorScale = d3.scaleLinear()
       .range(["white", "#69b3a2"])

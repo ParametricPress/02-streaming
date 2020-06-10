@@ -1,8 +1,6 @@
-import MediaPickerCarousel from './media-picker-carousel';
-import MediaPickerPacketViz from './media-picker-packet-viz';
-import MediaPickerSettings from './media-picker-settings';
-
 const React = require('react');
+
+import MediaPickerGrid from './media-picker-grid';
 
 class MediaPickerContainer extends React.Component {
   constructor(props) {
@@ -12,9 +10,9 @@ class MediaPickerContainer extends React.Component {
   render() {
     return (
       <div style={{backgroundColor:'#333333', padding: '16px'}}>
-        <MediaPickerCarousel />
-        <MediaPickerSettings />
-        <MediaPickerPacketViz />
+        <div id="mediaPickerGrid" style={{height: '450px'}}>
+          <MediaPickerGrid {...this.props} />
+        </div>
       </div>
     );
   }

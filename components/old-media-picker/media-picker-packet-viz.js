@@ -7,8 +7,8 @@ class MediaPickerPacketViz extends React.Component {
 
   render() {
     return (
-      <div>
-        TODO packet viz
+      <div style={{color: 'white'}}>
+        TODO packet viz (maybe this should be a D3 component)
       </div>
     );
   }

@@ -9,8 +9,8 @@ class MediaPickerContainer extends React.Component {
 
   render() {
     return (
-      <div style={{backgroundColor:'#333333', padding: '16px'}}>
-        <div id="mediaPickerGrid" style={{height: '450px'}}>
+      <div style={{border:'5px solid #333333', padding: '16px'}}>
+        <div id="mediaPickerGrid" style={{height: '600px'}}>
           <MediaPickerGrid {...this.props} />
         </div>
       </div>

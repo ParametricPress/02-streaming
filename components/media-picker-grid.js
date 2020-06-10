@@ -6,28 +6,41 @@ class MediaPickerGrid extends D3Component {
   initialize(node, props) {
     console.log(props);
     const svg = (this.svg = d3.select(node).append('svg'));
+    const g = (this.g = svg.append('g'));
+
     svg
       .style('width', '100%')
-      .style('height', '450px');
+      .style('height', '600px');
 
     const colorScale = d3.scaleLinear()
       .range(["white", "#69b3a2"])
       .domain([0, 1.0]);
 
-    const margin = {top: 30, right: 30, bottom: 30, left: 30};
+    const margin = {top: 70, right: 70, bottom: 70, left: 70};
+    g.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     const width = 450 - margin.left - margin.right;
     const height = 450 - margin.top - margin.bottom;
 
+    const xValues = ['time0','time1','time2','time3','time4','time5','time6','time7'];
+    const yValues = ['movie trailer', 'animation', 'slideshow', 'song 1', 'song 2', 'song 3', 'website 1', 'website 2'];
     const x = d3.scaleBand()
       .range([ 0, width ])
-      .domain(['time0','time1','time2','time3','time4','time5','time6','time7'])
+      .domain(xValues)
       .padding(0.02);
     const y = d3.scaleBand()
       .range([ height, 0 ])
-      .domain(['movie trailer', 'animation', 'slideshow', 'song 1', 'song 2', 'song 3', 'website 1', 'website 2'])
+      .domain(yValues)
       .padding(0.02);
+
+    // Add the y Axis
+    const yAxis = g.append("g")
+      .call(d3.axisLeft(y))
+      .style("color", "#333333")
+      .style("font-family", "Graphik");
+
+    yAxis.select(".domain").remove();
     
-    svg.selectAll()
+    g.selectAll()
       .data(props.data)
       .enter()
       .append("rect")

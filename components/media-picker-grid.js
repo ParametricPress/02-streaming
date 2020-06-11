@@ -4,7 +4,6 @@ const d3 = require('d3');
 
 class MediaPickerGrid extends D3Component {
   initialize(node, props) {
-    console.log(props);
     const svg = (this.svg = d3.select(node).append('svg'));
     const g = (this.g = svg.append('g'));
 
@@ -48,10 +47,12 @@ class MediaPickerGrid extends D3Component {
       .attr("y", function(d) { return y(d.media) })
       .attr("width", x.bandwidth() )
       .attr("height", y.bandwidth() )
-      .style("fill", function(d) { return colorScale(d.value)} )
+      .style("fill", function(d) { return colorScale(d.value)} );
+
   }
 
   update(props, oldProps) {
+    console.log('updating media picker grid properties');
     // TODO
   }
 }

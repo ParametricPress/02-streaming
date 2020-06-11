@@ -23,8 +23,10 @@
   source:`"https://github.com/ParametricPress/02-" + parametricSlug `
 /]
 
+[var name:"sortByVal" value:"normal" /]
 [data name:"mediaPickerData" source:"dummy-data.csv"  /]
 [MediaPickerContainer data:mediaPickerData /]
+[Select value:sortByVal options:`["normal", "reverse"]`  /]
 
 # 0.1 g
  The amount of CO2 you've released by loading this article

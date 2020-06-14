@@ -23,6 +23,19 @@
   source:`"https://github.com/ParametricPress/02-" + parametricSlug `
 /]
 
+[data name:"youtubePipeline" source:"youtube-pipeline.json"/]
+
+[var name:"step" value:0 /] // what scroller view we are in
+[var name:"progress" value:0 /]
+
+[Scroller currentStep:step progress:progress]
+  [Graphic]
+    [SvgScroll data:youtubePipeline step:step progress:progress/]
+  [/Graphic]
+  [Step style:`{backgroundColor: "transparent"}`]#Step 1[/Step]
+  [Step style:`{backgroundColor: "transparent"}`]#Step 2[/Step]
+[/Scroller]
+
 # 0.1 g
  The amount of CO2 you've released by loading this article
 

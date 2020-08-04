@@ -9,13 +9,16 @@ const files = fs.readdirSync(datadir);
 
 files.forEach(f => {
   if (f.endsWith('json')) {
-    const packets = JSON.parse(fs.readFileSync(path.resolve(datadir,f)));
-    const name = f.slice(0, f.indexOf('.json'));
+    const d = JSON.parse(fs.readFileSync(path.resolve(datadir,f)));
 
-    data.push({
-      name,
-      packets
-    });
+    if (d.media) {
+      data.push({
+        mediaType: d.media.type,
+        title: d.media.title,
+        ...(d.media.quality ? { quality: d.media.quality } : {}),
+        packets: d.data
+      });
+    }
   }
 });
 

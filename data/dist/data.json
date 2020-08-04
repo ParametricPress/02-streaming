@@ -1,6 +1,8 @@
 [
   {
-    "name": "3b1b_1080",
+    "mediaType": "video",
+    "title": "3Blue1Brown",
+    "quality": 1080,
     "packets": [
       {
         "time": 8.893,
@@ -65,7 +67,9 @@
     ]
   },
   {
-    "name": "3b1b_360",
+    "mediaType": "video",
+    "title": "3Blue1Brown",
+    "quality": 360,
     "packets": [
       {
         "time": 0,
@@ -106,7 +110,9 @@
     ]
   },
   {
-    "name": "3b1b_720",
+    "mediaType": "video",
+    "title": "3Blue1Brown",
+    "quality": 720,
     "packets": [
       {
         "time": 0.082,
@@ -159,7 +165,8 @@
     ]
   },
   {
-    "name": "amazon",
+    "mediaType": "website",
+    "title": "Amazon",
     "packets": [
       {
         "time": 0,
@@ -1092,7 +1099,9 @@
     ]
   },
   {
-    "name": "dr_strange_1080",
+    "mediaType": "video",
+    "title": "Dr Strange Trailer",
+    "quality": 1080,
     "packets": [
       {
         "time": 0,
@@ -1205,7 +1214,9 @@
     ]
   },
   {
-    "name": "dr_strange_360",
+    "mediaType": "video",
+    "title": "Dr Strange Trailer",
+    "quality": 360,
     "packets": [
       {
         "time": 3.251,
@@ -1254,7 +1265,9 @@
     ]
   },
   {
-    "name": "dr_strange_720",
+    "mediaType": "video",
+    "title": "Dr Strange Trailer",
+    "quality": 720,
     "packets": [
       {
         "time": 0.019,
@@ -1327,7 +1340,8 @@
     ]
   },
   {
-    "name": "fb_scroll_30_sec",
+    "mediaType": "website",
+    "title": "Facebook",
     "packets": [
       {
         "time": 0,
@@ -3284,7 +3298,8 @@
     ]
   },
   {
-    "name": "google",
+    "mediaType": "website",
+    "title": "Google",
     "packets": [
       {
         "time": 0,
@@ -3353,7 +3368,8 @@
     ]
   },
   {
-    "name": "nytimes",
+    "mediaType": "website",
+    "title": "New York Times",
     "packets": [
       {
         "time": 0,
@@ -3722,7 +3738,8 @@
     ]
   },
   {
-    "name": "parametric.press",
+    "mediaType": "website",
+    "title": "Parametric Press",
     "packets": [
       {
         "time": 0,
@@ -3847,11 +3864,9 @@
     ]
   },
   {
-    "name": "podcast",
-    "packets": []
-  },
-  {
-    "name": "slideshow_1080",
+    "mediaType": "video",
+    "title": "Slideshow",
+    "quality": 1080,
     "packets": [
       {
         "time": 0.327,
@@ -3976,7 +3991,9 @@
     ]
   },
   {
-    "name": "slideshow_360",
+    "mediaType": "video",
+    "title": "Slideshow",
+    "quality": 360,
     "packets": [
       {
         "time": 0.148,
@@ -4037,7 +4054,9 @@
     ]
   },
   {
-    "name": "slideshow_720",
+    "mediaType": "video",
+    "title": "Slideshow",
+    "quality": 720,
     "packets": [
       {
         "time": 2.558,
@@ -4116,9 +4135,5 @@
         "size": 28
       }
     ]
-  },
-  {
-    "name": "song",
-    "packets": []
   }
 ]

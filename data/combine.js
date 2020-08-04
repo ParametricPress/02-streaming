@@ -9,7 +9,7 @@ const files = fs.readdirSync(datadir);
 
 files.forEach(f => {
   if (f.endsWith('json')) {
-    const packets = JSON.parse(fs.readFileSync(f));
+    const packets = JSON.parse(fs.readFileSync(path.resolve(datadir,f)));
     const name = f.slice(0, f.indexOf('.json'));
 
     data.push({

@@ -7,6 +7,14 @@ export default {
 
 const data = require('../data/dist/data.json');
 
+const maxSize = data.reduce((max, d) => {
+  return Math.max(max, d.packets.reduce((s, p) => {
+    return s + p.size
+  }, 0));
+}, 0);
+
+console.log(maxSize);
+
 const mediaSpec = (title, hasQuality, last) => {
   return {
     resolve: {
@@ -28,15 +36,6 @@ const mediaSpec = (title, hasQuality, last) => {
       }
     },
     spec: {
-      transform: [
-        {
-          calculate: 'datum.packets.size', as: 'packetSize'
-        },
-        {
-          aggregate: [{op: 'sum', field: 'packetSize', as: 'size'}],
-          groupby: ['mediaType', 'title', 'quality']
-        }
-      ],
       layer: [
         {
           mark: { type: 'bar', color: '#7FE8BC' }
@@ -49,7 +48,7 @@ const mediaSpec = (title, hasQuality, last) => {
             dy: 1,
             baseline: 'middle',
             color: '#AAAAAA',
-            text: { signal: 'datum.size + " g"'}
+            text: { signal: 'round(datum.size * 1000) / 10 + " mg"'}
           },
         },
         {
@@ -74,6 +73,9 @@ const mediaSpec = (title, hasQuality, last) => {
           field: 'size',
           type: 'quantitative',
           title: false,
+          scale: {
+            domainMax: maxSize
+          },
           ...(last ? {
             axis: {
               title: "Carbon Emissions",
@@ -107,7 +109,14 @@ const spec = {
   },
   transform: [
     { calculate: 'datum.quality ? datum.title + " (" + datum.quality + "p)" : datum.title', as: 'source' },
-    { flatten: ['packets']}
+    { flatten: ['packets']},
+    {
+      calculate: 'datum.packets.size', as: 'packetSize'
+    },
+    {
+      aggregate: [{op: 'sum', field: 'packetSize', as: 'size'}],
+      groupby: ['mediaType', 'title', 'quality']
+    }
   ],
   vconcat: [
     {
@@ -116,7 +125,11 @@ const spec = {
     },
     {
       transform: [ { filter: 'datum.mediaType === "website"' }],
-      ...mediaSpec('Website', false, true)
+      ...mediaSpec('Website', false, false)
+    },
+    {
+      transform: [ { filter: 'datum.mediaType === "audio"' }],
+      ...mediaSpec('Audio', false, true)
     }
   ],
   config: {

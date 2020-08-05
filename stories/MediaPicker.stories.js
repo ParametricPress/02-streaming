@@ -49,7 +49,7 @@ const mediaSpec = (title, hasQuality, last) => {
             dy: 1,
             baseline: 'middle',
             color: '#AAAAAA',
-            text: { signal: 'round(datum.size / 1000000) / 100 + " g"'}
+            text: { signal: 'datum.size + " g"'}
           },
         },
         {

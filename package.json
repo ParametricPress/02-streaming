@@ -20,6 +20,8 @@
     ]
   },
   "dependencies": {
+    "@vx/group": "^0.0.198",
+    "@vx/scale": "^0.0.198",
     "d3": "^5.15.0",
     "idyll": "^4.0.7",
     "idyll-d3-component": "^2.0.0",
@@ -32,6 +34,7 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.19",
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",

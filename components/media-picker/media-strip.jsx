@@ -44,17 +44,19 @@ export default class MediaStrip extends React.Component {
     const xScale = this.props.xScale[type];
     const widthScale = this.props.widthScale;
     const y = type === 'timeline' ? MediaStrip.height / 2 - height[type] / 2 : 0;
+    const timeline = type === 'timeline';
+
     return (
       <Group>
         <rect
           x={0}
-          y={MediaStrip.height / 2}
+          y={MediaStrip.height / 2 - 1}
           width="100%"
           height={2}
           fill="#E8E8E8"
           style={{
-            transform: type === 'timeline' ? 'scaleX(1)' : 'scaleX(0)',
-            transition: type === 'timeline' ? 'transform 1s ease-in' : 'transform 1s ease-out'
+            transform: timeline ? 'scaleX(1)' : 'scaleX(0)',
+            transition: timeline ? 'transform 1s ease-in' : 'transform 1s ease-out'
           }}
         />
         {
@@ -69,7 +71,7 @@ export default class MediaStrip extends React.Component {
                 fill={fill}
                 opacity={opacity[type]}
                 style={{
-                  transition: 'x 700ms ease-in-out, y 700ms ease-in-out, width 700ms ease-in-out, height 700ms ease-in-out'
+                  transition: timeline ? 'x 700ms ease-in-out 700ms, y 700ms ease-in-out, width 700ms ease-in-out 700ms, height 700ms ease-in-out' : 'x 700ms ease-in-out, y 700ms ease-in-out 700ms, width 700ms ease-in-out, height 700ms ease-in-out 700ms'
                 }}
               />
             )

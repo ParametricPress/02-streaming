@@ -1,63 +1,26 @@
 import * as React from 'react';
 
-class Positionable extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  getStyleFromProps(props) {
-    const left = props.left || 0;
-    const top = props.top || 0;
-    const style = props.style;
+export class Container extends React.Component {
+  render() {
+    const left = this.props.left || 0;
+    const top = this.props.top || 0;
+    const width = this.props.width || '100%';
+    const height = this.props.height || '100%';
 
     const translate = getTranslates(left, top);
 
-    return {
-      position: 'absolute',
-      transformOrigin: '0 0',
-      ...style,
-      transform: translate
-    };
-  }
-}
-
-class Scalable extends Positionable {
-  constructor(props) {
-    super(props);
-
-    this.initialWidth = roundPixel(this.resolveWidth(props.width));
-    this.initialHeight = roundPixel(this.resolveHeight(props.height));
-  }
-
-  resolveWidth(width) {
-    return width;
-  }
-
-  resolveHeight(height) {
-    return height;
-  }
-
-  getStyleFromProps(props) {
-    const style = super.getStyleFromProps(props);
-
-    const width = roundPixel(props.width);
-    const height = roundPixel(props.height);
-
-    const scale = getScales(this.initialWidth, this.initialHeight, width, height);
-    
-    return {
-      ...style,
-      width: this.initialWidth,
-      height: this.initialHeight,
-      transform: style.transform + ' ' + scale
-    };
-  }
-}
-
-export class Container extends Scalable {
-  render() {
-    const style = this.getStyleFromProps(this.props);
-    return <div style={style}>{this.props.children}</div>
+    return (
+      <div
+        style={{
+          width,
+          height,
+          position: 'absolute',
+          transform: translate
+        }}
+      >
+        {this.props.children}
+      </div>
+    )
   }
 }
 
@@ -73,7 +36,6 @@ export class Text extends React.Component {
       <div
         style={{
           ...style,
-          width: '100%',
           position: 'absolute',
           transform: translate
         }}
@@ -206,7 +168,7 @@ const getScales = (initialWidth, initialHeight, width, height) => {
 
 const roundPixel = p => {
   if (isNumber(p)) {
-    return Math.round(p * 6) / 6;  //  factor of 1/3 = super retina, 1/2 = retina
+    return Math.round(p * 12) / 12;  //  factor of 1/3 = super retina, 1/2 = retina
   }
 
   return p;

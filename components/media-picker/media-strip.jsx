@@ -54,9 +54,13 @@ export default class MediaStrip extends React.Component {
           width={timeline ? xScale.timeline.range()[1] : 1}
           height={2}
           fill="#E8E8E8"
-          style={{
-            transition: timeline ? 'transform 1s ease-in' : 'transform 1s ease-out'
-          }}
+          transition={[
+            {
+              attrs: ['width'],
+              duration: 1000,
+              easing: timeline ? 'ease-in' : 'ease-out'
+            }
+          ]}
         />
         {
           this.props.data.map((d, i) => {

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export class Container extends React.Component {
+export class Container extends React.PureComponent {
   render() {
     const left = this.props.left || 0;
     const top = this.props.top || 0;
@@ -24,7 +24,7 @@ export class Container extends React.Component {
   }
 }
 
-export class Text extends React.Component {
+export class Text extends React.PureComponent {
   render() {
     const left = this.props.left || 0;
     const top = this.props.top || 0;
@@ -46,7 +46,7 @@ export class Text extends React.Component {
   }
 }
 
-export class Rect extends React.Component {
+export class Rect extends React.PureComponent {
   constructor(props) {
     super(props);
     
@@ -168,7 +168,7 @@ const getScales = (initialWidth, initialHeight, width, height) => {
 
 const roundPixel = p => {
   if (isNumber(p)) {
-    return Math.round(p * 12) / 12;  //  factor of 1/3 = super retina, 1/2 = retina
+    return Math.round(p * 2) / 2;  //  factor of 1/3 = super retina, 1/2 = retina
   }
 
   return p;

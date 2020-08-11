@@ -70,21 +70,8 @@ export default class MediaStrip extends React.Component {
                 fill={fill}
                 style={{
                   opacity: opacity[type],
-                }} 
-                transition={[
-                  {
-                    attrs: ['top', 'height'],
-                    duration: 700,
-                    delay: timeline ? 0 : 700,
-                    easing: 'ease-in-out'
-                  },
-                  {
-                    attrs: ['left', 'width'],
-                    duration: 700,
-                    delay: timeline ? 700 : 0,
-                    easing: 'ease-in-out'
-                  }
-                ]}
+                  transition: 'transform 700ms ease-in-out'
+                }}
               />
             )
           })

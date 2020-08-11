@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Group } from '@vx/group';
 import MediaType from './media-type';
+import { Container } from './components';
 
 /* Props:
 type: 'timeline' | 'bar',
@@ -28,13 +28,13 @@ export default class MediaAll extends React.Component {
 
     let yOffset = 0;
     return (
-      <Group>
+      <Container>
         {
-          data.map(d => {
+          data.map((d, i) => {
             const mediaType = (
-              <Group top={yOffset}>
+              <Container key={i} top={yOffset}>
                 <MediaType type={type} data={d} xScaleVX={xScaleVX} />
-              </Group>
+              </Container>
             );
 
             yOffset += MediaType.height(d) + mediaTypePadding;
@@ -42,7 +42,7 @@ export default class MediaAll extends React.Component {
             return mediaType;
           })
         }
-      </Group>
+      </Container>
     )
   }
 }

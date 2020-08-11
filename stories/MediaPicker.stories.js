@@ -1,247 +1,153 @@
-import React from 'react';
-import { VegaLite } from 'react-vega';
+import * as React from 'react';
+import MediaStrip from '../components/media-picker/media-strip';
+import { scaleLinear } from '@vx/scale';
+import { withKnobs, radios } from '@storybook/addon-knobs';
+import { getTotalSize, addCumulativeSize, getMaxSize, groupByTitle, groupByType } from '../components/media-picker/util';
+import { Group } from '@vx/group';
+import MediaTitle from '../components/media-picker/media-title';
+import MediaType from '../components/media-picker/media-type';
+import MediaAll from '../components/media-picker/media-all';
+import { Container } from '../components/media-picker/components';
 
 export default {
   title: 'Media Picker',
-};
-
-const data = require('../data/dist/data.json');
-
-const maxSize = data.reduce((max, d) => {
-  return Math.max(max, d.packets.reduce((s, p) => {
-    return s + p.size
-  }, 0));
-}, 0);
-
-const maxTime = data.reduce((max, d) => {
-  return Math.max(max, d.packets.reduce((m, p) => {
-    return Math.max(m, p.time)
-  }, 0));
-}, 0);
-
-const mediaBarSpec = (title, hasQuality, last) => {
-  return {
-    resolve: {
-      scale: { y: 'independent' }
-    },
-    facet: {
-      row: {
-        field: 'title',
-        title: null
-      }
-    },
-    spec: {
-      layer: [
-        {
-          mark: { type: 'bar', color: '#7FE8BC' }
-        },
-        {
-          mark: {
-            type: 'text',
-            align: 'left',
-            dx: 4,
-            dy: 1,
-            baseline: 'middle',
-            color: '#AAAAAA',
-            text: { signal: 'round(datum.size * 1000) / 10 + " mg"'}
-          },
-        },
-        {
-          transform: [
-            { calculate: 'datum.quality && scale("concat_0_x", datum.size) > 25', as: 'showQuality' }
-          ],
-          mark: {
-            type: 'text',
-            align: 'left',
-            x: 4,
-            text: { signal: 'datum.showQuality ? datum.quality + "p" : ""'},
-            color: '#FFFFFF',
-            fontSize: 9
-          },
-          encoding: {
-            x: null
-          }
-        }
-      ],
-      encoding: {
-        x: {
-          field: 'size',
-          type: 'quantitative',
-          title: false,
-          scale: {
-            domainMax: maxSize
-          },
-          ...(last ? {
-            axis: {
-              title: "Carbon Emissions"
-            }
-          } : {axis: false})
-        },
-        ...(hasQuality ?
-          {
-            y: {
-              field: 'quality',
-              type: 'nominal',
-              axis: false
-            }
-          } : {})
-      }
-    }
-  };
-};
-
-const mediaTimelineSpec = (title, hasQuality, last) => {
-  return {
-    resolve: {
-      scale: { y: 'independent' }
-    },
-    facet: {
-      row: {
-        field: 'title',
-        title: null
-      }
-    },
-    spec: {
-      layer: [
-        {
-          mark: { type: 'rule', color: '#E0E0E0', strokeWidth: 1 },
-          encoding: {
-            x: null
-          }
-        },
-        {
-          mark: { type: 'tick', color: '#E0E0E0', strokeWidth: 1, x: 0, height: 5 },
-          encoding: { x: null }
-        },
-        {
-          mark: { type: 'tick', color: '#E0E0E0', strokeWidth: 1, x: 200, height: 5 },
-          encoding: { x: null }
-        },
-        {
-          mark: { type: 'square', color: '#7FE8BC' }
-        }
-      ],
-      encoding: {
-        x: {
-          field: 'time',
-          type: 'quantitative',
-          title: false,
-          scale: {
-            domain: [0, maxTime]
-          },
-          ...(last ? {
-            axis: {
-              title: "Time",
-              domain: true,
-              ticks: true,
-              tickCount: 2,
-              labels: true
-            }
-          }: {})
-        },
-        ...(hasQuality ?
-          {
-            y: {
-              field: 'quality',
-              type: 'nominal',
-              axis: false
-            }
-          } : {
-            y: { value: 0 }
-          })
-      }
-    }
-  }
-};
-
-const config = {
-  style: {
-    cell: {
-      stroke: 'transparent'
-    }
-  },
-  axisX: {
-    titleColor: 'rgba(0, 0, 0, 0.51)',
-    titleFontSize: 10,
-    titlePadding: 10,
-    grid: false,
-    ticks: false,
-    labels: false,
-    domain: false,
-    domainColor: '#F1F1F1',
-    tickColor: '#F1F1F1',
-    labelExpr: "datum.value + ' s'",
-    labelColor: '#AAAAAA',
-    labelPadding: 5
-  },
-  header: {
-    labelAngle: 0,
-    labelAnchor: 'start',
-    labelAlign: 'left',
-    labelOrient: 'top',
-    labelPadding: -8,
-    labelFontWeight: 400,
-    labelFontSize: 10
-  }
+  decorators: [withKnobs]
 }
 
-const barSpec = {
-  data: {
-    values: data
-  },
-  transform: [
-    { calculate: 'datum.quality ? datum.title + " (" + datum.quality + "p)" : datum.title', as: 'source' },
-    { flatten: ['packets']},
-    {
-      calculate: 'datum.packets.size', as: 'packetSize'
-    },
-    {
-      aggregate: [{op: 'sum', field: 'packetSize', as: 'size'}],
-      groupby: ['mediaType', 'title', 'quality']
-    }
-  ],
-  vconcat: [
-    {
-      transform: [ { filter: 'datum.mediaType === "video"' }],
-      ...mediaBarSpec('Video', true, false)
-    },
-    {
-      transform: [ { filter: 'datum.mediaType === "website"' }],
-      ...mediaBarSpec('Website', false, false)
-    },
-    {
-      transform: [ { filter: 'datum.mediaType === "audio"' }],
-      ...mediaBarSpec('Audio', false, true)
-    }
-  ],
-  config
+const typeKnob = () => {
+  return radios('type', { Timeline: 'timeline', Bar: 'bar' }, 'bar');
+}
+
+const data = require('../data/dist/data.json');
+data.forEach(d => addCumulativeSize(d.packets));
+
+const width = 300;
+const height = 1000;
+
+const padding = {
+  left: 20,
+  right: 20,
+  top: 20,
+  bottom: 20
 };
 
-const timelineSpec = {
-  data: {
-    values: data
-  },
-  transform: [
-    { flatten: ['packets']},
-    { calculate: 'datum.packets.size', as: 'packetSize' },
-    { calculate: 'datum.packets.time', as: 'time' }
-  ],
-  vconcat: [
-    {
-      transform: [ { filter: 'datum.mediaType === "video"' }],
-      ...mediaTimelineSpec('Video', true, false)
-    },
-    {
-      transform: [ { filter: 'datum.mediaType === "website"' }],
-      ...mediaTimelineSpec('Website', false, false)
-    },
-    {
-      transform: [ { filter: 'datum.mediaType === "audio"' }],
-      ...mediaTimelineSpec('Audio', false, true)
-    }
-  ],
-  config
-};
+const getXScaleVX = maxTotal => {
+  return {
+    timeline: scaleLinear({
+      range: [0, width - padding.left - padding.right],
+      round: true,
+      domain: [0, 60]
+    }),
+    bar: scaleLinear({
+      range: [0, width - padding.left - padding.right],
+      round: true,
+      domain: [0, maxTotal]
+    })
+  };
+}
 
-export const Aggregate = () => <VegaLite spec={barSpec} />
-export const Timeline = () => <VegaLite spec={timelineSpec} />
+const StoryContainer = (props) => {
+  return (
+    <div style={{width, height}}>
+      <Container
+        top={padding.top}
+        left={padding.left}
+        width={width - padding.left - padding.right}
+        height={height - padding.top - padding.bottom}
+      >
+        {props.children}
+      </Container>
+    </div>
+  )
+}
+
+export const strip = () => {
+  const type = typeKnob();
+
+  const stripData = data[0].packets;
+  const sum = getTotalSize(stripData);
+
+  const timeScale = scaleLinear({
+    range: [0, width - padding.left - padding.right],
+    round: true,
+    domain: [0, 60]
+  });
+  
+  const stackScale = scaleLinear({
+    range: [0, width - padding.left - padding.right],
+    round: true,
+    domain: [0, sum]
+  });
+
+  return (
+    <StoryContainer>
+      <MediaStrip
+        type={type}
+        data={stripData}
+        xScale={{
+          timeline: timeScale,
+          bar: stackScale
+        }}
+        widthScale={{
+          timeline: d => 8,
+          bar: stackScale
+        }}
+      />
+    </StoryContainer>
+  )
+}
+
+export const group = () => {
+  const type = typeKnob();
+
+  const filteredData = data.filter(d => d.title === 'Dr Strange Trailer');
+  const maxTotal = getMaxSize(filteredData);
+  const groupData = groupByTitle(filteredData);
+  const xScaleVX = getXScaleVX(maxTotal);
+
+  return (
+    <StoryContainer>
+      <MediaTitle
+        type={type}
+        data={groupData[0]}
+        xScaleVX={xScaleVX}
+      />
+    </StoryContainer>
+  )
+}
+
+export const type = () => {
+  const type = typeKnob();
+
+  const filteredData = data.filter(d => d.mediaType === 'video');
+  const maxTotal = getMaxSize(filteredData);
+  const groupData = groupByType(groupByTitle(filteredData));
+  const xScaleVX = getXScaleVX(maxTotal);
+
+  return (
+    <StoryContainer>
+      <MediaType
+        type={type}
+        data={groupData[0]}
+        xScaleVX={xScaleVX}
+      />
+    </StoryContainer>
+  )
+}
+
+export const all = () => {
+  const type = typeKnob();
+  const maxTotal = getMaxSize(data);
+  const groupData = groupByType(groupByTitle(data));
+  const xScaleVX = getXScaleVX(maxTotal);
+
+  return (
+    <StoryContainer>
+      <MediaAll
+        type={type}
+        data={groupData}
+        xScaleVX={xScaleVX}
+      />
+    </StoryContainer>
+  )
+}

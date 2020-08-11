@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Group } from '@vx/group';
 import { scaleBand } from '@vx/scale';
 import MediaStrip from './media-strip';
+import { Container, Text } from './components';
 
 /** Props:
 type: 'timeline' | 'bar',
@@ -31,22 +32,17 @@ export default class MediaTitle extends React.Component {
     const xScaleVX = this.props.xScaleVX;
     const height = MediaTitle.height(data);
 
-    const xScale = {
-      timeline: d => xScaleVX['timeline'](d.time),
-      bar: d => xScaleVX['bar'](d.cumulative)
-    };
-
     const widthScale = {
       timeline: _ => 8,
-      bar: d => xScaleVX['bar'](d.size)
+      bar: xScaleVX.bar
     };
 
     let strips;
     if (data.packets.length) {
       strips = (
-        <Group top={titleHeight + titlePadding}>
-          <MediaStrip type={type} data={data.packets} xScale={xScale} widthScale={widthScale}/>
-        </Group>
+        <Container top={titleHeight + titlePadding}>
+          <MediaStrip type={type} data={data.packets} xScale={xScaleVX} widthScale={widthScale}/>
+        </Container>
       );
     } else {
       // has quality
@@ -57,28 +53,27 @@ export default class MediaTitle extends React.Component {
         range: [titleHeight + titlePadding, height]
       });
 
-      strips = qualities.map(q => {
+      strips = qualities.map((q, i) => {
         const packets = data.packets[q];
         return (
-          <Group top={yScale(q)}>
-            <MediaStrip type={type} data={packets} xScale={xScale} widthScale={widthScale}/>
-          </Group>
+          <Container key={i} top={yScale(q)}>
+            <MediaStrip type={type} data={packets} xScale={xScaleVX} widthScale={widthScale}/>
+          </Container>
         );
       });
     }
 
     return (
-      <Group>
-        <text
-          dominantBaseline="hanging"
+      <Container height={height}>
+        <Text
           style={{
             fontSize: titleFontSize,
-            lineHeight: titleHeight,
+            height: titleHeight,
             fontFamily: 'Helvetica'
           }}
-        >{data.title}</text>
+        >{data.title}</Text>
         {strips}
-      </Group>
+      </Container>
     );
   }
 }

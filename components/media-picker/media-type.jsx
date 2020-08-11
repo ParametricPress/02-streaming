@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Group } from '@vx/group';
 import MediaTitle from './media-title';
+import { Container } from './components';
 
 /** Props:
 type: 'timeline' | 'bar'
@@ -31,15 +32,17 @@ export default class MediaType extends React.Component {
     const data = this.props.data;
     const xScaleVX = this.props.xScaleVX;
 
+    const height = MediaType.height(data);
+
     let yOffset = 0;
     return (
-      <Group>
+      <Container height={height}>
         {
-          data.titles.map(d => {
+          data.titles.map((d, i) => {
             const mediaTitle = (
-              <Group top={yOffset}>
+              <Container key={i} top={yOffset}>
                 <MediaTitle type={type} data={d} xScaleVX={xScaleVX} />
-              </Group>
+              </Container>
             );
 
             yOffset += mediaTitlePadding + MediaTitle.height(d);
@@ -47,7 +50,7 @@ export default class MediaType extends React.Component {
             return mediaTitle
           })
         }
-      </Group>
+      </Container>
     )
   }
 }

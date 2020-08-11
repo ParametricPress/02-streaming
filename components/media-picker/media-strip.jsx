@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Group } from '@vx/group';
+import { Container, Rect } from './components';
 
 /** Props:
 type: 'timeline' | 'bar',
@@ -12,16 +12,16 @@ data:
     ...
   ]
 xScale: {
-  timeline, bar: d => number,
+  timeline, bar: vx.scaleLinear,
 },
 widthScale: {
-  timeline, bar: d => number,
+  timeline, bar: vx.scaleLinear,
 }
 */
 
 const widthOffset = {
   timeline: 0,
-  bar: 0.5
+  bar: 1
 }
 
 const opacity = {
@@ -41,43 +41,55 @@ export default class MediaStrip extends React.Component {
 
   render() {
     const type = this.props.type;
-    const xScale = this.props.xScale[type];
+    const xScale = this.props.xScale;
     const widthScale = this.props.widthScale;
     const y = type === 'timeline' ? MediaStrip.height / 2 - height[type] / 2 : 0;
     const timeline = type === 'timeline';
 
     return (
-      <Group>
-        <rect
-          x={0}
-          y={MediaStrip.height / 2 - 1}
-          width="100%"
+      <Container height={MediaStrip.height}>
+        <Rect
+          left={0}
+          top={MediaStrip.height / 2 - 1}
+          width={timeline ? xScale.timeline.range()[1] : 1}
           height={2}
           fill="#E8E8E8"
           style={{
-            transform: timeline ? 'scaleX(1)' : 'scaleX(0)',
             transition: timeline ? 'transform 1s ease-in' : 'transform 1s ease-out'
           }}
         />
         {
           this.props.data.map((d, i) => {
             return (
-              <rect
+              <Rect
                 key={i}
-                x={xScale(d)}
-                y={y}
-                width={widthScale[type](d) + widthOffset[type] }
+                left={xScale[type](timeline ? d.time : d.cumulative)}
+                top={y}
+                width={widthScale[type](timeline ? d.time : d.size) + widthOffset[type]}
                 height={height[type]}
                 fill={fill}
-                opacity={opacity[type]}
                 style={{
-                  transition: timeline ? 'x 700ms ease-in-out 700ms, y 700ms ease-in-out, width 700ms ease-in-out 700ms, height 700ms ease-in-out' : 'x 700ms ease-in-out, y 700ms ease-in-out 700ms, width 700ms ease-in-out, height 700ms ease-in-out 700ms'
-                }}
+                  opacity: opacity[type],
+                }} 
+                transition={[
+                  {
+                    attrs: ['top', 'height'],
+                    duration: 700,
+                    delay: timeline ? 0 : 700,
+                    easing: 'ease-in-out'
+                  },
+                  {
+                    attrs: ['left', 'width'],
+                    duration: 700,
+                    delay: timeline ? 700 : 0,
+                    easing: 'ease-in-out'
+                  }
+                ]}
               />
             )
           })
         }
-      </Group>
+      </Container>
     );
   }
 }

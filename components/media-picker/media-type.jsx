@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Group } from '@vx/group';
 import MediaTitle from './media-title';
-import { Container } from './components';
+import { Container, Text } from './components';
 
 /** Props:
 type: 'timeline' | 'bar'
@@ -19,12 +19,17 @@ data: {
 xScaleVX: vx.scaleLinear
 */
 const mediaTitlePadding = 16;
+const mediaTypeHeight = 24;
+
+const titleCase = s => {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
 
 export default class MediaType extends React.Component {
   static height = data => {
-    return data.titles.reduce((height, d, i) => {
-      return height + MediaTitle.height(d) + (i === 0 ? 0 : mediaTitlePadding);
-    }, 0);
+    return mediaTypeHeight + data.titles.reduce((height, d, i) => {
+      return height + MediaTitle.height(d) + mediaTitlePadding;
+    }, 0) - mediaTitlePadding;
   }
 
   render() {
@@ -34,9 +39,18 @@ export default class MediaType extends React.Component {
 
     const height = MediaType.height(data);
 
-    let yOffset = 0;
+    let yOffset = mediaTypeHeight;
     return (
       <Container height={height}>
+        <Text
+          style={{
+            fontSize: 14,
+            fontWeight: 600,
+            fontFamily: 'Helvetica'
+          }}
+        >
+          {titleCase(data.mediaType)}
+        </Text>
         {
           data.titles.map((d, i) => {
             const mediaTitle = (

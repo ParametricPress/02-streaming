@@ -18,7 +18,7 @@ data: [
 xScaleVX: vx.scaleLinear
 */
 
-const mediaTypePadding = 48;
+const mediaTypePadding = 20;
 
 export default class MediaAll extends React.Component {
   render() {

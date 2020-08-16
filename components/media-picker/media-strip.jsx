@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, Rect } from './components';
+import { Container, Rect, Text } from './components';
 
 /** Props:
 type: 'timeline' | 'bar',
@@ -35,6 +35,10 @@ const height = {
 }
 
 const fill = '#7FE8BC';
+const formatEmissions = n => Math.round(n * 1000) / 10 + ' mg';
+const emissionsBarPadding = 4;
+const emissionsTimelinePadding = 8;
+const tickHeight = 6
 
 export default class MediaStrip extends React.Component {
   static height = height.bar;
@@ -43,11 +47,27 @@ export default class MediaStrip extends React.Component {
     const type = this.props.type;
     const xScale = this.props.xScale;
     const widthScale = this.props.widthScale;
+    const data = this.props.data;
+    
     const y = type === 'timeline' ? MediaStrip.height / 2 - height[type] / 2 : 0;
     const timeline = type === 'timeline';
+    const sum = data.reduce((s, d) => d.size + s, 0);
 
     return (
-      <Container height={MediaStrip.height}>
+      <div style={{
+        height: MediaStrip.height,
+        width: '100%'
+      }}>
+        <Rect
+          left={timeline ? xScale.timeline.range()[1] : 0}
+          top={MediaStrip.height / 2 - tickHeight / 2}
+          width={2}
+          height={tickHeight}
+          fill="#E8E8E8"
+          style={{
+            transition: timeline ? 'transform 1s ease-in' : 'transform 1s ease-out'
+          }}
+        />
         <Rect
           left={0}
           top={MediaStrip.height / 2 - 1}
@@ -58,8 +78,21 @@ export default class MediaStrip extends React.Component {
             transition: timeline ? 'transform 1s ease-in' : 'transform 1s ease-out'
           }}
         />
+        <Text
+          top={4}
+          left={timeline ?
+            xScale.timeline.range()[1] + emissionsTimelinePadding:
+            xScale.bar(sum) + emissionsBarPadding}
+          style={{
+            fontSize: 10,
+            fontFamily: 'Helvetica',
+            color: '#AAAAAA',
+            transition: 'transform 700ms ease-in-out'
+          }}>
+          {formatEmissions(sum)}
+        </Text>
         {
-          this.props.data.map((d, i) => {
+          data.map((d, i) => {
             return (
               <Rect
                 key={i}
@@ -76,7 +109,7 @@ export default class MediaStrip extends React.Component {
             )
           })
         }
-      </Container>
+      </div>
     );
   }
 }

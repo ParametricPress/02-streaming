@@ -17,20 +17,16 @@ xScaleVX: {
 
 const titleFontSize = 10;
 const titleHeight = 12;
-const titlePadding = 2;
-const stripPadding = 4;
+const titlePadding = {
+  left: 2
+};
+const stripPadding = 2;
 
 export default class MediaTitle extends React.Component {
-  static height = data => {
-    const numStrips = data.packets.length ? 1 : Object.keys(data.packets).length;
-    return titleHeight + titlePadding + MediaStrip.height * numStrips + stripPadding * (numStrips - 1);
-  }
-
   render() {
     const type = this.props.type;
     const data = this.props.data;
     const xScaleVX = this.props.xScaleVX;
-    const height = MediaTitle.height(data);
 
     const widthScale = {
       timeline: _ => 8,
@@ -40,40 +36,45 @@ export default class MediaTitle extends React.Component {
     let strips;
     if (data.packets.length) {
       strips = (
-        <Container top={titleHeight + titlePadding}>
+        // <Container top={titleHeight + titlePadding.b}>
+        <div style={{
+          width: '100%',
+          paddingTop: stripPadding
+        }}>
           <MediaStrip type={type} data={data.packets} xScale={xScaleVX} widthScale={widthScale}/>
-        </Container>
+        </div>
       );
     } else {
       // has quality
       const qualities = Object.keys(data.packets);
 
-      const yScale = scaleBand({
-        domain: qualities,
-        range: [titleHeight + titlePadding, height]
-      });
-
       strips = qualities.map((q, i) => {
         const packets = data.packets[q];
         return (
-          <Container key={i} top={yScale(q)}>
+          <div key={i} style={{
+            width: '100%',
+            paddingTop: stripPadding
+          }}>
             <MediaStrip type={type} data={packets} xScale={xScaleVX} widthScale={widthScale}/>
-          </Container>
+          </div>
         );
       });
     }
 
     return (
-      <Container height={height}>
-        <Text
+      <div style={{
+        width: '100%'
+      }}>
+        <div
           style={{
+            paddingLeft: titlePadding.left,
             fontSize: titleFontSize,
             height: titleHeight,
             fontFamily: 'Helvetica'
           }}
-        >{data.title}</Text>
+        >{data.title}</div>
         {strips}
-      </Container>
+      </div>
     );
   }
 }

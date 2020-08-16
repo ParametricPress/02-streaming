@@ -6,12 +6,14 @@ export class Container extends React.PureComponent {
     const top = this.props.top || 0;
     const width = this.props.width || '100%';
     const height = this.props.height || '100%';
+    const style = this.props.style;
 
     const translate = getTranslates(left, top);
 
     return (
       <div
         style={{
+          ...style,
           width,
           height,
           position: 'absolute',

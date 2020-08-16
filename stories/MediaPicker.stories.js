@@ -24,39 +24,13 @@ data.forEach(d => addCumulativeSize(d.packets));
 const width = 300;
 const height = 1000;
 
-const padding = {
-  left: 20,
-  right: 20,
-  top: 20,
-  bottom: 20
-};
-
-const getXScaleVX = maxTotal => {
-  return {
-    timeline: scaleLinear({
-      range: [0, width - padding.left - padding.right],
-      round: true,
-      domain: [0, 60]
-    }),
-    bar: scaleLinear({
-      range: [0, width - padding.left - padding.right],
-      round: true,
-      domain: [0, maxTotal]
-    })
-  };
-}
-
 const StoryContainer = (props) => {
   return (
-    <div style={{width, height}}>
-      <Container
-        top={padding.top}
-        left={padding.left}
-        width={width - padding.left - padding.right}
-        height={height - padding.top - padding.bottom}
-      >
-        {props.children}
-      </Container>
+    <div style={{
+      width,
+      height,
+    }}>
+      {props.children}
     </div>
   )
 }
@@ -66,31 +40,17 @@ export const strip = () => {
 
   const stripData = data[0].packets;
   const sum = getTotalSize(stripData);
-
-  const timeScale = scaleLinear({
-    range: [0, width - padding.left - padding.right],
-    round: true,
-    domain: [0, 60]
-  });
-  
-  const stackScale = scaleLinear({
-    range: [0, width - padding.left - padding.right],
-    round: true,
-    domain: [0, sum]
-  });
+  const xScale = MediaAll.getXScaleVX(width, sum);
 
   return (
     <StoryContainer>
       <MediaStrip
         type={type}
         data={stripData}
-        xScale={{
-          timeline: timeScale,
-          bar: stackScale
-        }}
+        xScale={xScale}
         widthScale={{
           timeline: d => 8,
-          bar: stackScale
+          bar: xScale.bar
         }}
       />
     </StoryContainer>
@@ -103,7 +63,7 @@ export const group = () => {
   const filteredData = data.filter(d => d.title === 'Dr Strange Trailer');
   const maxTotal = getMaxSize(filteredData);
   const groupData = groupByTitle(filteredData);
-  const xScaleVX = getXScaleVX(maxTotal);
+  const xScaleVX = MediaAll.getXScaleVX(width, maxTotal);
 
   return (
     <StoryContainer>
@@ -122,7 +82,7 @@ export const type = () => {
   const filteredData = data.filter(d => d.mediaType === 'video');
   const maxTotal = getMaxSize(filteredData);
   const groupData = groupByType(groupByTitle(filteredData));
-  const xScaleVX = getXScaleVX(maxTotal);
+  const xScaleVX = MediaAll.getXScaleVX(width, maxTotal);
 
   return (
     <StoryContainer>
@@ -137,16 +97,13 @@ export const type = () => {
 
 export const all = () => {
   const type = typeKnob();
-  const maxTotal = getMaxSize(data);
-  const groupData = groupByType(groupByTitle(data));
-  const xScaleVX = getXScaleVX(maxTotal);
 
   return (
     <StoryContainer>
       <MediaAll
         type={type}
-        data={groupData}
-        xScaleVX={xScaleVX}
+        data={data}
+        width={width}
       />
     </StoryContainer>
   )

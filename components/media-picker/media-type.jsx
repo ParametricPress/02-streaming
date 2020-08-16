@@ -18,53 +18,50 @@ data: {
 ],
 xScaleVX: vx.scaleLinear
 */
-const mediaTitlePadding = 16;
-const mediaTypeHeight = 24;
+const mediaTitlePadding = {
+  bottom: 8,
+  left: 2
+};
 
 const titleCase = s => {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
 export default class MediaType extends React.Component {
-  static height = data => {
-    return mediaTypeHeight + data.titles.reduce((height, d, i) => {
-      return height + MediaTitle.height(d) + mediaTitlePadding;
-    }, 0) - mediaTitlePadding;
-  }
-
   render() {
     const type = this.props.type;
     const data = this.props.data;
     const xScaleVX = this.props.xScaleVX;
 
-    const height = MediaType.height(data);
-
-    let yOffset = mediaTypeHeight;
     return (
-      <Container height={height}>
-        <Text
+      <div style={{
+        width: '100%'
+      }}>
+        <div
           style={{
             fontSize: 14,
             fontWeight: 600,
-            fontFamily: 'Helvetica'
+            fontFamily: 'Helvetica',
+            paddingLeft: mediaTitlePadding.left,
+            paddingBottom: mediaTitlePadding.bottom
           }}
         >
           {titleCase(data.mediaType)}
-        </Text>
+        </div>
         {
           data.titles.map((d, i) => {
             const mediaTitle = (
-              <Container key={i} top={yOffset}>
+              <div key={i} style={{
+                width: '100%',
+                paddingBottom: mediaTitlePadding.bottom
+              }}>
                 <MediaTitle type={type} data={d} xScaleVX={xScaleVX} />
-              </Container>
+              </div>
             );
-
-            yOffset += mediaTitlePadding + MediaTitle.height(d);
-
             return mediaTitle
           })
         }
-      </Container>
+      </div>
     )
   }
 }

@@ -41,6 +41,8 @@ const emissionsTimelinePadding = 8;
 const tickHeight = 6;
 const tickWidth = 2;
 
+const pink = '#FF6CC4';
+
 export default class MediaStrip extends React.Component {
   static height = height.bar;
 
@@ -95,7 +97,7 @@ export default class MediaStrip extends React.Component {
           style={{
             fontSize: 10,
             fontFamily: 'Helvetica',
-            color: mouse ? '#FF6CC4' : '#AAAAAA',
+            color: mouse ? pink : '#AAAAAA',
             transition: 'transform 700ms ease-in-out',
             pointerEvents: 'none',
           }}>
@@ -115,7 +117,7 @@ export default class MediaStrip extends React.Component {
                 top={y}
                 width={widthScale[rectType](rTimeline ? d.time : d.size) + widthOffset[rectType]}
                 height={height[rectType]}
-                fill={fill}
+                fill={!timeline ? fill : rTimeline ? fill : pink}
                 style={{
                   opacity: opacity[rectType],
                   transition: animate ? 'transform 700ms ease-in-out' : '',
@@ -130,7 +132,7 @@ export default class MediaStrip extends React.Component {
           left={mouse ? Math.min(mouse.x, xScale.timeline.range()[1]) : 0}
           width={tickWidth}
           height={tickHeight}
-          fill="#FF6CC4"
+          fill={pink}
           style={{
             pointerEvents: 'none',
             opacity: mouse ? 1 : 0,

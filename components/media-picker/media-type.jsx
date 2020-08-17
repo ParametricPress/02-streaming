@@ -31,6 +31,8 @@ export default class MediaType extends React.Component {
   render() {
     const type = this.props.type;
     const data = this.props.data;
+    const mouse = this.props.mouse;
+    const animate = this.props.animate;
     const xScaleVX = this.props.xScaleVX;
 
     return (
@@ -55,7 +57,7 @@ export default class MediaType extends React.Component {
                 width: '100%',
                 paddingBottom: mediaTitlePadding.bottom
               }}>
-                <MediaTitle type={type} data={d} xScaleVX={xScaleVX} />
+                <MediaTitle type={type} data={d} xScaleVX={xScaleVX} mouse={mouse} animate={animate}/>
               </div>
             );
             return mediaTitle

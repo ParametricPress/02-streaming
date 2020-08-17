@@ -1,13 +1,10 @@
 import * as React from 'react';
 import MediaStrip from '../components/media-picker/media-strip';
-import { scaleLinear } from '@vx/scale';
 import { withKnobs, radios } from '@storybook/addon-knobs';
 import { getTotalSize, addCumulativeSize, getMaxSize, groupByTitle, groupByType } from '../components/media-picker/util';
-import { Group } from '@vx/group';
 import MediaTitle from '../components/media-picker/media-title';
 import MediaType from '../components/media-picker/media-type';
 import MediaAll from '../components/media-picker/media-all';
-import { Container } from '../components/media-picker/components';
 
 export default {
   title: 'Media Picker',
@@ -48,6 +45,7 @@ export const strip = () => {
         type={type}
         data={stripData}
         xScale={xScale}
+        animate={true}
         widthScale={{
           timeline: d => 8,
           bar: xScale.bar
@@ -70,6 +68,7 @@ export const group = () => {
       <MediaTitle
         type={type}
         data={groupData[0]}
+        animate={true}
         xScaleVX={xScaleVX}
       />
     </StoryContainer>
@@ -89,6 +88,7 @@ export const type = () => {
       <MediaType
         type={type}
         data={groupData[0]}
+        animate={true}
         xScaleVX={xScaleVX}
       />
     </StoryContainer>

@@ -5,17 +5,31 @@ export const addCumulativeSize = data => {
   }, 0);
 };
 
-export const getTotalSize = data => {
+export const getTotalSize = (data, optFilter) => {
   return data.reduce((s, d) => {
+    if (optFilter) {
+      return optFilter(d) ? s + d.size : s;
+    }
     return s + d.size;
   }, 0);
 };
 
-export const getMaxSize = data => {
+export const getMaxSize = (data, optFilter) => {
   return data.reduce((m, d) => {
-    return Math.max(m, getTotalSize(d.packets));
+    return Math.max(m, getTotalSize(d.packets, optFilter));
   }, 0);
 };
+
+export const getMaxTime = (data, time) => {
+  return data.reduce((t, d) => {
+    const packets = d.packets.filter(p => p.time <= time);
+    if (packets.length) {
+      return Math.max(t, packets[packets.length - 1].time);
+    }
+
+    return t;
+  }, 0);
+}
 
 export const groupByTitle = data => {
   return data.reduce((grouped, d) => {

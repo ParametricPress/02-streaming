@@ -35,7 +35,7 @@ const height = {
 }
 
 const fill = '#7FE8BC';
-const formatEmissions = n => Math.round(n * 1000) / 10 + ' mg';
+const formatEmissions = n => Math.round(n * 1000) + ' mg';
 const emissionsBarPadding = 4;
 const emissionsTimelinePadding = 8;
 const tickHeight = 6;

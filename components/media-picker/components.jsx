@@ -93,14 +93,24 @@ export class Rect extends React.PureComponent {
   }
 }
 
+const isString = s => typeof s === 'string'
+
 const getTranslates = (left, top) => {
-  return `translateX(${left}px) translateY(${top}px)`;
+  const l = isString(left) ? left : left + 'px';
+  const t = isString(top) ? top : top + 'px';
+  return `translateX(${l}) translateY(${t})`;
 }
 
 const getScales = (initialWidth, initialHeight, width, height) => {
+  if (initialWidth === width && initialHeight === height) {
+    return 'scaleX(1) scaleY(1)';
+  }
   return `scaleX(${width / initialWidth}) scaleY(${height / initialHeight})`;
 }
 
 const roundPixel = p => {
+  if (isString(p)) {
+    return p;
+  } 
   return Math.round(p * 12) / 12;  //  factor of 1/3 = super retina, 1/2 = retina
 }

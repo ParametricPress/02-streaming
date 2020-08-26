@@ -67,8 +67,6 @@ export default class MediaTitle extends React.Component {
             .filter(p => p.time <= mouseTime)
             .reduce((c, p) => c + p.size, 0)
 
-        console.log(mouseCumulative);
-
         return (
           <div key={i} style={{
             width: '100%',

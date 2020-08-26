@@ -2,6 +2,7 @@ import * as React from 'react';
 import MediaType from './media-type';
 import { getMaxSize, groupByType, groupByTitle, addCumulativeSize, getMaxTime } from './util';
 import { scaleLinear } from '@vx/scale';
+import { Rect } from './components';
 
 /* Props:
 type: 'timeline' | 'bar',
@@ -20,6 +21,11 @@ data: [
 
 const mediaTypePadding = 20;
 const paddingRight = 48;
+
+const gridlines = {
+  bar: [0.05, 0.1, 0.15],
+  timeline: [20, 40, 60]
+};
 
 export default class MediaAll extends React.Component {
   static getXScaleVX = (width, maxTotal) => {
@@ -84,14 +90,15 @@ export default class MediaAll extends React.Component {
           width: width,
           paddingTop: 8,
           paddingBottom: 2,
-          border: '1px solid #F1F1F1'
+          border: '1px solid #F1F1F1',
+          position: 'relative'
         }}
 
         onMouseMove={e => {
           clearTimeout(this.animateTimeout);
           const mouse = {x: e.clientX - e.target.getBoundingClientRect().x};
           const animate = false;
-
+ 
           this.setState({mouse, animate});
           this.animateTimeout = setTimeout(() => this.setState({animate: true}), 1000)
         }}
@@ -102,6 +109,9 @@ export default class MediaAll extends React.Component {
           this.animateTimeout = setTimeout(() => this.setState({animate: true}), 1000);
         }}
       >
+        {
+          gridlines[type].map((d, i)=> <Grid key={i} left={xScaleVX[type](d)}/>)
+        }
         {
           this.groupData.map((d, i) => {
             const mediaType = (
@@ -120,4 +130,20 @@ export default class MediaAll extends React.Component {
       </div>
     )
   }
+}
+
+const Grid = props => {
+  return (
+    <div style={{
+      position: 'absolute',
+      zIndex: -1,
+      width: 1,
+      left: 0,
+      top: 0,
+      bottom: 0,
+      backgroundColor: '#F1F1F1',
+      transform: `translateX(${props.left}px)`,
+      transition: 'transform 700ms ease-in-out'
+    }}></div>
+  );
 }

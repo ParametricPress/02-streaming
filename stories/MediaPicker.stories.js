@@ -19,13 +19,11 @@ const data = require('../data/dist/data.json');
 data.forEach(d => addCumulativeSize(d.packets));
 
 const width = 300;
-const height = 1000;
 
 const StoryContainer = (props) => {
   return (
     <div style={{
       width,
-      height,
     }}>
       {props.children}
     </div>

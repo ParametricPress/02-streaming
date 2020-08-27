@@ -62,10 +62,6 @@ export default class MediaTitle extends React.Component {
 
       strips = qualities.map((q, i) => {
         const packets = data.packets[q];
-        const mouseCumulative =
-          packets
-            .filter(p => p.time <= mouseTime)
-            .reduce((c, p) => c + p.size, 0)
 
         return (
           <div key={i} style={{

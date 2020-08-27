@@ -2,7 +2,7 @@ import * as React from 'react';
 import MediaType from './media-type';
 import { getMaxSize, groupByType, groupByTitle, addCumulativeSize, getMaxTime } from './util';
 import { scaleLinear } from '@vx/scale';
-import { Rect } from './components';
+import { Rect, Text } from './components';
 
 /* Props:
 type: 'timeline' | 'bar',
@@ -127,9 +127,34 @@ export default class MediaAll extends React.Component {
             return mediaType;
           })
         }
+        {
+          gridlines[type].map((d, i) => {
+            const val = type === 'bar' ? d * 1000 + ' mg' : d + ' s';
+            return <Label key={i} value={val} left={xScaleVX[type](d)}/>
+          })
+        }
       </div>
     )
   }
+}
+
+const Label = props => {
+  return (
+    <Text
+      top={4}
+      left={props.left - 30}
+      style={{
+        width:  60,
+        fontSize: 10,
+        fontFamily: 'Helvetica',
+        textAlign: 'center',
+        color: '#AAAAAA',
+        transition: 'transform 700ms ease-in-out',
+        pointerEvents: 'none',
+      }}>
+      {props.value}
+    </Text>
+  )
 }
 
 const Grid = props => {

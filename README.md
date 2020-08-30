@@ -50,3 +50,10 @@ To make changes to standard components, copy the source from `node_modules` to t
 For example if you wanted to customize the `[Caption /]` component you could run `cp node_modules/parametric-components/src/issue-02/caption.js components/`.
 
 Similarly, to modify a built-in Idyll component you can run e.g. `cp node_modules/idyll-components/src/button.js components/`.
+
+
+## Video Links
+
+* Movie trailer (Dr. Strange): https://www.youtube.com/watch?v=zTgdtmkMT2g
+* Animation (3blue1brown video): https://www.youtube.com/watch?v=HEfHFsfGXjs
+* Slideshow (Nature pictures): https://www.youtube.com/watch?v=rUHfGxxQnSU&t=87s

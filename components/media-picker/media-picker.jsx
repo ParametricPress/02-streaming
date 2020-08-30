@@ -3,8 +3,66 @@ import ReactDOM from 'react-dom';
 import MediaAll from './media-all';
 
 const previewHeight = 135;
-const previewWidth = 240;
 const previewPadding = 8;
+
+const titleToPreview= {
+  'Amazon': {
+    type: 'video',
+    url: 'amazon.mp4',
+  },
+  'Facebook': {
+    type: 'video',
+    url: 'facebook.mp4',
+  },
+  'Google': {
+    type: 'video',
+    url: 'google.mp4'
+  },
+  'New York Times': {
+    type: 'video',
+    url: 'nytimes.mp4'
+  },
+  'Parametric Press': {
+    type: 'video',
+    url: null
+  },
+  '3Blue1Brown': {
+    type: 'video',
+    url: '3blue1brown.mp4',
+  },
+  'Dr Strange Trailer': {
+    type: 'video',
+    url: 'drstrange.mp4',
+  },
+  'Slideshow': {
+    type: 'video',
+    url: 'slideshow.mp4',
+  },
+  'Digging into American Dirt (podcast)': {
+    type: 'image',
+    url: 'podcast.png'
+  },
+  'Righteous (song)': {
+    type: 'image',
+    url: 'song.png'
+  }
+}
+
+const previewStyle = (previewWidth, translateY) => {
+  return {
+    position: 'absolute',
+    zIndex: 2,
+    left: 0,
+    right: 0,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    maxWidth: previewWidth,
+    transform: `${translateY} translateZ(0)`,
+    lineHeight: 0,
+    boxShadow: '0px 0px 12px 0px rgba(0,0,0,0.75)',
+    backgroundColor: '#000'
+  }
+}
 
 export default class MediaPicker extends React.Component {
   constructor(props) {
@@ -41,34 +99,49 @@ export default class MediaPicker extends React.Component {
     const selectedHeight = this.state.selectedHeight;
     const selectedTitle = this.state.selectedTitle;
 
-    const translateX = `translateX(${width / 2 - previewWidth / 2}px)`;
+    let previewDiv;
+    if (selectedTitle) {
+      const preview = titleToPreview[selectedTitle];
+      const pType = preview.type;
 
-    const offset = selectedHeight + previewPadding;
-    let y = selectedY;
+      const previewWidth = this.width - previewPadding * 2;
+      const previewHeight = previewWidth * (pType === 'video' ? 0.6 : 1);
+  
+      // const translateX = `translateX(${width / 2 - previewWidth / 2}px)`;
+  
+      const offset = selectedHeight + previewPadding;
+      let y = selectedY;
+  
+      if (y + offset + previewHeight >= this.height) {
+        y -= previewHeight + previewPadding;
+      } else {
+        y += offset;
+      }
+  
+      const translateY = `translateY(${y}px)`;
 
-    if (y + offset + previewHeight >= this.height) {
-      y -= previewHeight + previewPadding;
-    } else {
-      y += offset;
+      if (pType === 'video') {
+        previewDiv = (
+          <video autoPlay
+            style={previewStyle(previewWidth, translateY)}
+          >
+            <source src={`./static/images/${titleToPreview[selectedTitle].url}`} type="video/mp4"/>
+          </video>
+        );
+      } else {
+        previewDiv = (
+          <img style={previewStyle(previewWidth, translateY)}
+          src={`./static/images/${titleToPreview[selectedTitle].url}`}/>
+        );
+      }
     }
-
-    const translateY = `translateY(${y}px)`;
 
     return (
       <div style={{
-        width: width
+        width: width,
+        position: 'relative',
       }}>
-        {this.state.selectedY ?
-          <div style={{
-            position: 'absolute',
-            zIndex: 101,
-            transform: `${translateX} ${translateY} translateZ(0)`,
-            width: previewWidth,
-            height: previewHeight,
-            backgroundColor: 'red'
-          }}></div>
-          : null
-        }
+        {previewDiv}
         <MediaAll type={type} data={data} width={width}
           selectY={this.selectY}
           hasSelected={this.state.selectedY !== null}

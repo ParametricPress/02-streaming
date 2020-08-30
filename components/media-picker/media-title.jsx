@@ -68,6 +68,9 @@ export default class MediaTitle extends React.PureComponent {
       const qualities = Object.keys(data.packets);
 
       strips = qualities.map((q, i) => {
+        if (q === '720') {  // remove 720 for now
+          return null;
+        }
         const packets = data.packets[q];
 
         return (

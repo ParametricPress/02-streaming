@@ -83,6 +83,7 @@ export default class MediaTitle extends React.PureComponent {
               animate={animate}
               widthScale={widthScale}
               selectY={this.props.selectY}
+              quality={q}
             />
           </div>
         );

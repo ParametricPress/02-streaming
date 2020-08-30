@@ -53,6 +53,7 @@ export default class MediaStrip extends React.PureComponent {
     const data = this.props.data;
     const mouseX = this.props.mouseX;
     const animate = this.props.animate;
+    const quality = this.props.quality;
 
     const timeline = type === 'timeline';
 
@@ -141,6 +142,19 @@ export default class MediaStrip extends React.PureComponent {
             zIndex: 100
           }}
         />
+        {
+          quality && type === 'bar' && xScale.bar(cumulative) > 40 ?
+            <Text
+              top={4}
+              left={4}
+              style={{
+                fontSize: 10,
+                fontFamily: 'Helvetica',
+                color: '#fff',
+                pointerEvents: 'none',
+              }}>{quality}p</Text>
+          : null
+        }
       </div>
     );
   }

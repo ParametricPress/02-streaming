@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Container, Rect, Text } from './components';
+import { secondaryMarkColor, markColor, accentColor } from './constants';
 
 /** Props:
 type: 'timeline' | 'bar',
@@ -34,14 +35,11 @@ const height = {
   bar: 22
 }
 
-const fill = '#7FE8BC';
 const formatEmissions = n => Math.round(n * 1000) + ' mg';
 const emissionsBarPadding = 4;
 const emissionsTimelinePadding = 8;
 const tickHeight = 6;
 const tickWidth = 2;
-
-const pink = '#FF6CC4';
 
 export default class MediaStrip extends React.PureComponent {
   static height = height.bar;
@@ -100,7 +98,7 @@ export default class MediaStrip extends React.PureComponent {
           style={{
             fontSize: 10,
             fontFamily: 'Helvetica',
-            color: mouseX ? pink : '#AAAAAA',
+            color: mouseX ? secondaryMarkColor : '#AAAAAA',
             transition: 'transform 700ms ease-in-out',
             pointerEvents: 'none',
           }}>
@@ -120,7 +118,7 @@ export default class MediaStrip extends React.PureComponent {
                 top={y}
                 width={widthScale[rectType](rTimeline ? d.time : d.size) + widthOffset[rectType]}
                 height={height[rectType]}
-                fill={!timeline ? fill : rTimeline ? fill : pink}
+                fill={!timeline ? markColor : rTimeline ? markColor : secondaryMarkColor}
                 style={{
                   opacity: opacity[rectType],
                   transition: animate ? 'transform 700ms ease-in-out' : '',
@@ -135,7 +133,7 @@ export default class MediaStrip extends React.PureComponent {
           left={mouseX ? Math.min(mouseX, xScale.timeline.range()[1]) : 0}
           width={tickWidth}
           height={tickHeight}
-          fill={pink}
+          fill={accentColor}
           style={{
             pointerEvents: 'none',
             opacity: mouseX ? 1 : 0,

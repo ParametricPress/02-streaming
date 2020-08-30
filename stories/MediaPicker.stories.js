@@ -5,6 +5,7 @@ import { getTotalSize, addCumulativeSize, getMaxSize, groupByTitle, groupByType 
 import MediaTitle from '../components/media-picker/media-title';
 import MediaType from '../components/media-picker/media-type';
 import MediaAll from '../components/media-picker/media-all';
+import MediaPicker from '../components/media-picker/media-picker';
 
 export default {
   title: 'Media Picker',
@@ -99,6 +100,20 @@ export const all = () => {
   return (
     <StoryContainer>
       <MediaAll
+        type={type}
+        data={data}
+        width={width}
+      />
+    </StoryContainer>
+  )
+}
+
+export const mediaPicker = () => {
+  const type = typeKnob();
+
+  return (
+    <StoryContainer>
+      <MediaPicker
         type={type}
         data={data}
         width={width}

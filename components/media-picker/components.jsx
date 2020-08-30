@@ -39,6 +39,7 @@ export class Text extends React.PureComponent {
         style={{
           ...style,
           position: 'absolute',
+          userSelect: 'none',
           transform: translate
         }}
       >

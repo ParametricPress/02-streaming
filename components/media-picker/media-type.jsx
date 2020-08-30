@@ -27,13 +27,15 @@ const titleCase = s => {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
-export default class MediaType extends React.Component {
+export default class MediaType extends React.PureComponent {
   render() {
     const type = this.props.type;
     const data = this.props.data;
-    const mouse = this.props.mouse;
+    const mouseX = this.props.mouseX;
     const animate = this.props.animate;
     const xScaleVX = this.props.xScaleVX;
+    const hasSelected = this.props.hasSelected;
+    const selectedTitle = this.props.selectedTitle;
 
     return (
       <div style={{
@@ -45,7 +47,8 @@ export default class MediaType extends React.Component {
             fontWeight: 600,
             fontFamily: 'Helvetica',
             paddingLeft: mediaTitlePadding.left,
-            paddingBottom: mediaTitlePadding.bottom
+            paddingBottom: mediaTitlePadding.bottom,
+            opacity: hasSelected ? 0.2 : 1
           }}
         >
           {titleCase(data.mediaType)}
@@ -57,7 +60,15 @@ export default class MediaType extends React.Component {
                 width: '100%',
                 paddingBottom: mediaTitlePadding.bottom
               }}>
-                <MediaTitle type={type} data={d} xScaleVX={xScaleVX} mouse={mouse} animate={animate}/>
+                <MediaTitle
+                  type={type}
+                  data={d}
+                  xScaleVX={xScaleVX}
+                  mouseX={mouseX}
+                  animate={animate}
+                  selectY={this.props.selectY}
+                  hasSelected={hasSelected}
+                  selectedTitle={selectedTitle}/>
               </div>
             );
             return mediaTitle

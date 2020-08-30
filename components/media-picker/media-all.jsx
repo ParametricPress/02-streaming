@@ -27,7 +27,7 @@ const gridlines = {
   timeline: [20, 40, 60]
 };
 
-export default class MediaAll extends React.Component {
+export default class MediaAll extends React.PureComponent {
   static getXScaleVX = (width, maxTotal) => {
     return {
       timeline: scaleLinear({
@@ -55,20 +55,28 @@ export default class MediaAll extends React.Component {
 
     this.animateTimeout = -1;
     this.state = {
-      mouse: null,
+      mouseX: null,
+      mouseMax: null,
       animate: true
     };
+
+    this.handleMouseMove = this.handleMouseMove.bind(this);
+    this.clearMouse = this.clearMouse.bind(this);
   }
 
   render() {
+    console.log('media-all rerender');
     const type = this.props.type;
     const width = this.props.width;
-    const mouse = this.state.mouse;
+    const hasSelected = this.props.hasSelected;
+    const selectedTitle = this.props.selectedTitle;
+
+    const mouseX = this.state.mouseX;
 
     let xScaleVX;
 
-    if (type === 'timeline' && mouse) {
-      const mouseTime = this.xScales.timeline.invert(mouse.x);
+    if (type === 'timeline' && mouseX) {
+      const mouseTime = this.xScales.timeline.invert(mouseX);
       const mouseMax = getMaxSize(this.data, d => d.time <= mouseTime);
       const maxTime = getMaxTime(this.data, mouseTime);
 
@@ -94,20 +102,16 @@ export default class MediaAll extends React.Component {
           position: 'relative'
         }}
 
+        onMouseDown={this.handleMouseMove}
+
         onMouseMove={e => {
-          clearTimeout(this.animateTimeout);
-          const mouse = {x: e.clientX - e.target.getBoundingClientRect().x};
-          const animate = false;
- 
-          this.setState({mouse, animate});
-          this.animateTimeout = setTimeout(() => this.setState({animate: true}), 1000)
+          if (this.state.mouseX !== null) {
+            this.handleMouseMove(e);
+          }
         }}
 
-        onMouseOut={e => {
-          clearTimeout(this.animateTimeout);
-          this.setState({mouse: null, animate: false});
-          this.animateTimeout = setTimeout(() => this.setState({animate: true}), 1000);
-        }}
+        onMouseLeave={this.clearMouse}
+        onMouseUp={this.clearMouse}
       >
         {
           gridlines[type].map((d, i)=> <Grid key={i} left={xScaleVX[type](d)}/>)
@@ -120,7 +124,9 @@ export default class MediaAll extends React.Component {
                 marginBottom: i === this.groupData.length - 1 ? 0 : mediaTypePadding
               }}>
                 <MediaType type={type} data={d} xScaleVX={xScaleVX} animate={this.state.animate}
-                  mouse={type === 'timeline' ? this.state.mouse : null}/>
+                  mouseX={type === 'timeline' ? this.state.mouseX : null}
+                  selectY={this.props.selectY} hasSelected={hasSelected}
+                  selectedTitle={selectedTitle}/>
               </div>
             );
 
@@ -135,6 +141,24 @@ export default class MediaAll extends React.Component {
         }
       </div>
     )
+  }
+
+  handleMouseMove(e) {
+    clearTimeout(this.animateTimeout);
+    if (this.props.type === 'timeline') {
+      const mouseX = e.clientX - e.target.getBoundingClientRect().x;
+      const animate = false;
+
+      this.setState({mouseX, animate});
+      this.animateTimeout = setTimeout(() => this.setState({animate: true}), 1000)
+    }
+  }
+
+  clearMouse() {
+    console.log('clearMouse');
+    clearTimeout(this.animateTimeout);
+    this.setState({mouseX: null, animate: false});
+    this.animateTimeout = setTimeout(() => this.setState({animate: true}), 1000);
   }
 }
 

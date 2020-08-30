@@ -43,7 +43,7 @@ const tickWidth = 2;
 
 const pink = '#FF6CC4';
 
-export default class MediaStrip extends React.Component {
+export default class MediaStrip extends React.PureComponent {
   static height = height.bar;
 
   render() {
@@ -51,22 +51,24 @@ export default class MediaStrip extends React.Component {
     const xScale = this.props.xScale;
     const widthScale = this.props.widthScale;
     const data = this.props.data;
-    const mouse = this.props.mouse;
+    const mouseX = this.props.mouseX;
     const animate = this.props.animate;
 
     const timeline = type === 'timeline';
 
-    const mouseTime = mouse ? xScale.timeline.invert(mouse.x) : xScale.timeline.domain()[1];
+    const mouseTime = mouseX ? xScale.timeline.invert(mouseX) : xScale.timeline.domain()[1];
     const cumulative =
       data
         .filter(p => p.time <= mouseTime)
         .reduce((c, p) => c + p.size, 0)
 
     return (
-      <div style={{
-        height: MediaStrip.height,
-        width: '100%'
-      }}>
+      <div
+        style={{
+          height: MediaStrip.height,
+          width: '100%'
+        }}
+      >
         <Rect
           left={timeline ? xScale.timeline.range()[1] : 0}
           top={MediaStrip.height / 2 - tickHeight / 2}
@@ -97,7 +99,7 @@ export default class MediaStrip extends React.Component {
           style={{
             fontSize: 10,
             fontFamily: 'Helvetica',
-            color: mouse ? pink : '#AAAAAA',
+            color: mouseX ? pink : '#AAAAAA',
             transition: 'transform 700ms ease-in-out',
             pointerEvents: 'none',
           }}>
@@ -106,8 +108,8 @@ export default class MediaStrip extends React.Component {
         {
           data.map((d, i) => {
             const rectType = !timeline ? 'bar' :
-              !mouse ? 'timeline' :
-                d.time < xScale.timeline.invert(mouse.x) ? 'bar' : 'timeline';
+              !mouseX ? 'timeline' :
+                d.time < xScale.timeline.invert(mouseX) ? 'bar' : 'timeline';
             const rTimeline = rectType === 'timeline';
             const y = rectType === 'timeline' ? MediaStrip.height / 2 - height[type] / 2 : 0;
             return (
@@ -129,13 +131,13 @@ export default class MediaStrip extends React.Component {
         }
         <Rect
           top={MediaStrip.height / 2 - tickHeight / 2}
-          left={mouse ? Math.min(mouse.x, xScale.timeline.range()[1]) : 0}
+          left={mouseX ? Math.min(mouseX, xScale.timeline.range()[1]) : 0}
           width={tickWidth}
           height={tickHeight}
           fill={pink}
           style={{
             pointerEvents: 'none',
-            opacity: mouse ? 1 : 0,
+            opacity: mouseX ? 1 : 0,
             zIndex: 100
           }}
         />

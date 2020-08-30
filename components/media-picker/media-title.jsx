@@ -1,4 +1,5 @@
 import * as React from 'react';
+import ReactDOM from 'react-dom';
 import { Group } from '@vx/group';
 import { scaleBand } from '@vx/scale';
 import MediaStrip from './media-strip';
@@ -21,16 +22,22 @@ const titlePadding = {
   left: 2
 };
 const stripPadding = 2;
-const tickHeight = 6;
-const tickWidth = 2;
 
-export default class MediaTitle extends React.Component {
+export default class MediaTitle extends React.PureComponent {
+  componentDidMount() {
+    const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
+    this.height = rect.height;
+    this.y = rect.y;
+  }
+
   render() {
     const type = this.props.type;
     const data = this.props.data;
     const xScaleVX = this.props.xScaleVX;
-    const mouse = this.props.mouse;
+    const mouseX = this.props.mouseX;
     const animate = this.props.animate;
+    const hasSelected = this.props.hasSelected;
+    const selectedTitle = this.props.selectedTitle;
 
     const widthScale = {
       timeline: _ => 8,
@@ -39,7 +46,6 @@ export default class MediaTitle extends React.Component {
 
     let strips;
 
-    const mouseTime = mouse ? xScaleVX.timeline.invert(mouse.x) : -1;
     if (data.packets.length) {
       strips = (
         // <Container top={titleHeight + titlePadding.b}>
@@ -51,9 +57,10 @@ export default class MediaTitle extends React.Component {
             type={type}
             data={data.packets}
             xScale={xScaleVX}
-            mouse={mouse}
+            mouseX={mouseX}
             animate={animate}
-            widthScale={widthScale}/> 
+            widthScale={widthScale}
+            selectY={this.props.selectY}/> 
         </div>
       );
     } else {
@@ -72,9 +79,10 @@ export default class MediaTitle extends React.Component {
               type={type}
               data={packets}
               xScale={xScaleVX}
-              mouse={mouse}
+              mouseX={mouseX}
               animate={animate}
               widthScale={widthScale}
+              selectY={this.props.selectY}
             />
           </div>
         );
@@ -83,14 +91,25 @@ export default class MediaTitle extends React.Component {
 
     return (
       <div style={{
-        width: '100%'
-      }}>
+        width: '100%',
+        opacity: hasSelected ? selectedTitle === data.title ? 1 : 0.2 : 1
+      }}
+        onMouseDown={_ => {
+          if (type === 'bar') {
+            this.props.selectY(this.y, this.height, data.title);
+          }
+        }}
+
+        onMouseUp={_ => this.props.selectY(null, null, null)}
+        onMouseLeave={_ => this.props.selectY(null, null, null)}
+      >
         <div
           style={{
             paddingLeft: titlePadding.left,
             fontSize: titleFontSize,
             height: titleHeight,
-            fontFamily: 'Helvetica'
+            fontFamily: 'Helvetica',
+            userSelect: 'none'
           }}
         >{data.title}</div>
         {strips}

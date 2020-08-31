@@ -74,10 +74,10 @@ export default class MediaPicker extends React.Component {
       selectedTitle: null,
     };
 
-    this.selectY = this.selectY.bind(this);
+    this.selectTitle = this.selectTitle.bind(this);
   }
 
-  selectY(y, h, t) {
+  selectTitle(y, h, t) {
     this.setState({
       selectedY: y,
       selectedHeight: h,
@@ -143,7 +143,7 @@ export default class MediaPicker extends React.Component {
       }}>
         {previewDiv}
         <MediaAll type={type} data={data} width={width}
-          selectY={this.selectY}
+          selectTitle={this.selectTitle}
           hasSelected={this.state.selectedY !== null}
           selectedTitle={selectedTitle}
         />

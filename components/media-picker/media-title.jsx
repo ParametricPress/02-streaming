@@ -59,8 +59,7 @@ export default class MediaTitle extends React.PureComponent {
             xScale={xScaleVX}
             mouseX={mouseX}
             animate={animate}
-            widthScale={widthScale}
-            selectY={this.props.selectY}/> 
+            widthScale={widthScale}/>
         </div>
       );
     } else {
@@ -85,7 +84,6 @@ export default class MediaTitle extends React.PureComponent {
               mouseX={mouseX}
               animate={animate}
               widthScale={widthScale}
-              selectY={this.props.selectY}
               quality={q}
             />
           </div>
@@ -100,12 +98,12 @@ export default class MediaTitle extends React.PureComponent {
       }}
         onMouseDown={_ => {
           if (type === 'bar') {
-            this.props.selectY(this.y, this.height, data.title);
+            this.props.selectTitle(this.y, this.height, data.title);
           }
         }}
 
-        onMouseUp={_ => this.props.selectY(null, null, null)}
-        onMouseLeave={_ => this.props.selectY(null, null, null)}
+        onMouseUp={_ => this.props.selectTitle(null, null, null)}
+        onMouseLeave={_ => this.props.selectTitle(null, null, null)}
       >
         <div
           style={{

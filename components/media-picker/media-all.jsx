@@ -99,7 +99,7 @@ export default class MediaAll extends React.PureComponent {
           paddingTop: 8,
           paddingBottom: 2,
           border: '1px solid #F1F1F1',
-          position: 'relative'
+          position: 'relative',
         }}
 
         onMouseDown={this.handleMouseMove}

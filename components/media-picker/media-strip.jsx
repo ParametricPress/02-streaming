@@ -65,7 +65,8 @@ export default class MediaStrip extends React.PureComponent {
       <div
         style={{
           height: MediaStrip.height,
-          width: '100%'
+          width: '100%',
+          userSelect: 'none'
         }}
       >
         <Rect

@@ -111,7 +111,7 @@ export default class MediaTitle extends React.PureComponent {
             fontSize: titleFontSize,
             height: titleHeight,
             fontFamily: 'Helvetica',
-            userSelect: 'none'
+            userSelect: 'none',
           }}
         >{data.title}</div>
         {strips}

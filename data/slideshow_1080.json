@@ -7,118 +7,147 @@
   "data": [
     {
       "time": 0.0,
+      "sizeInBytes": 654987,
       "size": 0.002778454854
     },
     {
       "time": 0.188,
+      "sizeInBytes": 65536,
       "size": 0.000278003712
     },
     {
       "time": 0.306,
+      "sizeInBytes": 42737,
       "size": 0.000181290354
     },
     {
       "time": 0.383,
+      "sizeInBytes": 1320282,
       "size": 0.005600636244
     },
     {
       "time": 5.933,
+      "sizeInBytes": 65536,
       "size": 0.000278003712
     },
     {
       "time": 5.958,
+      "sizeInBytes": 104906,
       "size": 0.00044501125199999995
     },
     {
       "time": 6.031,
+      "sizeInBytes": 1747053,
       "size": 0.0074109988259999995
     },
     {
       "time": 6.807,
+      "sizeInBytes": 176175,
       "size": 0.00074733435
     },
     {
       "time": 6.992,
+      "sizeInBytes": 2053224,
       "size": 0.008709776208000002
     },
     {
       "time": 7.333,
+      "sizeInBytes": 344721,
       "size": 0.001462306482
     },
     {
       "time": 8.653,
+      "sizeInBytes": 2072227,
       "size": 0.008790386934
     },
     {
       "time": 10.388,
+      "sizeInBytes": 28,
       "size": 1.1877599999999999e-07
     },
     {
       "time": 13.467,
+      "sizeInBytes": 1350119,
       "size": 0.005727204797999999
     },
     {
       "time": 15.892,
+      "sizeInBytes": 501958,
       "size": 0.0021293058360000003
     },
     {
       "time": 15.977,
+      "sizeInBytes": 2097152,
       "size": 0.008896118784
     },
     {
       "time": 20.469,
+      "sizeInBytes": 1426652,
       "size": 0.006051857783999999
     },
     {
       "time": 23.968,
+      "sizeInBytes": 1525690,
       "size": 0.0064719769799999995
     },
     {
       "time": 25.894,
+      "sizeInBytes": 1373169,
       "size": 0.005824982898
     },
     {
       "time": 28.719,
+      "sizeInBytes": 2097152,
       "size": 0.008896118784
     },
     {
       "time": 30.968,
+      "sizeInBytes": 498552,
       "size": 0.0021148575839999998
     },
     {
       "time": 33.218,
+      "sizeInBytes": 1618072,
       "size": 0.006863861423999999
     },
     {
       "time": 36.021,
+      "sizeInBytes": 28,
       "size": 1.1877599999999999e-07
     },
     {
       "time": 36.722,
+      "sizeInBytes": 2097152,
       "size": 0.008896118784
     },
     {
       "time": 41.72,
+      "sizeInBytes": 1621035,
       "size": 0.00687643047
     },
     {
       "time": 43.968,
+      "sizeInBytes": 1676767,
       "size": 0.007112845614
     },
     {
       "time": 45.218,
+      "sizeInBytes": 506305,
       "size": 0.0021477458099999997
     },
     {
       "time": 47.471,
+      "sizeInBytes": 1890175,
       "size": 0.00801812235
     },
     {
       "time": 51.978,
+      "sizeInBytes": 2097152,
       "size": 0.008896118784
     },
     {
       "time": 57.746,
+      "sizeInBytes": 2097152,
       "size": 0.008896118784
     }
   ]

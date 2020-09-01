@@ -6,98 +6,122 @@
   "data": [
     {
       "time": 0.0,
+      "sizeInBytes": 432334,
       "size": 0.0018339608279999997
     },
     {
       "time": 0.278,
+      "sizeInBytes": 3831,
       "size": 1.6251102e-05
     },
     {
       "time": 0.294,
+      "sizeInBytes": 574,
       "size": 2.434908e-06
     },
     {
       "time": 0.578,
+      "sizeInBytes": 4465,
       "size": 1.8940529999999998e-05
     },
     {
       "time": 0.614,
+      "sizeInBytes": 9618,
       "size": 4.0799556e-05
     },
     {
       "time": 0.812,
+      "sizeInBytes": 617237,
       "size": 0.0026183193539999995
     },
     {
       "time": 0.816,
+      "sizeInBytes": 21418,
       "size": 9.0855156e-05
     },
     {
       "time": 0.975,
+      "sizeInBytes": 103157,
       "size": 0.00043759199399999996
     },
     {
       "time": 1.105,
+      "sizeInBytes": 368228,
       "size": 0.0015620231759999998
     },
     {
       "time": 1.111,
+      "sizeInBytes": 219,
       "size": 9.289980000000001e-07
     },
     {
       "time": 1.214,
+      "sizeInBytes": 1729,
       "size": 7.334418e-06
     },
     {
       "time": 1.22,
+      "sizeInBytes": 4718,
       "size": 2.0013756e-05
     },
     {
       "time": 1.279,
+      "sizeInBytes": 2014,
       "size": 8.543387999999999e-06
     },
     {
       "time": 1.307,
+      "sizeInBytes": 68819,
       "size": 0.000291930198
     },
     {
       "time": 1.359,
+      "sizeInBytes": 5430,
       "size": 2.3034059999999997e-05
     },
     {
       "time": 5.008,
+      "sizeInBytes": 59926,
       "size": 0.000254206092
     },
     {
       "time": 5.173,
+      "sizeInBytes": 150572,
       "size": 0.0006387264239999999
     },
     {
       "time": 5.195,
+      "sizeInBytes": 18397,
       "size": 7.8040074e-05
     },
     {
       "time": 5.196,
+      "sizeInBytes": 141093,
       "size": 0.000598516506
     },
     {
       "time": 5.197,
+      "sizeInBytes": 4124,
       "size": 1.7494008e-05
     },
     {
       "time": 5.263,
+      "sizeInBytes": 35480,
       "size": 0.00015050616
     },
     {
       "time": 5.28,
+      "sizeInBytes": 227305,
       "size": 0.0009642278099999998
     },
     {
       "time": 5.418,
+      "sizeInBytes": 5749,
       "size": 2.4387258e-05
     },
     {
       "time": 5.436,
+      "sizeInBytes": 131,
       "size": 5.55702e-07
     }
   ]

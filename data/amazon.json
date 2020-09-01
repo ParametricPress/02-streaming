@@ -6,942 +6,1177 @@
   "data": [
     {
       "time": 0.0,
+      "sizeInBytes": 982346,
       "size": 0.004167111732
     },
     {
       "time": 0.281,
+      "sizeInBytes": 92896,
       "size": 0.000394064832
     },
     {
       "time": 0.282,
+      "sizeInBytes": 36401,
       "size": 0.000154413042
     },
     {
       "time": 0.283,
+      "sizeInBytes": 259286,
       "size": 0.001099891212
     },
     {
       "time": 0.451,
+      "sizeInBytes": 177547,
       "size": 0.000753154374
     },
     {
       "time": 0.452,
+      "sizeInBytes": 531,
       "size": 2.252502e-06
     },
     {
       "time": 0.455,
+      "sizeInBytes": 9046,
       "size": 3.8373131999999994e-05
     },
     {
       "time": 0.456,
+      "sizeInBytes": 6155,
       "size": 2.610951e-05
     },
     {
       "time": 0.542,
+      "sizeInBytes": 11179,
       "size": 4.7421317999999995e-05
     },
     {
       "time": 0.63,
+      "sizeInBytes": 2461,
       "size": 1.0439561999999998e-05
     },
     {
       "time": 0.631,
+      "sizeInBytes": 7279,
       "size": 3.0877518e-05
     },
     {
       "time": 0.647,
+      "sizeInBytes": 32966,
       "size": 0.00013984177199999998
     },
     {
       "time": 0.651,
+      "sizeInBytes": 16616,
       "size": 7.048507200000001e-05
     },
     {
       "time": 1.585,
+      "sizeInBytes": 247,
       "size": 1.0477739999999999e-06
     },
     {
       "time": 1.594,
+      "sizeInBytes": 46695,
       "size": 0.00019808019
     },
     {
       "time": 1.595,
+      "sizeInBytes": 35458,
       "size": 0.000150412836
     },
     {
       "time": 1.6,
+      "sizeInBytes": 654,
       "size": 2.774268e-06
     },
     {
       "time": 1.638,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 1.664,
+      "sizeInBytes": 913,
       "size": 3.872946e-06
     },
     {
       "time": 1.665,
+      "sizeInBytes": 1259,
       "size": 5.340677999999999e-06
     },
     {
       "time": 1.666,
+      "sizeInBytes": 7968,
       "size": 3.3800256e-05
     },
     {
       "time": 1.678,
+      "sizeInBytes": 33475,
       "size": 0.00014200094999999998
     },
     {
       "time": 1.703,
+      "sizeInBytes": 17336,
       "size": 7.3539312e-05
     },
     {
       "time": 1.746,
+      "sizeInBytes": 21686,
       "size": 9.199201199999999e-05
     },
     {
       "time": 1.747,
+      "sizeInBytes": 24727,
       "size": 0.00010489193399999998
     },
     {
       "time": 1.748,
+      "sizeInBytes": 654388,
       "size": 0.0027759138959999995
     },
     {
       "time": 1.749,
+      "sizeInBytes": 6412,
       "size": 2.7199704e-05
     },
     {
       "time": 1.75,
+      "sizeInBytes": 5549,
       "size": 2.3538857999999998e-05
     },
     {
       "time": 1.751,
+      "sizeInBytes": 67328,
       "size": 0.000285605376
     },
     {
       "time": 1.752,
+      "sizeInBytes": 52040,
       "size": 0.00022075368
     },
     {
       "time": 1.782,
+      "sizeInBytes": 15331,
       "size": 6.5034102e-05
     },
     {
       "time": 1.783,
+      "sizeInBytes": 17448,
       "size": 7.4014416e-05
     },
     {
       "time": 1.881,
+      "sizeInBytes": 68,
       "size": 2.8845599999999997e-07
     },
     {
       "time": 1.887,
+      "sizeInBytes": 41065,
       "size": 0.00017419773
     },
     {
       "time": 1.921,
+      "sizeInBytes": 13383,
       "size": 5.6770686000000004e-05
     },
     {
       "time": 1.924,
+      "sizeInBytes": 14695,
       "size": 6.233619e-05
     },
     {
       "time": 1.97,
+      "sizeInBytes": 4973,
       "size": 2.1095466e-05
     },
     {
       "time": 2.057,
+      "sizeInBytes": 159,
       "size": 6.744779999999999e-07
     },
     {
       "time": 2.077,
+      "sizeInBytes": 2807,
       "size": 1.1907293999999999e-05
     },
     {
       "time": 2.078,
+      "sizeInBytes": 249178,
       "size": 0.001057013076
     },
     {
       "time": 2.137,
+      "sizeInBytes": 209382,
       "size": 0.000888198444
     },
     {
       "time": 2.16,
+      "sizeInBytes": 1785,
       "size": 7.571970000000001e-06
     },
     {
       "time": 2.198,
+      "sizeInBytes": 5865,
       "size": 2.4879329999999996e-05
     },
     {
       "time": 2.233,
+      "sizeInBytes": 68,
       "size": 2.8845599999999997e-07
     },
     {
       "time": 2.234,
+      "sizeInBytes": 1610,
       "size": 6.8296199999999995e-06
     },
     {
       "time": 2.235,
+      "sizeInBytes": 4418,
       "size": 1.8741155999999996e-05
     },
     {
       "time": 2.304,
+      "sizeInBytes": 5056,
       "size": 2.1447552e-05
     },
     {
       "time": 2.305,
+      "sizeInBytes": 5300,
       "size": 2.2482599999999997e-05
     },
     {
       "time": 2.306,
+      "sizeInBytes": 13019,
       "size": 5.5226598e-05
     },
     {
       "time": 2.307,
+      "sizeInBytes": 9770,
       "size": 4.1444339999999995e-05
     },
     {
       "time": 2.311,
+      "sizeInBytes": 37320,
       "size": 0.00015831143999999999
     },
     {
       "time": 2.312,
+      "sizeInBytes": 17982,
       "size": 7.627964400000001e-05
     },
     {
       "time": 2.313,
+      "sizeInBytes": 39287,
       "size": 0.00016665545399999998
     },
     {
       "time": 2.315,
+      "sizeInBytes": 33770,
       "size": 0.00014325234
     },
     {
       "time": 2.316,
+      "sizeInBytes": 3091,
       "size": 1.3112022000000001e-05
     },
     {
       "time": 2.323,
+      "sizeInBytes": 7566,
       "size": 3.2094971999999993e-05
     },
     {
       "time": 2.336,
+      "sizeInBytes": 8351,
       "size": 3.5424941999999995e-05
     },
     {
       "time": 2.349,
+      "sizeInBytes": 35,
       "size": 1.4847e-07
     },
     {
       "time": 2.357,
+      "sizeInBytes": 3666,
       "size": 1.5551171999999998e-05
     },
     {
       "time": 2.386,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 2.407,
+      "sizeInBytes": 840,
       "size": 3.5632799999999997e-06
     },
     {
       "time": 2.481,
+      "sizeInBytes": 1239,
       "size": 5.2558379999999995e-06
     },
     {
       "time": 2.483,
+      "sizeInBytes": 24778,
       "size": 0.00010510827599999999
     },
     {
       "time": 2.484,
+      "sizeInBytes": 27624,
       "size": 0.00011718100799999998
     },
     {
       "time": 2.487,
+      "sizeInBytes": 33183,
       "size": 0.000140762286
     },
     {
       "time": 2.488,
+      "sizeInBytes": 30260,
       "size": 0.00012836292
     },
     {
       "time": 2.489,
+      "sizeInBytes": 7422,
       "size": 3.1484124e-05
     },
     {
       "time": 2.49,
+      "sizeInBytes": 4408,
       "size": 1.8698736e-05
     },
     {
       "time": 2.496,
+      "sizeInBytes": 6393,
       "size": 2.7119105999999996e-05
     },
     {
       "time": 2.497,
+      "sizeInBytes": 4364,
       "size": 1.8512088e-05
     },
     {
       "time": 2.505,
+      "sizeInBytes": 1698,
       "size": 7.202915999999999e-06
     },
     {
       "time": 2.548,
+      "sizeInBytes": 8865,
       "size": 3.7605330000000006e-05
     },
     {
       "time": 2.551,
+      "sizeInBytes": 242821,
       "size": 0.001030046682
     },
     {
       "time": 2.617,
+      "sizeInBytes": 538,
       "size": 2.282196e-06
     },
     {
       "time": 2.627,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 2.638,
+      "sizeInBytes": 906,
       "size": 3.843252e-06
     },
     {
       "time": 2.654,
+      "sizeInBytes": 37105,
       "size": 0.00015739941
     },
     {
       "time": 2.729,
+      "sizeInBytes": 31176,
       "size": 0.000132248592
     },
     {
       "time": 2.875,
+      "sizeInBytes": 36687,
       "size": 0.000155626254
     },
     {
       "time": 2.922,
+      "sizeInBytes": 5253,
       "size": 2.2283226e-05
     },
     {
       "time": 2.925,
+      "sizeInBytes": 51089,
       "size": 0.00021671953799999997
     },
     {
       "time": 2.934,
+      "sizeInBytes": 68852,
       "size": 0.000292070184
     },
     {
       "time": 2.95,
+      "sizeInBytes": 21686,
       "size": 9.199201199999999e-05
     },
     {
       "time": 2.955,
+      "sizeInBytes": 21686,
       "size": 9.199201199999999e-05
     },
     {
       "time": 3.084,
+      "sizeInBytes": 17664,
       "size": 7.493068799999999e-05
     },
     {
       "time": 3.123,
+      "sizeInBytes": 3208,
       "size": 1.3608336e-05
     },
     {
       "time": 3.161,
+      "sizeInBytes": 1,
       "size": 4.242e-09
     },
     {
       "time": 3.168,
+      "sizeInBytes": 20406,
       "size": 8.656225199999998e-05
     },
     {
       "time": 3.236,
+      "sizeInBytes": 16955,
       "size": 7.192310999999999e-05
     },
     {
       "time": 3.237,
+      "sizeInBytes": 249178,
       "size": 0.001057013076
     },
     {
       "time": 3.246,
+      "sizeInBytes": 1785,
       "size": 7.571970000000001e-06
     },
     {
       "time": 3.247,
+      "sizeInBytes": 937,
       "size": 3.974754e-06
     },
     {
       "time": 3.249,
+      "sizeInBytes": 16616,
       "size": 7.048507200000001e-05
     },
     {
       "time": 3.267,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 3.271,
+      "sizeInBytes": 22493,
       "size": 9.541530599999999e-05
     },
     {
       "time": 3.272,
+      "sizeInBytes": 68173,
       "size": 0.000289189866
     },
     {
       "time": 3.406,
+      "sizeInBytes": 7566,
       "size": 3.2094971999999993e-05
     },
     {
       "time": 3.407,
+      "sizeInBytes": 9823,
       "size": 4.1669166e-05
     },
     {
       "time": 3.582,
+      "sizeInBytes": 386304,
       "size": 0.0016387015680000001
     },
     {
       "time": 3.601,
+      "sizeInBytes": 4,
       "size": 1.6968e-08
     },
     {
       "time": 3.681,
+      "sizeInBytes": 3641,
       "size": 1.5445122e-05
     },
     {
       "time": 3.894,
+      "sizeInBytes": 1005,
       "size": 4.263209999999999e-06
     },
     {
       "time": 3.949,
+      "sizeInBytes": 3,
       "size": 1.2726e-08
     },
     {
       "time": 3.971,
+      "sizeInBytes": 6553,
       "size": 2.7797825999999998e-05
     },
     {
       "time": 4.082,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 4.178,
+      "sizeInBytes": 3,
       "size": 1.2726e-08
     },
     {
       "time": 4.182,
+      "sizeInBytes": 11378,
       "size": 4.8265475999999995e-05
     },
     {
       "time": 4.268,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 4.27,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 4.437,
+      "sizeInBytes": 36607,
       "size": 0.00015528689399999996
     },
     {
       "time": 4.48,
+      "sizeInBytes": 3556,
       "size": 1.5084551999999998e-05
     },
     {
       "time": 4.489,
+      "sizeInBytes": 2,
       "size": 8.484e-09
     },
     {
       "time": 5.064,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 5.355,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 5.358,
+      "sizeInBytes": 2,
       "size": 8.484e-09
     },
     {
       "time": 5.375,
+      "sizeInBytes": 16040,
       "size": 6.804167999999999e-05
     },
     {
       "time": 5.544,
+      "sizeInBytes": 7306,
       "size": 3.0992052e-05
     },
     {
       "time": 5.603,
+      "sizeInBytes": 275,
       "size": 1.1665499999999999e-06
     },
     {
       "time": 5.605,
+      "sizeInBytes": 4,
       "size": 1.6968e-08
     },
     {
       "time": 5.606,
+      "sizeInBytes": 4,
       "size": 1.6968e-08
     },
     {
       "time": 5.607,
+      "sizeInBytes": 4,
       "size": 1.6968e-08
     },
     {
       "time": 5.608,
+      "sizeInBytes": 4,
       "size": 1.6968e-08
     },
     {
       "time": 5.609,
+      "sizeInBytes": 4,
       "size": 1.6968e-08
     },
     {
       "time": 5.658,
+      "sizeInBytes": 27596,
       "size": 0.000117062232
     },
     {
       "time": 5.731,
+      "sizeInBytes": 272188,
       "size": 0.0011546214959999997
     },
     {
       "time": 5.75,
+      "sizeInBytes": 61,
       "size": 2.5876199999999997e-07
     },
     {
       "time": 5.754,
+      "sizeInBytes": 75,
       "size": 3.1815e-07
     },
     {
       "time": 5.769,
+      "sizeInBytes": 136,
       "size": 5.769119999999999e-07
     },
     {
       "time": 5.781,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 5.87,
+      "sizeInBytes": 220,
       "size": 9.3324e-07
     },
     {
       "time": 5.891,
+      "sizeInBytes": 1698,
       "size": 7.202915999999999e-06
     },
     {
       "time": 5.902,
+      "sizeInBytes": 17542,
       "size": 7.4413164e-05
     },
     {
       "time": 5.957,
+      "sizeInBytes": 4845,
       "size": 2.055249e-05
     },
     {
       "time": 5.959,
+      "sizeInBytes": 37414,
       "size": 0.00015871018799999996
     },
     {
       "time": 5.98,
+      "sizeInBytes": 5,
       "size": 2.121e-08
     },
     {
       "time": 5.985,
+      "sizeInBytes": 21554,
       "size": 9.143206799999999e-05
     },
     {
       "time": 6.002,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 6.004,
+      "sizeInBytes": 32582,
       "size": 0.00013821284399999999
     },
     {
       "time": 6.12,
+      "sizeInBytes": 65,
       "size": 2.7573e-07
     },
     {
       "time": 6.378,
+      "sizeInBytes": 30742,
       "size": 0.00013040756399999997
     },
     {
       "time": 6.443,
+      "sizeInBytes": 58,
       "size": 2.46036e-07
     },
     {
       "time": 6.559,
+      "sizeInBytes": 4443,
       "size": 1.8847205999999998e-05
     },
     {
       "time": 6.588,
+      "sizeInBytes": 1857,
       "size": 7.877393999999999e-06
     },
     {
       "time": 6.598,
+      "sizeInBytes": 758,
       "size": 3.2154359999999995e-06
     },
     {
       "time": 6.599,
+      "sizeInBytes": 855,
       "size": 3.62691e-06
     },
     {
       "time": 6.603,
+      "sizeInBytes": 7046,
       "size": 2.9889131999999996e-05
     },
     {
       "time": 6.604,
+      "sizeInBytes": 453,
       "size": 1.921626e-06
     },
     {
       "time": 6.605,
+      "sizeInBytes": 20568,
       "size": 8.7249456e-05
     },
     {
       "time": 6.607,
+      "sizeInBytes": 51945,
       "size": 0.00022035068999999997
     },
     {
       "time": 6.608,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 6.611,
+      "sizeInBytes": 26170,
       "size": 0.00011101313999999997
     },
     {
       "time": 6.69,
+      "sizeInBytes": 20004,
       "size": 8.4856968e-05
     },
     {
       "time": 6.799,
+      "sizeInBytes": 154676,
       "size": 0.000656135592
     },
     {
       "time": 6.828,
+      "sizeInBytes": 984659,
       "size": 0.004176923478
     },
     {
       "time": 6.905,
+      "sizeInBytes": 42926,
       "size": 0.000182092092
     },
     {
       "time": 6.91,
+      "sizeInBytes": 159108,
       "size": 0.0006749361359999999
     },
     {
       "time": 6.911,
+      "sizeInBytes": 259418,
       "size": 0.001100451156
     },
     {
       "time": 6.912,
+      "sizeInBytes": 331207,
       "size": 0.0014049800939999995
     },
     {
       "time": 6.95,
+      "sizeInBytes": 154923,
       "size": 0.0006571833659999999
     },
     {
       "time": 6.954,
+      "sizeInBytes": 730956,
       "size": 0.003100715352
     },
     {
       "time": 6.955,
+      "sizeInBytes": 9046,
       "size": 3.8373131999999994e-05
     },
     {
       "time": 6.956,
+      "sizeInBytes": 654388,
       "size": 0.0027759138959999995
     },
     {
       "time": 6.958,
+      "sizeInBytes": 189956,
       "size": 0.000805793352
     },
     {
       "time": 6.987,
+      "sizeInBytes": 696749,
       "size": 0.002955609258
     },
     {
       "time": 6.989,
+      "sizeInBytes": 706680,
       "size": 0.0029977365599999995
     },
     {
       "time": 6.99,
+      "sizeInBytes": 531,
       "size": 2.252502e-06
     },
     {
       "time": 6.991,
+      "sizeInBytes": 334858,
       "size": 0.0014204676359999998
     },
     {
       "time": 7.014,
+      "sizeInBytes": 27486,
       "size": 0.00011659561200000001
     },
     {
       "time": 7.016,
+      "sizeInBytes": 319317,
       "size": 0.001354542714
     },
     {
       "time": 7.025,
+      "sizeInBytes": 804051,
       "size": 0.003410784342
     },
     {
       "time": 7.026,
+      "sizeInBytes": 10538,
       "size": 4.4702195999999996e-05
     },
     {
       "time": 7.028,
+      "sizeInBytes": 13082,
       "size": 5.5493843999999994e-05
     },
     {
       "time": 7.029,
+      "sizeInBytes": 643348,
       "size": 0.002729082216
     },
     {
       "time": 7.049,
+      "sizeInBytes": 148656,
       "size": 0.0006305987519999999
     },
     {
       "time": 7.052,
+      "sizeInBytes": 386226,
       "size": 0.001638370692
     },
     {
       "time": 7.054,
+      "sizeInBytes": 74,
       "size": 3.13908e-07
     },
     {
       "time": 7.056,
+      "sizeInBytes": 135606,
       "size": 0.000575240652
     },
     {
       "time": 7.185,
+      "sizeInBytes": 153828,
       "size": 0.0006525383759999999
     },
     {
       "time": 7.289,
+      "sizeInBytes": 60437,
       "size": 0.000256373754
     },
     {
       "time": 7.313,
+      "sizeInBytes": 153667,
       "size": 0.000651855414
     },
     {
       "time": 7.437,
+      "sizeInBytes": 1817,
       "size": 7.707713999999999e-06
     },
     {
       "time": 7.438,
+      "sizeInBytes": 2931,
       "size": 1.2433301999999999e-05
     },
     {
       "time": 7.44,
+      "sizeInBytes": 76,
       "size": 3.22392e-07
     },
     {
       "time": 7.441,
+      "sizeInBytes": 870,
       "size": 3.69054e-06
     },
     {
       "time": 7.442,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 7.46,
+      "sizeInBytes": 188106,
       "size": 0.000797945652
     },
     {
       "time": 7.639,
+      "sizeInBytes": 120860,
       "size": 0.00051268812
     },
     {
       "time": 7.673,
+      "sizeInBytes": 96546,
       "size": 0.000409548132
     },
     {
       "time": 7.732,
+      "sizeInBytes": 29963,
       "size": 0.000127103046
     },
     {
       "time": 7.799,
+      "sizeInBytes": 82542,
       "size": 0.00035014316399999997
     },
     {
       "time": 7.88,
+      "sizeInBytes": 89960,
       "size": 0.00038161031999999997
     },
     {
       "time": 7.909,
+      "sizeInBytes": 119218,
       "size": 0.0005057227559999999
     },
     {
       "time": 7.944,
+      "sizeInBytes": 160636,
       "size": 0.000681417912
     },
     {
       "time": 8.022,
+      "sizeInBytes": 106799,
       "size": 0.000453041358
     },
     {
       "time": 8.204,
+      "sizeInBytes": 19046,
       "size": 8.0793132e-05
     },
     {
       "time": 8.239,
+      "sizeInBytes": 32329,
       "size": 0.000137139618
     },
     {
       "time": 8.297,
+      "sizeInBytes": 14935,
       "size": 6.335427000000001e-05
     },
     {
       "time": 8.357,
+      "sizeInBytes": 17604,
       "size": 7.4676168e-05
     },
     {
       "time": 9.208,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 9.981,
+      "sizeInBytes": 8758,
       "size": 3.7151435999999997e-05
     },
     {
       "time": 10.28,
+      "sizeInBytes": 464,
       "size": 1.968288e-06
     },
     {
       "time": 10.282,
+      "sizeInBytes": 333,
       "size": 1.4125859999999999e-06
     },
     {
       "time": 10.285,
+      "sizeInBytes": 16779,
       "size": 7.1176518e-05
     },
     {
       "time": 10.392,
+      "sizeInBytes": 2,
       "size": 8.484e-09
     },
     {
       "time": 10.482,
+      "sizeInBytes": 1425,
       "size": 6.0448499999999985e-06
     },
     {
       "time": 10.483,
+      "sizeInBytes": 333,
       "size": 1.4125859999999999e-06
     },
     {
       "time": 10.487,
+      "sizeInBytes": 711,
       "size": 3.016062e-06
     },
     {
       "time": 11.505,
+      "sizeInBytes": 1418,
       "size": 6.015156e-06
     },
     {
       "time": 11.783,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 13.516,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 13.517,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 15.355,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 15.356,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 15.617,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 16.249,
+      "sizeInBytes": 2,
       "size": 8.484e-09
     },
     {
       "time": 16.749,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 17.661,
+      "sizeInBytes": 43,
       "size": 1.8240599999999997e-07
     },
     {
       "time": 18.109,
+      "sizeInBytes": 2,
       "size": 8.484e-09
     },
     {
       "time": 20.618,
+      "sizeInBytes": 3,
       "size": 1.2726e-08
     },
     {
       "time": 20.868,
+      "sizeInBytes": 3,
       "size": 1.2726e-08
     },
     {
       "time": 22.049,
+      "sizeInBytes": 2,
       "size": 8.484e-09
     },
     {
       "time": 24.652,
+      "sizeInBytes": 10390,
       "size": 4.407438e-05
     },
     {
       "time": 28.184,
+      "sizeInBytes": 2,
       "size": 8.484e-09
     },
     {
       "time": 36.45,
+      "sizeInBytes": 2,
       "size": 8.484e-09
     },
     {
       "time": 48.885,
+      "sizeInBytes": 2,
       "size": 8.484e-09
     },
     {
       "time": 54.925,
+      "sizeInBytes": 8213,
       "size": 3.4839546e-05
     },
     {
       "time": 55.106,
+      "sizeInBytes": 29984,
       "size": 0.000127192128
     },
     {
       "time": 55.11,
+      "sizeInBytes": 4033,
       "size": 1.7107986e-05
     },
     {
       "time": 55.115,
+      "sizeInBytes": 16426,
       "size": 6.9679092e-05
     },
     {
       "time": 55.249,
+      "sizeInBytes": 2593,
       "size": 1.0999505999999998e-05
     },
     {
       "time": 55.281,
+      "sizeInBytes": 61564,
       "size": 0.000261154488
     },
     {
       "time": 55.282,
+      "sizeInBytes": 1635,
       "size": 6.93567e-06
     },
     {
       "time": 55.283,
+      "sizeInBytes": 38896,
       "size": 0.000164996832
     },
     {
       "time": 55.284,
+      "sizeInBytes": 179,
       "size": 7.593179999999999e-07
     },
     {
       "time": 56.653,
+      "sizeInBytes": 2,
       "size": 8.484e-09
     }
   ]

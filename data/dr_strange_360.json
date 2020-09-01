@@ -7,46 +7,57 @@
   "data": [
     {
       "time": 0.0,
+      "sizeInBytes": 169478,
       "size": 0.000718925676
     },
     {
       "time": 3.129,
+      "sizeInBytes": 329162,
       "size": 0.0013963052039999999
     },
     {
       "time": 4.13,
+      "sizeInBytes": 1032527,
       "size": 0.0043799795340000005
     },
     {
       "time": 6.78,
+      "sizeInBytes": 28,
       "size": 1.1877599999999999e-07
     },
     {
       "time": 13.774,
+      "sizeInBytes": 470176,
       "size": 0.001994486592
     },
     {
       "time": 17.709,
+      "sizeInBytes": 28,
       "size": 1.1877599999999999e-07
     },
     {
       "time": 27.777,
+      "sizeInBytes": 462012,
       "size": 0.001959854904
     },
     {
       "time": 28.879,
+      "sizeInBytes": 1555723,
       "size": 0.006599376965999999
     },
     {
       "time": 36.891,
+      "sizeInBytes": 28,
       "size": 1.1877599999999999e-07
     },
     {
       "time": 42.777,
+      "sizeInBytes": 461356,
       "size": 0.001957072152
     },
     {
       "time": 51.026,
+      "sizeInBytes": 732290,
       "size": 0.00310637418
     }
   ]

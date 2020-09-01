@@ -46,11 +46,18 @@ export default class MediaAll extends React.PureComponent {
   constructor(props) {
     super(props);
 
-    this.data = this.props.data;
+    this.data = props.data;
     this.data.forEach(d => addCumulativeSize(d.packets));
 
     this.maxTotal = getMaxSize(this.data);
+
+    const mediaType = props.mediaType;
+    if (mediaType) {
+      this.data = this.data.filter(d => d.mediaType === mediaType);
+      console.log(this.data);
+    }
     this.groupData = groupByType(groupByTitle(this.data));
+
     this.xScales = MediaAll.getXScaleVX(props.width, this.maxTotal);
 
     this.animateTimeout = -1;
@@ -65,7 +72,6 @@ export default class MediaAll extends React.PureComponent {
   }
 
   render() {
-    console.log('media-all rerender');
     const type = this.props.type;
     const width = this.props.width;
     const hasSelected = this.props.hasSelected;

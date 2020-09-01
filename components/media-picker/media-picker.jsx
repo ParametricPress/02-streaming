@@ -48,12 +48,13 @@ const titleToPreview= {
   }
 }
 
-const previewStyle = (previewWidth, translateY) => {
+const previewStyle = (previewWidth, translateY, top) => {
   return {
     position: 'absolute',
     zIndex: 2,
     left: 0,
     right: 0,
+    top,
     marginLeft: 'auto',
     marginRight: 'auto',
     maxWidth: previewWidth,
@@ -98,6 +99,7 @@ export default class MediaPicker extends React.Component {
     const selectedY = this.state.selectedY;
     const selectedHeight = this.state.selectedHeight;
     const selectedTitle = this.state.selectedTitle;
+    const mediaType = this.props.mediaType;
 
     let previewDiv;
     if (selectedTitle) {
@@ -110,27 +112,36 @@ export default class MediaPicker extends React.Component {
       // const translateX = `translateX(${width / 2 - previewWidth / 2}px)`;
   
       const offset = selectedHeight + previewPadding;
-      let y = selectedY;
-  
-      if (y + offset + previewHeight >= this.height) {
-        y -= previewHeight + previewPadding;
+
+      let translateY;
+      let top;
+      if (mediaType) {
+        top = '100%';
+        translateY = `translateY(24px)`
       } else {
-        y += offset;
-      }
+        top = 0;
+        let y = selectedY;
   
-      const translateY = `translateY(${y}px)`;
+        if (y + offset + previewHeight >= this.height) {
+          y -= previewHeight + previewPadding;
+        } else {
+          y += offset;
+        }
+
+        translateY = `translateY(${y}px)`;
+      }
 
       if (pType === 'video') {
         previewDiv = (
           <video autoPlay
-            style={previewStyle(previewWidth, translateY)}
+            style={previewStyle(previewWidth, translateY, top)}
           >
             <source src={`./static/images/${titleToPreview[selectedTitle].url}`} type="video/mp4"/>
           </video>
         );
       } else {
         previewDiv = (
-          <img style={previewStyle(previewWidth, translateY)}
+          <img style={previewStyle(previewWidth, translateY, top)}
           src={`./static/images/${titleToPreview[selectedTitle].url}`}/>
         );
       }
@@ -142,7 +153,8 @@ export default class MediaPicker extends React.Component {
         position: 'relative',
       }}>
         {previewDiv}
-        <MediaAll type={type} data={data} width={width}
+        <MediaAll type={type}
+          mediaType={mediaType} data={data} width={width}
           selectTitle={this.selectTitle}
           hasSelected={this.state.selectedY !== null}
           selectedTitle={selectedTitle}

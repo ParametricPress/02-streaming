@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Container, Rect, Text } from './components';
-import { secondaryMarkColor, markColor, accentColor, darkAccentColor } from './constants';
+import { secondaryMarkColor, markColor, accentColor, darkAccentColor } from '../constants';
 
 /** Props:
 type: 'timeline' | 'bar',

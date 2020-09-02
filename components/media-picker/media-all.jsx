@@ -77,26 +77,7 @@ export default class MediaAll extends React.PureComponent {
     const hasSelected = this.props.hasSelected;
     const selectedTitle = this.props.selectedTitle;
 
-    const mouseX = this.state.mouseX;
-
-    let xScaleVX;
-
-    if (type === 'timeline' && mouseX) {
-      const mouseTime = this.xScales.timeline.invert(mouseX);
-      const mouseMax = getMaxSize(this.data, d => d.time <= mouseTime);
-      const maxTime = getMaxTime(this.data, mouseTime);
-
-      xScaleVX = {
-        timeline: this.xScales.timeline,
-        bar: scaleLinear({
-          range: [0, this.xScales.timeline(maxTime)],
-          round: true,
-          domain: [0, mouseMax]
-        })
-      }
-    } else {
-      xScaleVX = this.xScales; 
-    }
+    const xScaleVX = this.xScales
 
     return (
       <div

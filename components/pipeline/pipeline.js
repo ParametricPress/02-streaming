@@ -22,7 +22,7 @@ const getMarkType = mark => {
   }
 }
 
-const stages = ['datacenter', 'cdn', 'internet', 'edge', 'device'];
+const stages = ['none', 'datacenter', 'cdn', 'internet', 'edge', 'device'];
 const datacenterIndex = stages.indexOf('datacenter');
 const cdnIndex = stages.indexOf('cdn');
 const internetIndex = stages.indexOf('internet');
@@ -58,10 +58,17 @@ export default class Pipeline extends React.PureComponent {
 
       this.marks.push(ref);
     };
+
+    this.redraw();
   }
 
   componentDidUpdate() {
+    this.redraw();
+  }
+
+  redraw() {
     const stage = this.props.stage;
+
     const progress = this.props.progress;
     const s = stages.indexOf(stage);
 
@@ -72,6 +79,8 @@ export default class Pipeline extends React.PureComponent {
       
       if (['internet', 'edge'].includes(m.type) && s === stages.indexOf(m.type)) {
         e.setAttribute('stroke-dashoffset', m.pathLength - m.pathLength * (progress / 100));
+      } else {
+        e.setAttribute('stroke-dashoffset', m.patnLength);
       }
     }
   }
@@ -79,7 +88,7 @@ export default class Pipeline extends React.PureComponent {
   render() {
     return (
       // EXPORTED FROM FIGMA
-      <svg id="pipeline" width="330" height="253" viewBox="0 0 330 253" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg id="pipeline" width="600" height="600" viewBox="0 0 330 253" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="151.5" y="140" width="10" height="10" fill="#FF6CC4"/>
         <rect x="65.5" y="115" width="13" height="13" fill="#7FE8BC"/>
         <rect x="89.5" y="188" width="13" height="13" fill="#7FE8BC"/>

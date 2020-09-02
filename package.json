@@ -15,7 +15,8 @@
     "layout": "./node_modules/parametric-styles/issue-02-theme.css",
     "theme": "./node_modules/parametric-styles/issue-02-layout.css",
     "components": [
-      "./components",
+      "./components/media-picker",
+      "./components/pipeline",
       "./node_modules/parametric-components/dist/cjs/issue-02"
     ]
   },

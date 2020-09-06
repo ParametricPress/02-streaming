@@ -33,7 +33,8 @@ const knobs = () => {
     datacenter: 'datacenter',
     cdn: 'cdn',
     internet: 'internet',
-    edge: 'edge',
+    residential: 'residential',
+    cellular: 'cellular',
     device: 'device',
     all: 'all'
   }, 'datacenter', { display: 'inline-radio'});

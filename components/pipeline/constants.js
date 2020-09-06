@@ -1,1 +1,1 @@
-export const stages = ['none', 'datacenter', 'cdn', 'internet', 'edge', 'device', 'all'];
+export const stages = ['none', 'datacenter', 'cdn', 'internet', 'residential', 'cellular', 'device', 'all'];

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Container, Rect, Text } from './components';
-import { secondaryMarkColor, markColor, accentColor, darkAccentColor } from '../constants';
+import { secondaryMarkColor, markColor, accentColor, darkAccentColor, labelColor, guideColor } from '../constants';
 
 /** Props:
 type: 'timeline' | 'bar',
@@ -76,7 +76,7 @@ export default class MediaStrip extends React.PureComponent {
           top={MediaStrip.height / 2 - tickHeight / 2}
           width={tickWidth}
           height={tickHeight}
-          fill="#E8E8E8"
+          fill={guideColor}
           style={{
             transition: timeline ? 'transform 1s ease-in' : 'transform 1s ease-out',
             pointerEvents: 'none',
@@ -87,7 +87,7 @@ export default class MediaStrip extends React.PureComponent {
           top={MediaStrip.height / 2 - 1}
           width={timeline ? xScale.timeline.range()[1] : 1}
           height={2}
-          fill="#E8E8E8"
+          fill={guideColor}
           style={{
             transition: timeline ? 'transform 1s ease-in' : 'transform 1s ease-out',
             pointerEvents: 'none',
@@ -101,7 +101,7 @@ export default class MediaStrip extends React.PureComponent {
           style={{
             fontSize: 10,
             fontFamily: 'Helvetica',
-            color: mouseX ? secondaryMarkColor : '#AAAAAA',
+            color: mouseX ? secondaryMarkColor : labelColor,
             transition: 'transform 700ms ease-in-out',
             pointerEvents: 'none',
           }}>

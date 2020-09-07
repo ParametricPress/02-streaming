@@ -25,19 +25,31 @@ const getMarkInfo = (mark) => {
     if (stroke === "#363636") {
       if (strokeWidth === "3") {
         if (opacity === null) {
-          return { stage: "internet", substage: 1, of: 2, draw: true };
+          return { stage: "internet", substage: 1, of: 4, draw: true };
         } else {
-          return { stage: "internet", substage: 2, of: 2, draw: true };
+          return { stage: "internet", substage: 3, of: 4, draw: true };
         }
       } else {
         if (opacity === null) {
-          return { stage: "residential", draw: true };
+          return { stage: "residential", substage: 1, of: 2, draw: true };
         } else {
           return { stage: "cellular", substage: 1, of: 6, draw: true };
         }
       }
     } else if (stroke === "#AFAFAF") {
-      return { stage: "internet", substage: 1, of: 2, animate: true };
+      if (strokeWidth === "5") {
+        if (opacity === null) {
+          return { stage: "internet", substage: 2, of: 4, animate: true };
+        } else {
+          return { stage: "internet", substage: 4, of: 4, animate: true };
+        }
+      } else if (strokeWidth === "3") {
+        if (opacity === null) {
+          return { stage: "residential", substage: 2, of: 2, animate: true };
+        } else {
+          return { stage: "cellular", animate: true };
+        }
+      }
     } else if (fill === "white") {
       if (opacity === null) {
         return { stage: "datacenter", appear: true };

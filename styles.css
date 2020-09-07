@@ -19,3 +19,14 @@
   }
 
 }
+
+.packet-animated {
+  animation-name: packet-animation;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes packet-animation {
+  from { stroke-dashoffset: attr(data-length); }
+  to { stroke-dashoffset: 0; }
+}

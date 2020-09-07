@@ -39,8 +39,11 @@ Edited by TK editor list.
 
 [Scroller currentStep:scrollerIndex progress:stepProgress]
   [Graphic]
-    [Pipeline stage:`scrollerStages[scrollerIndex]` progress:`stepProgress * 100; console.log(stepProgress)` /]
+    [div style:`{paddingLeft: '50%'}`]
+      [Pipeline stage:`scrollerStages[scrollerIndex]` progress:`stepProgress * 100` /]
+    [/div]
   [/Graphic]
+
   [Step]## Pipeline Intro[/Step]
   [Step]## Data Center[/Step]
   [Step]## CDN[/Step]

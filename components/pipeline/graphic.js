@@ -1,7 +1,7 @@
 import * as React from "react";
 import { stages } from "./constants";
-import { scaleLinear } from '@vx/scale';
-import { extent } from 'd3-array';
+import { scaleLinear } from "@vx/scale";
+import { extent } from "d3-array";
 
 const getMarkInfo = (mark) => {
   const opacity = mark.getAttribute("opacity");
@@ -33,10 +33,10 @@ const getMarkInfo = (mark) => {
         if (opacity === null) {
           return { stage: "residential", substage: 1, of: 2, draw: true };
         } else {
-          return { stage: "cellular", substage: 1, of: 6, draw: true };
+          return { stage: "cellular", substage: 1, of: 67, draw: true };
         }
       }
-    } else if (stroke === "#AFAFAF") {
+    } else if (stroke === "white") {
       if (strokeWidth === "5") {
         if (opacity === null) {
           return { stage: "internet", substage: 2, of: 4, animate: true };
@@ -47,38 +47,38 @@ const getMarkInfo = (mark) => {
         if (opacity === null) {
           return { stage: "residential", substage: 2, of: 2, animate: true };
         } else {
-          return { stage: "cellular", animate: true };
+          return { stage: "cellular", substage: 2, of: 7, animate: true };
         }
       }
     } else if (fill === "white") {
       if (opacity === null) {
-        return { stage: "datacenter", appear: true };
+        return { stage: "datacenter", appear: true, label: true };
       } else if (opacity === "0.99") {
-        return { stage: "cdn", appear: true };
+        return { stage: "cdn", appear: true, label: true };
       } else if (opacity === "0.98") {
-        return { stage: "internet", appear: true };
+        return { stage: "internet", appear: true, label: true };
       } else if (opacity === "0.97") {
-        return { stage: "residential", appear: true };
+        return { stage: "residential", appear: true, label: true };
       } else if (opacity === "0.96") {
-        return { stage: "cellular", appear: true };
+        return { stage: "cellular", appear: true, label: true };
       } else {
-        return { stage: "device", appear: true };
+        return { stage: "device", appear: true, label: true };
       }
     }
   } else if (mark.tagName === "circle") {
     let substage;
     if (strokeOpacity === null) {
-      substage = 2;
-    } else if (strokeOpacity === "0.25") {
       substage = 3;
-    } else if (strokeOpacity === "0.24") {
+    } else if (strokeOpacity === "0.25") {
       substage = 4;
-    } else if (strokeOpacity === "0.23") {
+    } else if (strokeOpacity === "0.24") {
       substage = 5;
-    } else if (strokeOpacity === "0.22") {
+    } else if (strokeOpacity === "0.23") {
       substage = 6;
+    } else if (strokeOpacity === "0.22") {
+      substage = 7;
     }
-    return { stage: "cellular", substage, of: 6 };
+    return { stage: "cellular", substage, of: 7 };
   }
 };
 
@@ -99,7 +99,7 @@ export default class Graphic extends React.PureComponent {
   componentDidMount() {
     const svg = document.getElementById("pipeline-graphic");
 
-    const pathLengths = [];
+    const pathLengths = [0];
     for (const e of svg.children) {
       const info = getMarkInfo(e);
       const ref = {
@@ -127,7 +127,7 @@ export default class Graphic extends React.PureComponent {
 
     const pathScale = scaleLinear({
       domain: extent(pathLengths),
-      range: [0.5, 1.5]
+      range: [0, 10],
     });
 
     for (const ref of this.marks) {
@@ -141,13 +141,12 @@ export default class Graphic extends React.PureComponent {
           `${strokeWidth} ${pathLength - strokeWidth}`
         );
         e.setAttribute("data-length", pathLength);
-        e.style.animationDelay = Math.random() + 's';
-        e.style.animationDuration = pathScale(pathLength) + 's';
+        e.style.animationDelay = Math.random() + "s";
+        e.style.animationDuration = pathScale(pathLength) + "s";
         e.classList.add("packet-animated");
       }
     }
 
-    console.log(this.marks);
     this.redraw();
   }
 
@@ -182,16 +181,23 @@ export default class Graphic extends React.PureComponent {
         } else {
           e.setAttribute("stroke-dashoffset", visible ? 0 : m.pathLength);
         }
-      } else {
-        let opacity;
-        if (m.stage === currentStage && m.substage) {
-          const subprog = getSubprogress(progress, m.substage, m.of);
-          opacity = visible ? subprog : 0;
-        } else {
-          opacity = visible ? 1 : 0;
-        }
-        e.style.opacity = opacity;
       }
+
+      let opacity;
+
+      if (m.stage === currentStage && m.substage) {
+        const subprog = getSubprogress(progress, m.substage, m.of);
+        opacity = visible ? subprog : 0;
+      } else {
+        if (m.stage === currentStage || currentStage === "all" || (m.stage === 'datacenter' && currentStage === 'cdn')) {
+          opacity = 1;
+        } else if (stages.indexOf(m.stage) < currentStageIndex) {
+          opacity = 0.2;
+        } else {
+          opacity = 0;
+        }
+      }
+      e.style.opacity = opacity;
     }
   }
 
@@ -199,8 +205,8 @@ export default class Graphic extends React.PureComponent {
     return (
       <svg
         id="pipeline-graphic"
-        width="375"
-        height="288"
+        width="100%"
+        height="100%"
         viewBox="0 0 375 288"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -216,7 +222,7 @@ export default class Graphic extends React.PureComponent {
         <rect x="217" y="10" width="4" height="4" rx="2" fill="#DEFFB6" />
         <rect x="326" y="89" width="4" height="4" rx="2" fill="#DEFFB6" />
         <rect x="332" y="203" width="4" height="4" rx="2" fill="#DEFFB6" />
-        <rect x="276" y="283" width="4" height="4" rx="2" fill="#DEFFB6" />
+        <rect x="270" y="276" width="4" height="4" rx="2" fill="#DEFFB6" />
         <rect x="319" y="263" width="4" height="4" rx="2" fill="#DEFFB6" />
         <rect x="258" y="228" width="4" height="4" rx="2" fill="#DEFFB6" />
         <rect x="282" y="212" width="4" height="4" rx="2" fill="#DEFFB6" />
@@ -322,101 +328,97 @@ export default class Graphic extends React.PureComponent {
         <path d="M45 221.5V236" stroke="#363636" />
         <path d="M102 184.5V159" stroke="#363636" />
         <path opacity="0.99" d="M311 181.5V220" stroke="#363636" />
-        <path d="M196 136H237.874V118H252" stroke="#AFAFAF" stroke-width="5" />
-        <path d="M196 131H226.678V54H282" stroke="#AFAFAF" stroke-width="5" />
-        <path
-          d="M190 125V92.292H216V69H204"
-          stroke="#AFAFAF"
-          stroke-width="5"
-        />
+        <path d="M196 136H237.874V118H252" stroke="white" stroke-width="5" />
+        <path d="M196 131H226.678V54H282" stroke="white" stroke-width="5" />
+        <path d="M190 125V92.292H216V69H204" stroke="white" stroke-width="5" />
         <path
           d="M185 125V104.556H164.412V79H150"
-          stroke="#AFAFAF"
+          stroke="white"
           stroke-width="5"
         />
         <path
           opacity="0.99"
           d="M146 75V69H196"
-          stroke="#AFAFAF"
+          stroke="white"
           stroke-width="5"
         />
-        <path d="M180 131H136.5V111H117" stroke="#AFAFAF" stroke-width="5" />
+        <path d="M180 131H136.5V111H117" stroke="white" stroke-width="5" />
         <path
           d="M180 136H166.034V148.5H150V182"
-          stroke="#AFAFAF"
+          stroke="white"
           stroke-width="5"
         />
-        <path d="M185 141V200H213V236" stroke="#AFAFAF" stroke-width="5" />
-        <path d="M190 141V158.5H244V199" stroke="#AFAFAF" stroke-width="5" />
+        <path d="M185 141V200H213V236" stroke="white" stroke-width="5" />
+        <path d="M190 141V158.5H244V199" stroke="white" stroke-width="5" />
         <path
           opacity="0.99"
           d="M240 203H225.319V240H217"
-          stroke="#AFAFAF"
+          stroke="white"
           stroke-width="5"
         />
         <path
           opacity="0.99"
           d="M109 111H53.9076V79H0"
-          stroke="#AFAFAF"
+          stroke="white"
           stroke-width="5"
         />
         <path
           opacity="0.99"
           d="M260 118H336V162.5H375"
-          stroke="#AFAFAF"
+          stroke="white"
           stroke-width="5"
         />
         <path
           opacity="0.99"
           d="M248 203H286V180H374.5"
-          stroke="#AFAFAF"
+          stroke="white"
           stroke-width="5"
         />
         <path
           opacity="0.99"
           d="M146 186H-0.5"
-          stroke="#AFAFAF"
+          stroke="white"
           stroke-width="5"
         />
         <path
           opacity="0.99"
           d="M209 240H136.5V220H0"
-          stroke="#AFAFAF"
+          stroke="white"
           stroke-width="5"
         />
         <path
           opacity="0.99"
           d="M290 54H317.5V73H375"
-          stroke="#AFAFAF"
+          stroke="white"
           stroke-width="5"
         />
         <path
           opacity="0.99"
           d="M142 79H120.5V65H0"
-          stroke="#AFAFAF"
+          stroke="white"
           stroke-width="5"
         />
         <path
           opacity="0.99"
           d="M200 65V37.5H91.5V52H0"
-          stroke="#AFAFAF"
+          stroke="white"
           stroke-width="5"
         />
-        <path d="M67.5 112.5V142H45" stroke="#AFAFAF" stroke-width="3" />
-        <path d="M52.5 102H30" stroke="#AFAFAF" stroke-width="3" />
-        <path d="M84 66.5V79" stroke="#AFAFAF" stroke-width="3" />
-        <path d="M109 63.5V56" stroke="#AFAFAF" stroke-width="3" />
-        <path d="M150 36V24" stroke="#AFAFAF" stroke-width="3" />
-        <path d="M201 43H219V14" stroke="#AFAFAF" stroke-width="3" />
-        <path d="M309 52.5V28" stroke="#AFAFAF" stroke-width="3" />
-        <path d="M328 74.5V89" stroke="#AFAFAF" stroke-width="3" />
-        <path d="M82 187.5V199" stroke="#AFAFAF" stroke-width="3" />
-        <path d="M45 221.5V236" stroke="#AFAFAF" stroke-width="3" />
-        <path d="M102 184.5V159" stroke="#AFAFAF" stroke-width="3" />
+        <path d="M67.5 112.5V142H45" stroke="white" stroke-width="3" />
+        <path d="M52.5 102H30" stroke="white" stroke-width="3" />
+        <path d="M84 66.5V79" stroke="white" stroke-width="3" />
+        <path d="M109 63.5V56" stroke="white" stroke-width="3" />
+        <path d="M150 36V24" stroke="white" stroke-width="3" />
+        <path d="M201 43H219V14" stroke="white" stroke-width="3" />
+        <path d="M309 52.5V28" stroke="white" stroke-width="3" />
+        <path d="M328 74.5V89" stroke="white" stroke-width="3" />
+        <path d="M82 187.5V199" stroke="white" stroke-width="3" />
+        <path d="M45 221.5V236" stroke="white" stroke-width="3" />
+        <path d="M102 184.5V159" stroke="white" stroke-width="3" />
         <path
           opacity="0.99"
           d="M311 181.5V220"
-          stroke="#AFAFAF"
+          stroke="white"
           stroke-width="3"
         />
         <circle cx="311" cy="224" r="4" fill="#363636" />

@@ -20,6 +20,16 @@
 
 }
 
+#pipeline {
+  margin-left: 50%;
+}
+
+@media only screen and (max-width: 1000px) {
+  #pipeline {
+    margin-left: 0;
+  }  
+}
+
 .packet-animated {
   animation-name: packet-animation;
   animation-iteration-count: infinite;
@@ -27,6 +37,5 @@
 }
 
 @keyframes packet-animation {
-  from { stroke-dashoffset: attr(data-length); }
-  to { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
 }

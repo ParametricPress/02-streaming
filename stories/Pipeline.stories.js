@@ -9,25 +9,6 @@ export default {
   decorators: [withKnobs]
 }
 
-const emissionsData = [
-  {
-    stage: 'cdn',  // and also data center
-    emissions: 100
-  },
-  {
-    stage: 'internet',
-    emissions: 50
-  },
-  {
-    stage: 'edge',
-    emissions: 150
-  },
-  {
-    stage: 'device',
-    emissions: 200
-  }
-];
-
 const knobs = () => {
   const stage = options('type', {
     datacenter: 'datacenter',
@@ -51,5 +32,10 @@ export const graphic = () => {
 
 export const emissions = () => {
   const { stage, progress } = knobs();
-  return <Emissions stage={stage} progress={progress} data={emissionsData} />
+  return <Emissions stage={stage} progress={progress} />
+}
+
+export const pipeline = () => {
+  const { stage, progress } = knobs();
+  return <Pipeline stage={stage} progress={progress} />
 }

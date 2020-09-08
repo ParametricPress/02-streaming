@@ -39,7 +39,7 @@ Edited by TK editor list.
 
 [Scroller currentStep:scrollerIndex progress:stepProgress]
   [Graphic]
-    [div style:`{paddingLeft: '50%'}`]
+    [div id:"pipeline"]
       [Pipeline stage:`scrollerStages[scrollerIndex]` progress:`stepProgress * 100` /]
     [/div]
   [/Graphic]
@@ -51,6 +51,7 @@ Edited by TK editor list.
   [Step]## Residential Networks[/Step]
   [Step]## Cellular[/Step]
   [Step]## Devices[/Step]
+  [Step]## All[/Step]
 [/Scroller]
 
 

@@ -52,15 +52,15 @@ const getMarkInfo = (mark) => {
     } else if (stroke === "white") {
       if (strokeWidth === "5") {
         if (opacity === null) {
-          return { stage: "internet", substage: 2, of: 4, animate: true };
+          return { stage: "internet", substage: 2, of: 4, animate: true, appear: true };
         } else {
-          return { stage: "internet", substage: 4, of: 4, animate: true };
+          return { stage: "internet", substage: 4, of: 4, animate: true, appear: true };
         }
       } else if (strokeWidth === "3") {
         if (opacity === null) {
-          return { stage: "residential", substage: 2, of: 2, animate: true };
+          return { stage: "residential", substage: 2, of: 2, animate: true, appear: true };
         } else {
-          return { stage: "cellular", substage: 2, of: 7, animate: true };
+          return { stage: "cellular", substage: 2, of: 7, animate: true, appear: true };
         }
       }
     } else if (fill === "white") {
@@ -91,7 +91,7 @@ const getMarkInfo = (mark) => {
     } else if (strokeOpacity === "0.22") {
       substage = 7;
     }
-    return { stage: "cellular", substage, of: 7 };
+    return { stage: "cellular", substage, of: 7, appear: true };
   }
 };
 

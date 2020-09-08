@@ -3,6 +3,15 @@ import { stages } from "./constants";
 import { scaleLinear } from "@vx/scale";
 import { extent } from "d3-array";
 
+const x1 = 70;
+const x2 = 180;
+const y1 = 119;
+const y2 = 125;
+const w1 = 5;
+const w2 = 16;
+const h1 = 5;
+const h2 = 16;
+
 const getMarkInfo = (mark) => {
   const opacity = mark.getAttribute("opacity");
   const strokeOpacity = mark.getAttribute("stroke-opacity");
@@ -11,11 +20,11 @@ const getMarkInfo = (mark) => {
   const fill = mark.getAttribute("fill");
 
   if (mark.tagName === "g") {
-    return { stage: "worldmap", appear: true };
+    return { stage: "worldmap", appear: true, substage: 1, of: 2};
   } else if (mark.tagName === "rect") {
     const width = mark.getAttribute("width");
     if (mark.getAttribute("id") === "datacenter") {
-      return { stage: "datacenter", id: "datacenter" };
+      return { stage: "datacenter", id: "datacenter", substage: 1, of: 2, appear: true };
     } else if (width === "8") {
       return { stage: "cdn", appear: true };
     } else if (width === "4") {
@@ -23,7 +32,7 @@ const getMarkInfo = (mark) => {
     } else if (strokeWidth === "4") {
       return { stage: "none", appear: true };
     } else if (width === "5") {
-      return { stage: "worldmap", appear: true };
+      return { stage: "worldmap", appear: true, substage: 2, of: 2 };
     }
   } else if (mark.tagName === "path") {
     if (stroke === "#363636") {
@@ -56,7 +65,7 @@ const getMarkInfo = (mark) => {
       }
     } else if (fill === "white") {
       if (opacity === null) {
-        return { stage: "datacenter", appear: true, label: true };
+        return { stage: "datacenter", substage: 2, of: 2, appear: true, label: true };
       } else if (opacity === "0.99") {
         return { stage: "cdn", appear: true, label: true };
       } else if (opacity === "0.98") {
@@ -92,6 +101,15 @@ const getSubprogress = (progress, substage, substageOf) => {
   const subProgress = Math.min(Math.max(progress - start, 0) / div, 1);
   return subProgress;
 };
+
+const interpolate = (start, end, i) => {
+  const scale = scaleLinear({
+    domain: [0, 1],
+    range: [start, end]
+  });
+
+  return scale(i);
+}
 
 export default class Graphic extends React.PureComponent {
   constructor(props) {
@@ -189,7 +207,49 @@ export default class Graphic extends React.PureComponent {
 
       let opacity;
 
-      if (m.stage === currentStage && m.substage) {
+      if (m.id === 'datacenter') {
+        let x;
+        let y;
+        let width;
+        let height;
+        const subprog = getSubprogress(progress, m.substage, m.of);
+
+        if (m.stage === currentStage) {
+          x = interpolate(x1, x2, subprog);
+          y = interpolate(y1, y2, subprog);
+          width = interpolate(w1, w2, subprog);
+          height = interpolate(h1, h2, subprog);
+
+          opacity = 1;
+        } else if (stages.indexOf('datacenter') < stages.indexOf(currentStage)) {
+          x = x2;
+          y = y2;
+          width = w2;
+          height = h2;
+          
+          if (currentStage === "cdn" || currentStage === "all") {
+            opacity = 1;
+          } else {
+            opacity = 0.2
+          }
+        } else {
+          x = x1;
+          y = y1;
+          width = w1;
+          height = h1;
+
+          if (currentStage === "worldmap") {
+            opacity = getSubprogress(progress, m.of, m.of);
+          } else {
+            opacity = 0;
+          }
+        }
+
+        e.setAttribute('x', x);
+        e.setAttribute('y', y);
+        e.setAttribute('width', width);
+        e.setAttribute('height', height);
+      } else if (m.stage === currentStage && m.substage && m.appear) {
         const subprog = getSubprogress(progress, m.substage, m.of);
         opacity = visible ? subprog : 0;
       } else {
@@ -228,15 +288,11 @@ export default class Graphic extends React.PureComponent {
         {map}
         <rect
           id="datacenter"
-          x={worldMap ? 70 : 180}
-          y={worldMap ? 119 : 125}
-          width={worldMap ? 5 : 16}
-          height={worldMap ? 5 : 16}
+          x={x1}
+          y={y1}
+          width={w1}
+          height={h1}
           fill="#DEFFB6"
-          style={{
-            transition:
-              "opacity 200ms linear, x 700ms ease-in-out, y 700ms ease-in-out, width 700ms ease-in-out, height 700ms ease-in-out",
-          }}
         />
         <rect x="70" y="129" width="5" height="5" fill="#DEFFB6" />
         <rect x="89" y="125" width="5" height="5" fill="#DEFFB6" />

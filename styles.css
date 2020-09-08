@@ -21,7 +21,7 @@
 }
 
 #pipeline {
-  margin-left: 50%;
+  margin-left: calc(50% + 32px);
 }
 
 @media only screen and (max-width: 1000px) {

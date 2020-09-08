@@ -35,7 +35,7 @@ Edited by TK editor list.
 // Variables
 [var name:"scrollerIndex" value:0 /]
 [var name:"stepProgress" value:0/]
-[var name:"scrollerStages" value:`['none', 'datacenter','cdn','internet','residential', 'cellular', 'device', 'all']`/]
+[var name:"scrollerStages" value:`['none', 'worldmap', 'datacenter','cdn','internet','residential', 'cellular', 'device', 'all']`/]
 
 [Scroller currentStep:scrollerIndex progress:stepProgress]
   [Graphic]
@@ -45,6 +45,7 @@ Edited by TK editor list.
   [/Graphic]
 
   [Step]## Pipeline Intro[/Step]
+  [Step]## World Map[/Step]
   [Step]## Data Center[/Step]
   [Step]## CDN[/Step]
   [Step]## The Internet[/Step]

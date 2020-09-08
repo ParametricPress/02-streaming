@@ -11,6 +11,8 @@ export default {
 
 const knobs = () => {
   const stage = options('type', {
+    none: 'none',
+    worldmap: 'worldmap',
     datacenter: 'datacenter',
     cdn: 'cdn',
     internet: 'internet',

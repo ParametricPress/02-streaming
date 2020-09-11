@@ -35,11 +35,11 @@ Edited by TK editor list.
 // Variables
 [var name:"scrollerIndex" value:0 /]
 [var name:"stepProgress" value:0/]
-[var name:"scrollerStages" value:`['none', 'worldmap', 'datacenter','cdn','internet','residential', 'cellular', 'device', 'all']`/]
+[var name:"scrollerStages" value:`['none', 'worldmap', 'datacenter','cdn','internet','residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare']`/]
 
 [Scroller currentStep:scrollerIndex progress:stepProgress]
   [Graphic]
-    [div id:"pipeline"]
+    [div id:"pipeline" style:`{overflow: 'hidden'}`]
       [Pipeline stage:`scrollerStages[scrollerIndex]` progress:`stepProgress * 100` /]
     [/div]
   [/Graphic]
@@ -80,6 +80,15 @@ Edited by TK editor list.
   [Step]
   ## All
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor. Netus et malesuada fames ac turpis egestas maecenas pharetra convallis. Consectetur adipiscing elit ut aliquam purus sit amet luctus. Bibendum ut tristique et egestas. Rutrum quisque non tellus orci ac auctor augue mauris augue. In nisl nisi scelerisque eu ultrices vitae. Pretium aenean pharetra magna ac. Ut lectus arcu bibendum at varius. Ornare quam viverra orci sagittis eu volutpat.
+  [/Step]
+  [Step]
+  ## Before Simple
+  [/Step]
+  [Step]
+  ## Simple
+  [/Step]
+  [Step]
+  ## Compare
   [/Step]
 [/Scroller]
 

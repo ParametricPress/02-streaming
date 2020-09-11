@@ -4,39 +4,21 @@ import { markColor, backgroundColor } from '../constants';
 
 const markHeight = 22;
 
-const data = [
-  {
-    stage: 'cdn',  // and also data center
-    emissions: 30
-  },
-  {
-    stage: 'internet',
-    emissions: 185
-  },
-  {
-    stage: 'residential',
-    emissions: 430
-  },
-  {
-    stage: 'cellular',
-    emissions: 850
-  },
-  {
-    stage: 'device',
-    emissions: 610
-  }
-];
-
-const total = data.reduce((s, d) => s + d.emissions, 0);
 
 export default class Emissions extends React.PureComponent {
   constructor(props) {
     super(props);
   }
   render() {
+    const data = this.props.data;
+    const total = data.reduce((s, d) => s + d.emissions, 0);
+
     const stage = this.props.stage;
+    const stageIndex = stages.indexOf(stage);
     const hasLabel = ['cdn', 'internet', 'residential', 'cellular', 'device', 'all'].includes(this.props.stage);
 
+    const simplified = stage === 'simple' || stage === 'compare';
+    console.log(simplified);
     const filteredData = stage === 'all' ?
       [data.reduce((p, d) => {
         p.emissions += d.emissions;
@@ -46,11 +28,10 @@ export default class Emissions extends React.PureComponent {
 
     return (
       <div style={{
+        ...this.props.style,
         display: 'flex',
         flexDirection: 'column',
         marginTop: 16,
-        marginLeft: 32,
-        marginRight: 32,
         width: '100%'
       }}>
         <div style={{
@@ -62,7 +43,7 @@ export default class Emissions extends React.PureComponent {
           {
             filteredData.map((d, i) => {
               let opacity;
-              if (stages.indexOf(d.stage) === stages.indexOf(stage) || stage === 'all') {
+              if (stages.indexOf(d.stage) === stageIndex || stageIndex >= stages.indexOf('all')) {
                 opacity = 1;
               } else if (stages.indexOf(d.stage) < stages.indexOf(stage)) {
                 opacity = 0.2;
@@ -79,12 +60,13 @@ export default class Emissions extends React.PureComponent {
                   }}
                 >
                   <div style={{
-                    opacity: opacity === 1 ? 1 : 0,
+                    opacity: stage === 'beforesimple' ? 0 : opacity === 1 ? 1 : 0,
                     color: 'white',
                     whiteSpace: 'nowrap',
                     marginLeft: stage === 'cdn' ? 2 : 0,
-                    textAlign: stage === 'cdn' ? 'left' : 'center'
-                  }}>X MtCO2</div>
+                    textAlign: stage === 'cdn' ? 'left' : 'center',
+                    fontSize: simplified ? 10 : undefined
+                  }}>{simplified ? d.name : Math.round(d.emissions / total * 10.1 * 10) / 10 + ' MtCO₂*'}</div>
                   <div style={{
                     height: markHeight,
                     width: '100%',
@@ -97,6 +79,14 @@ export default class Emissions extends React.PureComponent {
                     marginTop: 4,
                     transition: 'opacity 200ms linear'
                   }}/>
+                  <div style={{
+                    opacity: stageIndex <= stages.indexOf('beforesimple') ? 0 : 1,
+                    color: 'white',
+                    whiteSpace: 'nowrap',
+                    marginLeft: stage === 'cdn' ? 2 : 0,
+                    textAlign: stage === 'cdn' ? 'left' : 'center',
+                    fontSize: stageIndex <= stages.indexOf('beforesimple') ? undefined : 10,
+                  }}>{simplified ? d.emissions + '%' : 'placeholder'}</div>
                 </div>
               );
             })
@@ -107,7 +97,8 @@ export default class Emissions extends React.PureComponent {
             marginTop: 8,
             textAlign: 'center',
             color: 'white',
-            opacity: hasLabel ? 1 : 0
+            opacity: hasLabel ? 1 : 0,
+            transform: 'translateY(-100%)'
           }}
         >This is equivalent to X cars</div>
       </div>

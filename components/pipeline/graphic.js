@@ -284,6 +284,7 @@ export default class Graphic extends React.PureComponent {
         viewBox="0 0 375 294"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        style={this.props.style}
       >
         {map}
         <rect

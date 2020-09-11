@@ -35,7 +35,7 @@ const youtubeDataSimple = [
   {
     stage: "simple",
     emissions: 58,
-    name: 'Communication Networks'
+    name: 'Networks'
   },
   {
     stage: "simple",
@@ -53,7 +53,7 @@ const ict2010 = [
   {
     stage: "compare",
     emissions: 28,
-    name: 'Communication Networks'
+    name: 'Networks'
   },
   {
     stage: "compare",
@@ -71,7 +71,7 @@ const ict2020 = [
   {
     stage: "compare",
     emissions: 24,
-    name: 'Communication Networks'
+    name: 'Networks'
   },
   {
     stage: "compare",

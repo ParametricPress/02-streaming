@@ -6,7 +6,7 @@ import { stages } from "./constants";
 const youtubeData = [
   {
     stage: "cdn", // and also data center
-    emissions: 360,
+    emissions: 0,
   },
   {
     stage: "internet",
@@ -28,18 +28,18 @@ const youtubeData = [
 
 const youtubeDataSimple = [
   {
-    stage: "simple",
-    emissions: 2,
+    stage: "simple*",
+    emissions: 0,
     name: 'Data Centers + CDNs'
   },
   {
     stage: "simple",
-    emissions: 58,
+    emissions: 59,
     name: 'Networks'
   },
   {
     stage: "simple",
-    emissions: 40,
+    emissions: 41,
     name: 'Devices'
   },
 ];
@@ -48,7 +48,7 @@ const ict2010 = [
   {
     stage: "compare",
     emissions: 33,
-    name: 'Data Centers + CDNs'
+    name: 'Data Centers + CDNs†'
   },
   {
     stage: "compare",
@@ -66,7 +66,7 @@ const ict2020 = [
   {
     stage: "compare",
     emissions: 45,
-    name: 'Data Centers + CDNs'
+    name: 'Data Centers + CDNs†'
   },
   {
     stage: "compare",
@@ -88,6 +88,7 @@ export default class Pipeline extends React.PureComponent {
     const stageIndex = stages.indexOf(stage);
 
     const showGraphic = stageIndex <= stages.indexOf("simple");
+    const compareProgress = stage === 'compare' ? progress : 100
 
     return (
       <div
@@ -99,7 +100,7 @@ export default class Pipeline extends React.PureComponent {
           alignItems: "center",
           transform: showGraphic
             ? "translateY(0)"
-            : `translateY(calc(-${progress}% + ${(94 * progress) / 100}px))`,
+            : `translateY(calc(-${compareProgress}% + ${(94 * compareProgress) / 100}px))`,
         }}
       >
         <Graphic stage={stage} progress={progress} />
@@ -124,11 +125,13 @@ export default class Pipeline extends React.PureComponent {
         >
           <Emissions stage={stage} progress={progress} data={ict2010} />
           <div style={{ width: "100%", textAlign: "left", marginTop: 16 }}>
-            ICT Sector as a Whole (2020)   [Belkhir & Elmeligi]
+            ICT Sector as a Whole (2020, projected)   [Belkhir & Elmeligi, 2017]
           </div>
           <Emissions stage={stage} progress={progress} data={ict2020} />
           <div style={{ width: "100%", textAlign: "left" }}>
-            ICT Sector as a Whole (2010)   [Belkhir & Elmeligi]
+            <span style={{fontSize: 12}}>† Belkhir & Elmeligi do not distinguish between core data centers and those in the content delivery network, grouping them under a 'Data Center' category</span>
+            <br/><br/>
+            ICT Sector as a Whole (2010)   [Belkhir & Elmeligi, 2017]
           </div>
           <div
             style={{
@@ -139,6 +142,10 @@ export default class Pipeline extends React.PureComponent {
             }}
           >
             YouTube (2016)   [Priest et al.]
+            <br/>
+            <span style={{fontSize: 12}}>
+              * Google purchases renewable energy to run its data centers. If this weren't the case, this category would still only account for less than 2% of YouTube's emissions.
+            </span>
           </div>
         </div>
       </div>

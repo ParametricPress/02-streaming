@@ -17,7 +17,7 @@ export default class Emissions extends React.PureComponent {
     const stageIndex = stages.indexOf(stage);
     const hasLabel = ['cdn', 'internet', 'residential', 'cellular', 'device', 'all'].includes(this.props.stage);
 
-    const simplified = stage === 'simple' || stage === 'compare';
+    const simplified = stage === 'simple' || stage === 'compare' || stage === 'final';
     console.log(simplified);
     const filteredData = stage === 'all' ?
       [data.reduce((p, d) => {
@@ -43,7 +43,9 @@ export default class Emissions extends React.PureComponent {
           {
             filteredData.map((d, i) => {
               let opacity;
-              if (stages.indexOf(d.stage) === stageIndex || stageIndex >= stages.indexOf('all')) {
+              if (stage === 'final') {
+                opacity = 0.2;
+              } else if (stages.indexOf(d.stage) === stageIndex || stageIndex >= stages.indexOf('all')) {
                 opacity = 1;
               } else if (stages.indexOf(d.stage) < stages.indexOf(stage)) {
                 opacity = 0.2;
@@ -60,12 +62,12 @@ export default class Emissions extends React.PureComponent {
                   }}
                 >
                   <div style={{
-                    opacity: stage === 'beforesimple' ? 0 : opacity === 1 ? 1 : 0,
+                    opacity: stage === 'final' ? 0.2 : stage === 'beforesimple' ? 0 : opacity === 1 ? 1 : 0,
                     color: 'white',
                     whiteSpace: 'nowrap',
                     marginLeft: stage === 'cdn' ? 2 : 0,
                     textAlign: stage === 'cdn' ? 'left' : 'center',
-                    fontSize: simplified ? 10 : undefined
+                    fontSize: simplified ? 11 : undefined
                   }}>{simplified ? d.name : Math.round(d.emissions / total * 10.1 * 10) / 10 + ' MtCO₂*'}</div>
                   <div style={{
                     height: markHeight,

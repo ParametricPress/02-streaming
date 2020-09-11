@@ -1,21 +1,43 @@
 import * as React from 'react';
 import { withKnobs, optionsKnob as options, number } from '@storybook/addon-knobs';
 import Pipeline from '../components/pipeline/pipeline';
+import Graphic from '../components/pipeline/graphic';
+import Emissions from '../components/pipeline/emissions';
 
 export default {
   title: 'Pipeline',
   decorators: [withKnobs]
 }
 
-export const pipeline = () => {
+const knobs = () => {
   const stage = options('type', {
+    none: 'none',
+    worldmap: 'worldmap',
     datacenter: 'datacenter',
     cdn: 'cdn',
     internet: 'internet',
-    edge: 'edge',
-    device: 'device'
+    residential: 'residential',
+    cellular: 'cellular',
+    device: 'device',
+    all: 'all'
   }, 'datacenter', { display: 'inline-radio'});
 
   const progress = number('progress', 0, { range: true, min: 0, max: 100, step: 1});
-  return <Pipeline stage={stage} progress={progress}/>
+
+  return { stage, progress };
+}
+
+export const graphic = () => {
+  const { stage, progress } = knobs();
+  return <Graphic stage={stage} progress={progress}/>
+}
+
+export const emissions = () => {
+  const { stage, progress } = knobs();
+  return <Emissions stage={stage} progress={progress} />
+}
+
+export const pipeline = () => {
+  const { stage, progress } = knobs();
+  return <Pipeline stage={stage} progress={progress} />
 }

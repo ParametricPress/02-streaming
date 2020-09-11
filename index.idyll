@@ -23,52 +23,74 @@
   source:`"https://github.com/ParametricPress/02-" + parametricSlug `
 /]
 
-[data name:"mediaPickerData" source:"dummy-data.csv"  /]
-[MediaPickerContainer data:mediaPickerData /]
-
-# 0.1 g
- The amount of CO2 you've released by loading this article
-
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tortor nunc, elementum eu ex vitae, lobortis fringilla ligula. Nunc sed nisl auctor dolor viverra dapibus sit amet et magna. Phasellus vestibulum dictum facilisis. Phasellus ut suscipit justo, ac vulputate nisi. Proin eu leo non nunc viverra egestas vitae eu augue. Vestibulum non massa in nulla interdum viverra. Vestibulum sit amet libero iaculis, maximus magna quis, dapibus lacus.
-
- [data name:"carbonEmissions" source:"carbon-emissions.csv" /]
-
- [Table data:carbonEmissions columns:`['Year', 'Total']` defaultPageSize:10 /]
- [br/]
-
- Aenean eros sem, varius quis erat sit amet, pulvinar aliquet diam. Etiam et vestibulum justo. Pellentesque commodo tristique metus at tempor. Donec cursus volutpat arcu. Etiam eget nisl mi. Cras malesuada tortor non diam auctor, vel porta tellus malesuada. Aliquam erat volutpat. Sed ut venenatis quam, sed elementum turpis. Duis bibendum consequat finibus.
-
-[var name:"clicks" value:0 /]
-[CustomComponent style:`{cursor: 'pointer'}` clickCount:clicks /]
-
-[Caption]
-You've clicked on the component above [Display value:clicks format:"d" /] times.
-[/Caption]
-
-Fusce aliquam fermentum ex. Nullam mi sem, varius rutrum diam vitae, laoreet malesuada quam. Fusce sodales nibh ut finibus condimentum. Donec eget risus ut ipsum sodales commodo. Cras ullamcorper augue velit, at finibus diam mattis vel. Ut lobortis velit eget dolor dictum tincidunt. Morbi rhoncus vehicula sapien sit amet tempor. Aliquam blandit nisi eu enim fermentum, ac varius neque venenatis. Nullam in nisi at ante mollis tempus. Nullam congue finibus nisl eu finibus. Donec porttitor non ipsum et scelerisque. In in turpis elementum justo rhoncus varius at in metus. Aliquam eget dui mi. Donec non tortor sit amet massa porttitor aliquam tristique ut metus.
-
-[var name:"updateCount" value:0 /]
-
-[CustomD3Component updateCount:updateCount /]
-
-[Button onClick:`updateCount += 1`]
-  Update.
-[/Button]
-
-Integer viverra neque ut tristique laoreet. Vestibulum malesuada molestie sapien, sed auctor magna pellentesque nec. Nunc cursus tristique nisl. Donec aliquet felis nec mollis commodo. Ut dapibus blandit quam. Fusce tellus neque, ullamcorper quis magna ac, posuere pretium leo. Sed quam augue, porttitor eget pharetra non, tincidunt in mi. Suspendisse orci dui, vehicula ac aliquam non, iaculis a lacus. Fusce a nisi gravida, vulputate nibh quis, blandit ante. Nunc fringilla risus vitae ornare convallis. Sed rhoncus dolor risus, et pulvinar neque maximus non. Nullam tempor porta risus, et sagittis felis luctus at. Vestibulum a mi eget sapien auctor malesuada egestas vitae orci.
-
-Quisque non laoreet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc euismod consectetur odio, at facilisis leo congue at. Nam vitae est nunc. Ut consequat molestie erat id interdum. Quisque rhoncus, tortor a accumsan aliquet, augue odio porta lorem, vulputate egestas felis ante vitae neque. Proin nulla sapien, interdum et lorem quis, semper facilisis sapien. Donec erat sem, interdum id efficitur eget, efficitur sit amet eros. Aenean at nisl eu dui maximus convallis. Etiam varius odio vel laoreet maximus. Duis ac lacus lorem. Aliquam rutrum dapibus sapien non porttitor.
-
-# Header 1
-## Header 2
-### Header 3
-
 [AuthorBio]
 
 [b][a href:""]Your Name[/a][/b] is _TK insert bio here_.
 
 Edited by TK editor list.
 [/AuthorBio]
+
+// BEGIN ARTICLE
+
+// Variables
+[var name:"scrollerIndex" value:0 /]
+[var name:"stepProgress" value:0/]
+[var name:"scrollerStages" value:`['worldmap', 'datacenter','cdn', 'spacer', 'internet', 'spacer', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final']`/]
+
+We’ve just seen how digital streams are made up of packets of data sent over the internet. These packets aren’t delivered by magic. Every digital streaming platform relies on a system of computers and cables, each part consuming electricity and releasing carbon emissions. By understanding how these platforms deliver their content, we can directly link our digital actions to the physical infrastructure that releases carbon dioxide .
+
+Let's take a look at YouTube. With its 2 billion + users, YouTube is the prototypical digital streaming service. How does one of its videos arrive on your screen?
+
+[Scroller currentStep:scrollerIndex progress:stepProgress]
+  [Graphic]
+    [div id:"pipeline" style:`{overflow: 'hidden'}`]
+      [Pipeline stage:`scrollerStages[scrollerIndex]` progress:`stepProgress * 100` /]
+    [/div]
+  [/Graphic]
+
+  [Step]  
+  Videos are stored on servers called "data centers"—warehouses full of giant computers designed for storing and distributing videos. For global services, these are often placed around the world. YouTube's parent company, Google, has 21 main data centers strategically placed throughout 4 continents (North America, South America, Europe, and Asia). Google does not disclose the data centers they use specifically for YouTube; we show all of them here.
+  [/Step]
+  [Step]
+  Cooling these data centers is no small feat, consuming up to 40% of the total energy required to run them (source). Because of this, companies have begun placing data centers in cold countries (source), where they can take advantage of passive cooling. Google itself purchases renewable energy to run its data centers, so their carbon footprint from usage is effectively zero.
+  [/Step]
+  [Step]
+  When a video is sent to you, it passes through a network of these main and smaller data centers called a Content Delivery Network (CDN for short). These are responsible for storing the more popular or recently watched videos for users in a given area, ensuring no single data center is overwhelmed and service stays zippy. Priest et al. estimate that all data centers account for less than 2% of YouTube's electricity use. However, Google purchases renewable energy to run its data centers, so its carbon footprint is effectively zero here.
+  [/Step]
+  [Step]
+  Of course, videos need a way of moving between main and CDN data centers. For that, we have the internet.
+  [/Step]
+  [Step]
+  The Internet is a “highway of information” that allows packets of data to be transmitted as electrical impulses.  A packet is routed from a source computer, through cables and intermediary computers, before arriving at its destination. The backbone of this highway is made up of 550,000 miles of underwater cables. Miles of this cable is spooled onto a large ship and painstakingly unwound along the ocean floor, a process which can take several months and millions of dollars. Priest et al. estimate that this infrastructure consumes approximately 1,900 Gigawatt-hours of electricity to serve YouTube videos. We can approximate associated greenhouse gas emissions by using the world emissions factor for electricity generation in the same year (2016), netting us X million metric tons of CO2 (MtCO2).
+  [/Step]
+  [Step]
+  The packets traveling across this information highway need “off-ramps” to reach your screen. The off-ramps that packets take are either residential networks (wired connections from homes to the internet) or cellular networks (wireless connections from cell phones to the internet). The physical infrastructure making up these different networks is dramatically different, and therefore they have significantly different levels of energy consumption and carbon emissions.
+  [/Step]
+  [Step]
+  An estimated 88% of YouTube's traffic goes through "fixed line" networks (from your residential Cable, DSL, or Fiber-Optic providers), and this accounts for approximately 4,400 Gigawatt-hours of electricity usage. The associated carbon footprint will vary drastically depending on your local electricity production, but using the worlds emissions factor for electricity generation once again, we can approximate to X MtCO2.
+  [/Step]
+  [Step]
+  In comparison, only 12% of YouTube’s traffic goes through cellular networks, but they are by far the most expensive part of YouTube’s content delivery pipeline, accounting for 6,100 Gigawatt-hours of electricity usage, or around X MtCO2. At over 10 times the electricity usage per unit of traffic, the relative inefficiency of radio transmission is clear. 
+  [/Step]
+  [Step]
+  Eventually, the video data reaches your device for viewing. While your device might not technically be part of Youtube’s content delivery pipeline, we can't overlook the cost of moving those pixels.  Devices account for an estimated 8500 Gigawatt-hours of electricity usage, or X million metric tons of CO2 emissions.
+  [/Step]
+  [Step]
+  In total, Priest et al.'s research estimates that YouTube traffic contributes Y million metric tons of CO2 per year, as much as a small metropolitan area like Frankfurt or Providence. Put in another metric, this is equivalent to the yearly footprint of approximately 2.2 million cars in the United States (source).
+  [/Step]
+  [Step]
+  It's important to note that breakdown of YouTube's carbon footprint isn't necessarily representative of the entirety of the information and technology sector. A 2017 study by Belkhir and Elmeligi paints a surprisingly different picture for the sector as a whole.
+  [/Step]
+  [Step]
+  To compare the two, we can group the "Internet", "Residential Network", and "Cellular Network" sections into an umbrella "Networks".
+  [/Step]
+  [Step]
+  Belkhir and Elmeligi provide estimates for both 2010 (retrospective) and 2020 (prospective). Most surprising is the weight Data Centers and CDNs have in this breakdown. We can speculate that the relatively high bandwidth required to transfer videos as a medium contributes at least partially to the overweightedness of the "Networks" category for YouTube.
+  [/Step]
+  [Step]
+  In the same study, Belkhir and Elmeligi create two models to project the ICT sector's decades forward. Even their "unrealistically conservative" linear model puts tech at a 6-7% share of GHG emissions in 2040, and their exponential model has tech reaching over 14%. What is being done about this? Aside from increasing the efficiency of each part of the pipeline and taking advantage of renewable energy, mindful design could also go a long way.  In the context of digital streaming, Priest et al. point out that much of YouTube's traffic comes from music videos, and a good number of those "views" are likely just "listens". If this "listen" to "view" ratio were even just 10%, YouTube could have reduced its carbon footprint by about 117 thousand tons of CO2 in 2016, just by smartly sending audio with no accompanying video. That's over 2.2 million gallons of gasoline worth of CO2 in savings (source).
+  [/Step]
+[/Scroller]
 
 [NextArticle slug:parametricSlug fullWidth:true /]
 

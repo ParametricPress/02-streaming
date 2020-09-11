@@ -15,7 +15,8 @@
     "layout": "./node_modules/parametric-styles/issue-02-theme.css",
     "theme": "./node_modules/parametric-styles/issue-02-layout.css",
     "components": [
-      "./components",
+      "./components/media-picker",
+      "./components/pipeline",
       "./node_modules/parametric-components/dist/cjs/issue-02"
     ]
   },
@@ -23,6 +24,7 @@
     "@vx/group": "^0.0.198",
     "@vx/scale": "^0.0.198",
     "d3": "^5.15.0",
+    "d3-array": "^2.7.1",
     "idyll": "^4.0.7",
     "idyll-d3-component": "^2.0.0",
     "parametric-components": "^2.1.1",

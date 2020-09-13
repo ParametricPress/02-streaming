@@ -35,7 +35,7 @@ Edited by TK editor list.
 // Variables
 [var name:"scrollerIndex" value:0 /]
 [var name:"stepProgress" value:0/]
-[var name:"scrollerStages" value:`['worldmap', 'datacenter','cdn', 'spacer', 'internet', 'spacer', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final']`/]
+[var name:"scrollerStages" value:`['worldmap', 'datacenter','cdn', 'spacer1', 'internet', 'spacer2', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final']`/]
 
 We’ve just seen how digital streams are made up of packets of data sent over the internet. These packets aren’t delivered by magic. Every digital streaming platform relies on a system of computers and cables, each part consuming electricity and releasing carbon emissions. By understanding how these platforms deliver their content, we can directly link our digital actions to the physical infrastructure that releases carbon dioxide .
 

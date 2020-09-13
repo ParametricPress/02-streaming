@@ -32,6 +32,7 @@ export default class MediaType extends React.PureComponent {
   render() {
     const type = this.props.type;
     const data = this.props.data;
+    const headers = this.props.headers;
     const mouseX = this.props.mouseX;
     const animate = this.props.animate;
     const xScaleVX = this.props.xScaleVX;
@@ -42,7 +43,8 @@ export default class MediaType extends React.PureComponent {
       <div style={{
         width: '100%'
       }}>
-        <div
+        {headers ?
+          <div
           style={{
             fontSize: 14,
             fontWeight: 600,
@@ -54,7 +56,8 @@ export default class MediaType extends React.PureComponent {
           }}
         >
           {titleCase(data.mediaType)}
-        </div>
+        </div> : null
+        }
         {
           data.titles.map((d, i) => {
             const mediaTitle = (

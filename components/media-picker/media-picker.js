@@ -100,6 +100,7 @@ export default class MediaPicker extends React.Component {
   render() {
     const type = this.props.type;
     const data = this.props.data;
+    const headers = this.props.headers;
     const width = this.props.width;
     const selectedY = this.state.selectedY;
     const selectedHeight = this.state.selectedHeight;
@@ -160,7 +161,7 @@ export default class MediaPicker extends React.Component {
         {previewDiv}
         {this.width ? 
           <MediaAll type={type}
-            mediaType={mediaType} data={data} width={this.width}
+            mediaType={mediaType} data={data} width={this.width} headers={headers}
             selectTitle={this.selectTitle}
             hasSelected={this.state.selectedY !== null}
             selectedTitle={selectedTitle}

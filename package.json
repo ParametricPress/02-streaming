@@ -17,6 +17,7 @@
     "components": [
       "./components/media-picker",
       "./components/pipeline",
+      "./components",
       "./node_modules/parametric-components/dist/cjs/issue-02"
     ]
   },

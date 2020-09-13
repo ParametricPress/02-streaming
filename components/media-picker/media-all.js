@@ -3,6 +3,7 @@ import MediaType from './media-type';
 import { getMaxSize, groupByType, groupByTitle, addCumulativeSize, getMaxTime } from './util';
 import { scaleLinear } from '@vx/scale';
 import { Rect, Text } from './components';
+import { guideColor } from '../constants';
 
 /* Props:
 type: 'timeline' | 'bar',
@@ -85,7 +86,7 @@ export default class MediaAll extends React.PureComponent {
           width: width,
           paddingTop: 8,
           paddingBottom: 2,
-          border: '1px solid #F1F1F1',
+          border: '1px solid ' + guideColor,
           position: 'relative',
         }}
 
@@ -177,7 +178,7 @@ const Grid = props => {
       left: 0,
       top: 0,
       bottom: 0,
-      backgroundColor: '#F1F1F1',
+      backgroundColor: guideColor,
       transform: `translateX(${props.left}px)`,
       transition: 'transform 700ms ease-in-out'
     }}></div>

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Group } from '@vx/group';
 import MediaTitle from './media-title';
 import { Container, Text } from './components';
+import { textColor } from '../constants';
 
 /** Props:
 type: 'timeline' | 'bar'
@@ -48,6 +49,7 @@ export default class MediaType extends React.PureComponent {
             fontFamily: 'Graphik',
             paddingLeft: mediaTitlePadding.left,
             paddingBottom: mediaTitlePadding.bottom,
+            color: textColor,
             opacity: hasSelected ? 0.2 : 1
           }}
         >

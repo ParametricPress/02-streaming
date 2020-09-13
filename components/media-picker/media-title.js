@@ -4,6 +4,7 @@ import { Group } from '@vx/group';
 import { scaleBand } from '@vx/scale';
 import MediaStrip from './media-strip';
 import { Container, Text, Rect } from './components';
+import { textColor } from '../constants';
 
 /** Props:
 type: 'timeline' | 'bar',
@@ -112,6 +113,7 @@ export default class MediaTitle extends React.PureComponent {
             height: titleHeight,
             fontFamily: 'Graphik',
             userSelect: 'none',
+            color: textColor
           }}
         >{data.title}</div>
         {strips}

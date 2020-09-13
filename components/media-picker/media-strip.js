@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Container, Rect, Text } from './components';
-import { secondaryMarkColor, markColor, accentColor } from './constants';
+import { secondaryMarkColor, markColor, accentColor, darkAccentColor, labelColor, guideColor, backgroundColor } from '../constants';
 
 /** Props:
 type: 'timeline' | 'bar',
@@ -38,8 +38,10 @@ const height = {
 const formatEmissions = n => Math.round(n * 1000) + ' mg';
 const emissionsBarPadding = 4;
 const emissionsTimelinePadding = 8;
-const tickHeight = 6;
+const tickHeight = 8;
 const tickWidth = 2;
+const markerHeight = 14;
+const markerWidth = 3;
 
 export default class MediaStrip extends React.PureComponent {
   static height = height.bar;
@@ -74,7 +76,7 @@ export default class MediaStrip extends React.PureComponent {
           top={MediaStrip.height / 2 - tickHeight / 2}
           width={tickWidth}
           height={tickHeight}
-          fill="#E8E8E8"
+          fill={guideColor}
           style={{
             transition: timeline ? 'transform 1s ease-in' : 'transform 1s ease-out',
             pointerEvents: 'none',
@@ -85,7 +87,7 @@ export default class MediaStrip extends React.PureComponent {
           top={MediaStrip.height / 2 - 1}
           width={timeline ? xScale.timeline.range()[1] : 1}
           height={2}
-          fill="#E8E8E8"
+          fill={guideColor}
           style={{
             transition: timeline ? 'transform 1s ease-in' : 'transform 1s ease-out',
             pointerEvents: 'none',
@@ -98,30 +100,36 @@ export default class MediaStrip extends React.PureComponent {
             xScale.bar(cumulative) + emissionsBarPadding}
           style={{
             fontSize: 10,
-            fontFamily: 'Helvetica',
-            color: mouseX ? secondaryMarkColor : '#AAAAAA',
+            fontFamily: 'Graphik',
+            color: mouseX ? markColor : secondaryMarkColor,
             transition: 'transform 700ms ease-in-out',
             pointerEvents: 'none',
           }}>
           {formatEmissions(cumulative)}
         </Text>
+        <Rect
+          fill={secondaryMarkColor}
+          top={0}
+          left={0}
+          height={height.bar}
+          width={xScale.bar(cumulative)}
+          style={{
+            opacity: timeline && mouseX ? 1 : 0
+          }}
+        />
         {
           data.map((d, i) => {
-            const rectType = !timeline ? 'bar' :
-              !mouseX ? 'timeline' :
-                d.time < xScale.timeline.invert(mouseX) ? 'bar' : 'timeline';
-            const rTimeline = rectType === 'timeline';
-            const y = rectType === 'timeline' ? MediaStrip.height / 2 - height[type] / 2 : 0;
+            const y = timeline ? MediaStrip.height / 2 - height[type] / 2 : 0;
             return (
               <Rect
                 key={i}
-                left={xScale[rectType](rTimeline ? d.time : d.cumulative)}
+                left={xScale[type](timeline ? d.time : d.cumulative)}
                 top={y}
-                width={widthScale[rectType](rTimeline ? d.time : d.size) + widthOffset[rectType]}
-                height={height[rectType]}
-                fill={!timeline ? markColor : rTimeline ? markColor : secondaryMarkColor}
+                width={widthScale[type](timeline ? d.time : d.size) + widthOffset[type]}
+                height={height[type]}
+                fill={!timeline ? markColor : timeline ? markColor : secondaryMarkColor}
                 style={{
-                  opacity: opacity[rectType],
+                  opacity: opacity[type],
                   transition: animate ? 'transform 700ms ease-in-out' : '',
                   pointerEvents: 'none',
                 }}
@@ -130,15 +138,16 @@ export default class MediaStrip extends React.PureComponent {
           })
         }
         <Rect
-          top={MediaStrip.height / 2 - tickHeight / 2}
+          top={MediaStrip.height / 2 - markerHeight / 2}
           left={mouseX ? Math.min(mouseX, xScale.timeline.range()[1]) : 0}
-          width={tickWidth}
-          height={tickHeight}
+          width={markerWidth}
+          height={markerHeight}
           fill={accentColor}
           style={{
             pointerEvents: 'none',
             opacity: mouseX ? 1 : 0,
-            zIndex: 100
+            zIndex: 100,
+            border: '1px solid ' + darkAccentColor
           }}
         />
         {
@@ -148,8 +157,8 @@ export default class MediaStrip extends React.PureComponent {
               left={4}
               style={{
                 fontSize: 10,
-                fontFamily: 'Helvetica',
-                color: '#fff',
+                fontFamily: 'Graphik',
+                color: backgroundColor,
                 pointerEvents: 'none',
               }}>{quality}p</Text>
           : null

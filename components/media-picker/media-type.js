@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Group } from '@vx/group';
 import MediaTitle from './media-title';
 import { Container, Text } from './components';
+import { textColor } from '../constants';
 
 /** Props:
 type: 'timeline' | 'bar'
@@ -31,6 +32,7 @@ export default class MediaType extends React.PureComponent {
   render() {
     const type = this.props.type;
     const data = this.props.data;
+    const headers = this.props.headers;
     const mouseX = this.props.mouseX;
     const animate = this.props.animate;
     const xScaleVX = this.props.xScaleVX;
@@ -41,18 +43,21 @@ export default class MediaType extends React.PureComponent {
       <div style={{
         width: '100%'
       }}>
-        <div
+        {headers ?
+          <div
           style={{
             fontSize: 14,
             fontWeight: 600,
-            fontFamily: 'Helvetica',
+            fontFamily: 'Graphik',
             paddingLeft: mediaTitlePadding.left,
             paddingBottom: mediaTitlePadding.bottom,
+            color: textColor,
             opacity: hasSelected ? 0.2 : 1
           }}
         >
           {titleCase(data.mediaType)}
-        </div>
+        </div> : null
+        }
         {
           data.titles.map((d, i) => {
             const mediaTitle = (

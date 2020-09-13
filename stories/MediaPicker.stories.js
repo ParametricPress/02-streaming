@@ -121,3 +121,48 @@ export const mediaPicker = () => {
     </StoryContainer>
   )
 }
+
+export const websites = () => {
+  const type = typeKnob();
+
+  return (
+    <StoryContainer>
+      <MediaPicker
+        type={type}
+        mediaType="website"
+        data={data}
+        width={width}
+      />
+    </StoryContainer>
+  )
+}
+
+export const audio = () => {
+  const type = typeKnob();
+
+  return (
+    <StoryContainer>
+      <MediaPicker
+        type={type}
+        mediaType="audio"
+        data={data}
+        width={width}
+      />
+    </StoryContainer>
+  )
+}
+
+export const video = () => {
+  const type = typeKnob();
+
+  return (
+    <StoryContainer>
+      <MediaPicker
+        type={type}
+        mediaType="video"
+        data={data}
+        width={width}
+      />
+    </StoryContainer>
+  )
+}

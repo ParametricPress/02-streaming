@@ -1,6 +1,6 @@
 const React = require('react');
 const { filterChildren, mapChildren } = require('idyll-component-children');
-import TextContainer from './text-container';
+import { TextContainer } from 'idyll-components';
 const d3 = require('d3-selection');
 
 const styles = {
@@ -27,7 +27,7 @@ const styles = {
 
 let id = 0;
 
-class Scroller extends React.Component {
+export default class CustomScroller extends React.Component {
   constructor(props) {
     super(props);
     this.id = id++;
@@ -53,7 +53,8 @@ class Scroller extends React.Component {
         step: `#idyll-scroll-${this.id} .idyll-step`, // required
         container: `#idyll-scroll-${this.id}`, // required (for sticky)
         graphic: `#idyll-scroll-${this.id} .idyll-scroll-graphic`, // required (for sticky)
-        progress: this.props.progress !== undefined ? true : false
+        progress: this.props.progress !== undefined ? true : false,
+        offset: this.props.offset
       })
       .onStepEnter(this.handleStepEnter.bind(this))
       .onStepProgress(this.handleStepProgress.bind(this))
@@ -188,39 +189,3 @@ class Scroller extends React.Component {
     );
   }
 }
-
-Scroller._idyll = {
-  name: 'Scroller',
-  tagType: 'open',
-  children: [
-    `
-  [Graphic] This graphic stays fixed in the background.[/Graphic]
-  [Step]This is the content for step 1[/Step]
-  [Step]This is the content for step 2[/Step]
-  [Step]This is the content for step 3[/Step]`
-  ],
-  props: [
-    {
-      name: 'currentStep',
-      type: 'integer',
-      example: '0',
-      description: 'The index of the currently selected step.'
-    },
-    {
-      name: 'currentState',
-      type: 'object',
-      example: '`{}`',
-      description:
-        'The state value associated with the currently selected step. Note you must set the state property on the step components for this value to update.'
-    },
-    {
-      name: 'progress',
-      type: 'number',
-      example: '0',
-      description:
-        'The percent of completion (0-1) of the currently selected step'
-    }
-  ]
-};
-
-export default Scroller;

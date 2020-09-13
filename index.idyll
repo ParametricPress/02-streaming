@@ -23,52 +23,167 @@
   source:`"https://github.com/ParametricPress/02-" + parametricSlug `
 /]
 
-[data name:"mediaPickerData" source:"dummy-data.csv"  /]
-[MediaPickerContainer data:mediaPickerData /]
-
-# 0.1 g
- The amount of CO2 you've released by loading this article
-
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tortor nunc, elementum eu ex vitae, lobortis fringilla ligula. Nunc sed nisl auctor dolor viverra dapibus sit amet et magna. Phasellus vestibulum dictum facilisis. Phasellus ut suscipit justo, ac vulputate nisi. Proin eu leo non nunc viverra egestas vitae eu augue. Vestibulum non massa in nulla interdum viverra. Vestibulum sit amet libero iaculis, maximus magna quis, dapibus lacus.
-
- [data name:"carbonEmissions" source:"carbon-emissions.csv" /]
-
- [Table data:carbonEmissions columns:`['Year', 'Total']` defaultPageSize:10 /]
- [br/]
-
- Aenean eros sem, varius quis erat sit amet, pulvinar aliquet diam. Etiam et vestibulum justo. Pellentesque commodo tristique metus at tempor. Donec cursus volutpat arcu. Etiam eget nisl mi. Cras malesuada tortor non diam auctor, vel porta tellus malesuada. Aliquam erat volutpat. Sed ut venenatis quam, sed elementum turpis. Duis bibendum consequat finibus.
-
-[var name:"clicks" value:0 /]
-[CustomComponent style:`{cursor: 'pointer'}` clickCount:clicks /]
-
-[Caption]
-You've clicked on the component above [Display value:clicks format:"d" /] times.
-[/Caption]
-
-Fusce aliquam fermentum ex. Nullam mi sem, varius rutrum diam vitae, laoreet malesuada quam. Fusce sodales nibh ut finibus condimentum. Donec eget risus ut ipsum sodales commodo. Cras ullamcorper augue velit, at finibus diam mattis vel. Ut lobortis velit eget dolor dictum tincidunt. Morbi rhoncus vehicula sapien sit amet tempor. Aliquam blandit nisi eu enim fermentum, ac varius neque venenatis. Nullam in nisi at ante mollis tempus. Nullam congue finibus nisl eu finibus. Donec porttitor non ipsum et scelerisque. In in turpis elementum justo rhoncus varius at in metus. Aliquam eget dui mi. Donec non tortor sit amet massa porttitor aliquam tristique ut metus.
-
-[var name:"updateCount" value:0 /]
-
-[CustomD3Component updateCount:updateCount /]
-
-[Button onClick:`updateCount += 1`]
-  Update.
-[/Button]
-
-Integer viverra neque ut tristique laoreet. Vestibulum malesuada molestie sapien, sed auctor magna pellentesque nec. Nunc cursus tristique nisl. Donec aliquet felis nec mollis commodo. Ut dapibus blandit quam. Fusce tellus neque, ullamcorper quis magna ac, posuere pretium leo. Sed quam augue, porttitor eget pharetra non, tincidunt in mi. Suspendisse orci dui, vehicula ac aliquam non, iaculis a lacus. Fusce a nisi gravida, vulputate nibh quis, blandit ante. Nunc fringilla risus vitae ornare convallis. Sed rhoncus dolor risus, et pulvinar neque maximus non. Nullam tempor porta risus, et sagittis felis luctus at. Vestibulum a mi eget sapien auctor malesuada egestas vitae orci.
-
-Quisque non laoreet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc euismod consectetur odio, at facilisis leo congue at. Nam vitae est nunc. Ut consequat molestie erat id interdum. Quisque rhoncus, tortor a accumsan aliquet, augue odio porta lorem, vulputate egestas felis ante vitae neque. Proin nulla sapien, interdum et lorem quis, semper facilisis sapien. Donec erat sem, interdum id efficitur eget, efficitur sit amet eros. Aenean at nisl eu dui maximus convallis. Etiam varius odio vel laoreet maximus. Duis ac lacus lorem. Aliquam rutrum dapibus sapien non porttitor.
-
-# Header 1
-## Header 2
-### Header 3
-
 [AuthorBio]
 
 [b][a href:""]Your Name[/a][/b] is _TK insert bio here_.
 
 Edited by TK editor list.
 [/AuthorBio]
+
+// BEGIN ARTICLE
+In 2014, Google had to shark-proof their underwater cables. It turned out that sharks were fond of chewing on the high-speed cables that make up the internet. While this is not an issue anymore, it's a reminder that both the internet and sharks share the same home. 
+
+[Aside]
+[Graphic]
+[SVG style:`{width: '100%'}` src:"static/images/bookpipeline.svg"/]
+Book
+[br/][br/]
+[SVG style:`{width: '100%'}` src:"static/images/ebookpipeline.svg"/]
+E-Book
+[/Graphic]
+[/Aside]
+
+As technology advances, the need for seamless functionality comes at the cost of obfuscating the elaborate physical backbone that supports it. When you buy a book on Amazon, the environmental consequences are difficult to ignore. From the jet fuel and gasoline burned to transport the packages, to the cardboard boxes cluttering your house, the whole process is filled with reminders that your actions have tangible, permanent consequences. Download that book onto an e-reader, however, and this trail of evidence seems to vanish. The reality is, just as a package purchased on Amazon must be transported through warehouses and shipping centers to get to your home, a downloaded book must be transported from data centers and networks across the world to arrive on your screen. 
+
+And that's the thing: Your digital actions are only possible because of the physical infrastructure built to support them. Digital actions are physical ones. This means that Google has to be mindful of sharks. This also means that we should be mindful of the carbon emissions produced by running the world's data centers and internet networks. According to one study, the Information and Communications Technology sector is expected to account for between 3 - 3.6 % of global greenhouse gas emissions in 2020. That's more than the entire airline industry, which clocked in at 2.5% in 2019. The answer to "why?" and  "how?" may not be immediately obvious, but that's not the fault of consumers. A well-designed, frictionless digital experience means that users don't need to worry about what happens behind the scenes and, by extension, the consequences. This is problematic: The idea of "hidden costs" runs contrary to principles of environmental awareness. Understanding how these digital products and services work is a crucial first step towards understanding their environmental impact.
+
+## Media Picker
+[data name:"mediaPickerData" source:"dist/data.json"/]
+Each type of digital activity produces a different level of emissions, and as a result has different consequences on the physical world. The amount of carbon dioxide emitted is based on the type and quantity of information that needs to be loaded for a particular digital activity. 
+
+The CO2 emitted for any digital activity is directly correlated to the number of bytes that must be transferred for that activity. More specifically, emissions can be computed using the following equation:
+
+n bytes * X KwH/byte * Y g CO2/KwH
+
+where X = 6x10^-11 is the global average for energy consumed for transmitting one byte of data, and Y = 707 represents the U.S. national weighted average for grams of CO2 emitted for energy consumed.  (source , source).
+
+### Websites 
+[Aside]
+[Graphic hed:"Emissions of Websites" style:`{marginTop: 16}`]
+[MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
+[br/]
+[caption]This is a caption[/caption]
+[/Graphic]
+[/Aside]
+
+In order to load the Parametric Press article that you are currently reading, ?? grams of CO2 were produced. These emissions are a result of loading data for the text, graphics, and visualizations that are then rendered on your device.
+
+The chart above displays the carbon emitted when loading various websites and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading). Tapping and holding each bar will show a preview of that scroll, sped up to a 5 second clip. 
+
+In the context of carbon emissions, one of the least expensive forms of media to load onto your device is text. As shown above, websites like Google, which are relatively simple because they primarily show static text, have much lower emissions than websites like Facebook, which load a lot of data-heavy media types to your device. 
+
+### Audio 
+[Aside]
+[Graphic hed:"Emissions of Audio"]
+[MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
+[br/]
+[caption]This is a caption[/caption]
+[/Graphic]
+[/Aside]
+
+Let’s take a closer look at one common type of non-text media: audio. Spotify, one of the most ubiquitous streaming platforms, offers audio in the form of songs and podcasts. The audio that you receive from Spotify is a compressed version of the original (source).
+
+The podcast shown in the visualization was compressed to 128 kilobits per second, while the song was compressed to 256 kilobits per second. This means that in the one minute timespan that both audio files played, twice as much data needed to be loaded for the song in comparison to the podcast, which leads to the song having roughly twice as large of a carbon footprint. These audio examples have lower carbon emissions than most of the websites shown earlier.
+
+### Video
+[Aside]
+[Graphic hed:"Video"]
+[MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
+[br/]
+[caption]This is a caption[/caption]
+[/Graphic]
+[/Aside]
+
+Generally, digital activity that involves videos requires a large amount of data to be sent to your device so that your device can render each frame as well as the associated audio. The chart below shows emissions for streaming different YouTube videos at various qualities for 60 seconds each.
+
+When you view a video at a higher quality, you receive a clearer image on your device because that video is rendered with more pixels. Pixels are essentially units of visual information. This is why there are greater emissions for videos at 1080p than those at 360p: higher quality videos require a greater amount of data to be transferred to your device. 
+
+Over a one minute period, the Dr. Strange trailer emits more CO2 than the 3Blue1Brown animation. You might notice there is a lot of empty black space in the 3Blue1Brown video, while the Dr. Strange trailer exhibits a large range of colors and frequent visual changes, both of which require more data to render. The nature slideshow had more emissions than the other two videos, likely owed to. This slideshow contains a lot of moving, detailed images, and this may result in more visual changes than the Dr. Strange trailer. 
+
+### Packets
+[var name:"mediaPickerType" value:"bar"/]
+
+[Aside]
+[Graphic hed:"Media Emissions by Medium"]
+[MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
+[br/]
+[caption]This is a caption[/caption]
+[button onClick:`mediaPickerType = mediaPickerType === 'bar' ? 'timeline' : 'bar'`]Switch[/button]
+[/Graphic]
+[/Aside]
+
+Over a one minute period, the Dr. Strange trailer emits more CO2 than the 3Blue1Brown animation. You might notice there is a lot of empty black space in the 3Blue1Brown video, while the Dr. Strange trailer exhibits a large range of colors and frequent visual changes, both of which require more data to render. The nature slideshow had more emissions than the other two videos, likely owed to. This slideshow contains a lot of moving, detailed images, and this may result in more visual changes than the Dr. Strange trailer. 
+
+In a lot of cases, when you stream content online, you don’t receive all of the information for that content at once. Instead, your device loads incremental pieces of the data as you consume the media. These pieces are called packets.
+
+In these visualizations, we estimated emissions based on the size and quantity of the packets needed to load each type of media.
+
+When we break down each digital media snapshot into a timeline of packets, we can see that the way in which packets arrive for video and audio differs from the pattern for websites. With video and audio, packets travel to your device at regular intervals while you are playing the media. In contrast, the packets for websites are weighted more heavily towards the beginning of the timeline as websites make most of the requests for content on their initial load. Websites may make more requests as you scroll through and load more content. 
+
+[Aside]
+One thing that was not explicitly covered in this exploration was the carbon impact of advertisements. Ads are another form of digital content, and thus produce carbon dioxide as the packets comprising the ads are delivered to your screen. While ads don’t contribute to a website or video you may be watching, digital media providers include advertisements as a method of extra revenue. When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), the size of its website decreased from 5000 to 500 kilobytes with no significant changes to the appearance of the site (source), This meant that the information to render USA Today could be contained in fewer packets, and as a result delivering the website to readers’ devices would produce fewer carbon emissions. Although ads are not necessary components of digital media, ads are prevalent across the internet and have tangible environmental impacts.
+[/Aside]
+
+## YouTube Pipeline
+// Variables
+[var name:"scrollerIndex" value:0 /]
+[var name:"stepProgress" value:0/]
+[var name:"scrollerStages" value:`['worldmap', 'datacenter','cdn', 'spacer1', 'internet', 'spacer2', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final']`/]
+
+We’ve just seen how digital streams are made up of packets of data sent over the internet. These packets aren’t delivered by magic. Every digital streaming platform relies on a system of computers and cables, each part consuming electricity and releasing carbon emissions. By understanding how these platforms deliver their content, we can directly link our digital actions to the physical infrastructure that releases carbon dioxide .
+
+Let's take a look at YouTube. With its 2 billion + users, YouTube is the prototypical digital streaming service. How does one of its videos arrive on your screen?
+
+[Scroller currentStep:scrollerIndex progress:stepProgress]
+  [Graphic]
+    [div id:"pipeline" style:`{overflow: 'hidden'}`]
+      [Pipeline stage:`scrollerStages[scrollerIndex]` progress:`stepProgress * 100` /]
+    [/div]
+  [/Graphic]
+
+  [Step]  
+  Videos are stored on servers called "data centers"—warehouses full of giant computers designed for storing and distributing videos. For global services, these are often placed around the world. YouTube's parent company, Google, has 21 main data centers strategically placed throughout 4 continents (North America, South America, Europe, and Asia). Google does not disclose the data centers they use specifically for YouTube; we show all of them here.
+  [/Step]
+  [Step]
+  Cooling these data centers is no small feat, consuming up to 40% of the total energy required to run them (source). Because of this, companies have begun placing data centers in cold countries (source), where they can take advantage of passive cooling. Google itself purchases renewable energy to run its data centers, so their carbon footprint from usage is effectively zero.
+  [/Step]
+  [Step]
+  When a video is sent to you, it passes through a network of these main and smaller data centers called a Content Delivery Network (CDN for short). These are responsible for storing the more popular or recently watched videos for users in a given area, ensuring no single data center is overwhelmed and service stays zippy. Priest et al. estimate that all data centers account for less than 2% of YouTube's electricity use. However, Google purchases renewable energy to run its data centers, so its carbon footprint is effectively zero here.
+  [/Step]
+  [Step]
+  Of course, videos need a way of moving between main and CDN data centers. For that, we have the internet.
+  [/Step]
+  [Step]
+  The Internet is a “highway of information” that allows packets of data to be transmitted as electrical impulses.  A packet is routed from a source computer, through cables and intermediary computers, before arriving at its destination. The backbone of this highway is made up of 550,000 miles of underwater cables. Miles of this cable is spooled onto a large ship and painstakingly unwound along the ocean floor, a process which can take several months and millions of dollars. Priest et al. estimate that this infrastructure consumes approximately 1,900 Gigawatt-hours of electricity to serve YouTube videos. We can approximate associated greenhouse gas emissions by using the world emissions factor for electricity generation in the same year (2016), netting us X million metric tons of CO2 (MtCO2).
+  [/Step]
+  [Step]
+  The packets traveling across this information highway need “off-ramps” to reach your screen. The off-ramps that packets take are either residential networks (wired connections from homes to the internet) or cellular networks (wireless connections from cell phones to the internet). The physical infrastructure making up these different networks is dramatically different, and therefore they have significantly different levels of energy consumption and carbon emissions.
+  [/Step]
+  [Step]
+  An estimated 88% of YouTube's traffic goes through "fixed line" networks (from your residential Cable, DSL, or Fiber-Optic providers), and this accounts for approximately 4,400 Gigawatt-hours of electricity usage. The associated carbon footprint will vary drastically depending on your local electricity production, but using the worlds emissions factor for electricity generation once again, we can approximate to X MtCO2.
+  [/Step]
+  [Step]
+  In comparison, only 12% of YouTube’s traffic goes through cellular networks, but they are by far the most expensive part of YouTube’s content delivery pipeline, accounting for 6,100 Gigawatt-hours of electricity usage, or around X MtCO2. At over 10 times the electricity usage per unit of traffic, the relative inefficiency of radio transmission is clear. 
+  [/Step]
+  [Step]
+  Eventually, the video data reaches your device for viewing. While your device might not technically be part of Youtube’s content delivery pipeline, we can't overlook the cost of moving those pixels.  Devices account for an estimated 8500 Gigawatt-hours of electricity usage, or X million metric tons of CO2 emissions.
+  [/Step]
+  [Step]
+  In total, Priest et al.'s research estimates that YouTube traffic contributes Y million metric tons of CO2 per year, as much as a small metropolitan area like Frankfurt or Providence. Put in another metric, this is equivalent to the yearly footprint of approximately 2.2 million cars in the United States (source).
+  [/Step]
+  [Step]
+  It's important to note that breakdown of YouTube's carbon footprint isn't necessarily representative of the entirety of the information and technology sector. A 2017 study by Belkhir and Elmeligi paints a surprisingly different picture for the sector as a whole.
+  [/Step]
+  [Step]
+  To compare the two, we can group the "Internet", "Residential Network", and "Cellular Network" sections into an umbrella "Networks".
+  [/Step]
+  [Step]
+  Belkhir and Elmeligi provide estimates for both 2010 (retrospective) and 2020 (prospective). Most surprising is the weight Data Centers and CDNs have in this breakdown. We can speculate that the relatively high bandwidth required to transfer videos as a medium contributes at least partially to the overweightedness of the "Networks" category for YouTube.
+  [/Step]
+  [Step]
+  In the same study, Belkhir and Elmeligi create two models to project the ICT sector's decades forward. Even their "unrealistically conservative" linear model puts tech at a 6-7% share of GHG emissions in 2040, and their exponential model has tech reaching over 14%. What is being done about this? Aside from increasing the efficiency of each part of the pipeline and taking advantage of renewable energy, mindful design could also go a long way.  In the context of digital streaming, Priest et al. point out that much of YouTube's traffic comes from music videos, and a good number of those "views" are likely just "listens". If this "listen" to "view" ratio were even just 10%, YouTube could have reduced its carbon footprint by about 117 thousand tons of CO2 in 2016, just by smartly sending audio with no accompanying video. That's over 2.2 million gallons of gasoline worth of CO2 in savings (source).
+  [/Step]
+[/CustomScroller]
 
 [NextArticle slug:parametricSlug fullWidth:true /]
 

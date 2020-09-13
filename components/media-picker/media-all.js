@@ -3,6 +3,7 @@ import MediaType from './media-type';
 import { getMaxSize, groupByType, groupByTitle, addCumulativeSize, getMaxTime } from './util';
 import { scaleLinear } from '@vx/scale';
 import { Rect, Text } from './components';
+import { guideColor } from '../constants';
 
 /* Props:
 type: 'timeline' | 'bar',
@@ -46,11 +47,18 @@ export default class MediaAll extends React.PureComponent {
   constructor(props) {
     super(props);
 
-    this.data = this.props.data;
+    this.data = props.data;
     this.data.forEach(d => addCumulativeSize(d.packets));
 
     this.maxTotal = getMaxSize(this.data);
+
+    const mediaType = props.mediaType;
+    if (mediaType) {
+      this.data = this.data.filter(d => d.mediaType === mediaType);
+      console.log(this.data);
+    }
     this.groupData = groupByType(groupByTitle(this.data));
+
     this.xScales = MediaAll.getXScaleVX(props.width, this.maxTotal);
 
     this.animateTimeout = -1;
@@ -65,32 +73,12 @@ export default class MediaAll extends React.PureComponent {
   }
 
   render() {
-    console.log('media-all rerender');
     const type = this.props.type;
     const width = this.props.width;
     const hasSelected = this.props.hasSelected;
     const selectedTitle = this.props.selectedTitle;
 
-    const mouseX = this.state.mouseX;
-
-    let xScaleVX;
-
-    if (type === 'timeline' && mouseX) {
-      const mouseTime = this.xScales.timeline.invert(mouseX);
-      const mouseMax = getMaxSize(this.data, d => d.time <= mouseTime);
-      const maxTime = getMaxTime(this.data, mouseTime);
-
-      xScaleVX = {
-        timeline: this.xScales.timeline,
-        bar: scaleLinear({
-          range: [0, this.xScales.timeline(maxTime)],
-          round: true,
-          domain: [0, mouseMax]
-        })
-      }
-    } else {
-      xScaleVX = this.xScales; 
-    }
+    const xScaleVX = this.xScales
 
     return (
       <div
@@ -98,7 +86,7 @@ export default class MediaAll extends React.PureComponent {
           width: width,
           paddingTop: 8,
           paddingBottom: 2,
-          border: '1px solid #F1F1F1',
+          border: '1px solid ' + guideColor,
           position: 'relative',
         }}
 
@@ -150,7 +138,7 @@ export default class MediaAll extends React.PureComponent {
       const animate = false;
 
       this.setState({mouseX, animate});
-      this.animateTimeout = setTimeout(() => this.setState({animate: true}), 1000)
+      this.animateTimeout = setTimeout(() => this.setState({animate: true}), 200)
     }
   }
 
@@ -158,7 +146,7 @@ export default class MediaAll extends React.PureComponent {
     console.log('clearMouse');
     clearTimeout(this.animateTimeout);
     this.setState({mouseX: null, animate: false});
-    this.animateTimeout = setTimeout(() => this.setState({animate: true}), 1000);
+    this.animateTimeout = setTimeout(() => this.setState({animate: true}), 200);
   }
 }
 
@@ -170,7 +158,7 @@ const Label = props => {
       style={{
         width:  60,
         fontSize: 10,
-        fontFamily: 'Helvetica',
+        fontFamily: 'Graphik',
         textAlign: 'center',
         color: '#AAAAAA',
         transition: 'transform 700ms ease-in-out',
@@ -190,7 +178,7 @@ const Grid = props => {
       left: 0,
       top: 0,
       bottom: 0,
-      backgroundColor: '#F1F1F1',
+      backgroundColor: guideColor,
       transform: `translateX(${props.left}px)`,
       transition: 'transform 700ms ease-in-out'
     }}></div>

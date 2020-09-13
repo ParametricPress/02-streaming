@@ -56,7 +56,7 @@ export class Rect extends React.PureComponent {
     this.initialWidth = roundPixel(props.width);
     this.initialHeight = roundPixel(props.height);
 
-    if (this.initialWidth === 0 || this.initialWidth === 0) {
+    if (this.initialWidth === 0 || this.initialHeight === 0) {
       throw Error('initial dimension of Rect cannot be 0');
     }
   }

@@ -19,3 +19,23 @@
   }
 
 }
+
+#pipeline {
+  margin-left: calc(50% + 32px);
+}
+
+@media only screen and (max-width: 1000px) {
+  #pipeline {
+    margin-left: 0;
+  }  
+}
+
+.packet-animated {
+  animation-name: packet-animation;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes packet-animation {
+  100% { stroke-dashoffset: 0; }
+}

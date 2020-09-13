@@ -51,6 +51,8 @@ where X = 6x10^-11 is the global average for energy consumed for transmitting on
 [Aside]
 [Graphic hed:"Emissions of Websites" style:`{marginTop: 16}`]
 [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
+[br/]
+[caption]This is a caption[/caption]
 [/Graphic]
 [/Aside]
 
@@ -64,6 +66,8 @@ In the context of carbon emissions, one of the least expensive forms of media to
 [Aside]
 [Graphic hed:"Emissions of Audio"]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
+[br/]
+[caption]This is a caption[/caption]
 [/Graphic]
 [/Aside]
 
@@ -75,6 +79,8 @@ The podcast shown in the visualization was compressed to 128 kilobits per second
 [Aside]
 [Graphic hed:"Video"]
 [MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
+[br/]
+[caption]This is a caption[/caption]
 [/Graphic]
 [/Aside]
 
@@ -90,6 +96,8 @@ Over a one minute period, the Dr. Strange trailer emits more CO2 than the 3Blue1
 [Aside]
 [Graphic hed:"Media Emissions by Medium"]
 [MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
+[br/]
+[caption]This is a caption[/caption]
 [/Graphic]
 [/Aside]
 

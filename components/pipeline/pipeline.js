@@ -2,6 +2,7 @@ import * as React from "react";
 import Graphic from "./graphic";
 import Emissions from "./emissions";
 import { stages } from "./constants";
+import Projection from "./projection";
 
 const youtubeData = [
   {
@@ -30,17 +31,17 @@ const youtubeDataSimple = [
   {
     stage: "simple*",
     emissions: 0,
-    name: 'Data Centers + CDNs'
+    name: "Data Centers + CDNs",
   },
   {
     stage: "simple",
     emissions: 59,
-    name: 'Networks'
+    name: "Networks",
   },
   {
     stage: "simple",
     emissions: 41,
-    name: 'Devices'
+    name: "Devices",
   },
 ];
 
@@ -48,17 +49,17 @@ const ict2010 = [
   {
     stage: "compare",
     emissions: 33,
-    name: 'Data Centers + CDNs†'
+    name: "Data Centers + CDNs†",
   },
   {
     stage: "compare",
     emissions: 28,
-    name: 'Networks'
+    name: "Networks",
   },
   {
     stage: "compare",
     emissions: 39,
-    name: 'Devices'
+    name: "Devices",
   },
 ];
 
@@ -66,17 +67,17 @@ const ict2020 = [
   {
     stage: "compare",
     emissions: 45,
-    name: 'Data Centers + CDNs†'
+    name: "Data Centers + CDNs†",
   },
   {
     stage: "compare",
     emissions: 24,
-    name: 'Networks'
+    name: "Networks",
   },
   {
     stage: "compare",
     emissions: 31,
-    name: 'Devices'
+    name: "Devices",
   },
 ];
 
@@ -88,64 +89,89 @@ export default class Pipeline extends React.PureComponent {
     const stageIndex = stages.indexOf(stage);
 
     const showGraphic = stageIndex <= stages.indexOf("simple");
-    const compareProgress = stage === 'compare' ? progress : 100
+    const compareProgress = stage === "compare" ? progress : 100;
 
     return (
       <div
         style={{
           position: "relative",
           width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          transform: showGraphic
-            ? "translateY(0)"
-            : `translateY(calc(-${compareProgress}% + ${(94 * compareProgress) / 100}px))`,
         }}
       >
-        <Graphic stage={stage} progress={progress} />
-        <Emissions
-          stage={stage}
-          progress={progress}
-          data={
-            stageIndex < stages.indexOf("simple")
-              ? youtubeData
-              : youtubeDataSimple
-          }
+        <Projection
+          style={{
+            position: "absolute",
+            left: 0,
+            width: "100%",
+            height: "100%",
+            opacity: stage === "final" ? 1 : 0,
+          }}
         />
         <div
           style={{
-            position: "absolute",
-            top: "100%",
-            width: "100%",
-            height: "calc(100% - 94px)",
             display: "flex",
-            flexDirection: "column-reverse",
+            flexDirection: "column",
+            alignItems: "center",
+            width: '100%',
+            opacity: stage === 'final' ? 0 : 1,
+            transform: showGraphic
+              ? "translateY(0)"
+              : `translateY(calc(-${compareProgress}% + ${
+                  (94 * compareProgress) / 100
+                }px))`,
           }}
         >
-          <Emissions stage={stage} progress={progress} data={ict2010} />
-          <div style={{ width: "100%", textAlign: "left", marginTop: 16 }}>
-            ICT Sector as a Whole (2020, projected)   [Belkhir & Elmeligi, 2017]
-          </div>
-          <Emissions stage={stage} progress={progress} data={ict2020} />
-          <div style={{ width: "100%", textAlign: "left" }}>
-            <span style={{fontSize: 12}}>† Belkhir & Elmeligi do not distinguish between core data centers and those in the content delivery network, grouping them under a 'Data Center' category</span>
-            <br/><br/>
-            ICT Sector as a Whole (2010)   [Belkhir & Elmeligi, 2017]
-          </div>
+          <Graphic stage={stage} progress={progress} />
+          <Emissions
+            stage={stage}
+            progress={progress}
+            data={
+              stageIndex < stages.indexOf("simple")
+                ? youtubeData
+                : youtubeDataSimple
+            }
+          />
           <div
             style={{
-              width: "100%",
-              textAlign: "left",
               position: "absolute",
-              top: 0,
+              top: "100%",
+              width: "100%",
+              height: "calc(100% - 94px)",
+              display: "flex",
+              flexDirection: "column-reverse",
             }}
           >
-            YouTube (2016)   [Priest et al.]
-            <br/>
-            <span style={{fontSize: 12}}>
-              * Google purchases renewable energy to run its data centers. If this weren't the case, this category would still only account for less than 2% of YouTube's emissions.
-            </span>
+            <Emissions stage={stage} progress={progress} data={ict2010} />
+            <div style={{ width: "100%", textAlign: "left", marginTop: 16 }}>
+              ICT Sector as a Whole (2020, projected) [Belkhir & Elmeligi, 2017]
+            </div>
+            <Emissions stage={stage} progress={progress} data={ict2020} />
+            <div style={{ width: "100%", textAlign: "left" }}>
+              <span style={{ fontSize: 12 }}>
+                † Belkhir & Elmeligi do not distinguish between core data
+                centers and those in the content delivery network, grouping them
+                under a 'Data Center' category
+              </span>
+              <br />
+              <br />
+              ICT Sector as a Whole (2010) [Belkhir & Elmeligi, 2017]
+            </div>
+            <div
+              style={{
+                width: "100%",
+                textAlign: "left",
+                position: "absolute",
+                top: 0,
+              }}
+            >
+              YouTube (2016) [Priest et al.]
+              <br />
+              <span style={{ fontSize: 12 }}>
+                * Google purchases renewable energy to run its data centers. If
+                this weren't the case, this category would still only account
+                for less than 2% of YouTube's emissions.
+              </span>
+            </div>
           </div>
         </div>
       </div>

@@ -73,6 +73,7 @@ export default class MediaPicker extends React.Component {
       selectedY: null,
       offset: null,
       selectedTitle: null,
+      width: null,
     };
 
     this.selectTitle = this.selectTitle.bind(this);
@@ -90,6 +91,10 @@ export default class MediaPicker extends React.Component {
     const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
     this.height = rect.height;
     this.width = rect.width;
+
+    this.setState({
+      width: this.width
+    })
   }
 
   render() {
@@ -153,12 +158,14 @@ export default class MediaPicker extends React.Component {
         position: 'relative',
       }}>
         {previewDiv}
-        <MediaAll type={type}
-          mediaType={mediaType} data={data} width={width}
-          selectTitle={this.selectTitle}
-          hasSelected={this.state.selectedY !== null}
-          selectedTitle={selectedTitle}
-        />
+        {this.width ? 
+          <MediaAll type={type}
+            mediaType={mediaType} data={data} width={this.width}
+            selectTitle={this.selectTitle}
+            hasSelected={this.state.selectedY !== null}
+            selectedTitle={selectedTitle}
+          />
+        : null }
       </div>
     );
   }

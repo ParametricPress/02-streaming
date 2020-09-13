@@ -100,7 +100,7 @@ export default class MediaStrip extends React.PureComponent {
             xScale.bar(cumulative) + emissionsBarPadding}
           style={{
             fontSize: 10,
-            fontFamily: 'Helvetica',
+            fontFamily: 'Graphik',
             color: mouseX ? secondaryMarkColor : labelColor,
             transition: 'transform 700ms ease-in-out',
             pointerEvents: 'none',
@@ -157,7 +157,7 @@ export default class MediaStrip extends React.PureComponent {
               left={4}
               style={{
                 fontSize: 10,
-                fontFamily: 'Helvetica',
+                fontFamily: 'Graphik',
                 color: '#fff',
                 pointerEvents: 'none',
               }}>{quality}p</Text>

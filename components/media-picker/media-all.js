@@ -157,7 +157,7 @@ const Label = props => {
       style={{
         width:  60,
         fontSize: 10,
-        fontFamily: 'Helvetica',
+        fontFamily: 'Graphik',
         textAlign: 'center',
         color: '#AAAAAA',
         transition: 'transform 700ms ease-in-out',

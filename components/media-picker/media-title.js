@@ -110,7 +110,7 @@ export default class MediaTitle extends React.PureComponent {
             paddingLeft: titlePadding.left,
             fontSize: titleFontSize,
             height: titleHeight,
-            fontFamily: 'Helvetica',
+            fontFamily: 'Graphik',
             userSelect: 'none',
           }}
         >{data.title}</div>

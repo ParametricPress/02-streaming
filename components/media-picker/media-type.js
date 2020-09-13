@@ -45,7 +45,7 @@ export default class MediaType extends React.PureComponent {
           style={{
             fontSize: 14,
             fontWeight: 600,
-            fontFamily: 'Helvetica',
+            fontFamily: 'Graphik',
             paddingLeft: mediaTitlePadding.left,
             paddingBottom: mediaTitlePadding.bottom,
             opacity: hasSelected ? 0.2 : 1

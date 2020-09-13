@@ -138,7 +138,7 @@ export default class MediaAll extends React.PureComponent {
       const animate = false;
 
       this.setState({mouseX, animate});
-      this.animateTimeout = setTimeout(() => this.setState({animate: true}), 1000)
+      this.animateTimeout = setTimeout(() => this.setState({animate: true}), 200)
     }
   }
 
@@ -146,7 +146,7 @@ export default class MediaAll extends React.PureComponent {
     console.log('clearMouse');
     clearTimeout(this.animateTimeout);
     this.setState({mouseX: null, animate: false});
-    this.animateTimeout = setTimeout(() => this.setState({animate: true}), 1000);
+    this.animateTimeout = setTimeout(() => this.setState({animate: true}), 200);
   }
 }
 

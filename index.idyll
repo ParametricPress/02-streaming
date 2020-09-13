@@ -98,14 +98,13 @@ Over a one minute period, the Dr. Strange trailer emits more CO2 than the 3Blue1
 [MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
 [br/]
 [caption]This is a caption[/caption]
+[button onClick:`mediaPickerType = mediaPickerType === 'bar' ? 'timeline' : 'bar'`]Switch[/button]
 [/Graphic]
 [/Aside]
 
 Over a one minute period, the Dr. Strange trailer emits more CO2 than the 3Blue1Brown animation. You might notice there is a lot of empty black space in the 3Blue1Brown video, while the Dr. Strange trailer exhibits a large range of colors and frequent visual changes, both of which require more data to render. The nature slideshow had more emissions than the other two videos, likely owed to. This slideshow contains a lot of moving, detailed images, and this may result in more visual changes than the Dr. Strange trailer. 
 
 In a lot of cases, when you stream content online, you don’t receive all of the information for that content at once. Instead, your device loads incremental pieces of the data as you consume the media. These pieces are called packets.
-
-[button onClick:`mediaPickerType = mediaPickerType === 'bar' ? 'timeline' : 'bar'`]Switch[/button]
 
 In these visualizations, we estimated emissions based on the size and quantity of the packets needed to load each type of media.
 

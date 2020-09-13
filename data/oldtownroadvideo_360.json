@@ -1,0 +1,169 @@
+{
+  "media": {
+    "type": "video",
+    "title": "Old Town Road",
+    "quality": 360
+  },
+  "data": [
+    {
+      "time": 0.0,
+      "sizeInBytes": 1440,
+      "size": 6.1084799999999995e-06
+    },
+    {
+      "time": 0.002,
+      "sizeInBytes": 790,
+      "size": 3.3511799999999997e-06
+    },
+    {
+      "time": 0.03,
+      "sizeInBytes": 113,
+      "size": 4.79346e-07
+    },
+    {
+      "time": 0.575,
+      "sizeInBytes": 113,
+      "size": 4.79346e-07
+    },
+    {
+      "time": 0.868,
+      "sizeInBytes": 86942,
+      "size": 0.0003688079639999999
+    },
+    {
+      "time": 0.879,
+      "sizeInBytes": 16360,
+      "size": 6.939912e-05
+    },
+    {
+      "time": 1.006,
+      "sizeInBytes": 65536,
+      "size": 0.000278003712
+    },
+    {
+      "time": 1.176,
+      "sizeInBytes": 94549,
+      "size": 0.000401076858
+    },
+    {
+      "time": 1.218,
+      "sizeInBytes": 65536,
+      "size": 0.000278003712
+    },
+    {
+      "time": 1.25,
+      "sizeInBytes": 246852,
+      "size": 0.001047146184
+    },
+    {
+      "time": 1.287,
+      "sizeInBytes": 132964,
+      "size": 0.0005640332880000001
+    },
+    {
+      "time": 1.351,
+      "sizeInBytes": 561638,
+      "size": 0.002382468396
+    },
+    {
+      "time": 1.451,
+      "sizeInBytes": 255457,
+      "size": 0.001083648594
+    },
+    {
+      "time": 3.313,
+      "sizeInBytes": 28,
+      "size": 1.1877599999999999e-07
+    },
+    {
+      "time": 7.418,
+      "sizeInBytes": 191142,
+      "size": 0.0008108243639999999
+    },
+    {
+      "time": 10.194,
+      "sizeInBytes": 338665,
+      "size": 0.00143661693
+    },
+    {
+      "time": 13.367,
+      "sizeInBytes": 524288,
+      "size": 0.002224029696
+    },
+    {
+      "time": 14.276,
+      "sizeInBytes": 28,
+      "size": 1.1877599999999999e-07
+    },
+    {
+      "time": 19.231,
+      "sizeInBytes": 4096,
+      "size": 1.7375232e-05
+    },
+    {
+      "time": 20.149,
+      "sizeInBytes": 158301,
+      "size": 0.0006715128419999999
+    },
+    {
+      "time": 21.072,
+      "sizeInBytes": 129559,
+      "size": 0.0005495892779999999
+    },
+    {
+      "time": 22.982,
+      "sizeInBytes": 4096,
+      "size": 1.7375232e-05
+    },
+    {
+      "time": 23.629,
+      "sizeInBytes": 129559,
+      "size": 0.0005495892779999999
+    },
+    {
+      "time": 24.921,
+      "sizeInBytes": 165513,
+      "size": 0.000702106146
+    },
+    {
+      "time": 25.251,
+      "sizeInBytes": 911481,
+      "size": 0.0038665024019999997
+    },
+    {
+      "time": 25.629,
+      "sizeInBytes": 346326,
+      "size": 0.0014691148919999998
+    },
+    {
+      "time": 28.007,
+      "sizeInBytes": 454795,
+      "size": 0.0019292403899999998
+    },
+    {
+      "time": 31.075,
+      "sizeInBytes": 1261662,
+      "size": 0.005351970204
+    },
+    {
+      "time": 40.577,
+      "sizeInBytes": 28,
+      "size": 1.1877599999999999e-07
+    },
+    {
+      "time": 43.506,
+      "sizeInBytes": 510095,
+      "size": 0.00216382299
+    },
+    {
+      "time": 49.756,
+      "sizeInBytes": 1217002,
+      "size": 0.005162522484
+    },
+    {
+      "time": 58.505,
+      "sizeInBytes": 493933,
+      "size": 0.002095263786
+    }
+  ]
+}

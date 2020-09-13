@@ -33,6 +33,16 @@ Edited by TK editor list.
 // BEGIN ARTICLE
 In 2014, Google had to shark-proof their underwater cables. It turned out that sharks were fond of chewing on the high-speed cables that make up the internet. While this is not an issue anymore, it's a reminder that both the internet and sharks share the same home. 
 
+[Aside]
+[Graphic]
+[SVG style:`{width: '100%'}` src:"static/images/bookpipeline.svg"/]
+Book
+[br/][br/]
+[SVG style:`{width: '100%'}` src:"static/images/ebookpipeline.svg"/]
+E-Book
+[/Graphic]
+[/Aside]
+
 As technology advances, the need for seamless functionality comes at the cost of obfuscating the elaborate physical backbone that supports it. When you buy a book on Amazon, the environmental consequences are difficult to ignore. From the jet fuel and gasoline burned to transport the packages, to the cardboard boxes cluttering your house, the whole process is filled with reminders that your actions have tangible, permanent consequences. Download that book onto an e-reader, however, and this trail of evidence seems to vanish. The reality is, just as a package purchased on Amazon must be transported through warehouses and shipping centers to get to your home, a downloaded book must be transported from data centers and networks across the world to arrive on your screen. 
 
 And that's the thing: Your digital actions are only possible because of the physical infrastructure built to support them. Digital actions are physical ones. This means that Google has to be mindful of sharks. This also means that we should be mindful of the carbon emissions produced by running the world's data centers and internet networks. According to one study, the Information and Communications Technology sector is expected to account for between 3 - 3.6 % of global greenhouse gas emissions in 2020. That's more than the entire airline industry, which clocked in at 2.5% in 2019. The answer to "why?" and  "how?" may not be immediately obvious, but that's not the fault of consumers. A well-designed, frictionless digital experience means that users don't need to worry about what happens behind the scenes and, by extension, the consequences. This is problematic: The idea of "hidden costs" runs contrary to principles of environmental awareness. Understanding how these digital products and services work is a crucial first step towards understanding their environmental impact.

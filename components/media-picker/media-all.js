@@ -55,7 +55,6 @@ export default class MediaAll extends React.PureComponent {
     const mediaType = props.mediaType;
     if (mediaType) {
       this.data = this.data.filter(d => d.mediaType === mediaType);
-      console.log(this.data);
     }
     this.groupData = groupByType(groupByTitle(this.data));
 
@@ -144,7 +143,6 @@ export default class MediaAll extends React.PureComponent {
   }
 
   clearMouse() {
-    console.log('clearMouse');
     clearTimeout(this.animateTimeout);
     this.setState({mouseX: null, animate: false});
     this.animateTimeout = setTimeout(() => this.setState({animate: true}), 200);

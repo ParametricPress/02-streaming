@@ -26,9 +26,10 @@ const stripPadding = 2;
 
 export default class MediaTitle extends React.PureComponent {
   componentDidMount() {
-    const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
+    const node = ReactDOM.findDOMNode(this);
+    const rect = node.getBoundingClientRect();
     this.height = rect.height;
-    this.y = rect.y;
+    this.y = node.parentElement.offsetTop + node.parentElement.parentElement.parentElement.offsetTop;
   }
 
   render() {

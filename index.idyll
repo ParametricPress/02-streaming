@@ -8,10 +8,10 @@
 [Nav fullWidth:true /]
 
 [Header
-  title:`["Digital", "Footprints"]`
-  longTitle:`["Digital", "Footprints"]`
+  title:`["The Hidden Cost", "of Digital Consumption"]`
+  longTitle:`["The Hidden Cost", "of Digital Consumption"]`
   date:"May 15, 2020"
-  dek:"TK TK A punchy description of why we should read your article."
+  dek:"You might not be aware of the environmental price that is being paid in this era of profound digital consumption."
   fullWidth:true
   authors:`[{
     name: "",
@@ -47,7 +47,7 @@ As technology advances, the need for seamless functionality comes at the cost of
 
 And that's the thing: Your digital actions are only possible because of the physical infrastructure built to support them. Digital actions are physical ones. This means that Google has to be mindful of sharks. This also means that we should be mindful of the carbon emissions produced by running the world's data centers and internet networks. According to one study, the Information and Communications Technology sector is expected to account for between 3 - 3.6 % of global greenhouse gas emissions in 2020. That's more than the entire airline industry, which clocked in at 2.5% in 2019. The answer to "why?" and  "how?" may not be immediately obvious, but that's not the fault of consumers. A well-designed, frictionless digital experience means that users don't need to worry about what happens behind the scenes and, by extension, the consequences. This is problematic: The idea of "hidden costs" runs contrary to principles of environmental awareness. Understanding how these digital products and services work is a crucial first step towards understanding their environmental impact.
 
-## Media Picker
+## A Look at Different Types of Media
 [data name:"mediaPickerData" source:"dist/data.json"/]
 Each type of digital activity produces a different level of emissions, and as a result has different consequences on the physical world. The amount of carbon dioxide emitted is based on the type and quantity of information that needs to be loaded for a particular digital activity. 
 
@@ -66,9 +66,9 @@ where X = 6x10^-11 is the global average for energy consumed for transmitting on
 [/Graphic]
 [/Aside]
 
-In order to load the Parametric Press article that you are currently reading, ?? grams of CO2 were produced. These emissions are a result of loading data for the text, graphics, and visualizations that are then rendered on your device.
+In order to load the Parametric Press article that you are currently reading, we estimate that ?? milligrams of CO2 were produced. These emissions are a result of loading data for the text, graphics, and visualizations that are then rendered on your device.
 
-The chart above displays the carbon emitted when loading various websites and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading). Tapping and holding each bar will show a preview of that scroll, sped up to a 5 second clip. 
+The chart above displays the carbon emitted when loading various websites and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site). Tapping and holding each bar will show a preview of that scroll, sped up to a 5 second clip. 
 
 In the context of carbon emissions, one of the least expensive forms of media to load onto your device is text. As shown above, websites like Google, which are relatively simple because they primarily show static text, have much lower emissions than websites like Facebook, which load a lot of data-heavy media types to your device. 
 
@@ -94,11 +94,12 @@ The podcast shown in the visualization was compressed to 128 kilobits per second
 [/Graphic]
 [/Aside]
 
-Generally, digital activity that involves videos requires a large amount of data to be sent to your device so that your device can render each frame as well as the associated audio. The chart below shows emissions for streaming different YouTube videos at various qualities for 60 seconds each.
+Generally, digital activity that involves videos requires a large amount of data to be sent to your device so that your device can render each frame as well as the associated audio. The chart below shows emissions for streaming different YouTube videos at two different qualities—360p and 1080p, for 60 seconds each.
 
-When you view a video at a higher quality, you receive a clearer image on your device because that video is rendered with more pixels. Pixels are essentially units of visual information. This is why there are greater emissions for videos at 1080p than those at 360p: higher quality videos require a greater amount of data to be transferred to your device. 
+When you view a video at a higher quality, you receive a clearer image on your device because that video is rendered with more pixels. The number in front of the "p" for quality refers to the height, in pixels, of the video. Each pixel is a unit of visual information. This is why there are greater emissions for videos at 1080p than those at 360p: more pixels means more data loaded. 
 
-Over a one minute period, the Dr. Strange trailer emits more CO2 than the 3Blue1Brown animation. You might notice there is a lot of empty black space in the 3Blue1Brown video, while the Dr. Strange trailer exhibits a large range of colors and frequent visual changes, both of which require more data to render. The nature slideshow had more emissions than the other two videos, likely owed to. This slideshow contains a lot of moving, detailed images, and this may result in more visual changes than the Dr. Strange trailer. 
+Over a one minute period, the music video (which is a live action video) emits more emissions than the 3Blue1Brown animation. You might notice there is a lot of empty black space in the 3Blue1Brown video, while the music video exhibits a large range of colors and frequent visual changes, both of which require more data to render. In the examples provided, videos produced far more CO2 than audio over the same time span. This is especially apparent when comparing the emissions for Old Town Road and its corresponding music video. Not only does a video require loading both sound and visual data to your device, but also visual data is particularly heavy in terms of the amount of data it requires. Facebook produces more CO2 than any of the provided video examples, likely a result of the website loading multiple videos and other heavy data.
+
 
 ### Packets
 [var name:"mediaPickerType" value:"bar"/]
@@ -112,17 +113,13 @@ Over a one minute period, the Dr. Strange trailer emits more CO2 than the 3Blue1
 [/Graphic]
 [/Aside]
 
-Over a one minute period, the Dr. Strange trailer emits more CO2 than the 3Blue1Brown animation. You might notice there is a lot of empty black space in the 3Blue1Brown video, while the Dr. Strange trailer exhibits a large range of colors and frequent visual changes, both of which require more data to render. The nature slideshow had more emissions than the other two videos, likely owed to. This slideshow contains a lot of moving, detailed images, and this may result in more visual changes than the Dr. Strange trailer. 
+In a lot of cases, when you stream content online, you don’t receive all of the information for that content at once. Instead, your device loads incremental pieces of the data as you consume the media. These pieces are called packets. In these visualizations, we estimated emissions based on the size and quantity of the packets needed to load each type of media.
 
-In a lot of cases, when you stream content online, you don’t receive all of the information for that content at once. Instead, your device loads incremental pieces of the data as you consume the media. These pieces are called packets.
-
-In these visualizations, we estimated emissions based on the size and quantity of the packets needed to load each type of media.
+Click the 'Switch' button on the visualization to the right to see a timeline breakdown of each title.
 
 When we break down each digital media snapshot into a timeline of packets, we can see that the way in which packets arrive for video and audio differs from the pattern for websites. With video and audio, packets travel to your device at regular intervals while you are playing the media. In contrast, the packets for websites are weighted more heavily towards the beginning of the timeline as websites make most of the requests for content on their initial load. Websites may make more requests as you scroll through and load more content. 
 
-[Aside]
-One thing that was not explicitly covered in this exploration was the carbon impact of advertisements. Ads are another form of digital content, and thus produce carbon dioxide as the packets comprising the ads are delivered to your screen. While ads don’t contribute to a website or video you may be watching, digital media providers include advertisements as a method of extra revenue. When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), the size of its website decreased from 5000 to 500 kilobytes with no significant changes to the appearance of the site (source), This meant that the information to render USA Today could be contained in fewer packets, and as a result delivering the website to readers’ devices would produce fewer carbon emissions. Although ads are not necessary components of digital media, ads are prevalent across the internet and have tangible environmental impacts.
-[/Aside]
+SHOW AS ASIDE?: One thing that was not explicitly covered in this exploration was the carbon impact of advertisements. Ads are another form of digital content, and thus produce carbon dioxide as the packets comprising the ads are delivered to your screen. While ads don’t contribute to a website or video you may be watching, digital media providers include advertisements as a method of extra revenue. When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), the size of its website decreased from 5000 to 500 kilobytes with no significant changes to the appearance of the site (source), This meant that the information to render USA Today could be contained in fewer packets, and as a result delivering the website to readers’ devices would produce fewer carbon emissions. Although ads are not necessary components of digital media, ads are prevalent across the internet and have tangible environmental impacts.
 
 ## YouTube Pipeline
 // Variables

@@ -112,6 +112,7 @@ export default class MediaTitle extends React.PureComponent {
             fontSize: titleFontSize,
             fontFamily: font,
             userSelect: 'none',
+            transform: 'translateZ(1)',
             color: textColor
           }}
         >{data.title}</div>

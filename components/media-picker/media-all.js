@@ -109,6 +109,7 @@ export default class MediaAll extends React.PureComponent {
             const mediaType = (
               <div key={i} style={{
                 width: '100%',
+                position: 'relative',
                 marginBottom: i === this.groupData.length - 1 ? 0 : mediaTypePadding
               }}>
                 <MediaType type={type} data={d} xScaleVX={xScaleVX} animate={this.state.animate}
@@ -173,7 +174,7 @@ const Grid = props => {
   return (
     <div style={{
       position: 'absolute',
-      zIndex: -1,
+      zIndex: 0,
       width: 1,
       left: 0,
       top: 0,

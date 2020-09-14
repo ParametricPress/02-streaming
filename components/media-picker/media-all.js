@@ -3,7 +3,7 @@ import MediaType from './media-type';
 import { getMaxSize, groupByType, groupByTitle, addCumulativeSize, getMaxTime } from './util';
 import { scaleLinear } from '@vx/scale';
 import { Rect, Text } from './components';
-import { guideColor } from '../constants';
+import { guideColor, font } from '../constants';
 
 /* Props:
 type: 'timeline' | 'bar',
@@ -158,7 +158,7 @@ const Label = props => {
       style={{
         width:  60,
         fontSize: 10,
-        fontFamily: 'Graphik',
+        fontFamily: font,
         textAlign: 'center',
         color: '#AAAAAA',
         transition: 'transform 700ms ease-in-out',

@@ -4,7 +4,7 @@ import { Group } from '@vx/group';
 import { scaleBand } from '@vx/scale';
 import MediaStrip from './media-strip';
 import { Container, Text, Rect } from './components';
-import { textColor } from '../constants';
+import { textColor, font } from '../constants';
 
 /** Props:
 type: 'timeline' | 'bar',
@@ -52,7 +52,7 @@ export default class MediaTitle extends React.PureComponent {
         // <Container top={titleHeight + titlePadding.b}>
         <div style={{
           width: '100%',
-          paddingTop: stripPadding
+          paddingTop: 0
         }}>
           <MediaStrip
             type={type}
@@ -76,7 +76,7 @@ export default class MediaTitle extends React.PureComponent {
         return (
           <div key={i} style={{
             width: '100%',
-            paddingTop: stripPadding
+            paddingTop: i !== 0 ? stripPadding : 0
           }}>
             <MediaStrip
               type={type}
@@ -110,8 +110,7 @@ export default class MediaTitle extends React.PureComponent {
           style={{
             paddingLeft: titlePadding.left,
             fontSize: titleFontSize,
-            height: titleHeight,
-            fontFamily: 'Graphik',
+            fontFamily: font,
             userSelect: 'none',
             color: textColor
           }}

@@ -6,3 +6,4 @@ export const labelColor = '#444444';
 export const guideColor = '#333333';
 export const textColor = '#EEEEEE';
 export const backgroundColor = '#222222';
+export const font = 'Graphik Web, Helvetica, sans-serif'

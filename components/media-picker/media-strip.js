@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Container, Rect, Text } from './components';
-import { secondaryMarkColor, markColor, accentColor, darkAccentColor, labelColor, guideColor, backgroundColor } from '../constants';
+import { secondaryMarkColor, markColor, accentColor, darkAccentColor, labelColor, guideColor, backgroundColor, font } from '../constants';
 
 /** Props:
 type: 'timeline' | 'bar',
@@ -37,7 +37,7 @@ const height = {
 
 const formatEmissions = n => Math.round(n * 1000) + ' mg';
 const emissionsBarPadding = 4;
-const emissionsTimelinePadding = 8;
+const emissionsTimelinePadding = 8 + 4;
 const tickHeight = 8;
 const tickWidth = 2;
 const markerHeight = 14;
@@ -94,13 +94,14 @@ export default class MediaStrip extends React.PureComponent {
           }}
         />
         <Text
-          top={4}
+          top={0}
           left={timeline ?
             xScale.timeline.range()[1] + emissionsTimelinePadding:
             xScale.bar(cumulative) + emissionsBarPadding}
           style={{
             fontSize: 10,
-            fontFamily: 'Graphik',
+            lineHeight: height.bar + 'px',
+            fontFamily: font,
             color: mouseX ? markColor : secondaryMarkColor,
             transition: 'transform 700ms ease-in-out',
             pointerEvents: 'none',
@@ -153,13 +154,14 @@ export default class MediaStrip extends React.PureComponent {
         {
           quality && type === 'bar' && xScale.bar(cumulative) > 40 ?
             <Text
-              top={4}
+              top={0}
               left={4}
               style={{
                 fontSize: 10,
-                fontFamily: 'Graphik',
+                lineHeight: height.bar + 'px',
+                fontFamily: font,
                 color: backgroundColor,
-                pointerEvents: 'none',
+                pointerEvents: 'none'
               }}>{quality}p</Text>
           : null
         }

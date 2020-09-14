@@ -83,7 +83,7 @@ In the context of carbon emissions, one of the least expensive forms of media to
 
 Let’s take a closer look at one common type of non-text media: audio. Spotify, one of the most ubiquitous streaming platforms, offers audio in the form of songs and podcasts. The audio that you receive from Spotify is a compressed version of the original (source).
 
-The podcast shown in the visualization was compressed to 128 kilobits per second, while the song was compressed to 256 kilobits per second. This means that in the one minute timespan that both audio files played, twice as much data needed to be loaded for the song in comparison to the podcast, which leads to the song having roughly twice as large of a carbon footprint. These audio examples have lower carbon emissions than most of the websites shown earlier.
+The Daily podcast shown in the visualization was compressed to 128 kilobits per second, while the song Old Town Road was compressed to 256 kilobits per second. This means that in the one minute timespan that both audio files played, twice as much data needed to be loaded for the song in comparison to the podcast, which leads to the song having roughly twice as large of a carbon footprint. These audio examples have lower carbon emissions than most of the websites shown earlier.
 
 ### Video
 [Aside]
@@ -94,11 +94,11 @@ The podcast shown in the visualization was compressed to 128 kilobits per second
 [/Graphic]
 [/Aside]
 
-Generally, digital activity that involves videos requires a large amount of data to be sent to your device so that your device can render each frame as well as the associated audio. The chart below shows emissions for streaming different YouTube videos at two different qualities—360p and 1080p, for 60 seconds each.
+Generally, digital activity that involves videos requires a large amount of data to be loaded on your device so that your device can render each frame as well as the associated audio. The chart below shows emissions for streaming different YouTube videos at two different qualities—360p and 1080p, for 60 seconds each.
 
-When you view a video at a higher quality, you receive a clearer image on your device because that video is rendered with more pixels. The number in front of the "p" for quality refers to the height, in pixels, of the video. Each pixel is a unit of visual information. This is why there are greater emissions for videos at 1080p than those at 360p: more pixels means more data loaded. 
+When you view a video at a higher quality, you receive a clearer image on your device because the video that you load contains more pixels. Pixels are units of visual information. In the chart, the number in front of the "p" for quality refers to the height, in pixels, of the video. This is why there are greater emissions for videos at 1080p than those at 360p: more pixels means more data loaded. 
 
-Over a one minute period, the music video (which is a live action video) emits more emissions than the 3Blue1Brown animation. You might notice there is a lot of empty black space in the 3Blue1Brown video, while the music video exhibits a large range of colors and frequent visual changes, both of which require more data to render. In the examples provided, videos produced far more CO2 than audio over the same time span. This is especially apparent when comparing the emissions for Old Town Road and its corresponding music video. Not only does a video require loading both sound and visual data to your device, but also visual data is particularly heavy in terms of the amount of data it requires. Facebook produces more CO2 than any of the provided video examples, likely a result of the website loading multiple videos and other heavy data.
+Over a one minute period, the Old Town Road music video (which is a live action video) emits more emissions than the 3Blue1Brown animation. You might notice there is a lot of empty black space in the 3Blue1Brown video, while the music video exhibits a large range of colors and frequent visual changes, both of which require more data to render. In the examples provided, videos produced far more CO2 than audio over the same time span. This is especially apparent when comparing the emissions for Old Town Road and its corresponding music video. Not only does a video require loading both sound and visual data to your device, but also visual data is particularly heavy in terms of the amount of information it holds. Facebook produces more CO2 than any of the provided video examples, likely a result of the website loading multiple videos and other heavy data.
 
 
 ### Packets

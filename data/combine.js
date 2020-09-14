@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const data = [];
+let data = [];
 
 const datadir = path.resolve(__dirname);
 
@@ -21,6 +21,15 @@ files.forEach(f => {
     }
   }
 });
+
+const nolist = [
+  'Digging into American Dirt (podcast)',
+  'Righteous (song)',
+  'Slideshow',
+  'Dr Strange Trailer'
+]
+
+data = data.filter(d => !nolist.includes(d.title));
 
 const outpath = path.resolve(__dirname, 'dist', 'data.json');
 

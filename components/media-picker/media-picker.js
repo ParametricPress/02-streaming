@@ -6,27 +6,31 @@ const previewHeight = 135;
 const previewPadding = 8;
 
 const titleToPreview= {
-  'Amazon': {
+  'Amazon (product page)': {
     type: 'video',
     url: 'amazon.mp4',
   },
-  'Facebook': {
+  'Facebook (newsfeed)': {
     type: 'video',
     url: 'facebook.mp4',
   },
-  'Google': {
+  'Google (search result)': {
     type: 'video',
     url: 'google.mp4'
   },
-  'New York Times': {
+  'The New York Times (interactive article)': {
     type: 'video',
     url: 'nytimes.mp4'
   },
-  'Parametric Press': {
+  'Parametric Press (you are here)': {
     type: 'video',
     url: null
   },
-  '3Blue1Brown': {
+  'Old Town Road (music video)': {
+    type: 'video',
+    url: 'oldtownroad.mp4'
+  },
+  '3Blue1Brown (animation)': {
     type: 'video',
     url: '3blue1brown.mp4',
   },
@@ -45,6 +49,14 @@ const titleToPreview= {
   'Righteous (song)': {
     type: 'image',
     url: 'song.png'
+  },
+  'Old Town Road (song)': {
+    type: 'image',
+    url: 'oldtownroad.jpg'
+  },
+  'The Daily (podcast)': {
+    type: 'image',
+    url: 'thedaily.png'
   }
 }
 

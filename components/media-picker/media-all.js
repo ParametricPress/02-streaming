@@ -3,7 +3,7 @@ import MediaType from './media-type';
 import { getMaxSize, groupByType, groupByTitle, addCumulativeSize, getMaxTime } from './util';
 import { scaleLinear } from '@vx/scale';
 import { Rect, Text } from './components';
-import { guideColor } from '../constants';
+import { guideColor, font } from '../constants';
 
 /* Props:
 type: 'timeline' | 'bar',
@@ -55,7 +55,6 @@ export default class MediaAll extends React.PureComponent {
     const mediaType = props.mediaType;
     if (mediaType) {
       this.data = this.data.filter(d => d.mediaType === mediaType);
-      console.log(this.data);
     }
     this.groupData = groupByType(groupByTitle(this.data));
 
@@ -109,6 +108,7 @@ export default class MediaAll extends React.PureComponent {
             const mediaType = (
               <div key={i} style={{
                 width: '100%',
+                position: 'relative',
                 marginBottom: i === this.groupData.length - 1 ? 0 : mediaTypePadding
               }}>
                 <MediaType type={type} data={d} xScaleVX={xScaleVX} animate={this.state.animate}
@@ -143,7 +143,6 @@ export default class MediaAll extends React.PureComponent {
   }
 
   clearMouse() {
-    console.log('clearMouse');
     clearTimeout(this.animateTimeout);
     this.setState({mouseX: null, animate: false});
     this.animateTimeout = setTimeout(() => this.setState({animate: true}), 200);
@@ -158,7 +157,7 @@ const Label = props => {
       style={{
         width:  60,
         fontSize: 10,
-        fontFamily: 'Graphik',
+        fontFamily: font,
         textAlign: 'center',
         color: '#AAAAAA',
         transition: 'transform 700ms ease-in-out',
@@ -173,7 +172,7 @@ const Grid = props => {
   return (
     <div style={{
       position: 'absolute',
-      zIndex: -1,
+      zIndex: 0,
       width: 1,
       left: 0,
       top: 0,

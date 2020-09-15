@@ -18,7 +18,6 @@ export default class Emissions extends React.PureComponent {
     const hasLabel = ['cdn', 'internet', 'residential', 'cellular', 'device', 'all'].includes(this.props.stage);
 
     const simplified = stage === 'simple' || stage === 'compare' || stage === 'final';
-    console.log(simplified);
     const filteredData = stage === 'all' ?
       [data.reduce((p, d) => {
         p.emissions += d.emissions;

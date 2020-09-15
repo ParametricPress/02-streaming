@@ -25,6 +25,7 @@ export default class Emissions extends React.PureComponent {
       }, {stage: 'all', emissions: 0})]
       : data;
 
+    const current = data.filter(d => d.stage === stage);
     return (
       <div style={{
         ...this.props.style,
@@ -67,7 +68,7 @@ export default class Emissions extends React.PureComponent {
                     marginLeft: stage === 'cdn' ? 2 : 0,
                     textAlign: stage === 'cdn' ? 'left' : 'center',
                     fontSize: simplified ? 11 : undefined
-                  }}>{simplified ? d.name : Math.round(d.emissions / total * 10.1 * 10) / 10 + ' MtCO₂*'}</div>
+                  }}>{simplified ? d.name : stages.indexOf(d.stage) >= stages.indexOf('all') ? '19.6 TWh': d.emissions + ' GWh'}</div>
                   <div style={{
                     height: markHeight,
                     width: '100%',
@@ -101,7 +102,13 @@ export default class Emissions extends React.PureComponent {
             opacity: hasLabel ? 1 : 0,
             transform: 'translateY(-100%)'
           }}
-        >This is equivalent to X cars</div>
+        >{
+          stages.indexOf(stage) >= stages.indexOf('all') ?
+          'Enough to power over 1.7 million U.S. homes for a year'
+          :
+          `Enough to power over ${current.length ? current[0].homes : ''} U.S. homes for a year`
+        }
+        </div>
       </div>
     )
   }

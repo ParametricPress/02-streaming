@@ -7,40 +7,45 @@ import Projection from "./projection";
 const youtubeData = [
   {
     stage: "cdn", // and also data center
-    emissions: 0,
+    emissions: 360,
+    homes: 32000
   },
   {
     stage: "internet",
     emissions: 1900,
+    homes: 170000
   },
   {
     stage: "residential",
     emissions: 4400,
+    homes: 400000
   },
   {
     stage: "cellular",
     emissions: 6100,
+    homes: 500000
   },
   {
     stage: "device",
     emissions: 8500,
+    homes: 750000
   },
 ]; // total = 21,260
 
 const youtubeDataSimple = [
   {
     stage: "simple*",
-    emissions: 0,
+    emissions: 2,
     name: "Data Centers + CDNs",
   },
   {
     stage: "simple",
-    emissions: 59,
+    emissions: 58,
     name: "Networks",
   },
   {
     stage: "simple",
-    emissions: 41,
+    emissions: 40,
     name: "Devices",
   },
 ];

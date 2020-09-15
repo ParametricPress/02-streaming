@@ -1,0 +1,5 @@
+/* TODO FIX THIS FOR MOBILE (This is a hack) */
+
+.idyll-scroll {  
+  transform: translateX(-50px);
+}

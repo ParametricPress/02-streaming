@@ -1,0 +1,304 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.421400,
+            -122.143400
+          ]
+        },
+        "properties": {
+          "title": "Hewlett-Packard (620-640 Page Mill Road)"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.416500,
+            -122.087200
+          ]
+        },
+        "properties": {
+          "title": "CTS Printex, Inc."
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.398800,
+            -122.088200
+          ]
+        },
+        "properties": {
+          "title": "JASCO Chemical Corp"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.410800,
+            -122.079700
+          ]
+        },
+        "properties": {
+          "title": "Teledyne Semiconductor"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.408050,
+            -122.078600
+          ]
+        },
+        "properties": {
+          "title": "Spectra-Physics, Inc."
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.396200,
+            -122.056600
+          ]
+        },
+        "properties": {
+          "title": "Intel Corp. (Mountain View Plant)"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.401200,
+            -122.054200
+          ]
+        },
+        "properties": {
+          "title": "Fairchild Semiconductor Corp. (Mountain View Plant)"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.397400,
+            -122.053300
+          ]
+        },
+        "properties": {
+          "title": "Raytheon Corp."
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.411389,
+            -122.052200
+          ]
+        },
+        "properties": {
+          "title": "Moffett Naval Air Station"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.378700,
+            -122.022500
+          ]
+        },
+        "properties": {
+          "title": "Westinghouse Electric Corp. (Sunnyvale Plant)"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.382500,
+            -122.008600
+          ]
+        },
+        "properties": {
+          "title": "Advanced Micro Devices, Inc."
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.384600,
+            -122.08500
+          ]
+        },
+        "properties": {
+          "title": "TRW Microwave, Inc (Building 825)"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.386800,
+            -122.006600
+          ]
+        },
+        "properties": {
+          "title": "Advanced Micro Devices, Inc. (Building 915)"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.375281,
+            -121.998900
+          ]
+        },
+        "properties": {
+          "title": "National Semiconductor Corp."
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.381600,
+            -121.996800
+          ]
+        },
+        "properties": {
+          "title": "Monolithic Memories"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.375600,
+            -121.980100
+          ]
+        },
+        "properties": {
+          "title": "Intel Magnetics"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.377700,
+            -121.977700
+          ]
+        },
+        "properties": {
+          "title": "Applied Materials"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.377300,
+            -121.971900
+          ]
+        },
+        "properties": {
+          "title": "Synertek, Inc. (Building 1)"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.373700,
+            -121.971700
+          ]
+        },
+        "properties": {
+          "title": "Intel Corp. (Santa Clara III)"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.336100,
+            -122.001500
+          ]
+        },
+        "properties": {
+          "title": "Intersil Inc./Siemens Components"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.318611,
+            -121.864400
+          ]
+        },
+        "properties": {
+          "title": "Lorentz Barrel & Drum Co."
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.429861,
+            -121.981100
+          ]
+        },
+        "properties": {
+          "title": "South Bay Asbestos Area"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.232600,
+            -121.774800
+          ]
+        },
+        "properties": {
+          "title": "Fairchild Semiconductor Corp. (South San Jose Plant)"
+        }
+      }
+    ]
+}

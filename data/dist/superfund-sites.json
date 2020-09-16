@@ -1,304 +1,304 @@
 {
-    "type": "FeatureCollection",
-    "features": [
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.421400,
-            -122.143400
-          ]
-        },
-        "properties": {
-          "title": "Hewlett-Packard (620-640 Page Mill Road)"
-        }
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.1434, 37.4214]
       },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.416500,
-            -122.087200
-          ]
-        },
-        "properties": {
-          "title": "CTS Printex, Inc."
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.398800,
-            -122.088200
-          ]
-        },
-        "properties": {
-          "title": "JASCO Chemical Corp"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.410800,
-            -122.079700
-          ]
-        },
-        "properties": {
-          "title": "Teledyne Semiconductor"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.408050,
-            -122.078600
-          ]
-        },
-        "properties": {
-          "title": "Spectra-Physics, Inc."
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.396200,
-            -122.056600
-          ]
-        },
-        "properties": {
-          "title": "Intel Corp. (Mountain View Plant)"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.401200,
-            -122.054200
-          ]
-        },
-        "properties": {
-          "title": "Fairchild Semiconductor Corp. (Mountain View Plant)"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.397400,
-            -122.053300
-          ]
-        },
-        "properties": {
-          "title": "Raytheon Corp."
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.411389,
-            -122.052200
-          ]
-        },
-        "properties": {
-          "title": "Moffett Naval Air Station"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.378700,
-            -122.022500
-          ]
-        },
-        "properties": {
-          "title": "Westinghouse Electric Corp. (Sunnyvale Plant)"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.382500,
-            -122.008600
-          ]
-        },
-        "properties": {
-          "title": "Advanced Micro Devices, Inc."
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.384600,
-            -122.08500
-          ]
-        },
-        "properties": {
-          "title": "TRW Microwave, Inc (Building 825)"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.386800,
-            -122.006600
-          ]
-        },
-        "properties": {
-          "title": "Advanced Micro Devices, Inc. (Building 915)"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.375281,
-            -121.998900
-          ]
-        },
-        "properties": {
-          "title": "National Semiconductor Corp."
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.381600,
-            -121.996800
-          ]
-        },
-        "properties": {
-          "title": "Monolithic Memories"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.375600,
-            -121.980100
-          ]
-        },
-        "properties": {
-          "title": "Intel Magnetics"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.377700,
-            -121.977700
-          ]
-        },
-        "properties": {
-          "title": "Applied Materials"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.377300,
-            -121.971900
-          ]
-        },
-        "properties": {
-          "title": "Synertek, Inc. (Building 1)"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.373700,
-            -121.971700
-          ]
-        },
-        "properties": {
-          "title": "Intel Corp. (Santa Clara III)"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.336100,
-            -122.001500
-          ]
-        },
-        "properties": {
-          "title": "Intersil Inc./Siemens Components"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.318611,
-            -121.864400
-          ]
-        },
-        "properties": {
-          "title": "Lorentz Barrel & Drum Co."
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.429861,
-            -121.981100
-          ]
-        },
-        "properties": {
-          "title": "South Bay Asbestos Area"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            37.232600,
-            -121.774800
-          ]
-        },
-        "properties": {
-          "title": "Fairchild Semiconductor Corp. (South San Jose Plant)"
-        }
+      "properties": {
+        "name": "Hewlett-Packard (620-640 Page Mill Road)",
+        "hazardScore": 29.76,
+        "listed": 1990,
+        "status": "Monitoring of groundwater and potential vapor intrusion required"
       }
-    ]
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.0872, 37.4165]
+      },
+      "properties": {
+        "name": "CTS Printex, Inc.",
+        "hazardScore": 33.62,
+        "listed": 1990,
+        "status": "unspecified"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.0882, 37.3988]
+      },
+      "properties": {
+        "name": "JASCO Chemical Corp",
+        "hazardScore": 35.36,
+        "listed": 1989,
+        "status": "Cleanup completed, proposed for deletion from Superfund list"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.0797, 37.4108]
+      },
+      "properties": {
+        "name": "Teledyne Semiconductor",
+        "hazardScore": 35.35,
+        "listed": 1987,
+        "status": "Monitoring and mitigation of vapor intrusion required"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.0786, 37.40805]
+      },
+      "properties": {
+        "name": "Spectra-Physics, Inc.",
+        "hazardScore": 37.20,
+        "listed": 1991,
+        "status": "Monitoring and mitigation of vapor intrusion required"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.0566, 37.3962]
+      },
+      "properties": {
+        "name": "Intel Corp. (Mountain View Plant)",
+        "hazardScore": 29.76,
+        "listed": 1986,
+        "status": "Soil cleanup completed, but groundwater cleanup will continue for decades"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.0542, 37.4012]
+      },
+      "properties": {
+        "name": "Fairchild Semiconductor Corp. (Mountain View Plant)",
+        "hazardScore": 31.94,
+        "listed": 1991,
+        "status": "Groundwater cleanup must continue for decades"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.0533, 37.3974]
+      },
+      "properties": {
+        "name": "Raytheon Corp.",
+        "hazardScore": 29.76,
+        "listed": 1986,
+        "status": "Ongoing cleanup, operation and maintenance, and monitoring"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.0522, 37.411389]
+      },
+      "properties": {
+        "name": "Moffett Naval Air Station",
+        "hazardScore": 29.49,
+        "listed": 1987,
+        "status": "Long term remedies include sediment and soil excavation, treatment, and offset-site disposal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.0225, 37.3787]
+      },
+      "properties": {
+        "name": "Westinghouse Electric Corp. (Sunnyvale Plant)",
+        "hazardScore": 39.93,
+        "listed": 1986,
+        "status": "Long-term cleanup of groundwater contamination is ongoing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.0086, 37.3825]
+      },
+      "properties": {
+        "name": "Advanced Micro Devices, Inc.",
+        "hazardScore": 37.93,
+        "listed": 1986,
+        "status": "Existing remedies are preventing spread of contaminants and keeping their levels within acceptable limits"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.085, 37.3846]
+      },
+      "properties": {
+        "name": "TRW Microwave, Inc (Building 825)",
+        "hazardScore": 31.94,
+        "listed": 1990,
+        "status": "Existing remedy is currently controlling exposure pathways, but monitoring and mitigation systems in adjacent neighborhood must be continued."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.0066, 37.3868]
+      },
+      "properties": {
+        "name": "Advanced Micro Devices, Inc. (Building 915)",
+        "hazardScore": 31.94,
+        "listed": 1990,
+        "status": "Existing remedy is protective of human health and the environment in the short term"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.9989, 37.375281]
+      },
+      "properties": {
+        "name": "National Semiconductor Corp.",
+        "hazardScore": 35.57,
+        "listed": 1987,
+        "status": "Operation of groundwater extraction and treatment system is ongoing."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.9968, 37.3816]
+      },
+      "properties": {
+        "name": "Monolithic Memories",
+        "hazardScore": 35.57,
+        "listed": 1987,
+        "status": "Existing remedy is currently protective of human health and the environment in the short term"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.9801, 37.3756]
+      },
+      "properties": {
+        "name": "Intel Magnetics",
+        "hazardScore": 31.94,
+        "listed": 1986,
+        "status": "Groundwater monitoring is ongoing."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.9777, 37.3777]
+      },
+      "properties": {
+        "name": "Applied Materials",
+        "hazardScore": 31.94,
+        "listed": 1987,
+        "status": "Operation and maintenance activites of remedy and monitoring are ongoing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.9719, 37.3773]
+      },
+      "properties": {
+        "name": "Synertek, Inc. (Building 1)",
+        "hazardScore": 31.94,
+        "listed": 1989,
+        "status": "Existing remedy is protective of human health and the environment in the short term, but a new one must be selected for the long term"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.9717, 37.3737]
+      },
+      "properties": {
+        "name": "Intel Corp. (Santa Clara III)",
+        "hazardScore": 31.94,
+        "listed": 1986,
+        "status": "Contamination has been addressed. Site was deleted from EPA's National Priorities List in 2019."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.0015, 37.3361]
+      },
+      "properties": {
+        "name": "Intersil Inc./Siemens Components",
+        "hazardScore": 28.90,
+        "listed": 1990,
+        "status": "Remedy construction completed, groundwater cleanup continues, with monitoring required."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.8644, 37.318611]
+      },
+      "properties": {
+        "name": "Lorentz Barrel & Drum Co.",
+        "hazardScore": 33.94,
+        "listed": 1998,
+        "status": "Most cleanup has been completed; investigation and planning for remainder is ongoing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.9811, 37.429861]
+      },
+      "properties": {
+        "name": "South Bay Asbestos Area",
+        "hazardScore": 44.68,
+        "listed": 1986,
+        "status": "Maintenance is ongoing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.7748, 37.2326]
+      },
+      "properties": {
+        "name": "Fairchild Semiconductor Corp. (South San Jose Plant)",
+        "hazardScore": 44.46,
+        "listed": 1989,
+        "status": "Existing remedy is protective of human health and the environment, but vapor intrusion could impact indoor air quality in the area"
+      }
+    }
+  ]
 }

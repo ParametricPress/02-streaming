@@ -2063,3 +2063,19 @@ input {
 @keyframes packet-animation {
   100% { stroke-dashoffset: 0; }
 }
+
+/* TODO FIX THIS FOR MOBILE (This is a hack) */
+
+.idyll-scroll {  
+  transform: translateX(-50px);
+}
+
+.map-tooltip {
+  background: #fff;
+  border: solid 1px #222;
+  font-family: 'Graphik Web';
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0.5em;
+  font-weight: 400;
+}

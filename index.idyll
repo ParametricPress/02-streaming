@@ -197,6 +197,12 @@ What is being done about this? Aside from increasing the efficiency of each part
 [/Aside]
 The convenience of environmentally harmful aspects of technology being outside the public consciousness is hardly limited to YouTube or streaming. Here's a surprising fact: Santa Clara County leads the nation in the number of EPA classified "superfund" (highly polluted) sites. These 29 locations are expected to take an estimated 300 years to fully clean \[1\]. "Silicon Valley" is primarily to blame. 
 
+[data name:"superfundSitesGeoJSON" source:"dist/superfund-sites.json"/]
+[div fullWidth:true]
+[SuperfundSites map:"homes" zoomEnabled:false geoJSON:superfundSitesGeoJSON initialViewport:`{latitude: 37.327117, longitude: -121.955563, zoom: 10.5}` /]
+[caption]The 23 superfund sites of Santa Clara County. Hover over each one for more information. Larger Hazard Ranking System Scores are worse.[/caption]
+[/div]
+
 Santa Clara County became “Silicon Valley” in the 1960s when companies in the area found ways to embed computer circuits into small wafers of silicon. Manufacturing these chips is inherently toxic, and its chemical runoff has been linked to increases in cancer and birth defect rates around the Bay. However, the industry avoided responsibility for decades and actually cultivated a clean image, publicizing their pristine campuses and white-collar workforce. 
 
 [Aside]

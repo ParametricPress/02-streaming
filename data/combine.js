@@ -32,6 +32,6 @@ const nolist = [
 
 data = data.filter(d => !nolist.includes(d.title));
 
-const outpath = path.resolve(__dirname, 'dist', 'data.json');
+const outpath = path.resolve(__dirname, 'dist', 'media-emissions.json');
 
 fs.writeFileSync(outpath, JSON.stringify(data, null, 2));

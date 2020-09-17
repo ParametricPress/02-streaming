@@ -42,7 +42,7 @@ const titleToPreview= {
     type: 'video',
     url: 'slideshow.mp4',
   },
-  'Digging into American Dirt (podcast)': {
+  'NPR: Digging into "American Dirt" (podcast)': {
     type: 'image',
     url: 'podcast.png'
   },

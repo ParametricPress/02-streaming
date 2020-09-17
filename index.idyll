@@ -52,7 +52,7 @@ And that's the thing: Your digital actions are only possible because of the phys
 
 
 ### A Look at Different Types of Media
-[data name:"mediaPickerData" source:"dist/data.json"/]
+[data name:"mediaPickerData" source:"dist/media-emissions.json"/]
 Each type of digital activity produces a different level of emissions, and as a result has different consequences on the physical world. The amount of carbon dioxide emitted is based on the type and quantity of information that needs to be loaded for a particular digital activity. 
 
 The CO2 emitted for any digital activity is directly correlated to the number of bytes that must be transferred for that activity. More specifically, emissions can be computed using the following equation:

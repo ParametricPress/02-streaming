@@ -1,158 +1,113 @@
 {
   "media": {
     "type": "audio",
-    "title": "Digging into American Dirt (podcast)"
+    "title": "NPR: Digging into \"American Dirt\" (podcast)"
   },
   "data": [
     {
       "time": 0.0,
-      "sizeInBytes": 98304,
-      "size": 0.000417005568
+      "sizeInBytes": 836,
+      "size": 3.5463119999999997e-06
     },
     {
-      "time": 2.17,
-      "sizeInBytes": 20954,
-      "size": 8.888686799999999e-05
+      "time": 0.767,
+      "sizeInBytes": 110278,
+      "size": 0.000467799276
     },
     {
-      "time": 4.045,
-      "sizeInBytes": 113892,
-      "size": 0.000483129864
+      "time": 2.773,
+      "sizeInBytes": 67366,
+      "size": 0.000285766572
     },
     {
-      "time": 6.244,
-      "sizeInBytes": 16384,
-      "size": 6.9500928e-05
+      "time": 4.821,
+      "sizeInBytes": 40652,
+      "size": 0.000172445784
     },
     {
-      "time": 8.163,
-      "sizeInBytes": 76089,
-      "size": 0.00032276953799999995
+      "time": 6.89,
+      "sizeInBytes": 75531,
+      "size": 0.000320402502
     },
     {
-      "time": 10.322,
-      "sizeInBytes": 15748,
-      "size": 6.6803016e-05
+      "time": 11.007,
+      "sizeInBytes": 44739,
+      "size": 0.00018978283799999995
     },
     {
-      "time": 12.259,
-      "sizeInBytes": 69256,
-      "size": 0.000293783952
+      "time": 13.055,
+      "sizeInBytes": 69405,
+      "size": 0.00029441601
     },
     {
-      "time": 14.407,
-      "sizeInBytes": 16384,
-      "size": 6.9500928e-05
+      "time": 17.175,
+      "sizeInBytes": 46778,
+      "size": 0.00019843227599999997
     },
     {
-      "time": 16.355,
-      "sizeInBytes": 76089,
-      "size": 0.00032276953799999995
+      "time": 19.178,
+      "sizeInBytes": 63126,
+      "size": 0.000267780492
     },
     {
-      "time": 18.547,
-      "sizeInBytes": 10424,
-      "size": 4.4218608e-05
+      "time": 21.247,
+      "sizeInBytes": 72468,
+      "size": 0.000307409256
     },
     {
-      "time": 20.451,
-      "sizeInBytes": 77032,
-      "size": 0.000326769744
-    },
-    {
-      "time": 22.661,
-      "sizeInBytes": 7817,
-      "size": 3.315971399999999e-05
-    },
-    {
-      "time": 24.568,
-      "sizeInBytes": 76089,
-      "size": 0.00032276953799999995
-    },
-    {
-      "time": 26.726,
-      "sizeInBytes": 16384,
-      "size": 6.9500928e-05
-    },
-    {
-      "time": 28.665,
+      "time": 25.364,
       "sizeInBytes": 65536,
       "size": 0.000278003712
     },
     {
-      "time": 30.88,
-      "sizeInBytes": 105912,
-      "size": 0.00044927870399999996
+      "time": 29.482,
+      "sizeInBytes": 59048,
+      "size": 0.000250481616
     },
     {
-      "time": 32.917,
-      "sizeInBytes": 10553,
-      "size": 4.4765825999999995e-05
+      "time": 31.509,
+      "sizeInBytes": 138013,
+      "size": 0.000585451146
     },
     {
-      "time": 34.83,
+      "time": 35.647,
+      "sizeInBytes": 76555,
+      "size": 0.00032474631
+    },
+    {
+      "time": 39.743,
+      "sizeInBytes": 37589,
+      "size": 0.000159452538
+    },
+    {
+      "time": 41.77,
+      "sizeInBytes": 61086,
+      "size": 0.000259126812
+    },
+    {
+      "time": 43.818,
       "sizeInBytes": 65536,
       "size": 0.000278003712
     },
     {
-      "time": 36.997,
-      "sizeInBytes": 6616,
-      "size": 2.8065072e-05
+      "time": 47.935,
+      "sizeInBytes": 40652,
+      "size": 0.000172445784
     },
     {
-      "time": 38.926,
-      "sizeInBytes": 65536,
-      "size": 0.000278003712
+      "time": 49.984,
+      "sizeInBytes": 72467,
+      "size": 0.000307405014
     },
     {
-      "time": 41.11,
-      "sizeInBytes": 10553,
-      "size": 4.4765825999999995e-05
+      "time": 54.1,
+      "sizeInBytes": 64150,
+      "size": 0.0002721243
     },
     {
-      "time": 43.022,
-      "sizeInBytes": 80840,
-      "size": 0.00034292328000000004
-    },
-    {
-      "time": 45.205,
-      "sizeInBytes": 16384,
-      "size": 6.9500928e-05
-    },
-    {
-      "time": 47.161,
-      "sizeInBytes": 78675,
-      "size": 0.00033373934999999995
-    },
-    {
-      "time": 49.51,
-      "sizeInBytes": 16384,
-      "size": 6.9500928e-05
-    },
-    {
-      "time": 51.257,
-      "sizeInBytes": 77603,
-      "size": 0.000329191926
-    },
-    {
-      "time": 53.398,
-      "sizeInBytes": 16384,
-      "size": 6.9500928e-05
-    },
-    {
-      "time": 55.353,
-      "sizeInBytes": 73875,
-      "size": 0.00031337775000000003
-    },
-    {
-      "time": 57.525,
-      "sizeInBytes": 10553,
-      "size": 4.4765825999999995e-05
-    },
-    {
-      "time": 59.449,
-      "sizeInBytes": 65536,
-      "size": 0.000278003712
+      "time": 56.149,
+      "sizeInBytes": 72231,
+      "size": 0.000306403902
     }
   ]
 }

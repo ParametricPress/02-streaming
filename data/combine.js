@@ -23,10 +23,11 @@ files.forEach(f => {
 });
 
 const nolist = [
-  'Digging into American Dirt (podcast)',
+  'Digging into American Dirt (podcast) (old)',
   'Righteous (song)',
   'Slideshow',
-  'Dr Strange Trailer'
+  'Dr Strange Trailer',
+  'The Daily (podcast)'
 ]
 
 data = data.filter(d => !nolist.includes(d.title));

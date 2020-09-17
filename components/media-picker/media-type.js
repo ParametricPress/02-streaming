@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Group } from '@vx/group';
 import MediaTitle from './media-title';
 import { Container, Text } from './components';
-import { textColor, font } from '../constants';
+import { textColor, font, titleOrder } from '../constants';
 
 /** Props:
 type: 'timeline' | 'bar'
@@ -59,7 +59,9 @@ export default class MediaType extends React.PureComponent {
         </div> : null
         }
         {
-          data.titles.map((d, i) => {
+          data.titles.sort((a, b) => {
+            return titleOrder.indexOf(a.title) - titleOrder.indexOf(b.title);
+          }).map((d, i) => {
             const mediaTitle = (
               <div key={i} style={{
                 width: '100%',

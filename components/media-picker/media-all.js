@@ -3,7 +3,7 @@ import MediaType from './media-type';
 import { getMaxSize, groupByType, groupByTitle, addCumulativeSize, getMaxTime } from './util';
 import { scaleLinear } from '@vx/scale';
 import { Rect, Text } from './components';
-import { guideColor, font } from '../constants';
+import { guideColor, font, typeOrder } from '../constants';
 
 /* Props:
 type: 'timeline' | 'bar',
@@ -58,14 +58,15 @@ export default class MediaAll extends React.PureComponent {
     }
     this.groupData = groupByType(groupByTitle(this.data));
 
-    this.xScales = MediaAll.getXScaleVX(props.width, this.maxTotal);
-
     this.animateTimeout = -1;
     this.state = {
       mouseX: null,
       mouseMax: null,
       animate: true
     };
+
+    this.hasBeenTimeline = false;
+    this.autoplayInterval = null;
 
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.clearMouse = this.clearMouse.bind(this);
@@ -77,7 +78,27 @@ export default class MediaAll extends React.PureComponent {
     const hasSelected = this.props.hasSelected;
     const selectedTitle = this.props.selectedTitle;
 
-    const xScaleVX = this.xScales
+    const xScaleVX = MediaAll.getXScaleVX(width, this.maxTotal);
+
+
+    if (type === 'timeline') {
+      if (!this.hasBeenTimeline) {
+        setTimeout(() => {
+          this.autoplayInterval = setInterval(() => {
+            if (this.state.mouseX >= width) {
+              setTimeout(() => {
+                clearInterval(this.autoplayInterval);
+                this.setState({mouseX: null});
+              }, 0)
+            }
+            this.setState({mouseX: this.state.mouseX === null ? 0 : this.state.mouseX + 2});
+          }, 10);
+        }, 700);
+      }
+
+      this.hasBeenTimeline = true;
+    }
+
 
     return (
       <div
@@ -104,7 +125,9 @@ export default class MediaAll extends React.PureComponent {
           gridlines[type].map((d, i)=> <Grid key={i} left={xScaleVX[type](d)}/>)
         }
         {
-          this.groupData.map((d, i) => {
+          this.groupData.sort((a, b) => {
+            return typeOrder.indexOf(a.mediaType) - typeOrder.indexOf(b.mediaType);
+          }).map((d, i) => {
             const mediaType = (
               <div key={i} style={{
                 width: '100%',
@@ -114,7 +137,7 @@ export default class MediaAll extends React.PureComponent {
                 <MediaType type={type} data={d} xScaleVX={xScaleVX} animate={this.state.animate}
                   mouseX={type === 'timeline' ? this.state.mouseX : null}
                   selectTitle={this.props.selectTitle} hasSelected={hasSelected}
-                  selectedTitle={selectedTitle}/>
+                  selectedTitle={selectedTitle} headers={this.props.headers}/>
               </div>
             );
 

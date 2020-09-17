@@ -1,64 +1,10 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import MediaAll from './media-all';
+import { titleToPreview } from '../constants';
 
 const previewHeight = 135;
 const previewPadding = 8;
-
-const titleToPreview= {
-  'Amazon (product page)': {
-    type: 'video',
-    url: 'amazon.mp4',
-  },
-  'Facebook (newsfeed)': {
-    type: 'video',
-    url: 'facebook.mp4',
-  },
-  'Google (search result)': {
-    type: 'video',
-    url: 'google.mp4'
-  },
-  'The New York Times (interactive article)': {
-    type: 'video',
-    url: 'nytimes.mp4'
-  },
-  'Parametric Press (you are here)': {
-    type: 'video',
-    url: null
-  },
-  'Old Town Road (music video)': {
-    type: 'video',
-    url: 'oldtownroad.mp4'
-  },
-  '3Blue1Brown (animation)': {
-    type: 'video',
-    url: '3blue1brown.mp4',
-  },
-  'Dr Strange Trailer': {
-    type: 'video',
-    url: 'drstrange.mp4',
-  },
-  'Slideshow': {
-    type: 'video',
-    url: 'slideshow.mp4',
-  },
-  'NPR: Digging into "American Dirt" (podcast)': {
-    type: 'image',
-    url: 'podcast.png'
-  },
-  'Righteous (song)': {
-    type: 'image',
-    url: 'song.png'
-  },
-  'Old Town Road (song)': {
-    type: 'image',
-    url: 'oldtownroad.jpg'
-  },
-  'The Daily (podcast)': {
-    type: 'image',
-    url: 'thedaily.png'
-  }
-}
 
 const previewStyle = (previewWidth, translateY, top) => {
   return {
@@ -101,17 +47,23 @@ export default class MediaPicker extends React.Component {
 
   componentDidMount() {
     const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
-    this.height = rect.height;
-    this.width = rect.width;
-
     this.setState({
-      width: this.width
+      width: rect.width
     })
   }
 
+  _onResize() {
+    const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
+    this.height = rect.height;
+  }
+
+  componentDidUpdate() {
+    this._onResize();
+  }
+
   render() {
-    const type = this.props.type;
     const data = this.props.data;
+    const type = this.props.type;
     const headers = this.props.headers;
     const width = this.props.width;
     const selectedY = this.state.selectedY;
@@ -119,12 +71,13 @@ export default class MediaPicker extends React.Component {
     const selectedTitle = this.state.selectedTitle;
     const mediaType = this.props.mediaType;
 
+
     let previewDiv;
     if (selectedTitle) {
       const preview = titleToPreview[selectedTitle];
       const pType = preview.type;
 
-      const previewWidth = this.width - previewPadding * 2;
+      const previewWidth = this.state.width - previewPadding * 2;
       const previewHeight = previewWidth * (pType === 'video' ? 0.6 : 1);
   
       // const translateX = `translateX(${width / 2 - previewWidth / 2}px)`;
@@ -141,12 +94,10 @@ export default class MediaPicker extends React.Component {
         let y = selectedY;
   
         if (y + offset + previewHeight >= this.height) {
-          y -= previewHeight + previewPadding;
+          translateY = `translateY(calc(${y - previewPadding}px - 100%))`
         } else {
-          y += offset;
+          translateY = `translateY(${y + offset}px)`;
         }
-
-        translateY = `translateY(${y}px)`;
       }
 
       if (pType === 'video') {
@@ -169,16 +120,18 @@ export default class MediaPicker extends React.Component {
       <div style={{
         width: width,
         position: 'relative',
+        
       }}>
         {previewDiv}
-        {this.width ? 
+        { this.state.width ?
           <MediaAll type={type}
-            mediaType={mediaType} data={data} width={this.width} headers={headers}
+            mediaType={mediaType} data={data} width={this.state.width} headers={headers}
             selectTitle={this.selectTitle}
             hasSelected={this.state.selectedY !== null}
             selectedTitle={selectedTitle}
           />
-        : null }
+          : null
+        }
       </div>
     );
   }

@@ -124,7 +124,7 @@ export default class SuperfundMap extends Component {
           doubleClickZoom={this.props.zoomEnabled}
           onViewportChange={this._onChangeViewport.bind(this)}
           mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN}
-          getCursor={({isDragging, isHovering}) => 'crosshair'}
+          getCursor={({isDragging, isHovering}) => 'default'}
         >
           <DeckGL
             viewState={viewport}

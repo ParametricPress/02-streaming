@@ -70,19 +70,6 @@ p {
   font-weight: lighter;
 }
 
-.equation {
-  font-family: 'Reforma 1918' !important;
-  font-weight: bold;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  width: 100%;
-  text-align: center;
-}
-
-.math {
-  font-style: italic;
-}
-
 .terms {
   font-weight: 'bold';
 }

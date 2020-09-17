@@ -31,8 +31,7 @@ export default class MediaPicker extends React.Component {
       selectedY: null,
       offset: null,
       selectedTitle: null,
-      width: 300,  // initial width (min width)
-      height: null
+      width: null,
     };
 
     this.selectTitle = this.selectTitle.bind(this);
@@ -49,9 +48,17 @@ export default class MediaPicker extends React.Component {
   componentDidMount() {
     const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
     this.setState({
-      height: rect.height,
       width: rect.width
     })
+  }
+
+  _onResize() {
+    const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
+    this.height = rect.height;
+  }
+
+  componentDidUpdate() {
+    this._onResize();
   }
 
   render() {
@@ -86,7 +93,7 @@ export default class MediaPicker extends React.Component {
         top = 0;
         let y = selectedY;
   
-        if (y + offset + previewHeight >= this.state.height) {
+        if (y + offset + previewHeight >= this.height) {
           translateY = `translateY(calc(${y - previewPadding}px - 100%))`
         } else {
           translateY = `translateY(${y + offset}px)`;
@@ -113,14 +120,18 @@ export default class MediaPicker extends React.Component {
       <div style={{
         width: width,
         position: 'relative',
+        
       }}>
         {previewDiv}
-        <MediaAll type={type}
-          mediaType={mediaType} data={data} width={this.state.width} headers={headers}
-          selectTitle={this.selectTitle}
-          hasSelected={this.state.selectedY !== null}
-          selectedTitle={selectedTitle}
-        />
+        { this.state.width ?
+          <MediaAll type={type}
+            mediaType={mediaType} data={data} width={this.state.width} headers={headers}
+            selectTitle={this.selectTitle}
+            hasSelected={this.state.selectedY !== null}
+            selectedTitle={selectedTitle}
+          />
+          : null
+        }
       </div>
     );
   }

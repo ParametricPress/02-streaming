@@ -1,64 +1,10 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import MediaAll from './media-all';
+import { titleToPreview } from '../constants';
 
 const previewHeight = 135;
 const previewPadding = 8;
-
-const titleToPreview= {
-  'Amazon (product page)': {
-    type: 'video',
-    url: 'amazon.mp4',
-  },
-  'Facebook (newsfeed)': {
-    type: 'video',
-    url: 'facebook.mp4',
-  },
-  'Google (search result)': {
-    type: 'video',
-    url: 'google.mp4'
-  },
-  'The New York Times (interactive article)': {
-    type: 'video',
-    url: 'nytimes.mp4'
-  },
-  'Parametric Press (you are here)': {
-    type: 'video',
-    url: null
-  },
-  'Old Town Road (music video)': {
-    type: 'video',
-    url: 'oldtownroad.mp4'
-  },
-  '3Blue1Brown (animation)': {
-    type: 'video',
-    url: '3blue1brown.mp4',
-  },
-  'Dr Strange Trailer': {
-    type: 'video',
-    url: 'drstrange.mp4',
-  },
-  'Slideshow': {
-    type: 'video',
-    url: 'slideshow.mp4',
-  },
-  'NPR: Digging into "American Dirt" (podcast)': {
-    type: 'image',
-    url: 'podcast.png'
-  },
-  'Righteous (song)': {
-    type: 'image',
-    url: 'song.png'
-  },
-  'Old Town Road (song)': {
-    type: 'image',
-    url: 'oldtownroad.jpg'
-  },
-  'The Daily (podcast)': {
-    type: 'image',
-    url: 'thedaily.png'
-  }
-}
 
 const previewStyle = (previewWidth, translateY, top) => {
   return {
@@ -109,14 +55,15 @@ export default class MediaPicker extends React.Component {
   }
 
   render() {
-    const type = this.props.type;
     const data = this.props.data;
+    const type = this.props.type;
     const headers = this.props.headers;
     const width = this.props.width;
     const selectedY = this.state.selectedY;
     const selectedHeight = this.state.selectedHeight;
     const selectedTitle = this.state.selectedTitle;
     const mediaType = this.props.mediaType;
+
 
     let previewDiv;
     if (selectedTitle) {

@@ -3,7 +3,7 @@ import MediaType from './media-type';
 import { getMaxSize, groupByType, groupByTitle, addCumulativeSize, getMaxTime } from './util';
 import { scaleLinear } from '@vx/scale';
 import { Rect, Text } from './components';
-import { guideColor, font } from '../constants';
+import { guideColor, font, typeOrder } from '../constants';
 
 /* Props:
 type: 'timeline' | 'bar',
@@ -102,7 +102,9 @@ export default class MediaAll extends React.PureComponent {
           gridlines[type].map((d, i)=> <Grid key={i} left={xScaleVX[type](d)}/>)
         }
         {
-          this.groupData.map((d, i) => {
+          this.groupData.sort((a, b) => {
+            return typeOrder.indexOf(a.mediaType) - typeOrder.indexOf(b.mediaType);
+          }).map((d, i) => {
             const mediaType = (
               <div key={i} style={{
                 width: '100%',

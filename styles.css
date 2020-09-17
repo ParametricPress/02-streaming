@@ -55,3 +55,34 @@
   padding: 0.5em;
   font-weight: 400;
 }
+
+h2 {
+  font-family: 'Bluu Next' !important;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: 'Graphik' !important;
+}
+
+p {
+  font-family: 'Graphik' !important;
+  font-weight: lighter;
+}
+
+.equation {
+  font-family: 'Reforma 1918' !important;
+  font-weight: bold;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  text-align: center;
+}
+
+.math {
+  font-style: italic;
+}
+
+.terms {
+  font-weight: 'bold';
+}

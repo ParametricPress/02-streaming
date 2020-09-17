@@ -65,6 +65,9 @@ export default class MediaAll extends React.PureComponent {
       animate: true
     };
 
+    this.hasBeenTimeline = false;
+    this.autoplayInterval = null;
+
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.clearMouse = this.clearMouse.bind(this);
   }
@@ -76,6 +79,26 @@ export default class MediaAll extends React.PureComponent {
     const selectedTitle = this.props.selectedTitle;
 
     const xScaleVX = MediaAll.getXScaleVX(width, this.maxTotal);
+
+
+    if (type === 'timeline') {
+      if (!this.hasBeenTimeline) {
+        setTimeout(() => {
+          this.autoplayInterval = setInterval(() => {
+            if (this.state.mouseX >= width) {
+              setTimeout(() => {
+                clearInterval(this.autoplayInterval);
+                this.setState({mouseX: null});
+              }, 0)
+            }
+            this.setState({mouseX: this.state.mouseX === null ? 0 : this.state.mouseX + 2});
+          }, 10);
+        }, 700);
+      }
+
+      this.hasBeenTimeline = true;
+    }
+
 
     return (
       <div

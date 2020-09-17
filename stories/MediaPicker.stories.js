@@ -117,6 +117,7 @@ export const mediaPicker = () => {
         type={type}
         data={data}
         width={width}
+        headers={true}
       />
     </StoryContainer>
   )

@@ -62,7 +62,6 @@ export default class MediaType extends React.PureComponent {
           data.titles.sort((a, b) => {
             return titleOrder.indexOf(a.title) - titleOrder.indexOf(b.title);
           }).map((d, i) => {
-            console.log(d);
             const mediaTitle = (
               <div key={i} style={{
                 width: '100%',

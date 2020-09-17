@@ -114,7 +114,7 @@ export default class MediaAll extends React.PureComponent {
                 <MediaType type={type} data={d} xScaleVX={xScaleVX} animate={this.state.animate}
                   mouseX={type === 'timeline' ? this.state.mouseX : null}
                   selectTitle={this.props.selectTitle} hasSelected={hasSelected}
-                  selectedTitle={selectedTitle}/>
+                  selectedTitle={selectedTitle} headers={this.props.headers}/>
               </div>
             );
 

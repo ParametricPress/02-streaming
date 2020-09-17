@@ -32,7 +32,7 @@ Edited by TK editor list.
 
 // BEGIN ARTICLE
 
-### A Paradigm Shift
+## A Paradigm Shift
 
 In 2014, Google had to shark-proof their underwater cables. It turned out that sharks were fond of chewing on the high-speed cables that make up the internet. While this is not an issue anymore, it's a reminder that both the internet and sharks share the same home. 
 
@@ -51,7 +51,7 @@ As technology advances, the need for seamless functionality comes at the cost of
 And that's the thing: Your digital actions are only possible because of the physical infrastructure built to support them. Digital actions are physical ones. This means that Google has to be mindful of sharks. This also means that we should be mindful of the carbon emissions produced by running the world's data centers and internet networks. According to one study, the Information and Communications Technology sector is expected to account for between 3 - 3.6 % of global greenhouse gas emissions in 2020. That's more than the fuel emissions for all air travel in 2019, which clocked in at 2.5%. The answer to "why?" and  "how?" may not be immediately obvious, but that's not the fault of consumers. A well-designed, frictionless digital experience means that users don't need to worry about what happens behind the scenes and, by extension, the consequences. This is problematic: The idea of "hidden costs" runs contrary to principles of environmental awareness. Understanding how these digital products and services work is a crucial first step towards understanding their environmental impact.
 
 
-### A Look at Different Types of Media
+## A Look at Different Types of Media
 [data name:"mediaPickerData" source:"dist/media-emissions.json"/]
 Each type of digital activity produces a different level of emissions, and as a result has different consequences on the physical world. The amount of carbon dioxide emitted is based on the type and quantity of information that needs to be loaded for a particular digital activity. 
 
@@ -61,7 +61,7 @@ The CO2 emitted for any digital activity is directly correlated to the number of
 
 where [Equation display:false]X = 6 \times 10^{-11} [/Equation] is the global average for energy consumed for transmitting one byte of data, and [equation] Y = 707 [/equation] represents the U.S. national weighted average for grams of CO2 emitted for energy consumed.  (source , source).
 
-#### Websites 
+### Websites 
 [Aside]
 [Graphic hed:"Emissions of Websites" style:`{marginTop: 16}`]
 [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
@@ -76,7 +76,7 @@ The chart to the right displays the carbon emitted when loading various websites
 
 In the context of carbon emissions, one of the least expensive forms of media to load onto your device is text. As shown above, websites like Google, which are relatively simple because they primarily show static text, have much lower emissions than websites like Facebook, which load a lot of data-heavy media types to your device. 
 
-#### Audio 
+### Audio 
 [Aside]
 [Graphic hed:"Emissions of Audio"]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
@@ -90,7 +90,7 @@ Let’s take a closer look at one common type of non-text media: audio. When you
 The NPR podcast shown in the visualization was compressed to 128 kilobits per second, while the song Old Town Road, retrieved from Spotify, was compressed to 256 kilobits per second. This means that in the one minute timespan that both audio files played, twice as much data needed to be loaded for the song in comparison to the podcast, which leads to the song having roughly twice as large of a carbon footprint. These audio examples have lower carbon emissions than most of the websites shown earlier.
 
 
-#### Video
+### Video
 [Aside]
 [Graphic hed:"Video"]
 [MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
@@ -106,7 +106,7 @@ When you view a video at a higher quality, you receive a clearer image on your d
 Over a one minute period, the Old Town Road music video (which is a live action video) emits more emissions than the 3Blue1Brown animation. You might notice there is a lot of empty black space in the 3Blue1Brown video, while the music video exhibits a large range of colors and frequent visual changes, both of which require more data to render. In the examples provided, videos produced far more CO2 than audio over the same time span. This is especially apparent when comparing the emissions for Old Town Road and its corresponding music video. Not only does a video require loading both sound and visual data to your device, but also visual data is particularly heavy in terms of the amount of information it holds. Facebook produces more CO2 than any of the provided video examples, likely a result of the website loading multiple videos and other heavy data.
 
 
-### Packets
+## Packets
 [var name:"mediaPickerType" value:"bar"/]
 
 [Aside]
@@ -126,7 +126,7 @@ When we break down each digital media snapshot into a timeline of packets, we ca
 
 SHOW AS ASIDE?: One thing that was not explicitly covered in this exploration was the carbon impact of advertisements. Ads are another form of digital content, and thus produce carbon dioxide as the packets comprising the ads are delivered to your screen. While ads don’t contribute to a website or video you may be watching, digital media providers include advertisements as a method of extra revenue. When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), the size of its website decreased from 5000 to 500 kilobytes with no significant changes to the appearance of the site (source), This meant that the information to render USA Today could be contained in fewer packets, and as a result delivering the website to readers’ devices would produce fewer carbon emissions. Although ads are not necessary components of digital media, ads are prevalent across the internet and have tangible environmental impacts.
 
-### A Case Study: YouTube's Carbon Emissions
+## A Case Study: YouTube's Carbon Emissions
 // Variables
 [var name:"scrollerIndex" value:0 /]
 [var name:"stepProgress" value:0/]
@@ -189,7 +189,7 @@ Let's take a look at YouTube. With its 2 billion + users, YouTube is the prototy
 
 What is being done about this? Aside from increasing the efficiency of each part of the pipeline and taking advantage of renewable energy, mindful design could also go a long way.  In the context of digital streaming, Priest et al. point out that much of YouTube's traffic comes from music videos, and a good number of those "views" are likely just "listens". If this "listen" to "view" ratio were even just 10%, YouTube could have reduced its carbon footprint by about 117 thousand tons of CO2 in 2016, just by smartly sending audio with no accompanying video. That's over 2.2 million gallons of gasoline worth of CO2 in savings (source).
 
-### Tech's Inconvenient Truths
+## Tech's Inconvenient Truths
 
 The convenience of environmentally harmful aspects of technology being outside the public consciousness is hardly limited to YouTube or streaming. Here's a surprising fact: Santa Clara County leads the nation in the number of EPA classified "superfund" (highly polluted) sites. These 29 locations are expected to take an estimated 300 years to fully clean \[1\]. "Silicon Valley" is primarily to blame. 
 

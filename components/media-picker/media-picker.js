@@ -85,7 +85,8 @@ export default class MediaPicker extends React.Component {
       selectedY: null,
       offset: null,
       selectedTitle: null,
-      width: null,
+      width: 300,  // initial width (min width)
+      height: null
     };
 
     this.selectTitle = this.selectTitle.bind(this);
@@ -101,11 +102,9 @@ export default class MediaPicker extends React.Component {
 
   componentDidMount() {
     const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
-    this.height = rect.height;
-    this.width = rect.width;
-
     this.setState({
-      width: this.width
+      height: rect.height,
+      width: rect.width
     })
   }
 
@@ -124,7 +123,7 @@ export default class MediaPicker extends React.Component {
       const preview = titleToPreview[selectedTitle];
       const pType = preview.type;
 
-      const previewWidth = this.width - previewPadding * 2;
+      const previewWidth = this.state.width - previewPadding * 2;
       const previewHeight = previewWidth * (pType === 'video' ? 0.6 : 1);
   
       // const translateX = `translateX(${width / 2 - previewWidth / 2}px)`;
@@ -140,13 +139,11 @@ export default class MediaPicker extends React.Component {
         top = 0;
         let y = selectedY;
   
-        if (y + offset + previewHeight >= this.height) {
-          y -= previewHeight + previewPadding;
+        if (y + offset + previewHeight >= this.state.height) {
+          translateY = `translateY(calc(${y - previewPadding}px - 100%))`
         } else {
-          y += offset;
+          translateY = `translateY(${y + offset}px)`;
         }
-
-        translateY = `translateY(${y}px)`;
       }
 
       if (pType === 'video') {
@@ -171,14 +168,12 @@ export default class MediaPicker extends React.Component {
         position: 'relative',
       }}>
         {previewDiv}
-        {this.width ? 
-          <MediaAll type={type}
-            mediaType={mediaType} data={data} width={this.width} headers={headers}
-            selectTitle={this.selectTitle}
-            hasSelected={this.state.selectedY !== null}
-            selectedTitle={selectedTitle}
-          />
-        : null }
+        <MediaAll type={type}
+          mediaType={mediaType} data={data} width={this.state.width} headers={headers}
+          selectTitle={this.selectTitle}
+          hasSelected={this.state.selectedY !== null}
+          selectedTitle={selectedTitle}
+        />
       </div>
     );
   }

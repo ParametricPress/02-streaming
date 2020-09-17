@@ -58,8 +58,6 @@ export default class MediaAll extends React.PureComponent {
     }
     this.groupData = groupByType(groupByTitle(this.data));
 
-    this.xScales = MediaAll.getXScaleVX(props.width, this.maxTotal);
-
     this.animateTimeout = -1;
     this.state = {
       mouseX: null,
@@ -77,7 +75,7 @@ export default class MediaAll extends React.PureComponent {
     const hasSelected = this.props.hasSelected;
     const selectedTitle = this.props.selectedTitle;
 
-    const xScaleVX = this.xScales
+    const xScaleVX = MediaAll.getXScaleVX(width, this.maxTotal);
 
     return (
       <div

@@ -45,6 +45,7 @@ Book
 [br/][br/]
 [SVG style:`{width: '100%'}` src:"static/images/ebookpipeline.svg"/]
 E-Book
+[caption]It is difficult to ignore the environmental consequences of ordering a physical book on Amazon. But what happens when you download an E-Book instead?[/caption]
 [/Graphic]
 [/Aside]
 
@@ -82,7 +83,7 @@ where [Equation display:false]X = 6 \times 10^{-11} [/Equation] is the global av
 [Graphic hed:"Emissions of Websites" style:`{marginTop: 16}`]
 [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
 [br/]
-[caption]This is a caption[/caption]
+[caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. Click and hold each bar to show a preview clip of the scroll. [/caption]
 [/Graphic]
 [/Aside]
 
@@ -100,7 +101,7 @@ As shown above, websites like Google, which are relatively simple because they p
 [Graphic hed:"Emissions of Audio"]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
 [br/]
-[caption]This is a caption[/caption]
+[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds.[/caption]
 [/Graphic]
 [/Aside]
 
@@ -117,7 +118,7 @@ These audio examples have lower carbon emissions than most of the websites shown
 [Graphic hed:"Video"]
 [MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
 [br/]
-[caption]This is a caption[/caption]
+[caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p.[/caption]
 [/Graphic]
 [/Aside]
 
@@ -143,7 +144,7 @@ Facebook produces more CO2 than any of the provided video examples, likely a res
 [Graphic hed:"Media Emissions by Medium"]
 [MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
 [br/]
-[caption]This is a caption[/caption]
+[caption]Click on the "Switch Modes" button to see a timeline of loading packets for each type of media.[/caption]
 [button onClick:`mediaPickerType = mediaPickerType === 'bar' ? 'timeline' : 'bar'`]Switch Modes[/button]
 [/Graphic]
 [/Aside]
@@ -278,7 +279,7 @@ However, the industry avoided responsibility for decades and actually cultivated
 
 [Aside]
   [img src:"static/images/lorainneross.png"/]
-  [caption]"Leaking Chemicals in California's 'Silicon Valley' Alarm Neighbors" Lorraine Ross was one of the leaders of the protest movement responsible for shutting down Fairchild Semiconductor's South San Jose factory[/caption]
+  [caption]"Leaking Chemicals in California's 'Silicon Valley' Alarm Neighbors": Lorraine Ross was one of the leaders of the protest movement responsible for shutting down Fairchild Semiconductor's South San Jose factory. (Credit: [a href:"https://www.nytimes.com/1982/05/20/us/leaking-chemicals-in-california-s-silicon-valley-alarm-neighbors.html"]New York Times[/a])[/caption]
 [/Aside]
 
 Change in Silicon Valley never came easily.
@@ -290,7 +291,7 @@ A study done in 2014 found that “social vulnerability, cumulative environmenta
 
 [Aside]
   [img src:"static/images/bayan.jpg"/]
-  [caption]The toxic sludge of the Bayan Obo mining district[/caption]
+  [caption]A lake of toxic sludge at the Bayan Obo mining district. (Credit: [a href:"https://www.bbc.com/future/article/20150402-the-worst-place-on-earth"]BBC - Liam Young, Unknown Fields[/a])[/caption]
 [/Aside]
 The tech industry’s legacy of toxic mining and manufacturing continues today — with hardware giants like Apple taking the throne of Silicon Valley's founding industrialists — only nowon a global scale. 
 In 2009, China produced 95% of the world’s “rare earth” minerals, with an estimated 70% coming from the Bayan Obo mining district in Inner Mongolia.
@@ -306,7 +307,7 @@ Facebook has come under fire for lax action against climate change denial on the
 
 [Aside]
   [img src:"static/images/protest.jpg"/]
-  [caption]A protest aimed at Amazon's complicity in climate change acceleration.[/caption]
+  [caption]Amazon employees joined the global "climate strike" in September 2019 to protest their company's complicity in the climate crisis. (Credit: [a href:"https://grist.org/article/hundreds-of-amazon-employees-walk-out-for-climate-strike/"]Grist - Jesse Nichols[/a])[/caption]
 [/Aside]
 Our purpose in throwing light onto this destructive behavior is not simply to paint a bleak future. 
 Through public pressure and the collective organizing of tech employees, there has been media coverage of some success in holding the tech industry responsible for their environmental destruction.

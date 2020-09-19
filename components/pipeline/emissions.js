@@ -68,7 +68,7 @@ export default class Emissions extends React.PureComponent {
                     marginLeft: stage === 'cdn' ? 2 : 0,
                     textAlign: stage === 'cdn' ? 'left' : 'center',
                     fontSize: simplified ? 11 : undefined
-                  }}>{simplified ? d.name : stages.indexOf(d.stage) >= stages.indexOf('all') ? '19.6 TWh': d.emissions + ' GWh'}</div>
+                  }}>{simplified ? d.name : stages.indexOf(d.stage) >= stages.indexOf('all') ? '19.6 TWh': d.emissionsString + ' GWh'}</div>
                   <div style={{
                     height: markHeight,
                     width: '100%',

@@ -3,32 +3,39 @@ import Graphic from "./graphic";
 import Emissions from "./emissions";
 import { stages } from "./constants";
 import Projection from "./projection";
+import PipelineMap from "./map";
+import { backgroundColor } from "../constants";
 
 const youtubeData = [
   {
     stage: "cdn", // and also data center
     emissions: 360,
-    homes: 32000
+    emissionsString: "360",
+    homes: "32,000"
   },
   {
     stage: "internet",
     emissions: 1900,
-    homes: 170000
+    emissionsString: "1,900",
+    homes: "170,000"
   },
   {
     stage: "residential",
     emissions: 4400,
-    homes: 400000
+    emissionsString: "4,400",
+    homes: "400,000"
   },
   {
     stage: "cellular",
     emissions: 6100,
-    homes: 500000
+    emissionsString: "6,100",
+    homes: "500,000"
   },
   {
     stage: "device",
     emissions: 8500,
-    homes: 750000
+    emissionsString: "8,500",
+    homes: "750,000"
   },
 ]; // total = 21,260
 
@@ -97,6 +104,9 @@ export default class Pipeline extends React.PureComponent {
     const compareProgress = stage === "compare" ? progress : 100;
     const final = stage === 'final';
 
+    const showPops = stage === "pop" && this.props.showPops
+    const showGgcs = stage === "cdn" && this.props.showGgcs
+
     return (
       <div
         style={{
@@ -114,6 +124,30 @@ export default class Pipeline extends React.PureComponent {
         }}
       >
         <Graphic stage={stage} progress={progress} />
+        <div style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          backgroundColor: backgroundColor,
+          top: 0,
+          left: 0,
+          opacity: showPops ? 1 : 0,
+          zIndex: showPops ? 100 : 0
+        }}>
+          <PipelineMap dataType="pops" />
+        </div>
+        <div style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          backgroundColor: backgroundColor,
+          top: 0,
+          left: 0,
+          opacity: showGgcs ? 1 : 0,
+          zIndex: showGgcs ? 100 : 0
+        }}>
+          <PipelineMap dataType="ggcs" />
+        </div>
         <Emissions
           stage={stage}
           progress={progress}

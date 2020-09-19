@@ -322,27 +322,35 @@ date:"December 2002"
 [/Aside]
 
 Change in Silicon Valley never came easily.
-In the 1980s, residents around the Bay mapped out patterns of illnesses around factories and formed environmental coalitions.
+In the 1980s, residents around the Bay took matters into their own hands, mapping out patterns of illnesses around factories and formed environmental coalitions.
 It wasn't until this public outcry that one of the largest Silicon Valley manufacturers closed down a particularly problematic factory.
 For the first time, a tech company admitted responsibility for manufacturing-related illnesses, blowing a hole in the industry’s clean facade.
 In the decades that followed, factories began shutting down as manufacturing moved out of Silicon Valley, but their burden is still being felt today, primarily by working-class communities of color. 
-A study done in 2014 found that “social vulnerability, cumulative environmental hazards, and environmental benefits exhibit distinct spatial patterns in \[Santa Clara County\]” \[2\].
+A study done in 2014 found that “social vulnerability, cumulative environmental hazards, and environmental benefits exhibit distinct spatial patterns in \[Santa Clara County\]” [Cite
+authors:"Iris T.Stewart, Christopher M.Bacon, and William D.Burke"
+title:"The uneven distribution of environmental burdens and benefits in Silicon Valley's backyard"
+url:"https://www.sciencedirect.com/science/article/abs/pii/S0143622814002264"
+venue:"Applied Geography"
+id:"spatial-inequity"
+date:"December 2014"
+/].
 
 [Aside]
   [img src:"static/images/bayan.jpg"/]
   [caption]A lake of toxic sludge at the Bayan Obo mining district. (Credit: [a href:"https://www.bbc.com/future/article/20150402-the-worst-place-on-earth"]BBC - Liam Young, Unknown Fields[/a])[/caption]
 [/Aside]
-The tech industry’s legacy of toxic mining and manufacturing continues today — with hardware giants like Apple taking the throne of Silicon Valley's founding industrialists — only nowon a global scale. 
-In 2009, China produced 95% of the world’s “rare earth” minerals, with an estimated 70% coming from the Bayan Obo mining district in Inner Mongolia.
-The process of mining “rare earth” minerals contaminated the water from Bayan Obo, which seeps into the Yellow River, the area’s local water supply.
-The local population has suffered devastating effects, as farmland has turned to lakes of toxic waste, and cancer related deaths have spiked. 
+The tech industry’s legacy of toxic mining and manufacturing [link text:"continues today" url:"https://increment.com/energy-environment/a-rare-and-toxic-age/" target:"_blank"/] — with hardware giants like Apple taking the throne of Silicon Valley's founding industrialists — only now on a global scale. 
+In 2009, [link text:"China produced 95% of the world’s “rare earth” minerals" url:"https://www.livescience.com/38094-facts-about-rare-earth-elements-infographic.html" target:"_blank"/], with an estimated [link text:"70% coming from the Bayan Obo mining district" url:"https://www.mindat.org/loc-720.html" target:"_blank"/] in Inner Mongolia.
+The process of mining “rare earth” minerals [link text:"released contaminated water" url:"https://www.jstor.org/stable/10.7591/j.ctt1w0dd6d.8?seq=4#metadata_info_tab_contents" target:"_blank"/] into the Yellow River, the area’s local water supply.
+The local population has suffered devastating effects, as farmland has turned to lakes of [link text:"toxic waste" url:"https://www.bbc.com/future/article/20150402-the-worst-place-on-earth" target:"_blank"/], and [link text:"cancer related deaths have spiked" url:"https://www.jstor.org/stable/10.7591/j.ctt1w0dd6d.8?seq=4#metadata_info_tab_contents" target:"_blank"/]. Since 2004, [link text:"villagers have organized" url:"https://www.jstor.org/stable/10.7591/j.ctt1w0dd6d.8?seq=4#metadata_info_tab_contents" target:"_blank"/] to compel the government to take action. While the state has not fully fixed the devastation it’s caused, it has responded to public pressure by removing some of the toxic waste and providing the people of Bayan Obo better access to healthcare.
+ 
 
 The tech industry's complicity in environmental destruction is not just limited to toxic manufacturing waste and a large carbon footprint.
 Companies also have a large influence on the climate crisis in the context of policy, the broader economy, and the flow of information.
-Reports in 2019 revealed that Google has made significant contributions to climate denialist groups, including the Competitive Enterprise Institute (CEI), which helped convince the Trump administration to withdraw from the Paris Agreement in 2017.
-Google, Microsoft, and Amazon have partnered with large oil companies to build machine learning tools that streamline oil production.
-In fact, the oil industry invested an estimated $1.75 billion in 2018 into machine learning tools, which is projected to grow to $4.01 billion by 2025.
-Facebook has come under fire for lax action against climate change denial on their platform, where disinformation can easily spread without diligent fact-checking.
+Reports in 2019 revealed that [link text:"Google has made significant contributions to climate denialist groups" url:"https://www.theguardian.com/environment/2019/oct/11/google-contributions-climate-change-deniers" target:"_blank"/], including the Competitive Enterprise Institute (CEI), which helped convince the Trump administration to withdraw from the Paris Agreement in 2017.
+[link text:"Google, Microsoft, and Amazon have partnered with large oil companies" url:"https://www.vox.com/recode/2020/1/3/21030688/google-amazon-ai-oil-gas" target:"_blank"/] to build machine learning tools that streamline oil production.
+In fact, the [link text:"oil industry invested an estimated $1.75 billion in 2018 into machine learning tools" url:"https://www.globenewswire.com/news-release/2019/07/18/1884499/0/en/Global-AI-In-Oil-and-Gas-Market-Will-Reach-to-USD-4-01-Billion-By-2025-Zion-Market-Research.html" target:"_blank"/], which is projected to grow to $4.01 billion by 2025.
+[link text:"Facebook has come under fire" url:"https://www.scientificamerican.com/article/climate-denial-spreads-on-facebook-as-scientists-face-restrictions/" target:"_blank"/] for lax action against climate change denial on their platform, where disinformation can easily spread without diligent fact-checking.
 
 [Aside]
   [img src:"static/images/protest.jpg"/]
@@ -350,9 +358,9 @@ Facebook has come under fire for lax action against climate change denial on the
 [/Aside]
 Our purpose in throwing light onto this destructive behavior is not simply to paint a bleak future. 
 Through public pressure and the collective organizing of tech employees, there has been media coverage of some success in holding the tech industry responsible for their environmental destruction.
-In 2019, after the Amazon Employees for Climate Justice led a large walkout in support of the global climate strike, Amazon pledged to reach net-zero carbon emissions by 2040.
-Similarly, in response to employee pressure, Google pledged to stop funding climate change deniers in 2020.
-Google also promised to ban all future contracts with oil companies in response to a Greenpeace report about tech’s oil contracts. 
+In 2019, after the [link text:"Amazon Employees for Climate Justice organization led a large walkout" url:"https://www.latimes.com/business/story/2019-09-19/amazon-climate-change" target:"_blank"/] in support of the global climate strike, Amazon pledged to reach net-zero carbon emissions by 2040.
+Similarly, in response to [link text:"employee pressure" url:"https://medium.com/@googworkersac/ruth-porat-497bbb841b52" target:"_blank"/], Google [link text:"pledged to stop funding climate change deniers in 2020" url:"https://agreenergoogle.com/" target:"_blank"/].
+Google also promised to [link text:"rescind all future contracts with oil companies" url:"https://www.cnbc.com/2020/05/20/google-ai-greenpeace-oil-gas.html" target:"_blank"/] in response to a [link text:"Greenpeace report" url:"" target:"_blank"/] about tech’s oil contracts. 
 
 While these companies’ pledges are not enough to fully mitigate their destructive practices, they are proof that public pressure and collective organizing works.
 Whether it is Google employees demanding change from their company, or Bay Area residents demanding the removal of toxic waste, change can only occur if we understand and acknowledge the hidden, yet harmful consequences of the technology we use. 

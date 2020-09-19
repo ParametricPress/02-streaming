@@ -58,7 +58,7 @@ The reality is, just as a package purchased on Amazon must be transported throug
 And that's the thing: Your digital actions are only possible because of the physical infrastructure built to support them.
 Digital actions are physical ones. This means that Google has to be mindful of sharks.
 This also means that we should be mindful of the carbon emissions produced by running the world's data centers and internet networks.
-According to one study, the Information and Communications Technology sector is expected to account for between 3 - 3.6 % of global greenhouse gas emissions in 2020.
+According to one study, [span className:"emphasized"]the Information and Communications Technology sector is expected to account for between 3 - 3.6% of global greenhouse gas emissions in 2020.[/span]
 That's more than the fuel emissions for all air travel in 2019, which clocked in at 2.5%.
 The answer to "why?" and  "how?" may not be immediately obvious, but that's not the fault of consumers.
 A well-designed, frictionless digital experience means that users don't need to worry about what happens behind the scenes and, by extension, the consequences.
@@ -129,6 +129,13 @@ When you view a video at a higher quality, you receive a clearer image on your d
 In the chart, the number in front of the "p" for quality refers to the height, in pixels, of the video.
 This is why there are greater emissions for videos at 1080p than those at 360p: more pixels means more data loaded. 
 
+[Aside]
+One thing that was not explicitly covered in this exploration was the carbon impact of advertisements.
+Ads are another form of digital content, and thus produce carbon dioxide as the packets comprising the ads are delivered to your screen.
+While ads don’t contribute to a website or video you may be watching, digital media providers include advertisements as a method of extra revenue.
+When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), the size of its website decreased from 5000 to 500 kilobytes with no significant changes to the appearance of the site (source). This meant that the information to render USA Today could be contained in fewer packets, and as a result delivering the website to readers’ devices would produce fewer carbon emissions.
+Although ads are not necessary components of digital media, ads are prevalent across the internet and have tangible environmental impacts.
+[/Aside]
 Over a one minute period, the Old Town Road music video (which is a live action video) emits more emissions than the 3Blue1Brown animation.
 You might notice there is a lot of empty black space in the 3Blue1Brown video, while the music video exhibits a large range of colors and frequent visual changes, both of which require more data to render.
 In the examples provided, videos produced far more CO2 than audio over the same time span.
@@ -160,12 +167,6 @@ When we break down each digital media snapshot into a timeline of packets, we ca
 With video and audio, packets tend to travel to your device at regular intervals while you are playing the media.
 In contrast, the packets for websites are weighted more heavily towards the beginning of the timeline as websites make most of the requests for content on their initial load.
 Websites may make more requests as you scroll through and load more content. 
-
-SHOW AS ASIDE?: One thing that was not explicitly covered in this exploration was the carbon impact of advertisements.
-Ads are another form of digital content, and thus produce carbon dioxide as the packets comprising the ads are delivered to your screen.
-While ads don’t contribute to a website or video you may be watching, digital media providers include advertisements as a method of extra revenue.
-When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), the size of its website decreased from 5000 to 500 kilobytes with no significant changes to the appearance of the site (source), This meant that the information to render USA Today could be contained in fewer packets, and as a result delivering the website to readers’ devices would produce fewer carbon emissions.
-Although ads are not necessary components of digital media, ads are prevalent across the internet and have tangible environmental impacts.
 
 ## A Case Study: YouTube's Carbon Emissions
 // Variables
@@ -289,10 +290,11 @@ For the first time, a tech company admitted responsibility for manufacturing-rel
 In the decades that followed, factories began shutting down as manufacturing moved out of Silicon Valley, but their burden is still being felt today, primarily by working-class communities of color. 
 A study done in 2014 found that “social vulnerability, cumulative environmental hazards, and environmental benefits exhibit distinct spatial patterns in \[Santa Clara County\]” \[2\].
 
-[Aside]
-  [img src:"static/images/bayan.jpg"/]
+[div fullWidth:true]
+  [img src:"static/images/bayan.webp"/]
   [caption]A lake of toxic sludge at the Bayan Obo mining district. (Credit: [a href:"https://www.bbc.com/future/article/20150402-the-worst-place-on-earth"]BBC - Liam Young, Unknown Fields[/a])[/caption]
-[/Aside]
+[/div]
+
 The tech industry’s legacy of toxic mining and manufacturing continues today — with hardware giants like Apple taking the throne of Silicon Valley's founding industrialists — only nowon a global scale. 
 In 2009, China produced 95% of the world’s “rare earth” minerals, with an estimated 70% coming from the Bayan Obo mining district in Inner Mongolia.
 The process of mining “rare earth” minerals contaminated the water from Bayan Obo, which seeps into the Yellow River, the area’s local water supply.

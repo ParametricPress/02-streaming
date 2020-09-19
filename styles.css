@@ -40,6 +40,18 @@
   100% { stroke-dashoffset: 0; }
 }
 
+.radio-animated {
+  animation-name: radio-animation;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes radio-animation {
+  50% { stroke: #363636 }
+  75% { stroke: white }
+  100% { stroke: #363636 }
+}
+
 /* TODO FIX THIS FOR MOBILE (This is a hack) */
 
 .idyll-scroll {  

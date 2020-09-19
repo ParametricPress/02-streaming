@@ -187,7 +187,9 @@ Websites may make more requests as you scroll through and load more content.
 // Variables
 [var name:"scrollerIndex" value:0 /]
 [var name:"stepProgress" value:0/]
-[var name:"scrollerStages" value:`['worldmap', 'datacenter','cdn', 'spacer1', 'internet', 'spacer2', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final']`/]
+[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'datacenter', 'pop', 'cdn', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final']`/]
+[var name:"showPops" value:false /]
+[var name:"showGgcs" value:false /]
 
 We’ve just seen how digital streams are made up of packets of data sent over the internet. These packets aren’t delivered by magic.
 [span className:"emphasized"] Every digital streaming platform relies on a system of computers and cables, each part consuming electricity and releasing carbon emissions.[/span]
@@ -197,10 +199,10 @@ Let's take a look at YouTube.
 With its 2 billion + users, YouTube is the prototypical digital streaming service.
 How does one of its videos arrive on your screen?
 
-[CustomScroller currentStep:scrollerIndex progress:stepProgress offset:0.75]
+[CustomScroller currentStep:scrollerIndex progress:stepProgress offset:0.65]
 [Graphic]
   [div id:"pipeline" style:`{overflow: 'hidden'}`]
-    [Pipeline stage:`scrollerStages[scrollerIndex]` progress:`stepProgress * 100` /]
+    [Pipeline stage:`scrollerStages[scrollerIndex]` progress:`stepProgress * 100` showPops:showPops showGgcs: showGgcs/]
   [/div]
 [/Graphic]
 
@@ -222,26 +224,53 @@ date:"May 2017"
 Because of this, companies have begun [link text:"placing data centers in cold countries" url:"https://www.wsj.com/articles/SB10001424053111904836104576560551005570810" target:"_blank"/], where they can take advantage of passive cooling. 
 [/Step]
 [Step]
-When a video is sent to you, it passes through a network of these main and smaller data centers called a [span className:"terms"]Content Delivery Network[/span] (CDN for short).
-These are responsible for storing the more popular or recently watched videos for users in a given area, ensuring no single data center is overwhelmed and service stays zippy.
-Priest et al. estimate that all data centers account for [span className:"emphasized"]less than 2% of YouTube's electricity use[/span].[Cite
+Let's take a closer look at one of these data centers. This one is in The Dalles, Oregon, on the West Coast of the United States.
+[/Step]
+[Step]
+For information to get from this data center to you, it first goes through Google's own specialized data network to what they call "Edge Points of Presence" (POPs for short), which bring data closer to high traffic areas.
+There are four metro areas with POPs in this region: in the Seattle, San Francisco, San Jose, and Salt Lake City areas.
+[Button onClick:`showPops = !showPops` style:`{opacity: scrollerStages[scrollerIndex] === "pop" ? 1 : 0}`]
+[Conditional if:`!showPops`]
+Show all POPs
+[/Conditional]
+[Conditional if:`showPops`]
+Hide Globe
+[/Conditional]
+[/Button]
+[/Step]
+[Step]
+From these POPs, data is routed through smaller data centers that form the "Google Global Cache". 
+There are 20 of these in this region. These are responsible for storing the more popular or recently watched videos for users in a given area, ensuring no single data center is overwhelmed and service stays zippy.
+Together, they form what is known as a [span className:"terms"]Content Delivery Network (CDN for short)[/span]. Priest et al. estimate that all data centers account for [span className:"emphasized"]less than 2% of YouTube's electricity use[/span] [Cite
 authors:"Chris Preist, Daniel Schien, and Paul Shabajee"
 title:"Evaluating Sustainable Interaction Design of Digital Services: The Case of YouTube"
 url:"https://dl.acm.org/doi/10.1145/3290605.3300627"
 id:"youtube-paper"
 venue:"CHI"
 date:"2019"
-/] 
+/].
+
+[Button onClick:`showGgcs = !showGgcs` style:`{opacity: scrollerStages[scrollerIndex] === "cdn" ? 1 : 0}`]
+[Conditional if:`!showGgcs`]
+Show all CDNs
+[/Conditional]
+[Conditional if:`showGgcs`]
+Hide Globe
+[/Conditional]
+[/Button]
 [/Step]
 [Step]
-Of course, videos need a way of moving between main and CDN data centers.
-For that, we have the internet.
+Google doesn't have their own network for communication between POPs and these smaller data centers.
+For that, they use the internet.
 [/Step]
 [Step]
-The internet is a “highway of information” that allows packets of data to be transmitted as electrical impulses.
+The internet is a global “highway of information” that allows packets of data to be transmitted as electrical impulses.
 [link text:"A packet is routed" url:"https://medium.com/@User3141592/how-does-the-internet-work-edc2e22e7eb8" target:"_blank"/] from a source computer, through cables and intermediary computers, before arriving at its destination.
-The backbone of this highway is made up of [span className:"emphasized"][link text:"550,000 miles of underwater cables." url:"https://www.businessinsider.com/how-internet-works-infrastructure-photos-2018-5#if-the-worlds-underwater-cables-were-laid-out-end-to-end-the-cables-could-extend-from-here-to-the-moon-and-back-again-and-then-wrap-around-the-earths-widest-point-almost-three-times-5" target:"_blank"/][/span]
-Miles of this cable are spooled onto a large ship and painstakingly unwound along the ocean floor, a process which can take several months and millions of dollars.
+In addition to the [span className:"emphasized"][link text:"550,000 miles of underwater cables." url:"https://www.businessinsider.com/how-internet-works-infrastructure-photos-2018-5#if-the-worlds-underwater-cables-were-laid-out-end-to-end-the-cables-could-extend-from-here-to-the-moon-and-back-again-and-then-wrap-around-the-earths-widest-point-almost-three-times-5" target:"_blank"/][/span] that form the backbone of the internet, countries will have their own land-based networks.
+[/Step]
+[Step]
+Here's (roughly) what the major internet lines of the west coast look like.
+Perhaps not surprisingly, it somewhat resembles our interstate highway system.
 Priest et al. estimate that this infrastructure consumes approximately [span className:"emphasized"]1,900 Gigawatt-hours of electricity to serve YouTube videos, enough to power [link text:"170,000 homes in the United States." url:"https://www.eia.gov/tools/faqs/faq.php?id=97&t=3" target:"_blank"/][/span][Cite
 id:"youtube-paper"
 /]

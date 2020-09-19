@@ -16,7 +16,7 @@ const typeKnob = () => {
   return radios('type', { Timeline: 'timeline', Bar: 'bar' }, 'bar');
 }
 
-const data = require('../data/dist/data.json');
+const data = require('../data/dist/media-emissions.json');
 data.forEach(d => addCumulativeSize(d.packets));
 
 const width = 300;

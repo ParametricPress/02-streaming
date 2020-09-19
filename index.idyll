@@ -69,7 +69,7 @@ Understanding how these digital products and services work is a crucial first st
 ## A Look at Different Types of Media
 [data name:"mediaPickerData" source:"dist/media-emissions.json"/]
 Each type of digital activity produces a different level of emissions, and as a result has different consequences on the physical world.
-The amount of carbon dioxide emitted is based on the type and quantity of information that needs to be loaded for a particular digital activity. 
+[span className:"emphasized"]  The amount of carbon dioxide emitted is based on the type and quantity of information that needs to be loaded[/span] for a particular digital activity. 
 
 The CO2 emitted for any digital activity is directly correlated to the number of bytes that must be transferred for that activity.
 More specifically, emissions can be computed using the following equation:
@@ -88,7 +88,7 @@ where [Equation display:false]X = 6 \times 10^{-11} [/Equation] is the global av
 [/Aside]
 
 In order to load the Parametric Press article that you are currently reading, we estimate that ?? milligrams of CO2 were produced.
-These emissions are a result of loading data for the text, graphics, and visualizations that are then rendered on your device.
+[span className:"emphasized"]  These emissions are a result of loading data for the text, graphics, and visualizations[/span] that are then rendered on your device.
 
 The chart to the right displays the carbon emitted when loading various websites and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site).
 Clicking and holding each bar will show a preview of that scroll, sped up to a 5 second clip. 
@@ -125,7 +125,7 @@ These audio examples have lower carbon emissions than most of the websites shown
 Generally, digital activity that involves videos requires a large amount of data to be loaded on your device so that your device can render each frame as well as the associated audio.
 The chart below shows emissions for streaming different YouTube videos at two different qualities—360p and 1080p, for 60 seconds each.
 
-When you view a video at a higher quality, you receive a clearer image on your device because the video that you load contains more pixels. Pixels are units of visual information.
+When you view a video at a higher quality, you receive a clearer image on your device because the video that you load contains more [span className:"terms"]pixels[/span]. Pixels are units of visual information.
 In the chart, the number in front of the "p" for quality refers to the height, in pixels, of the video.
 This is why there are greater emissions for videos at 1080p than those at 360p: more pixels means more data loaded. 
 
@@ -133,14 +133,14 @@ This is why there are greater emissions for videos at 1080p than those at 360p: 
 One thing that was not explicitly covered in this exploration was the carbon impact of advertisements.
 Ads are another form of digital content, and thus produce carbon dioxide as the packets comprising the ads are delivered to your screen.
 While ads don’t contribute to a website or video you may be watching, digital media providers include advertisements as a method of extra revenue.
-When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), the size of its website decreased from 5000 to 500 kilobytes with no significant changes to the appearance of the site (source). This meant that the information to render USA Today could be contained in fewer packets, and as a result delivering the website to readers’ devices would produce fewer carbon emissions.
+When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), [span className:"emphasized"]the size of its website decreased from 5000 to 500 kilobytes with no significant changes to the appearance of the site[/span] (source). This meant that the information to render USA Today could be contained in fewer packets, and as a result delivering the website to readers’ devices would produce fewer carbon emissions.
 Although ads are not necessary components of digital media, ads are prevalent across the internet and have tangible environmental impacts.
 [/Aside]
 Over a one minute period, the Old Town Road music video (which is a live action video) emits more emissions than the 3Blue1Brown animation.
 You might notice there is a lot of empty black space in the 3Blue1Brown video, while the music video exhibits a large range of colors and frequent visual changes, both of which require more data to render.
 In the examples provided, videos produced far more CO2 than audio over the same time span.
 This is especially apparent when comparing the emissions for Old Town Road and its corresponding music video. 
-Not only does a video require loading both sound and visual data to your device, but also visual data is particularly heavy in terms of the amount of information it holds.
+Not only does a video require loading both sound and visual data to your device, but also [span className:"emphasized"]visual data is particularly heavy in terms of the amount of information it holds[/span].
 Facebook produces more CO2 than any of the provided video examples, likely a result of the website loading multiple videos and other heavy data.
 
 
@@ -156,9 +156,9 @@ Facebook produces more CO2 than any of the provided video examples, likely a res
 [/Graphic]
 [/Aside]
 
-In a lot of cases, when you stream content online, you don’t receive all of the information for that content at once.
+In a lot of cases, when you stream content online, [span className:"emphasized"] you don’t receive all of the information for that content at once[/span].
 Instead, your device loads incremental pieces of the data as you consume the media.
-These pieces are called packets.
+These pieces are called [span className:"terms"]packets[/span].
 In these visualizations, we estimated emissions based on the size and quantity of the packets needed to load each type of media.
 
 Click the ‘Switch Modes’ button on the visualization to the right to see a timeline breakdown of each title.
@@ -175,7 +175,7 @@ Websites may make more requests as you scroll through and load more content.
 [var name:"scrollerStages" value:`['worldmap', 'datacenter','cdn', 'spacer1', 'internet', 'spacer2', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final']`/]
 
 We’ve just seen how digital streams are made up of packets of data sent over the internet. These packets aren’t delivered by magic.
-Every digital streaming platform relies on a system of computers and cables, each part consuming electricity and releasing carbon emissions.
+[span className:"emphasized"] Every digital streaming platform relies on a system of computers and cables, each part consuming electricity and releasing carbon emissions.[/span]
 By understanding how these platforms deliver their content, we can directly link our digital actions to the physical infrastructure that releases carbon dioxide.
 
 Let's take a look at YouTube.
@@ -190,7 +190,7 @@ How does one of its videos arrive on your screen?
 [/Graphic]
 
 [Step]  
-Videos are stored on servers called "data centers": Warehouses full of giant computers designed for storing and distributing videos.
+Videos are stored on servers called [span className:"terms"] "data centers"[/span]: Warehouses full of giant computers designed for storing and distributing videos.
 For global services, these are often placed around the world.
 YouTube's parent company, Google, has 21 main data centers strategically placed throughout 4 continents (North America, South America, Europe, and Asia).
 Google does not disclose the data centers they use specifically for YouTube; so all of Google's data centers are shown here.
@@ -200,9 +200,9 @@ Cooling these data centers is no small feat, consuming up to 40% of the total en
 Because of this, companies have begun placing data centers in cold countries (source), where they can take advantage of passive cooling.
 [/Step]
 [Step]
-When a video is sent to you, it passes through a network of these main and smaller data centers called a Content Delivery Network (CDN for short).
+When a video is sent to you, it passes through a network of these main and smaller data centers called a [span className:"terms"]Content Delivery Network[/span] (CDN for short).
 These are responsible for storing the more popular or recently watched videos for users in a given area, ensuring no single data center is overwhelmed and service stays zippy.
-Priest et al. estimate that all data centers account for less than 2% of YouTube's electricity use. 
+Priest et al. estimate that all data centers account for [span className:"emphasized"]less than 2% of YouTube's electricity use[/span]. 
 [/Step]
 [Step]
 Of course, videos need a way of moving between main and CDN data centers.
@@ -211,36 +211,36 @@ For that, we have the internet.
 [Step]
 The internet is a “highway of information” that allows packets of data to be transmitted as electrical impulses.
 A packet is routed from a source computer, through cables and intermediary computers, before arriving at its destination.
-The backbone of this highway is made up of 550,000 miles of underwater cables.
+The backbone of this highway is made up of [span className:"emphasized"]550,000 miles of underwater cables.[/span]
 Miles of this cable are spooled onto a large ship and painstakingly unwound along the ocean floor, a process which can take several months and millions of dollars.
-Priest et al. estimate that this infrastructure consumes approximately 1,900 Gigawatt-hours of electricity to serve YouTube videos, enough to power 170,000 homes in the United States.
+Priest et al. estimate that this infrastructure consumes approximately [span className:"emphasized"]1,900 Gigawatt-hours of electricity to serve YouTube videos, enough to power 170,000 homes in the United States[/span].
 [/Step]
 [Step]
 The packets traveling across this information highway need “off-ramps” to reach your screen.
-The off-ramps that packets take are either "fixed line" residential networks (wired connections from homes to the internet) or cellular networks (wireless connections from cell phones to the internet).
+The off-ramps that packets take are either [span className:"terms"]"fixed line" residential networks[/span] (wired connections from homes to the internet) or [span className:"terms"]cellular networks[/span] (wireless connections from cell phones to the internet).
 The physical infrastructure making up these different networks is dramatically different, and therefore they have significantly different levels of energy consumption and carbon emissions.
 [/Step]
 [Step]
-An estimated 88% of YouTube's traffic goes through fixed line networks (from your residential Cable, DSL, or Fiber-Optic providers), and this accounts for approximately 4,400 Gigawatt-hours of electricity usage—power for over 400,000 U.S. homes.
+An estimated 88% of YouTube's traffic goes through fixed line networks (from your residential Cable, DSL, or Fiber-Optic providers), and this accounts for approximately [span className:"emphasized"]4,400 Gigawatt-hours of electricity usage—power for over 400,000 U.S. homes[/span].
 [/Step]
 [Step]
-In comparison, only 12% of YouTube’s traffic goes through cellular networks, but they are by far the most expensive part of YouTube’s content delivery pipeline, accounting for 6,100 Gigawatt-hours of electricity usage—over half a million U.S.homes.
+In comparison, only 12% of YouTube’s traffic goes through cellular networks, but they are by far the most expensive part of YouTube’s content delivery pipeline, accounting for [span className:"emphasized"]6,100 Gigawatt-hours of electricity usage—over half a million U.S.homes[/span].
 At over 10 times the electricity usage per unit of traffic, the relative inefficiency of cellular transmission is clear.
 [/Step]
 [Step]
 Eventually, the video data reaches your device for viewing.
 While your device might not technically be part of Youtube’s content delivery pipeline, we can't overlook the cost of moving those pixels.
-Devices account for an estimated 8500 Gigawatt-hours of electricity usage.
+Devices account for an estimated [span className:"emphasized"]8500 Gigawatt-hours of electricity usage[/span].
 That's over a 3/4 of a million U.S. homes worth of electricity.
 [/Step]
 [Step]
-In total, Priest et al.'s research estimated that YouTube traffic consumes 19.6 Tetrawatt-hours of electricity in 2016.
-Using the world emissions factor for electricity generation as reported by the International Energy Agency, they place resulting carbon emissions at 10.1 million metric tons of CO2—as much as a small metropolitan area like Frankfurt or Providence.
+In total, Priest et al.'s research estimated that [span className:"emphasized"]YouTube traffic consumes 19.6 Tetrawatt-hours of electricity in 2016[/span].
+Using the world emissions factor for electricity generation as reported by the International Energy Agency, they place resulting [span className:"emphasized"]carbon emissions at 10.1 million metric tons of CO2[/span]—as much as a small metropolitan area like Frankfurt or Providence.
 Put in other words, this is equivalent to the yearly footprint of approximately 2.2 million cars in the United States (source).
 YouTube's monthly active user count has since increased by a minimum of 33% since then (from 1.5 billion a year later in 2017 to over 2 billion last year).
 [/Step]
 [Step]
-It's important to note that breakdown of YouTube's carbon footprint isn't necessarily representative of the entirety of the information and technology sector.
+It's important to note that [span className:"emphasized"]breakdown of YouTube's carbon footprint isn't necessarily representative of the entirety of the information and technology sector[/span].
 A 2017 study by Belkhir and Elmeligi paints a surprisingly different picture for the sector as a whole.
 [/Step]
 [Step]
@@ -253,19 +253,19 @@ We can speculate that the relatively high bandwidth required to transfer videos 
 [/Step]
 [Step]
 In the same study, Belkhir and Elmeligi create two models to project the ICT sector's decades forward.
-Even their "unrealistically conservative" linear model puts tech at a 6-7% share of GHG emissions in 2040, and their exponential model has tech reaching over 14%. 
+Even their "unrealistically conservative" linear model puts tech at a [span className:"emphasized"]6-7% share of GHG emissions in 2040[/span], and their exponential model has tech reaching over 14%. 
 [/Step]
 [/CustomScroller]
 
 What is being done about this? Aside from increasing the efficiency of each part of the pipeline and taking advantage of renewable energy, mindful design could also go a long way.
 In the context of digital streaming, Priest et al. point out that much of YouTube's traffic comes from music videos, and a good number of those "views" are likely just "listens".
-If this "listen" to "view" ratio were even just 10%, YouTube could have reduced its carbon footprint by about 117 thousand tons of CO2 in 2016, just by smartly sending audio with no accompanying video.
+If this "listen" to "view" ratio were even just 10%, [span className:"emphasized"]YouTube could have reduced its carbon footprint by about 117 thousand tons of CO2 in 2016[/span], just by smartly sending audio with no accompanying video.
 That's over 2.2 million gallons of gasoline worth of CO2 in savings (source).
 
 ## Tech's Inconvenient Truths
 
 The convenience of environmentally harmful aspects of technology being outside the public consciousness is hardly limited to YouTube or streaming.
-Here's a surprising fact: Santa Clara County leads the nation in the number of EPA classified "superfund" (highly polluted) sites.
+[span className:"emphasized"] Here's a surprising fact: Santa Clara County leads the nation in the number of EPA classified "superfund" (highly polluted) sites[/span].
 These 29 locations are expected to take an estimated 300 years to fully clean \[1\]. "Silicon Valley" is primarily to blame. 
 
 [data name:"superfundSitesGeoJSON" source:"dist/superfund-sites.json"/]
@@ -275,8 +275,8 @@ These 29 locations are expected to take an estimated 300 years to fully clean \[
 [caption]The 23 superfund sites of Santa Clara County. Hover over each one for more information. Larger Hazard Ranking System Scores are worse.[/caption]
 
 Santa Clara County became “Silicon Valley” in the 1960s when companies in the area found ways to embed computer circuits into small wafers of silicon.
-Manufacturing these chips is inherently toxic, and its chemical runoff has been linked to increases in cancer and birth defect rates around the Bay.
-However, the industry avoided responsibility for decades and actually cultivated a clean image, publicizing their pristine campuses and white-collar workforce. 
+[span className:"emphasized"] Manufacturing these chips is inherently toxic[/span], and its chemical runoff has been linked to increases in cancer and birth defect rates around the Bay.
+However, [span className:"emphasized"]the industry avoided responsibility for decades[/span] and actually cultivated a clean image, publicizing their pristine campuses and white-collar workforce. 
 
 [Aside]
   [img src:"static/images/lorainneross.png"/]
@@ -285,7 +285,7 @@ However, the industry avoided responsibility for decades and actually cultivated
 
 Change in Silicon Valley never came easily.
 In the 1980s, residents around the Bay mapped out patterns of illnesses around factories and formed environmental coalitions.
-It wasn't until this public outcry that one of the largest Silicon Valley manufacturers closed down a particularly problematic factory.
+[span className:"emphasized"] It wasn't until this public outcry that one of the largest Silicon Valley manufacturers closed down a particularly problematic factory.[/span]
 For the first time, a tech company admitted responsibility for manufacturing-related illnesses, blowing a hole in the industry’s clean facade.
 In the decades that followed, factories began shutting down as manufacturing moved out of Silicon Valley, but their burden is still being felt today, primarily by working-class communities of color. 
 A study done in 2014 found that “social vulnerability, cumulative environmental hazards, and environmental benefits exhibit distinct spatial patterns in \[Santa Clara County\]” \[2\].
@@ -295,13 +295,13 @@ A study done in 2014 found that “social vulnerability, cumulative environmenta
   [caption]A lake of toxic sludge at the Bayan Obo mining district. (Credit: [a href:"https://www.bbc.com/future/article/20150402-the-worst-place-on-earth"]BBC - Liam Young, Unknown Fields[/a])[/caption]
 [/div]
 
-The tech industry’s legacy of toxic mining and manufacturing continues today — with hardware giants like Apple taking the throne of Silicon Valley's founding industrialists — only nowon a global scale. 
+[span className:"emphasized"]The tech industry’s legacy of toxic mining and manufacturing continues today[/span] — with hardware giants like Apple taking the throne of Silicon Valley's founding industrialists — only now on a global scale. 
 In 2009, China produced 95% of the world’s “rare earth” minerals, with an estimated 70% coming from the Bayan Obo mining district in Inner Mongolia.
 The process of mining “rare earth” minerals contaminated the water from Bayan Obo, which seeps into the Yellow River, the area’s local water supply.
 The local population has suffered devastating effects, as farmland has turned to lakes of toxic waste, and cancer related deaths have spiked. 
 
 The tech industry's complicity in environmental destruction is not just limited to toxic manufacturing waste and a large carbon footprint.
-Companies also have a large influence on the climate crisis in the context of policy, the broader economy, and the flow of information.
+[span className:"emphasized"] Companies also have a large influence on the climate crisis in the context of policy, the broader economy, and the flow of information.[/span]
 Reports in 2019 revealed that Google has made significant contributions to climate denialist groups, including the Competitive Enterprise Institute (CEI), which helped convince the Trump administration to withdraw from the Paris Agreement in 2017.
 Google, Microsoft, and Amazon have partnered with large oil companies to build machine learning tools that streamline oil production.
 In fact, the oil industry invested an estimated $1.75 billion in 2018 into machine learning tools, which is projected to grow to $4.01 billion by 2025.

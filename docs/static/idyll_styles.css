@@ -2094,6 +2094,11 @@ p {
   font-weight: lighter;
 }
 
+.emphasized {
+  font-weight: bold;
+}
+
 .terms {
-  font-weight: 'bold';
+  font-weight: bold;
+  font-style: italic;
 }

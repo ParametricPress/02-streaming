@@ -12849,7 +12849,7 @@ vega-wordcloud@~4.1.2:
     vega-statistics "^1.7.8"
     vega-util "^1.15.1"
 
-vega@^5.13.0:
+vega@^5.15.0:
   version "5.15.0"
   resolved "https://registry.yarnpkg.com/vega/-/vega-5.15.0.tgz#9a813c5699f0a4b2a2be385d44c356ab87b19394"
   integrity sha512-uygUtkZJm3/HNvNGLQSugZld4qvaiOMtH34tOGuS/MSGj7MaP0CLoFrthlas30lyMPQ42UfzX8tk5X+I91dFKQ==

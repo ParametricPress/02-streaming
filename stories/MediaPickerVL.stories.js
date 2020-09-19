@@ -5,7 +5,7 @@ export default {
   title: 'Media Picker (VL)',
 };
 
-const data = require('../data/dist/data.json');
+const data = require('../data/dist/media-emissions.json');
 
 const maxSize = data.reduce((max, d) => {
   return Math.max(max, d.packets.reduce((s, p) => {

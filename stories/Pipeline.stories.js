@@ -3,6 +3,7 @@ import { withKnobs, optionsKnob as options, number } from '@storybook/addon-knob
 import Pipeline from '../components/pipeline/pipeline';
 import Graphic from '../components/pipeline/graphic';
 import Emissions from '../components/pipeline/emissions';
+import PipelineMap from '../components/pipeline/map';
 
 export default {
   title: 'Pipeline',
@@ -40,4 +41,13 @@ export const emissions = () => {
 export const pipeline = () => {
   const { stage, progress } = knobs();
   return <Pipeline stage={stage} progress={progress} />
+}
+
+export const map = () => {
+  const dataType = options('type', { pops: 'pops', ggcs: 'ggcs' }, 'pops', { display: 'inline-radio'});
+  return (
+    <div style={{width: 500, height: 500 }}>
+      <PipelineMap dataType={dataType}/>
+    </div>
+  )
 }

@@ -269,7 +269,7 @@ The internet is a global “highway of information” that allows packets of dat
 In addition to the [span className:"emphasized"][link text:"550,000 miles of underwater cables." url:"https://www.businessinsider.com/how-internet-works-infrastructure-photos-2018-5#if-the-worlds-underwater-cables-were-laid-out-end-to-end-the-cables-could-extend-from-here-to-the-moon-and-back-again-and-then-wrap-around-the-earths-widest-point-almost-three-times-5" target:"_blank"/][/span] that form the backbone of the internet, countries will have their own land-based networks.
 [/Step]
 [Step]
-Here's (roughly) what the major internet lines of the west coast look like.
+Here's (roughly) what the [link text:"major internet lines of the west coast" url:"https://www.technologyreview.com/2015/09/15/166239/first-detailed-public-map-of-us-internet-backbone-could-make-it-stronger/"/] look like.
 Perhaps not surprisingly, it somewhat resembles our interstate highway system.
 Priest et al. estimate that this infrastructure consumes approximately [span className:"emphasized"]1,900 Gigawatt-hours of electricity to serve YouTube videos, enough to power [link text:"170,000 homes in the United States." url:"https://www.eia.gov/tools/faqs/faq.php?id=97&t=3" target:"_blank"/][/span][Cite
 id:"youtube-paper"

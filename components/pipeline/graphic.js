@@ -49,9 +49,9 @@ const getMarkInfo = (mark) => {
         
       } else {
         if (opacity === null) {
-          return { stage: "residential", substage: 1, of: 4, draw: true };
+          return { stage: "residential", substage: 1, of: 2, draw: true };
         } else if (opacity === "0.99") {
-          return { stage: "residential", substage: 3, of: 4, draw: true };
+          return { stage: "residential", substage: 1, of: 2, draw: true };
         } else {
           return { stage: "cellular", substage: 1, of: 67, draw: true };
         }
@@ -69,9 +69,9 @@ const getMarkInfo = (mark) => {
         }
       } else if (strokeWidth === "2") {
         if (opacity === null) {
-          return { stage: "residential", substage: 2, of: 4, animate: true, speed: 'slow', appear: true };
+          return { stage: "residential", substage: 2, of: 2, animate: true, speed: 'slow', appear: true };
         } else if (opacity === "0.99") {
-          return { stage: "residential", substage: 4, of: 4, animate: true, speed: 'slow', appear: true };
+          return { stage: "residential", substage: 2, of: 2, animate: true, speed: 'fast', appear: true };
         } else {
           return { stage: "cellular", substage: 2, of: 7, animate: true, speed: 'fast', appear: true };
         }
@@ -378,9 +378,13 @@ export default class Graphic extends React.PureComponent {
 <path d="M277 282V280" stroke="#363636" stroke-width="2"/>
 <path opacity="0.98" d="M295 258L257 258L257 234.5" stroke="#363636"/>
 <circle cx="257" cy="235" r="1" stroke="#363636" stroke-width="2"/>
-<circle opacity="0.99" cx="257" cy="234" r="7.5" stroke="#363636"/>
-<circle opacity="0.98" cx="257" cy="234" r="20.5" stroke="#363636"/>
-<circle opacity="0.97" cx="257" cy="234" r="36.5" stroke="#363636"/>
+<circle cx="206" cy="150" r="1" stroke="#363636" stroke-width="2"/>
+<circle opacity="0.99" cx="257" cy="235" r="7.5" stroke="#363636"/>
+<circle opacity="0.99" cx="206" cy="150" r="7.5" stroke="#363636"/>
+<circle opacity="0.98" cx="257" cy="235" r="20.5" stroke="#363636"/>
+<circle opacity="0.98" cx="206" cy="150" r="20.5" stroke="#363636"/>
+<circle opacity="0.97" cx="257" cy="235" r="36.5" stroke="#363636"/>
+<path opacity="0.98" d="M174.5 150H206" stroke="#363636"/>
 <path d="M153 83H151.222V78H149" stroke="#363636"/>
 <path d="M151 81H147" stroke="#363636"/>
 <path d="M157 82.5H159.5V80H166" stroke="#363636"/>
@@ -435,6 +439,13 @@ export default class Graphic extends React.PureComponent {
 <path opacity="0.99" d="M272 269.5V267" stroke="#363636"/>
 <path d="M275 278H271" stroke="#363636"/>
 <path d="M161 28H158V25" stroke="#363636"/>
+<path d="M241 184.5L241 171H248" stroke="#363636"/>
+<path d="M318 66L331 66L331 73" stroke="#363636"/>
+<path d="M232 94L246 94L246 90" stroke="#363636"/>
+<path d="M156.5 182H166M201.5 64H211M254 35.5V22.5" stroke="#363636"/>
+<path d="M163 64H169V68" stroke="#363636"/>
+<path d="M153.5 199H147V201.5" stroke="#363636"/>
+<path d="M319.5 213H308.5" stroke="#363636"/>
 <path opacity="0.98" d="M182 81H164.5V40" stroke="white" stroke-width="4"/>
 <path opacity="0.98" d="M182 89H161V248" stroke="white" stroke-width="4"/>
 <path opacity="0.98" d="M182 89H161V241V257H168" stroke="white" stroke-width="4"/>
@@ -459,23 +470,32 @@ export default class Graphic extends React.PureComponent {
 <path d="M176 259H181V229H173V227" stroke="white" stroke-width="4"/>
 <path d="M167 34H204.5V37H307.5V42H371" stroke="white" stroke-width="4"/>
 <path d="M167 34H204.5V37H307.5V42H317V125H321" stroke="white" stroke-width="4"/>
+<path opacity="0.99" d="M167 34H204.5V37H307.5V42H317V66H331V73" stroke="white" stroke-width="2"/>
 <path d="M167 34H204.5V37H307.5V42H332V39" stroke="white" stroke-width="4"/>
 <path d="M167 34H204.5V37H289V48" stroke="white" stroke-width="4"/>
+<path opacity="0.99" d="M167 34H204.5V37H254V22" stroke="white" stroke-width="2"/>
 <path d="M167 34H204.5V37H243V60" stroke="white" stroke-width="4"/>
 <path d="M167 34H204.5V37H208V40" stroke="white" stroke-width="4"/>
 <path d="M167 34H194V36" stroke="white" stroke-width="4"/>
 <path d="M167 34H200V69L256 115V123" stroke="white" stroke-width="4"/>
 <path d="M167 34H200V69L284 138V145" stroke="white" stroke-width="4"/>
 <path d="M167 34H200V69L298 149.5H317V139H315" stroke="white" stroke-width="4"/>
+<path opacity="0.99" d="M167 34H200V64H211" stroke="white" stroke-width="2"/>
 <path d="M162 40V76H155V81" stroke="white" stroke-width="4"/>
 <path d="M162 40V76H155V81V85H173V110H176" stroke="white" stroke-width="4"/>
+<path opacity="0.99" d="M162 40V64H169V68" stroke="white" stroke-width="2"/>
 <path d="M166.5 255V269.5H190.5L220 298" stroke="white" stroke-width="4"/>
 <path d="M166 255V269.5H190L200 278.5V266" stroke="white" stroke-width="4"/>
 <path d="M176 259H181V235H200V216L236 186H353V176H371" stroke="white" stroke-width="4"/>
 <path d="M176 259H181V235H200V216L236 186H321V185" stroke="white" stroke-width="4"/>
 <path d="M176 259H181V235H200V211" stroke="white" stroke-width="4"/>
+<path opacity="0.99" d="M176 259H181V235H200V215.5L236 186H241V171H248" stroke="white" stroke-width="2"/>
 <path d="M166.5 255V245H155V112H149" stroke="white" stroke-width="4"/>
+<path opacity="0.98" d="M166.5 255V245H155V162H173V150H206" stroke="white" stroke-width="2"/>
+<path opacity="0.99" d="M166.5 255V245H155V199H147V202" stroke="white" stroke-width="2"/>
+<path opacity="0.99" d="M166.5 255V245H155V182L155.5 182H166" stroke="white" stroke-width="2"/>
 <path d="M278.5 284.5L321 251V186H353V176H372" stroke="white" stroke-width="4"/>
+<path opacity="0.99" d="M278 284.5L320.5 251V213H308" stroke="white" stroke-width="2"/>
 <path d="M279 284L297 269.5V260" stroke="white" stroke-width="4"/>
 <path d="M279 284L310 260H327" stroke="white" stroke-width="4"/>
 <path opacity="0.98" d="M295 258L257 258L257 234.5" stroke="white" stroke-width="2"/>
@@ -523,7 +543,12 @@ export default class Graphic extends React.PureComponent {
 <circle cx="248" cy="264" r="1" fill="#D1FF99"/>
 <circle cx="271" cy="239" r="1" fill="#D1FF99"/>
 <circle cx="252" cy="225" r="1" fill="#D1FF99"/>
+<circle cx="248" cy="171" r="1" fill="#D1FF99"/>
+<circle cx="216" cy="137" r="1" fill="#D1FF99"/>
+<circle cx="196" cy="143" r="1" fill="#D1FF99"/>
+<circle cx="211" cy="160" r="1" fill="#D1FF99"/>
 <circle cx="289" cy="235" r="1" fill="#D1FF99"/>
+<circle cx="308" cy="213" r="1" fill="#D1FF99"/>
 <circle cx="335" cy="260" r="1" fill="#D1FF99"/>
 <circle cx="333" cy="253" r="1" fill="#D1FF99"/>
 <circle cx="280" cy="273" r="1" fill="#D1FF99"/>
@@ -567,8 +592,15 @@ export default class Graphic extends React.PureComponent {
 <circle cx="215" cy="51" r="1" fill="#D1FF99"/>
 <circle cx="191" cy="48" r="1" fill="#D1FF99"/>
 <circle cx="187" cy="47" r="1" fill="#D1FF99"/>
+<circle cx="169" cy="68" r="1" fill="#D1FF99"/>
+<circle cx="211" cy="64" r="1" fill="#D1FF99"/>
+<circle cx="147" cy="202" r="1" fill="#D1FF99"/>
+<circle cx="166" cy="182" r="1" fill="#D1FF99"/>
 <circle cx="239" cy="66" r="1" fill="#D1FF99"/>
 <circle cx="246" cy="68" r="1" fill="#D1FF99"/>
+<circle cx="254" cy="22" r="1" fill="#D1FF99"/>
+<circle cx="331" cy="73" r="1" fill="#D1FF99"/>
+<circle cx="246" cy="90" r="1" fill="#D1FF99"/>
 <circle r="1" transform="matrix(-1 0 0 1 282 53)" fill="#D1FF99"/>
 <circle r="1" transform="matrix(-1 0 0 1 286 56)" fill="#D1FF99"/>
 <circle cx="310" cy="132" r="1" transform="rotate(-180 310 132)" fill="#D1FF99"/>

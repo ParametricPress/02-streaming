@@ -43,7 +43,7 @@ const youtubeDataSimple = [
   {
     stage: "simple*",
     emissions: 2,
-    name: "Data Centers + CDNs",
+    name: "Data Centers",
   },
   {
     stage: "simple",
@@ -61,7 +61,7 @@ const ict2010 = [
   {
     stage: "compare",
     emissions: 33,
-    name: "Data Centers + CDNs†",
+    name: "Data Centers",
   },
   {
     stage: "compare",
@@ -79,7 +79,7 @@ const ict2020 = [
   {
     stage: "compare",
     emissions: 45,
-    name: "Data Centers + CDNs†",
+    name: "Data Centers",
   },
   {
     stage: "compare",
@@ -169,18 +169,11 @@ export default class Pipeline extends React.PureComponent {
         >
           <Emissions stage={stage} progress={progress} data={ict2010} />
           <div style={{ width: "100%", textAlign: "left", marginTop: 16 }}>
-            ICT Sector as a Whole (2020, projected) [Belkhir & Elmeligi, 2017]
+            ICT Sector (2020, projected) [Belkhir & Elmeligi, 2017]
           </div>
           <Emissions stage={stage} progress={progress} data={ict2020} />
           <div style={{ width: "100%", textAlign: "left" }}>
-            <span style={{ fontSize: 12 }}>
-              † Belkhir & Elmeligi do not distinguish between core data centers
-              and those in the content delivery network, grouping them under a
-              'Data Center' category
-            </span>
-            <br />
-            <br />
-            ICT Sector as a Whole (2010) [Belkhir & Elmeligi, 2017]
+            ICT Sector (2010) [Belkhir & Elmeligi, 2017]
           </div>
           <div
             style={{

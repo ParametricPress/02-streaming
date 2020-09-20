@@ -240,7 +240,7 @@ Hide Globe
 [/Step]
 [Step]
 From these POPs, data is routed through smaller data centers that form the "Google Global Cache". 
-There are 20 of these in this region. These are responsible for storing the more popular or recently watched videos for users in a given area, ensuring no single data center is overwhelmed and service stays zippy.
+There are 23 of these in this region. These are responsible for storing the more popular or recently watched videos for users in a given area, ensuring no single data center is overwhelmed and service stays zippy.
 Together, they form what is known as a [span className:"terms"]Content Delivery Network (CDN for short)[/span]. Priest et al. estimate that all data centers account for [span className:"emphasized"]less than 2% of YouTube's electricity use[/span] [Cite
 authors:"Chris Preist, Daniel Schien, and Paul Shabajee"
 title:"Evaluating Sustainable Interaction Design of Digital Services: The Case of YouTube"

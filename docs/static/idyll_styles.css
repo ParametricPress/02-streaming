@@ -2064,6 +2064,18 @@ input {
   100% { stroke-dashoffset: 0; }
 }
 
+.radio-animated {
+  animation-name: radio-animation;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes radio-animation {
+  50% { stroke: #363636 }
+  75% { stroke: white }
+  100% { stroke: #363636 }
+}
+
 /* TODO FIX THIS FOR MOBILE (This is a hack) */
 
 .idyll-scroll {  
@@ -2078,20 +2090,6 @@ input {
   line-height: 18px;
   padding: 0.5em;
   font-weight: 400;
-}
-
-h2 {
-  font-family: 'Bluu Next' !important;
-  font-weight: bold;
-}
-
-h3 {
-  font-family: 'Graphik' !important;
-}
-
-p {
-  font-family: 'Graphik' !important;
-  font-weight: lighter;
 }
 
 .emphasized {

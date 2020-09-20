@@ -88,7 +88,7 @@ export default class Emissions extends React.PureComponent {
                     marginLeft: stage === 'cdn' ? 2 : 0,
                     textAlign: stage === 'cdn' ? 'left' : 'center',
                     fontSize: stageIndex <= stages.indexOf('beforesimple') ? undefined : 10,
-                  }}>{simplified ? d.emissions + '%' : 'placeholder'}</div>
+                  }}>{simplified ? d.emissionsString : 'placeholder'}</div>
                 </div>
               );
             })

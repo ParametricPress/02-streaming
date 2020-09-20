@@ -41,18 +41,21 @@ const youtubeData = [
 
 const youtubeDataSimple = [
   {
-    stage: "simple*",
+    stage: "simple",
     emissions: 2,
+    emissionsString: "2%*",
     name: "Data Centers",
   },
   {
     stage: "simple",
     emissions: 58,
+    emissionsString: "58%",
     name: "Networks",
   },
   {
     stage: "simple",
     emissions: 40,
+    emissionsString: "40%",
     name: "Devices",
   },
 ];
@@ -61,16 +64,19 @@ const ict2010 = [
   {
     stage: "compare",
     emissions: 33,
+    emissionsString: "33%",
     name: "Data Centers",
   },
   {
     stage: "compare",
     emissions: 28,
+    emissionsString: "28%",
     name: "Networks",
   },
   {
     stage: "compare",
     emissions: 39,
+    emissionsString: "39%",
     name: "Devices",
   },
 ];
@@ -79,16 +85,19 @@ const ict2020 = [
   {
     stage: "compare",
     emissions: 45,
+    emissionsString: "45%",
     name: "Data Centers",
   },
   {
     stage: "compare",
     emissions: 24,
+    emissionsString: "24%",
     name: "Networks",
   },
   {
     stage: "compare",
     emissions: 31,
+    emissionsString: "31%",
     name: "Devices",
   },
 ];
@@ -186,9 +195,7 @@ export default class Pipeline extends React.PureComponent {
             YouTube (2016) [Priest et al.]
             <br />
             <span style={{ fontSize: 12 }}>
-              * Google purchases renewable energy to run its data centers. If
-              this weren't the case, this category would still only account for
-              less than 2% of YouTube's emissions.
+              * Google purchases renewable energy to run its data centers.
             </span>
           </div>
         </div>

@@ -2092,20 +2092,6 @@ input {
   font-weight: 400;
 }
 
-h2 {
-  font-family: 'Bluu Next' !important;
-  font-weight: bold;
-}
-
-h3 {
-  font-family: 'Graphik' !important;
-}
-
-p {
-  font-family: 'Graphik' !important;
-  font-weight: lighter;
-}
-
 .emphasized {
   font-weight: bold;
 }

@@ -10,6 +10,7 @@ export default class PipelineMap extends React.PureComponent {
     this.state = {
       startX: null,
       rotate: 0,
+      isDragging: false,
       width: null,
       height: null
     };
@@ -18,6 +19,7 @@ export default class PipelineMap extends React.PureComponent {
     this._handleMouseMove = this._handleMouseMove.bind(this);
     this._handleMouseUp = this._handleMouseUp.bind(this);
     this._handleResize = this._handleResize.bind(this);
+    this._rotateOne = this._rotateOne.bind(this);
   }
 
   _handleResize() {
@@ -26,6 +28,14 @@ export default class PipelineMap extends React.PureComponent {
       width: rect.width,
       height: rect.height
     });
+  }
+
+  _rotateOne() {
+    if (!this.state.isDragging && this.props.animate) {
+      this.setState({
+        rotate: this.state.rotate + 1
+      });
+    }
   }
 
   componentDidMount() {
@@ -40,6 +50,8 @@ export default class PipelineMap extends React.PureComponent {
       });
   
       this.view.runAsync();
+
+      setInterval(this._rotateOne, 50);
   
       window.addEventListener('resize', this._handleResize)
     }, 100);  // need to wait a split second for size to update for some reason
@@ -49,10 +61,14 @@ export default class PipelineMap extends React.PureComponent {
     this.view.signal("rotate0", this.state.rotate);
     this.view.signal("dataType", this.props.dataType);
     this._handleResize();
+    this.view.runAsync();
   }
 
   _handleMouseDown(e) {
-    this.setState({ startX: e.clientX });
+    this.setState({
+      startX: e.clientX,
+      isDragging: true,
+    });
   }
 
   _handleMouseMove(e) {
@@ -67,17 +83,22 @@ export default class PipelineMap extends React.PureComponent {
   }
 
   _handleMouseUp(e) {
-    this.setState({ startX: null });
+    this.setState({ startX: null, isDragging: false });
   }
 
   render() {
     return (
       <div
         id={"vega-map-" + this.props.dataType}
-        style={{width: '100%', height: '100%'}}
+        style={{
+          width: '100%',
+          height: '100%',
+          cursor: this.state.isDragging ? "grabbing" : "grab"
+        }}
         onMouseDown={this._handleMouseDown}
         onMouseMove={this._handleMouseMove}
         onMouseUp={this._handleMouseUp}
+        onMouseLeave={this._handleMouseUp}
       ></div>
     );
   }
@@ -151,7 +172,7 @@ const spec = (initDataType, initWidth, initHeight) => {
         ],
         center: [{ signal: "center0" }, { signal: "center1" }],
         fit: { signal: "data('graticule')" },
-        extent: [[20, 20], {signal: "[width, height]"}]
+        extent: [[20, 20], {signal: "[width - 20, height - 20]"}]
       },
     ],
 

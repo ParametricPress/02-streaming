@@ -228,7 +228,7 @@ Let's take a closer look at one of these data centers. This one is in The Dalles
 [/Step]
 [Step]
 For information to get from this data center to you, it first goes through Google's own specialized data network to what they call "Edge Points of Presence" (POPs for short), which bring data closer to high traffic areas.
-There are four metro areas with POPs in this region: in the Seattle, San Francisco, San Jose, and Salt Lake City areas.
+There are four metro areas with POPs in this region: Seattle, San Francisco, San Jose, and Salt Lake City.
 [Button onClick:`showPops = !showPops` style:`{opacity: scrollerStages[scrollerIndex] === "pop" ? 1 : 0}`]
 [Conditional if:`!showPops`]
 Show all POPs

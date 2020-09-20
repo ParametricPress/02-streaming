@@ -47,7 +47,7 @@ export const map = () => {
   const dataType = options('type', { pops: 'pops', ggcs: 'ggcs' }, 'pops', { display: 'inline-radio'});
   return (
     <div style={{width: 500, height: 500 }}>
-      <PipelineMap dataType={dataType}/>
+      <PipelineMap dataType={dataType} animate={true}/>
     </div>
   )
 }

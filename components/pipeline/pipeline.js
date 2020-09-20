@@ -134,7 +134,7 @@ export default class Pipeline extends React.PureComponent {
           opacity: showPops ? 1 : 0,
           zIndex: showPops ? 100 : 0
         }}>
-          <PipelineMap dataType="pops" />
+          <PipelineMap dataType="pops" animate={showPops} />
         </div>
         <div style={{
           position: 'absolute',
@@ -146,7 +146,7 @@ export default class Pipeline extends React.PureComponent {
           opacity: showGgcs ? 1 : 0,
           zIndex: showGgcs ? 100 : 0
         }}>
-          <PipelineMap dataType="ggcs" />
+          <PipelineMap dataType="ggcs" animate={showGgcs}/>
         </div>
         <Emissions
           stage={stage}

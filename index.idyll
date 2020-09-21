@@ -33,14 +33,16 @@ It turned out that sharks were fond of chewing on the high-speed cables that mak
 While this is not an issue anymore, it's a reminder that both the internet and sharks share the same home.
 
 [Aside]
-[Graphic]
-[SVG style:`{width: '100%'}` src:"static/images/bookpipeline.svg"/]
-Book
-[br/][br/]
-[SVG style:`{width: '100%'}` src:"static/images/ebookpipeline.svg"/]
-E-Book
-[caption]It is difficult to ignore the environmental consequences of ordering a physical book on Amazon. But what happens when you download an E-Book instead?[/caption]
-[/Graphic]
+  [ParametricGraphic]
+
+    [SVG style:`{width: '100%'}` src:"static/images/bookpipeline.svg" /]
+    Book
+    [br/][br/]
+    [SVG style:`{width: '100%'}` src:"static/images/ebookpipeline.svg" /]
+    E-Book
+    [caption]It is difficult to ignore the environmental consequences of ordering a physical book on Amazon. But what happens when you download an E-Book instead?[/caption]
+
+  [/ParametricGraphic]
 [/Aside]
 
 As technology advances, the need for seamless functionality comes at the cost of obfuscating the elaborate physical backbone that supports it.
@@ -89,11 +91,11 @@ date:"August 201"
 
 ### Websites
 [Aside]
-[Graphic hed:"Emissions of Websites" style:`{marginTop: 16}`]
+[ParametricGraphic hed:"Emissions of Websites" style:`{marginTop: 16}`]
 [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
 [br/]
 [caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. Click and hold each bar to show a preview clip of the scroll. [/caption]
-[/Graphic]
+[/ParametricGraphic]
 [/Aside]
 
 In order to load the Parametric Press article that you are currently reading, we estimate that ?? milligrams of CO2 were produced.
@@ -107,11 +109,11 @@ As shown above, websites like Google, which are relatively simple because they p
 
 ### Audio
 [Aside]
-[Graphic hed:"Emissions of Audio"]
+[ParametricGraphic hed:"Emissions of Audio"]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
 [br/]
 [caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds.[/caption]
-[/Graphic]
+[/ParametricGraphic]
 [/Aside]
 
 Let’s take a closer look at one common type of non-text media: audio.
@@ -124,11 +126,11 @@ These audio examples have lower carbon emissions than most of the websites shown
 
 ### Video
 [Aside]
-[Graphic hed:"Video"]
+[ParametricGraphic hed:"Video"]
 [MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
 [br/]
 [caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p.[/caption]
-[/Graphic]
+[/ParametricGraphic]
 [/Aside]
 
 Generally, digital activity that involves videos requires a large amount of data to be loaded on your device so that your device can render each frame as well as the associated audio.
@@ -157,12 +159,12 @@ Facebook produces more CO2 than any of the provided video examples, likely a res
 [var name:"mediaPickerType" value:"bar"/]
 
 [Aside]
-[Graphic hed:"Media Emissions by Medium"]
+[ParametricGraphic hed:"Media Emissions by Medium"]
 [MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
 [br/]
 [caption]Click on the "Switch Modes" button to see a timeline of loading packets for each type of media.[/caption]
 [button onClick:`mediaPickerType = mediaPickerType === 'bar' ? 'timeline' : 'bar'`]Switch Modes[/button]
-[/Graphic]
+[/ParametricGraphic]
 [/Aside]
 
 In a lot of cases, when you stream content online, [span className:"emphasized"] you don’t receive all of the information for that content at once[/span].
@@ -196,7 +198,7 @@ How does one of its videos arrive on your screen?
 [CustomScroller currentStep:scrollerIndex progress:stepProgress offset:0.65]
 [Graphic]
   [div id:"pipeline" style:`{overflow: 'hidden'}`]
-    [Pipeline stage:`scrollerStages[scrollerIndex]` progress:`stepProgress * 100` showPops:showPops showGgcs: showGgcs/]
+    [Pipeline stage:`scrollerStages[scrollerIndex]` progress:`stepProgress * 100` showPops:showPops showGgcs:showGgcs /]
   [/div]
 [/Graphic]
 

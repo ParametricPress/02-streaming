@@ -1,5 +1,5 @@
 import * as React from "react";
-import Graphic from "./graphic";
+import Graphic from "./pipeline-graphic";
 import Emissions from "./emissions";
 import { stages } from "./constants";
 import Projection from "./projection";

@@ -36,10 +36,10 @@ While this is not an issue anymore, it's a reminder that both the internet and s
   [ParametricGraphic]
 
     [SVG style:`{width: '100%'}` src:"static/images/bookpipeline.svg" /]
-    Book
+    Book [span style:`{color: 'white'}`][b] →[/b][/span]
     [br/][br/]
     [SVG style:`{width: '100%'}` src:"static/images/ebookpipeline.svg" /]
-    E-Book
+    E-Book [span style:`{color: 'white'}`][b] →[/b][/span]
     [caption]It is difficult to ignore the environmental consequences of ordering a physical book on Amazon. But what happens when you download an E-Book instead?[/caption]
 
   [/ParametricGraphic]

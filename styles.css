@@ -88,3 +88,19 @@
   margin-right: 0.5em;
 }
 
+.large-aside-container {
+  display: block;
+  position: relative;
+}
+
+.large-aside-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: calc(600px + 5vw + 75px);
+  margin-right: 50px;
+}
+
+.large-aside {
+  width: 100%;
+}

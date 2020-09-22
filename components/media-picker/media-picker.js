@@ -46,19 +46,27 @@ export default class MediaPicker extends React.Component {
   }
 
   componentDidMount() {
-    const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
-    this.setState({
-      width: rect.width
-    })
+    setTimeout(() => {
+      const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
+      this.setState({
+        width: rect.width
+      });
+
+      window.addEventListener('resize', this._onResize.bind(this));
+    }, 100);
   }
 
   _onResize() {
     const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
-    this.height = rect.height;
+    console.log('onResize', rect.width);
+    this.setState({
+      width: rect.width,
+    });
   }
 
   componentDidUpdate() {
-    this._onResize();
+    const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
+    this.height = rect.height;
   }
 
   render() {

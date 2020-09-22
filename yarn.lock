@@ -9535,18 +9535,18 @@ param-case@^3.0.3:
     dot-case "^3.0.3"
     tslib "^1.10.0"
 
-parametric-components@^2.1.11:
-  version "2.1.11"
-  resolved "https://registry.yarnpkg.com/parametric-components/-/parametric-components-2.1.11.tgz#da66975a9d0bf8128ec4cb0ace69aa50ff464c3a"
-  integrity sha512-qIOt2NehRg08SqRs961mmmeLQg5C9Vt1Wy5//lFFqoIBuWvbo/1eu41Zx9ycyE47o3CcHx3zn5X+BS3TbfHYRg==
+parametric-components@^2.1.14:
+  version "2.1.14"
+  resolved "https://registry.yarnpkg.com/parametric-components/-/parametric-components-2.1.14.tgz#1c47b1d49f455b2928d18b8936f185c716d442ce"
+  integrity sha512-9peUnMSZcDDhcUuIWIVXTSRLnKE4nLh6RVGzBOXGz+6s1wh+f7gCD4paRhXVDbUlNr9cdRb5tFUalkrfErovnQ==
   dependencies:
     idyll-components "^3.12.1"
     react-tooltip "^3.11.6"
 
-parametric-styles@^2.1.6:
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/parametric-styles/-/parametric-styles-2.1.6.tgz#1ddbd6c94eeee5d9be7572e412fccd5d26a6ffe9"
-  integrity sha512-gnmaBY8rWxVVa+V8ZnVkBJGvyGljZsMmD3ZAxQ/UlyTcRQcNQcPSKM6u+6cL6pCHT01qDceKyQ5Ha0X6KTgHng==
+parametric-styles@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/parametric-styles/-/parametric-styles-2.2.3.tgz#d064665f063087723b3567ac0d8e4cdc6f1295ce"
+  integrity sha512-SacyWSoqRfGQBPj1efYe9AkQI2P3s11sbdjktIVVgL1jEFUno/pdfIOs5UmbTOmsmepGNStsJIGyeUPonUfUHg==
 
 parent-module@^1.0.0:
   version "1.0.1"

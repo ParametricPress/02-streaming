@@ -3,6 +3,9 @@
   margin: 0;
 }
 
+.idyll-root {
+  padding: 0;
+}
 
 @media all and (max-width: 1000px) {
   .idyll-root {
@@ -27,7 +30,7 @@
 @media only screen and (max-width: 1000px) {
   #pipeline {
     margin-left: 0;
-  }  
+  }
 }
 
 .packet-animated {
@@ -54,7 +57,7 @@
 
 /* TODO FIX THIS FOR MOBILE (This is a hack) */
 
-.idyll-scroll {  
+.idyll-scroll {
   transform: translateX(-50px);
 }
 
@@ -76,3 +79,12 @@
   font-weight: bold;
   font-style: italic;
 }
+
+.parametric-header-metadata-component > div {
+  margin-right: 2em;
+}
+
+.parametric-header-metadata-component > div > *{
+  margin-right: 0.5em;
+}
+

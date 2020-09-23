@@ -15,7 +15,7 @@
 
 
 #pipeline {
-  margin-left: calc(50% + 32px);
+  margin-left: calc(600px + 32px);
 }
 
 .packet-animated {
@@ -103,7 +103,8 @@
   }
 
   #pipeline {
-    margin-left: 0;
+    margin-left: 25px;
+    margin-right: 8px;
   }
 
   .large-aside-wrapper {

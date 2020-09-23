@@ -25,14 +25,19 @@ const titlePadding = {
 const stripPadding = 2;
 
 export default class MediaTitle extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+
+    this._handleMouseDown = this._handleMouseDown.bind(this);
+    this._handleMouseUp = this._handleMouseUp.bind(this);
+  }
+  
   componentDidMount() {
     const node = ReactDOM.findDOMNode(this);
     const rect = node.getBoundingClientRect();
     this.height = rect.height;
     this.y = node.parentElement.offsetTop + node.parentElement.parentElement.parentElement.offsetTop;
-
-    this._handleMouseDown = this._handleMouseDown.bind(this);
-    this._handleMouseUp = this._handleMouseUp.bind(this);
   }
 
   _handleMouseDown() {

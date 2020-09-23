@@ -30,6 +30,19 @@ export default class MediaTitle extends React.PureComponent {
     const rect = node.getBoundingClientRect();
     this.height = rect.height;
     this.y = node.parentElement.offsetTop + node.parentElement.parentElement.parentElement.offsetTop;
+
+    this._handleMouseDown = this._handleMouseDown.bind(this);
+    this._handleMouseUp = this._handleMouseUp.bind(this);
+  }
+
+  _handleMouseDown() {
+    if (this.props.type === 'bar') {
+      this.props.selectTitle(this.y, this.height, data.title);
+    }
+  }
+
+  _handleMouseUp() {
+    this.props.selectTitle(null, null, null);
   }
 
   render() {
@@ -98,14 +111,12 @@ export default class MediaTitle extends React.PureComponent {
         width: '100%',
         opacity: hasSelected ? selectedTitle === data.title ? 1 : 0.2 : 1
       }}
-        onMouseDown={_ => {
-          if (type === 'bar') {
-            this.props.selectTitle(this.y, this.height, data.title);
-          }
-        }}
+        onMouseDown={this._handleMouseDown}
+        onMouseUp={this._handleMouseUp}
+        onMouseLeave={this._handleMouseUp}
 
-        onMouseUp={_ => this.props.selectTitle(null, null, null)}
-        onMouseLeave={_ => this.props.selectTitle(null, null, null)}
+        onTouchStart={this._handleMouseDown}
+        onTouchEnd={this._handleMouseUp}
       >
         <div
           style={{

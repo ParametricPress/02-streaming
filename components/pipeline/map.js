@@ -99,6 +99,10 @@ export default class PipelineMap extends React.PureComponent {
         onMouseMove={this._handleMouseMove}
         onMouseUp={this._handleMouseUp}
         onMouseLeave={this._handleMouseUp}
+
+        onTouchStart={this._handleMouseDown}
+        onTouchMove={this._handleMouseMove}
+        onTouchEnd={this._handleMouseUp}
       ></div>
     );
   }

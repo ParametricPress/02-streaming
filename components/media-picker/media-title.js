@@ -37,7 +37,7 @@ export default class MediaTitle extends React.PureComponent {
 
   _handleMouseDown() {
     if (this.props.type === 'bar') {
-      this.props.selectTitle(this.y, this.height, data.title);
+      this.props.selectTitle(this.y, this.height, this.props.data.title);
     }
   }
 
@@ -114,9 +114,6 @@ export default class MediaTitle extends React.PureComponent {
         onMouseDown={this._handleMouseDown}
         onMouseUp={this._handleMouseUp}
         onMouseLeave={this._handleMouseUp}
-
-        onTouchStart={this._handleMouseDown}
-        onTouchEnd={this._handleMouseUp}
       >
         <div
           style={{

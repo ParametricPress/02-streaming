@@ -125,10 +125,10 @@ export default class MediaPicker extends React.Component {
     }
 
     return (
-      <div style={{
-        width: width,
-        position: 'relative',
-        
+      <div className="media-picker"
+        style={{
+          width: width,
+          position: 'relative',
       }}>
         {previewDiv}
         { this.state.width ?

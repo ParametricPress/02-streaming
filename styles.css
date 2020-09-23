@@ -84,6 +84,13 @@
   width: 100%;
 }
 
+.media-picker * {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
+}
 
 @media all and (max-width: 1000px) {
   .idyll-root {
@@ -112,5 +119,4 @@
     max-width: none;
     padding: 0;
   }
-
 }

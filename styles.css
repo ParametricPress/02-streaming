@@ -7,30 +7,15 @@
   padding: 0;
 }
 
-@media all and (max-width: 1000px) {
-  .idyll-root {
-    max-width: none;
-    padding: 0;
-  }
+
+/* TODO FIX THIS FOR MOBILE (This is a hack) */
+.idyll-scroll {
+  transform: translateX(-50px);
 }
 
-
-@media all and (max-width: 800px) {
-  .idyll-root {
-    max-width: none;
-    padding: 0;
-  }
-
-}
 
 #pipeline {
   margin-left: calc(50% + 32px);
-}
-
-@media only screen and (max-width: 1000px) {
-  #pipeline {
-    margin-left: 0;
-  }
 }
 
 .packet-animated {
@@ -53,12 +38,6 @@
   50% { stroke: #363636 }
   75% { stroke: white }
   100% { stroke: #363636 }
-}
-
-/* TODO FIX THIS FOR MOBILE (This is a hack) */
-
-.idyll-scroll {
-  transform: translateX(-50px);
 }
 
 .map-tooltip {
@@ -103,4 +82,35 @@
 
 .large-aside {
   width: 100%;
+}
+
+
+@media all and (max-width: 1000px) {
+  .idyll-root {
+    max-width: none;
+    padding: 0;
+  }
+
+  .idyll-scroll {
+    transform: translateX(0);
+  }
+
+  #pipeline {
+    margin-left: 0;
+  }
+
+  .large-aside-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+    position: static;
+  }
+}
+
+
+@media all and (max-width: 800px) {
+  .idyll-root {
+    max-width: none;
+    padding: 0;
+  }
+
 }

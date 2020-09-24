@@ -52,6 +52,8 @@ export default class PipelineMap extends React.PureComponent {
       this.view.runAsync();
 
       setInterval(this._rotateOne, 50);
+
+      this._handleResize();
   
       window.addEventListener('resize', this._handleResize)
     }, 100);  // need to wait a split second for size to update for some reason
@@ -60,7 +62,8 @@ export default class PipelineMap extends React.PureComponent {
   componentDidUpdate() {
     this.view.signal("rotate0", this.state.rotate);
     this.view.signal("dataType", this.props.dataType);
-    this._handleResize();
+    this.view.signal("width", this.state.width);
+    this.view.signal("height", this.state.height);
     this.view.runAsync();
   }
 

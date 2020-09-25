@@ -103,6 +103,28 @@ const ict2020 = [
 ];
 
 export default class Pipeline extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      youtubeEmissionsHeight: 0,
+      youtubeEmissionsTextHeight: 0,
+    };
+  }
+  
+  componentDidMount() {
+    setTimeout(() => {
+      const youtubeEmissions = document.getElementById("youtube-emissions");
+      const youtubeEmissionsText = document.getElementById("youtube-emissions-text");
+      this.setState({
+        youtubeEmissionsHeight: youtubeEmissions.clientHeight,
+        youtubeEmissionsTextHeight: youtubeEmissionsText.clientHeight
+      });
+
+      console.log(this.state);
+    }, 1000);
+  }
+
   render() {
     const stage = this.props.stage;
     const progress = this.props.progress;
@@ -116,6 +138,7 @@ export default class Pipeline extends React.PureComponent {
     const showPops = stage === "pop" && this.props.showPops
     const showGgcs = stage === "cdn" && this.props.showGgcs
 
+    const yh = this.state.youtubeEmissionsHeight;
     return (
       <div
         style={{
@@ -127,9 +150,9 @@ export default class Pipeline extends React.PureComponent {
           transform: showGraphic
             ? "translateY(0)"
             : !final ? `translateY(calc(-${compareProgress}% + ${
-                (94 * compareProgress) / 100
+                (yh * compareProgress) / 100
               }px))`
-            : `translateY(calc(-${100 + progress}% + 94px))`
+            : `translateY(calc(-${100 + progress}% + ${yh}px))`
         }}
       >
         <Graphic stage={stage} progress={progress} />
@@ -158,6 +181,7 @@ export default class Pipeline extends React.PureComponent {
           <PipelineMap dataType="ggcs" animate={showGgcs}/>
         </div>
         <Emissions
+          id="youtube-emissions"
           stage={stage}
           progress={progress}
           data={
@@ -165,44 +189,53 @@ export default class Pipeline extends React.PureComponent {
               ? youtubeData
               : youtubeDataSimple
           }
+          style={{
+            marginTop: 16
+          }}
+          showHomesText
         />
+        <div
+            style={{
+              width: "100%",
+              textAlign: "left",
+              position: "absolute",
+              fontSize: '0.75em',
+              top: `calc(100% - ${this.state.youtubeEmissionsTextHeight}px)`,
+              opacity: stageIndex < stages.indexOf('compare') ? 0 : compareProgress / 100
+            }}
+          >
+            YouTube (2016) [Priest et al.]
+            <br />
+            {/* <span style={{ fontSize: '0.65em' }}>
+              * Google purchases renewable energy to run its data centers.
+            </span> */}
+          </div>
         <div
           style={{
             position: "absolute",
             top: "100%",
             width: "100%",
-            height: "calc(100% - 94px)",
+            height: `calc(100% - ${yh}px)`,
             display: "flex",
             flexDirection: "column-reverse",
+            // overflow: 'hidden'
           }}
         >
-          <Emissions stage={stage} progress={progress} data={ict2010} />
-          <div style={{ width: "100%", textAlign: "left", marginTop: 16 }}>
+          <Emissions id="2020-emissions" stage={stage} progress={progress} data={ict2010} showHomesText={false}/>
+          <div style={{ width: "100%", textAlign: "left", fontSize: '0.75em', lineHeight: '1.1em', marginTop: '1em'}}>
             ICT Sector (2020, projected) [Belkhir & Elmeligi, 2017]
           </div>
-          <Emissions stage={stage} progress={progress} data={ict2020} />
-          <div style={{ width: "100%", textAlign: "left" }}>
+          <Emissions id="2010-emissions" stage={stage} progress={progress} data={ict2020} showHomesText={false}/>
+          <div style={{ width: "100%", textAlign: "left", fontSize: '0.75em', lineHeight: '1.1em',
+            opacity: stageIndex < stages.indexOf('compare') ? 0 : compareProgress / 100
+          }}>
             ICT Sector (2010) [Belkhir & Elmeligi, 2017]
-          </div>
-          <div
-            style={{
-              width: "100%",
-              textAlign: "left",
-              position: "absolute",
-              top: 0,
-            }}
-          >
-            YouTube (2016) [Priest et al.]
-            <br />
-            <span style={{ fontSize: 12 }}>
-              * Google purchases renewable energy to run its data centers.
-            </span>
           </div>
         </div>
         <Projection
           style={{
             position: "absolute",
-            top: 'calc(200% - 94px)',
+            top: `calc(200% - ${yh}px)`,
             width: "100%",
             height: "100%",
             opacity: stage === "final" ? 1 : 0,

@@ -7,9 +7,9 @@ const x1 = 70;
 const x2 = 182;
 const y1 = 119;
 const y2 = 77;
-const w1 = 5;
+const w1 = 2;
 const w2 = 16;
-const h1 = 5;
+const h1 = 2;
 const h2 = 16;
 
 const getMarkInfo = (mark) => {
@@ -33,7 +33,7 @@ const getMarkInfo = (mark) => {
       return { stage: "cdn", appear: true };
     } else if (strokeWidth === "4") {
       return { stage: "none", appear: true };
-    } else if (width === "5") {
+    } else if (width === "2") {
       return { stage: "worldmap", appear: true, substage: 2, of: 2 };
     }
   } else if (mark.tagName === "path") {
@@ -271,7 +271,7 @@ export default class PipelineGraphic extends React.PureComponent {
 
           if (currentStage === "worldmap") {
             opacity = getSubprogress(progress, m.of, m.of);
-          } else if (currentStage === "worldmap2") {
+          } else if (currentStage === "worldmap2" || currentStage === "worldmap3") {
             opacity = 1
           } else {
             opacity = 0;
@@ -288,7 +288,7 @@ export default class PipelineGraphic extends React.PureComponent {
       } else {
         if (
           m.stage === currentStage ||
-          (m.stage === "worldmap" && currentStage === "worldmap2") ||
+          (m.stage === "worldmap" && (currentStage === "worldmap2" || currentStage === "worldmap3")) ||
           (currentStage === "all" && m.stage !== "worldmap") ||
           (m.stage === "datacenter" && currentStage === "cdn") ||
           ((m.stage === "pop" || m.stage === "pop2") && currentStage === "cdn") ||
@@ -650,26 +650,26 @@ export default class PipelineGraphic extends React.PureComponent {
           height={h1}
           fill="#DEFFB6"
         />
-        <rect x="70" y="129" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="89" y="125" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="90" y="124" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="88" y="129" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="97" y="127" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="104" y="125" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="107" y="126" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="101" y="129" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="104" y="132" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="176" y="109" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="190" y="107" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="203" y="101" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="303" y="143" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="289" y="169" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="187" y="109" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="184" y="113" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="98" y="132" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="100" y="134" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="112" y="210" width="5" height="5" fill="#DEFFB6"/>
-        <rect x="85" y="132" width="5" height="5" fill="#DEFFB6"/>
+        <rect x="70" y="129" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="89" y="125" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="90" y="124" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="88" y="129" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="97" y="127" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="104" y="125" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="107" y="126" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="101" y="129" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="104" y="132" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="176" y="109" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="190" y="107" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="203" y="101" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="303" y="143" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="289" y="169" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="187" y="109" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="184" y="113" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="98" y="132" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="100" y="134" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="112" y="210" width="2" height="2" fill="#DEFFB6"/>
+        <rect x="85" y="132" width="2" height="2" fill="#DEFFB6"/>
         <defs>
         <clipPath id="clip0">
         <rect width="375" height="300" fill="white"/>

@@ -61,7 +61,6 @@ export default class PipelineMap extends React.PureComponent {
 
   componentDidUpdate() {
     this.view.signal("rotate0", this.state.rotate);
-    this.view.signal("dataType", this.props.dataType);
     this.view.signal("width", this.state.width);
     this.view.signal("height", this.state.height);
     this.view.runAsync();
@@ -113,39 +112,40 @@ export default class PipelineMap extends React.PureComponent {
 
 const pointData = require("../../data/dist/google.json");
 
-const pops = pointData.pops.map((d) => {
+const makeData = (dataType) => {
   return {
-    type: "Feature",
-    geometry: {
-      type: "Point",
-      coordinates: [d[1], d[0]],
-    },
-    properties: {},
-  };
-});
+    type: "FeatureCollection",
+    features: pointData[dataType].map(d => {
+      return {
+        type: "Feature",
+        geometry: {
+          type: "Point",
+          coordinates: [d[1], d[0]],
+        },
+        properties: {},
+      };
+    })
+  }
+}
 
-const popData = {
-  type: "FeatureCollection",
-  features: pops,
-};
+const data = {
+  datacenters: makeData('datacenters'),
+  pops: makeData('pops'),
+  ggcs: makeData('ggcs')
+}
 
-const ggcs = pointData.ggcs.map((d) => {
+const getDataDeclaration = (dataType) => {
   return {
-    type: "Feature",
-    geometry: {
-      type: "Point",
-      coordinates: [d[1], d[0]],
+    name: dataType,
+    values: data[dataType],
+    format: {
+      type: "json",
+      property: "features",
     },
-    properties: {},
   };
-});
+}
 
-const ggcsData = {
-  type: "FeatureCollection",
-  features: ggcs,
-};
-
-const spec = (initDataType, initWidth, initHeight) => {
+const spec = (dataType, initWidth, initHeight) => {
   return {
     $schema: "https://vega.github.io/schema/vega/v5.json",
     description: "A configurable map of countries of the world.",
@@ -164,8 +164,7 @@ const spec = (initDataType, initWidth, initHeight) => {
       { name: "translate1", update: "height / 2" },
       { name: "graticuleDash", value: 0 },
       { name: "borderWidth", value: 1 },
-      { name: "invert", value: false },
-      { name: "dataType", value: initDataType }
+      { name: "invert", value: false }
     ],
 
     projections: [
@@ -199,22 +198,7 @@ const spec = (initDataType, initWidth, initHeight) => {
           { type: "graticule" }
         ],
       },
-      {
-        name: "popData",
-        values: popData,
-        format: {
-          type: "json",
-          property: "features",
-        },
-      },
-      {
-        name: "ggcsData",
-        values: ggcsData,
-        format: {
-          type: "json",
-          property: "features",
-        },
-      },
+      getDataDeclaration(dataType)
     ],
 
     marks: [
@@ -233,11 +217,10 @@ const spec = (initDataType, initWidth, initHeight) => {
       },
       {
         type: "shape",
-        from: { data: "popData" },
+        from: { data: dataType },
         encode: {
           update: {
-            fill: { value: "#D1FF99" },
-            opacity: { signal: "dataType === 'pops' ? 1 : 0" },
+            fill: { value: "#D1FF99" }
           },
         },
         transform: [
@@ -247,24 +230,7 @@ const spec = (initDataType, initWidth, initHeight) => {
             pointRadius: 1,
           },
         ],
-      },
-      {
-        type: "shape",
-        from: { data: "ggcsData" },
-        encode: {
-          update: {
-            fill: { value: "#D1FF99" },
-            opacity: { signal: "dataType === 'ggcs' ? 1 : 0" },
-          },
-        },
-        transform: [
-          {
-            type: "geoshape",
-            projection: "projection",
-            pointRadius: 1,
-          },
-        ],
-      },
+      }
     ],
   };
 };

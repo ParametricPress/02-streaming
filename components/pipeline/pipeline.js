@@ -135,6 +135,7 @@ export default class Pipeline extends React.PureComponent {
     const compareProgress = stage === "compare" ? progress : 100;
     const final = stage === 'final';
 
+    const showDatacenters = stage === "worldmap"
     const showPops = stage === "pop" && this.props.showPops
     const showGgcs = stage === "cdn" && this.props.showGgcs
 
@@ -163,8 +164,24 @@ export default class Pipeline extends React.PureComponent {
           backgroundColor: backgroundColor,
           top: 0,
           left: 0,
+          opacity: showDatacenters ? 1 : 0,
+          zIndex: showDatacenters ? 100 : 0,
+          transform: 'translateZ(0)',
+          transition: 'opacity 200ms linear, z-index 200ms linear',
+        }}>
+          <PipelineMap dataType="datacenters" animate={showDatacenters} />
+        </div>
+        <div style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          backgroundColor: backgroundColor,
+          top: 0,
+          left: 0,
           opacity: showPops ? 1 : 0,
-          zIndex: showPops ? 100 : 0
+          zIndex: showPops ? 100 : 0,
+          transform: 'translateZ(0)',
+          transition: 'opacity 200ms linear, z-index 200ms linear',
         }}>
           <PipelineMap dataType="pops" animate={showPops} />
         </div>
@@ -176,7 +193,9 @@ export default class Pipeline extends React.PureComponent {
           top: 0,
           left: 0,
           opacity: showGgcs ? 1 : 0,
-          zIndex: showGgcs ? 100 : 0
+          zIndex: showGgcs ? 100 : 0,
+          transform: 'translateZ(0)',
+          transition: 'opacity 200ms linear, z-index 200ms linear',
         }}>
           <PipelineMap dataType="ggcs" animate={showGgcs}/>
         </div>

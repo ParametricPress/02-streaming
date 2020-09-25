@@ -183,7 +183,7 @@ Websites may make more requests for data as you scroll through and load more con
 // Variables
 [var name:"scrollerIndex" value:0 /]
 [var name:"stepProgress" value:0/]
-[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'datacenter', 'pop', 'cdn', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final']`/]
+[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'worldmap3', 'datacenter', 'pop', 'cdn', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final']`/]
 [var name:"showPops" value:false /]
 [var name:"showGgcs" value:false /]
 
@@ -205,6 +205,8 @@ How does one of its videos arrive on your screen?
 [Step]
 Videos are stored on servers called [span className:"terms"] "data centers"[/span]: Warehouses full of giant computers designed for storing and distributing videos.
 For global services, these are often placed around the world.
+[/Step]
+[Step]
 YouTube's parent company, Google, has 21 main data centers strategically placed throughout 4 continents (North America, South America, Europe, and Asia).
 Google does not disclose the data centers they use specifically for YouTube; so all of Google's data centers are shown here.
 [/Step]

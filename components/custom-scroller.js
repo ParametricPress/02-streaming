@@ -27,7 +27,7 @@ const styles = {
 
 let id = 0;
 
-export default class CustomScroller extends React.Component {
+export default class Scroller extends React.Component {
   constructor(props) {
     super(props);
     this.id = id++;

@@ -302,12 +302,14 @@ Put in other words, this is equivalent to the yearly footprint of approximately 
 YouTube's monthly active user count has since increased by a minimum of 33% since then (from [link text:"1.5 billion a year later in 2017" url:"https://techcrunch.com/2017/06/22/youtube-has-1-5-billion-logged-in-monthly-users-watching-a-ton-of-mobile-video/" target:"_blank"/] to over [link text:"2 billion last year" url:"https://variety.com/2019/digital/news/youtube-2-billion-users-tv-screen-watch-time-hours-1203204267/" target:"_blank"/]).
 [/Step]
 [Step]
-It's important to note that the [span className:"emphasized"]breakdown of YouTube's carbon footprint isn't necessarily representative of the entirety of the information and technology sector[/span].
+If we assume that the emissions factor for electricity usage is similar for each part of the pipeline, we can get a rough idea of the carbon footprint profile of YouTube. However, it's important to note that this [span className:"emphasized"]breakdown isn't necessarily representative of the entirety of the information and technology sector[/span].
 A 2018 study by Belkhir and Elmeligi paints a surprisingly different picture for the sector as a whole. [Cite
 id:"ict-global-emissions"/]
 [/Step]
 [Step]
 To compare the two, we can group the "Internet", "Residential Network", and "Cellular Network" sections into an umbrella "Networks".
+
+[caption]* Priest et al. note that Google purchases renewable energy to match their data center electricity consumption. [/caption]
 [/Step]
 [Step]
 Belkhir and Elmeligi provide estimates for both 2010 (retrospective) and 2020 (prospective).

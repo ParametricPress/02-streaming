@@ -120,8 +120,6 @@ export default class Pipeline extends React.PureComponent {
         youtubeEmissionsHeight: youtubeEmissions.clientHeight,
         youtubeEmissionsTextHeight: youtubeEmissionsText.clientHeight
       });
-
-      console.log(this.state);
     }, 1000);
   }
 

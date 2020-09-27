@@ -58,7 +58,6 @@ export default class MediaPicker extends React.Component {
 
   _onResize() {
     const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
-    console.log('onResize', rect.width);
     this.setState({
       width: rect.width,
     });

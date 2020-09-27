@@ -2,7 +2,8 @@
 import React, { Component } from 'react';
 import MapGL, { FlyToInterpolator } from 'react-map-gl';
 import DeckGL, { GeoJsonLayer, TextLayer } from 'deck.gl';
-import { backgroundColor } from './constants';
+import { accentColor, backgroundColor } from './constants';
+import { scaleLinear } from '@vx/scale';
 
 
 // Set your mapbox access token here
@@ -15,36 +16,24 @@ export default class SuperfundMap extends Component {
   constructor(props) {
     super(props);
 
-    this.getViewport = v => {
-      let vp = Object.assign({}, asiaVP);
-      if (this.props.isMobile) {
-        vp.zoom = vp.zoom - 1;
-      }
-      return vp;
-    };
-
-    initialViewport = Object.assign({
-      latitude: 0,
-      longitude: 0,
-      zoom: 1,
-      maxZoom: 16,
-      pitch: 0,
-      bearing: 0,
-      transitionDuration: 5000,
-      transitionInterpolator: new FlyToInterpolator()
-    }, this.props.initialViewport);
-
     this.state = {
-      viewport: initialViewport,
+      viewport: {},
       initialized: false,
       transitioning: false
     };
+
+    this.zoomScale =  scaleLinear({ range: [8.75, 10.5], domain: [300, 1440], clamp: true});
+    this.latitudeScale = scaleLinear({ range: [37.222117, 37.322117], domain: [300, 1440], clamp: true });
+    this.longitudeScale = scaleLinear({ range: [-121.955563, -121.955563], domain: [300, 1440], clamp: true });
   }
 
   _resize() {
     this._onChangeViewport({
       width: Math.min(window.innerWidth, 1440),
-      height: window.innerHeight * (2/3)
+      height: window.innerHeight * (2/3),
+      zoom: this.zoomScale(window.innerWidth),
+      latitude: this.latitudeScale(window.innerWidth),
+      longitude: this.longitudeScale(window.innerWidth)
     });
   }
 
@@ -55,20 +44,8 @@ export default class SuperfundMap extends Component {
   }
 
   componentDidMount() {
-    if (!this.ref) {
-      return;
-    }
     window.addEventListener('resize', this._resize.bind(this));
     this._resize();
-  }
-
-  _renderTooltip() {
-    const { hoveredObject, pointerX, pointerY } = this.state || {};
-    return hoveredObject && (
-      <div style={{ position: 'absolute', zIndex: 1, pointerEvents: 'none', left: pointerX, top: pointerY }}>
-        {hoveredObject.message}
-      </div>
-    );
   }
 
   getLayers() {
@@ -82,11 +59,9 @@ export default class SuperfundMap extends Component {
       pickable: true,
       getLineColor: d => [238, 152, 139],
       getFillColor: d => [238, 152, 139],
-      // radiusScale: 10000,
-      getRadius: 5,
-      radiusMinPixels: 5,
-      pointRadiusMinPixels: 5,
-      // onHover: ({object}) => alert(`${object.venue}`)
+      getRadius: 4,
+      radiusMinPixels: 4,
+      pointRadiusMinPixels: 4,
       onHover: (info) => {
         this.setState({
           hoveredObject: info.object,
@@ -103,27 +78,42 @@ export default class SuperfundMap extends Component {
     this.props.updateProps({ isLoaded: true });
   }
 
-  handleRef(_ref) {
-    if (!_ref) {
-      return;
-    }
-    this.ref = _ref;
-  }
-
   render() {
     const { viewport, initialized, transitioning, hoveredObject, pointerX, pointerY } = this.state;
 
+    let tooltipPos;
+    if (viewport.width < 800) {
+      tooltipPos = {
+        left: 0,
+        bottom: 0,
+        width: viewport.width,
+        borderBottom: 'solid 4px #D8FFA2'
+      }
+    } else {
+      if (hoveredObject && hoveredObject.properties.name === "Fairchild Semiconductor Corp. (South San Jose Plant)") {
+        tooltipPos = {
+          top: pointerY + 15,
+          left: pointerX - 350 - 15,
+          width: 350
+        }
+      } else {
+        tooltipPos = {
+          top: pointerY + 15,
+          left: pointerX + 15,
+          maxWidth: 350
+        }
+      }
+    }
+
     return (
-      <div key={'map'} ref={this.handleRef.bind(this)} style={{position: 'relative', width: 'calc(100% - 50px)', maxWidth: 1440}}>
+      <div key={'map'} style={{position: 'relative', width: 'calc(100% - 50px)', maxWidth: 1440}}>
         <MapGL
           {...viewport}
           onClick={() => this.props.updateProps({ zoomEnabled: !this.props.zoomEnabled })}
           mapStyle="mapbox://styles/mathisonian/cjv2tiyabes041fnuap89nfrt"
-          dragRotate={this.props.zoomEnabled}
-          scrollZoom={this.props.zoomEnabled}
-          dragPan={this.props.zoomEnabled}
-          doubleClickZoom={this.props.zoomEnabled}
-          onViewportChange={this._onChangeViewport.bind(this)}
+          dragRotate={true}
+          scrollZoom={true}
+          doubleClickZoom={false}
           mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN}
           getCursor={({isDragging, isHovering}) => 'default'}
         >
@@ -139,9 +129,7 @@ export default class SuperfundMap extends Component {
             style={{
               position: 'absolute',
               zIndex: 1000,
-              top: pointerY + 15,
-              left: pointerX + 15,
-              maxWidth: 350,
+              ...tooltipPos,
               pointerEvents: 'none',
               paddingLeft: 12,
               paddingRight: 12,

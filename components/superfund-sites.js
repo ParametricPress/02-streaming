@@ -22,7 +22,7 @@ export default class SuperfundMap extends Component {
       transitioning: false
     };
 
-    this.zoomScale =  scaleLinear({ range: [8.75, 10.5], domain: [300, 1440], clamp: true});
+    this.zoomScale =  scaleLinear({ range: [9, 10.5], domain: [300, 1440], clamp: true});
     this.latitudeScale = scaleLinear({ range: [37.222117, 37.322117], domain: [300, 1440], clamp: true });
     this.longitudeScale = scaleLinear({ range: [-121.955563, -121.955563], domain: [300, 1440], clamp: true });
     

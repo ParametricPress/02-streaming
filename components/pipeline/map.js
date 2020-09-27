@@ -198,10 +198,28 @@ const spec = (dataType, initWidth, initHeight) => {
           { type: "graticule" }
         ],
       },
+      {
+        name: "sphere",
+        values: [
+          { type: "Sphere" }
+        ]
+      },
       getDataDeclaration(dataType)
     ],
 
     marks: [
+      {
+        type: "shape",
+        from: { data: "sphere" },
+        encode: {
+          update: {
+            fill: { value: '#444444' }
+          }
+        },
+        transform: [
+          { type: 'geoshape', projection: "projection" }
+        ]
+      },
       {
         type: "shape",
         from: { data: "world" },
@@ -209,7 +227,7 @@ const spec = (dataType, initWidth, initHeight) => {
           update: {
             strokeWidth: { signal: "+borderWidth" },
             stroke: { value: "#222222" },
-            fill: { value: "#171717" },
+            fill: { value: "#2D2D2D" },
             zindex: { value: 0 },
           },
         },

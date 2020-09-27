@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import MapGL, { FlyToInterpolator } from 'react-map-gl';
 import DeckGL, { GeoJsonLayer, TextLayer } from 'deck.gl';
+import { backgroundColor } from './constants';
 
 
 // Set your mapbox access token here
@@ -135,7 +136,17 @@ export default class SuperfundMap extends Component {
         </MapGL>
         {
           hoveredObject ? <div className="map-tooltip"
-            style={{position: 'absolute', zIndex: 1000, top: pointerY + 15, left: pointerX + 15, maxWidth: 350, pointerEvents: 'none', paddingLeft: 12, paddingRight: 12}}>
+            style={{
+              position: 'absolute',
+              zIndex: 1000,
+              top: pointerY + 15,
+              left: pointerX + 15,
+              maxWidth: 350,
+              pointerEvents: 'none',
+              paddingLeft: 12,
+              paddingRight: 12,
+              backgroundColor: backgroundColor
+            }}>
             <div><h3 style={{marginTop: 4}}>{hoveredObject.properties.name}</h3></div>
             <div><b>Hazard Ranking System Score:</b> {hoveredObject.properties.hazardScore}</div>
             <div><b>Year Listed:</b> {hoveredObject.properties.listed}</div>

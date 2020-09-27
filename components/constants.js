@@ -95,3 +95,5 @@ export const titleToPreview= {
     url: 'thedaily.png'
   }
 };
+
+export const debounceTimer = 200;

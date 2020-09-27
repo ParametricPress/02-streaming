@@ -1,7 +1,7 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import MediaAll from './media-all';
-import { titleToPreview } from '../constants';
+import { debounceTimer, titleToPreview } from '../constants';
 
 const previewHeight = 135;
 const previewPadding = 8;
@@ -35,6 +35,9 @@ export default class MediaPicker extends React.Component {
     };
 
     this.selectTitle = this.selectTitle.bind(this);
+
+    this.resizeBounce = null;
+    this._size = this._size.bind(this);
   }
 
   selectTitle(y, h, t) {
@@ -47,20 +50,24 @@ export default class MediaPicker extends React.Component {
 
   componentDidMount() {
     setTimeout(() => {
-      const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
-      this.setState({
-        width: rect.width
-      });
-
+      this._size();
       window.addEventListener('resize', this._onResize.bind(this));
     }, 100);
   }
 
-  _onResize() {
+  _size() {
     const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
     this.setState({
       width: rect.width,
     });
+  }
+
+  _onResize() {
+    if (this.resizeBounce) {
+      clearTimeout(this.resizeBounce);
+    }
+    
+    this.resizeBounce = setTimeout(this._size, debounceTimer);
   }
 
   componentDidUpdate() {

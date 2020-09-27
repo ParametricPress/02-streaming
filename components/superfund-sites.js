@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import MapGL, { FlyToInterpolator } from 'react-map-gl';
 import DeckGL, { GeoJsonLayer, TextLayer } from 'deck.gl';
-import { accentColor, backgroundColor } from './constants';
+import { accentColor, backgroundColor, debounceTimer } from './constants';
 import { scaleLinear } from '@vx/scale';
 
 
@@ -25,9 +25,12 @@ export default class SuperfundMap extends Component {
     this.zoomScale =  scaleLinear({ range: [8.75, 10.5], domain: [300, 1440], clamp: true});
     this.latitudeScale = scaleLinear({ range: [37.222117, 37.322117], domain: [300, 1440], clamp: true });
     this.longitudeScale = scaleLinear({ range: [-121.955563, -121.955563], domain: [300, 1440], clamp: true });
+    
+    this.resizeBounce = null;
+    this._size = this._size.bind(this);
   }
 
-  _resize() {
+  _size() {
     this._onChangeViewport({
       width: Math.min(window.innerWidth, 1440),
       height: window.innerHeight * (2/3),
@@ -35,6 +38,14 @@ export default class SuperfundMap extends Component {
       latitude: this.latitudeScale(window.innerWidth),
       longitude: this.longitudeScale(window.innerWidth)
     });
+  }
+
+  _resize() {
+    if (this.resizeBounce) {
+      clearTimeout(this.resizeBounce);
+    }
+
+    this.resizeBounce = setTimeout(this._size, debounceTimer);
   }
 
   _onChangeViewport(viewport) {
@@ -45,7 +56,7 @@ export default class SuperfundMap extends Component {
 
   componentDidMount() {
     window.addEventListener('resize', this._resize.bind(this));
-    this._resize();
+    this._size();
   }
 
   getLayers() {

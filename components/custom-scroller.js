@@ -1,6 +1,7 @@
 const React = require('react');
 const { filterChildren, mapChildren } = require('idyll-component-children');
 import { TextContainer } from 'idyll-components';
+import { debounceTimer } from './constants';
 const d3 = require('d3-selection');
 
 const styles = {
@@ -38,6 +39,9 @@ export default class Scroller extends React.Component {
 
     this.SCROLL_STEP_MAP = {};
     this.SCROLL_NAME_MAP = {};
+
+    this.resizeBounce = null;
+    this._size = this._size.bind(this);
   }
 
   componentDidMount() {
@@ -45,7 +49,7 @@ export default class Scroller extends React.Component {
     const scrollama = require('scrollama');
     // instantiate the scrollama
     const scroller = scrollama();
-    this.handleResize();
+    this._size();
 
     // setup the instance, pass callback functions
     scroller
@@ -78,11 +82,19 @@ export default class Scroller extends React.Component {
     }
   }
 
-  handleResize() {
+  _size() {
     this.setState({
       graphicHeight: window.innerHeight + 'px',
       graphicWidth: window.innerWidth + 'px'
     });
+  }
+
+  handleResize() {
+    if (this.resizeBounce) {
+      clearTimeout(this.resizeBounce);
+    }
+
+    this.resizeBounce = setTimeout(this._size, debounceTimer);
   }
 
   handleContainerEnter(response) {

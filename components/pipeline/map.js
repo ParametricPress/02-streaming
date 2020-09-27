@@ -1,7 +1,7 @@
 import React from "react";
 import * as vega from "vega";
 import ReactDOM from 'react-dom';
-import { backgroundColor } from "../constants";
+import { backgroundColor, debounceTimer } from "../constants";
 
 export default class PipelineMap extends React.PureComponent {
   constructor(props) {
@@ -20,14 +20,25 @@ export default class PipelineMap extends React.PureComponent {
     this._handleMouseUp = this._handleMouseUp.bind(this);
     this._handleResize = this._handleResize.bind(this);
     this._rotateOne = this._rotateOne.bind(this);
+
+    this.resizeBounce = null;
+    this._size = this._size.bind(this);
   }
 
-  _handleResize() {
+  _size() {
     const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
     this.setState({
       width: rect.width,
       height: rect.height
     });
+  }
+
+  _handleResize() {
+    if (this.resizeBounce) {
+      clearTimeout(this.resizeBounce);
+    }
+
+    this.resizeBounce = setTimeout(this._size, debounceTimer);
   }
 
   _rotateOne() {
@@ -53,7 +64,7 @@ export default class PipelineMap extends React.PureComponent {
 
       setInterval(this._rotateOne, 50);
 
-      this._handleResize();
+      this._size();
   
       window.addEventListener('resize', this._handleResize)
     }, 100);  // need to wait a split second for size to update for some reason

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { debounceTimer } from './constants';
 
 export default class LargeAside extends React.Component {
   constructor(props) {
@@ -7,16 +8,27 @@ export default class LargeAside extends React.Component {
     this.state = {
       width: 0
     }
+
+    this.resizeBounce = null;
+    this._size = this._size.bind(this);
   }
 
   _handleResize() {
+    if (this.resizeBounce) {
+      clearTimeout(this.resizeBounce);
+    }
+
+    this.resizeBounce = setTimeout(this._size, debounceTimer);
+  }
+
+  _size() {
     this.setState({
       width: window.innerWidth,
     })
   }
 
   componentDidMount() {
-    this._handleResize();
+    this._size();
     window.addEventListener('resize', this._handleResize.bind(this));
   }
 

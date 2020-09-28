@@ -211,14 +211,14 @@ YouTube's parent company, Google, has 21 main data centers strategically placed 
 Google does not disclose the data centers they use specifically for YouTube; so all of Google's data centers are shown here.
 [/Step]
 [Step]
-Cooling these data centers is no small feat, consuming up to 40% of the total energy required to run them.[Cite
+Cooling these data centers is no small feat, consuming up to 40% of the total energy required to run them [Cite
 authors:"X.Zhanga, T.Lindberg, N.Xiong, V.Vyatkinde, A.Mousavi"
 title:"Cooling Energy Consumption Investigation of Data Center IT Room with Vertical Placed Server"
 url:"https://www.sciencedirect.com/science/article/pii/S1876610217306331"
 id:"cooling-data-center"
 venue:"Energy Procedia"
 date:"May 2017"
-/]
+/].
 Because of this, companies have begun [link text:"placing data centers in cold countries" url:"https://www.wsj.com/articles/SB10001424053111904836104576560551005570810" target:"_blank"/], where they can take advantage of passive cooling.
 [/Step]
 [Step]
@@ -269,9 +269,9 @@ In addition to the [span className:"emphasized"][link text:"550,000 miles of und
 [Step]
 Here's (roughly) what the [link text:"major internet lines of the west coast" url:"https://www.technologyreview.com/2015/09/15/166239/first-detailed-public-map-of-us-internet-backbone-could-make-it-stronger/"/] look like.
 Perhaps not surprisingly, it somewhat resembles our interstate highway system.
-Priest et al. estimate that this infrastructure consumes approximately [span className:"emphasized"]1,900 Gigawatt-hours of electricity to serve YouTube videos, enough to power [link text:"170,000 homes in the United States." url:"https://www.eia.gov/tools/faqs/faq.php?id=97&t=3" target:"_blank"/][/span][Cite
+Priest et al. estimate that this infrastructure consumes approximately [span className:"emphasized"]1,900 Gigawatt-hours of electricity to serve YouTube videos, enough to power [link text:"170,000 homes in the United States" url:"https://www.eia.gov/tools/faqs/faq.php?id=97&t=3" target:"_blank"/][/span][Cite
 id:"youtube-paper"
-/]
+/].
 [/Step]
 [Step]
 The packets traveling across this information highway need “off-ramps” to reach your screen.
@@ -292,9 +292,9 @@ Devices account for an estimated [span className:"emphasized"]8500 Gigawatt-hour
 That's over a 3/4 of a million U.S. homes worth of electricity.
 [/Step]
 [Step]
-In total, Priest et al.'s research estimated that [span className:"emphasized"]YouTube traffic consumes 19.6 Tetrawatt-hours of electricity in 2016[/span].[Cite
+In total, Priest et al.'s research estimated that [span className:"emphasized"]YouTube traffic consumes 19.6 Tetrawatt-hours of electricity in 2016[/span] [Cite
 id:"youtube-paper"
-/]
+/].
 Using the world emissions factor for electricity generation as reported by the International Energy Agency, they place resulting [span className:"emphasized"]carbon emissions at 10.2 million metric tons of CO2[/span] (10.1 after renewable energy purchases for data center activities).
 
 This is as much as a small metropolitan area like Frankfurt or Providence.
@@ -303,8 +303,8 @@ YouTube's monthly active user count has since increased by a minimum of 33% sinc
 [/Step]
 [Step]
 If we assume that the emissions factor for electricity usage is similar for each part of the pipeline, we can get a rough idea of the carbon footprint profile of YouTube. However, it's important to note that this [span className:"emphasized"]breakdown isn't necessarily representative of the entirety of the information and technology sector[/span].
-A 2018 study by Belkhir and Elmeligi paints a surprisingly different picture for the sector as a whole. [Cite
-id:"ict-global-emissions"/]
+A 2018 study by Belkhir and Elmeligi paints a surprisingly different picture for the sector as a whole [Cite
+id:"ict-global-emissions"/]. 
 [/Step]
 [Step]
 To compare the two, we can group the "Internet", "Residential Network", and "Cellular Network" sections into an umbrella "Networks".
@@ -341,13 +341,13 @@ These [link text:"23 locations" url:"https://www.theatlantic.com/technology/arch
 
 Santa Clara County became “Silicon Valley” in the 1960s when companies in the area found ways to embed computer circuits into small wafers of silicon.
 [span className:"emphasized"]Manufacturing these chips is inherently toxic[/span], and its chemical runoff has been linked to increases in cancer and birth defect rates around the Bay.
-However, [span className:"emphasized"]the industry avoided responsibility for decades[/span] and actually cultivated a clean image, publicizing their pristine campuses and white-collar workforce.[Cite
+However, [span className:"emphasized"]the industry avoided responsibility for decades[/span] and actually cultivated a clean image, publicizing their pristine campuses and white-collar workforce [Cite
 authors:"David N. Pellow and Lisa Sun-Hee Park"
 title:"The Silicon Valley of Dreams: Environmental Injustice, Immigrant Workers, and the High-Tech Global Economy"
 id:"silicon-valley-book"
 url:"https://nyupress.org/9780814767092/the-silicon-valley-of-dreams/"
 date:"December 2002"
-/]
+/].
 
 [Aside]
   [img src:"static/images/lorainneross.png"/]

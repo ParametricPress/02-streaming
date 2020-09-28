@@ -112,10 +112,11 @@ export default class MediaTitle extends React.PureComponent {
     }
 
     return (
-      <div style={{
-        width: '100%',
-        opacity: hasSelected ? selectedTitle === data.title ? 1 : 0.2 : 1
-      }}
+      <div 
+        style={{
+          width: '100%',
+          opacity: hasSelected ? selectedTitle === data.title ? 1 : 0.2 : 1
+        }}
         onMouseDown={this._handleMouseDown}
         onMouseUp={this._handleMouseUp}
         onMouseLeave={this._handleMouseUp}
@@ -129,6 +130,7 @@ export default class MediaTitle extends React.PureComponent {
             fontSize: titleFontSize,
             fontFamily: font,
             userSelect: 'none',
+            WebkitTouchCallout: 'none',
             transform: 'translateZ(1)',
             color: textColor
           }}

@@ -91,9 +91,9 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  -webkit-touch-callout: none;
   cursor: default;
 }
-
 
 h1, h2, h3, h4, h6 {
   color: #D8FFA2;

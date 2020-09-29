@@ -45,7 +45,6 @@ While this is not an issue anymore, it's a reminder that both the internet and s
   [/ParametricGraphic]
 [/LargeAside]
 
-As technology advances, the need for seamless functionality comes at the cost of obfuscating the elaborate physical backbone that supports it.
 When you buy a book on Amazon, the environmental consequences are difficult to ignore.
 From the jet fuel and gasoline burned to transport the packages, to the cardboard boxes cluttering your house, the whole process is filled with reminders that your actions have tangible, permanent consequences.
 Download that book onto an e-reader, however, and this trail of evidence seems to vanish.
@@ -74,7 +73,7 @@ Understanding how these digital products and services work is a crucial first st
 Each type of digital activity produces a different level of emissions, and as a result has different consequences on the physical world.
 [span className:"emphasized"]  The amount of carbon dioxide emitted is based on the type and quantity of information that needs to be loaded[/span] for a particular digital activity.
 
-The CO2 emitted for any digital activity is directly correlated to the number of bytes (a unit for information) that must be transferred for that activity.
+The CO2 emitted for any digital activity is directly correlated to the number of bytes (units for information) that must be transferred for that activity.
 More specifically, emissions can be computed using the following equation:
 
 [Equation display:false]n [/Equation] bytes [Equation display:false] \times X [/Equation] KwH/byte  [Equation display:false]\times Y [/Equation] g CO2/KwH
@@ -119,9 +118,9 @@ As shown above, websites like Google, which are relatively simple because they p
 Let’s take a closer look at one common type of non-text media: audio.
 When you listen to audio onto your device, you generally load a compressed version of the original audio file.
 
-The NPR podcast shown in the visualization was compressed to 128 kilobits per second, while the song Old Town Road, retrieved from Spotify, was compressed to 256 kilobits per second.
-This means that in the one minute timespan that both audio files played, twice as much data needed to be loaded for the song in comparison to the podcast, which leads to the song having roughly twice as large of a carbon footprint.
-These audio examples have lower carbon emissions than most of the websites shown earlier.
+The NPR podcast shown in the visualization was compressed to 128 kilobits per second, while the song "Old Town Road", retrieved from Spotify, was compressed to 256 kilobits per second.
+This means that in the one minute timespan that both audio files played, twice as much data needed to be loaded for the song than for the podcast, which leads to the song having roughly twice as large of a carbon footprint.
+Even so, these audio examples have lower carbon emissions than most of the multimedia websites shown earlier.
 
 
 ### Video
@@ -151,7 +150,7 @@ Over a one minute period, the Old Town Road music video (which is a live action 
 You might notice there is a lot of empty black space in the 3Blue1Brown video, while the music video exhibits a large range of colors and frequent visual changes, both of which require more data to render.
 In the examples provided, videos produced far more CO2 than audio over the same time span.
 This is especially apparent when comparing the emissions for Old Town Road and its corresponding music video.
-Not only does a video require loading both sound and visual data to your device, but also [span className:"emphasized"]visual data is particularly heavy in terms of the amount of information it holds[/span].
+Not only does a video require loading both sound and visual data to your device, but [span className:"emphasized"]visual data is also particularly heavy in terms of the amount of information it holds[/span].
 Facebook produces more CO2 than any of the provided video examples, likely a result of the website loading multiple videos and other heavy data.
 
 
@@ -189,7 +188,7 @@ Websites may make more requests for data as you scroll through and load more con
 
 We’ve just seen how digital streams are made up of packets of data sent over the internet. These packets aren’t delivered by magic.
 [span className:"emphasized"] Every digital streaming platform relies on a system of computers and cables, each part consuming electricity and releasing carbon emissions.[/span]
-By understanding how these platforms deliver their content, we can directly link our digital actions to the physical infrastructure that releases carbon dioxide.
+When we understand how these platforms deliver their content, we can directly link our digital actions to the physical infrastructure that releases carbon dioxide.
 
 Let's take a look at YouTube.
 With its 2 billion + users, YouTube is the prototypical digital streaming service.
@@ -203,23 +202,12 @@ How does one of its videos arrive on your screen?
 [/Graphic]
 
 [Step]
-Videos are stored on servers called [span className:"terms"] "data centers"[/span]: Warehouses full of giant computers designed for storing and distributing videos.
+Videos are stored on servers called [span className:"terms"] "data centers"[/span]: warehouses full of giant computers designed for storing and distributing videos.
 For global services, these are often placed around the world.
 [/Step]
 [Step]
 YouTube's parent company, Google, has 21 main data centers strategically placed throughout 4 continents (North America, South America, Europe, and Asia).
-Google does not disclose the data centers they use specifically for YouTube; so all of Google's data centers are shown here.
-[/Step]
-[Step]
-Cooling these data centers is no small feat, consuming up to 40% of the total energy required to run them.[Cite
-authors:"X.Zhanga, T.Lindberg, N.Xiong, V.Vyatkinde, A.Mousavi"
-title:"Cooling Energy Consumption Investigation of Data Center IT Room with Vertical Placed Server"
-url:"https://www.sciencedirect.com/science/article/pii/S1876610217306331"
-id:"cooling-data-center"
-venue:"Energy Procedia"
-date:"May 2017"
-/]
-Because of this, companies have begun [link text:"placing data centers in cold countries" url:"https://www.wsj.com/articles/SB10001424053111904836104576560551005570810" target:"_blank"/], where they can take advantage of passive cooling.
+Google does not disclose the data centers they use specifically for YouTube, so all of Google's data centers are shown here.
 [/Step]
 [Step]
 Let's take a closer look at one of these data centers. This one is in The Dalles, Oregon, on the West Coast of the United States.
@@ -269,9 +257,9 @@ In addition to the [span className:"emphasized"][link text:"550,000 miles of und
 [Step]
 Here's (roughly) what the [link text:"major internet lines of the west coast" url:"https://www.technologyreview.com/2015/09/15/166239/first-detailed-public-map-of-us-internet-backbone-could-make-it-stronger/"/] look like.
 Perhaps not surprisingly, it somewhat resembles our interstate highway system.
-Priest et al. estimate that this infrastructure consumes approximately [span className:"emphasized"]1,900 Gigawatt-hours of electricity to serve YouTube videos, enough to power [link text:"170,000 homes in the United States." url:"https://www.eia.gov/tools/faqs/faq.php?id=97&t=3" target:"_blank"/][/span][Cite
+Priest et al. estimate that this infrastructure consumes approximately [span className:"emphasized"]1,900 Gigawatt-hours of electricity to serve YouTube videos, enough to power [link text:"170,000 homes in the United States" url:"https://www.eia.gov/tools/faqs/faq.php?id=97&t=3" target:"_blank"/][/span][Cite
 id:"youtube-paper"
-/]
+/].
 [/Step]
 [Step]
 The packets traveling across this information highway need “off-ramps” to reach your screen.
@@ -288,13 +276,13 @@ At over 10 times the electricity usage per unit of traffic, the relative ineffic
 [Step]
 Eventually, the video data reaches your device for viewing.
 While your device might not technically be part of Youtube’s content delivery pipeline, we can't overlook the cost of moving those pixels.
-Devices account for an estimated [span className:"emphasized"]8500 Gigawatt-hours of electricity usage[/span].
-That's over a 3/4 of a million U.S. homes worth of electricity.
+Devices account for an estimated [span className:"emphasized"]8500 Gigawatt-hours of electricity usage[/span]:
+that's over a 3/4 of a million U.S. homes worth of electricity.
 [/Step]
 [Step]
-In total, Priest et al.'s research estimated that [span className:"emphasized"]YouTube traffic consumes 19.6 Tetrawatt-hours of electricity in 2016[/span].[Cite
+In total, Priest et al.'s research estimated that [span className:"emphasized"]YouTube traffic consumes 19.6 Tetrawatt-hours of electricity in 2016[/span] [Cite
 id:"youtube-paper"
-/]
+/].
 Using the world emissions factor for electricity generation as reported by the International Energy Agency, they place resulting [span className:"emphasized"]carbon emissions at 10.2 million metric tons of CO2[/span] (10.1 after renewable energy purchases for data center activities).
 
 This is as much as a small metropolitan area like Frankfurt or Providence.
@@ -303,8 +291,8 @@ YouTube's monthly active user count has since increased by a minimum of 33% sinc
 [/Step]
 [Step]
 If we assume that the emissions factor for electricity usage is similar for each part of the pipeline, we can get a rough idea of the carbon footprint profile of YouTube. However, it's important to note that this [span className:"emphasized"]breakdown isn't necessarily representative of the entirety of the information and technology sector[/span].
-A 2018 study by Belkhir and Elmeligi paints a surprisingly different picture for the sector as a whole. [Cite
-id:"ict-global-emissions"/]
+A 2018 study by Belkhir and Elmeligi paints a surprisingly different picture for the sector as a whole [Cite
+id:"ict-global-emissions"/]. 
 [/Step]
 [Step]
 To compare the two, we can group the "Internet", "Residential Network", and "Cellular Network" sections into an umbrella "Networks".
@@ -330,7 +318,7 @@ That's over [link text:"2.2 million gallons of gasoline worth of CO2 in savings.
 ## Tech's Inconvenient Truths
 
 Digital streaming is not the only instance where environmentally harmful aspects of technology are outside of public consciousness.
-[span className:"emphasized"]Here's a surprising fact: Santa Clara County leads the nation in the number of EPA classified "superfund" (highly polluted) sites[/span].
+[span className:"emphasized"]Tech is rarely perceived as environmentally toxic, but here's a surprising fact: Santa Clara County leads the nation in the number of EPA classified "superfund" (highly polluted) sites[/span].
 These [link text:"23 locations" url:"https://www.theatlantic.com/technology/archive/2019/09/silicon-valley-full-superfund-sites/598531/#:~:text=Santa%20Clara%20County%20has%2023,these%20chemicals%20may%20be%20impossible." target:"_blank"/] may be impossible to fully clean. "Silicon Valley" is primarily to blame.
 
 [data name:"superfundSitesGeoJSON" source:"dist/superfund-sites.json"/]
@@ -341,13 +329,13 @@ These [link text:"23 locations" url:"https://www.theatlantic.com/technology/arch
 
 Santa Clara County became “Silicon Valley” in the 1960s when companies in the area found ways to embed computer circuits into small wafers of silicon.
 [span className:"emphasized"]Manufacturing these chips is inherently toxic[/span], and its chemical runoff has been linked to increases in cancer and birth defect rates around the Bay.
-However, [span className:"emphasized"]the industry avoided responsibility for decades[/span] and actually cultivated a clean image, publicizing their pristine campuses and white-collar workforce.[Cite
+However, [span className:"emphasized"]the industry avoided responsibility for decades[/span] and actually cultivated a clean image, publicizing their pristine campuses and white-collar workforce [Cite
 authors:"David N. Pellow and Lisa Sun-Hee Park"
 title:"The Silicon Valley of Dreams: Environmental Injustice, Immigrant Workers, and the High-Tech Global Economy"
 id:"silicon-valley-book"
 url:"https://nyupress.org/9780814767092/the-silicon-valley-of-dreams/"
 date:"December 2002"
-/]
+/].
 
 [Aside]
   [img src:"static/images/lorainneross.png"/]
@@ -369,7 +357,7 @@ date:"December 2014"
 /].
 
 [div fullWidth:true]
-  [img src:"static/images/bayan.webp"/]
+  [img src:"static/images/bayan2.jpg"/]
 [/div]
 [caption]A lake of toxic sludge at the Bayan Obo mining district. (Credit: [a href:"https://www.bbc.com/future/article/20150402-the-worst-place-on-earth" target:"_blank"]BBC - Liam Young, Unknown Fields[/a])[/caption]
 

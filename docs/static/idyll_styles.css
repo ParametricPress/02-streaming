@@ -1280,7 +1280,7 @@ a {
 }
 
 .parametric-caption a {
-  color: #24292e;
+  color: #D8FFA2;
   text-decoration: underline;
 }
 
@@ -1581,10 +1581,14 @@ h2 {
 
 .parametric-recirc-next-article {
   /* position: relative; */
-  margin-left: calc(-1 * (100vw - 1440px) / 2);
-  margin-right: calc(-1 * (100vw - 1440px) / 2);
   width: 100%;
+}
 
+@media screen and (min-width: 1400px) {
+  .parametric-recirc-next-article {
+    margin-left: calc(-1 * (100vw - 1440px) / 2);
+    margin-right: calc(-1 * (100vw - 1440px) / 2);
+  }
 }
 
 .idyll-scroll-graphic > div {
@@ -2043,19 +2047,6 @@ button {
   .parametric-article-dek {
     font-size: 24px;
   }
-  .parametric-article-nav {
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 24px;
-    line-height: 32px;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-
-  .parametric-nav-links {
-    font-size: 18px;
-    line-height: 1.5;
-  }
 
   .parametric-header-text {
     top: 0;
@@ -2075,6 +2066,15 @@ button {
     margin-bottom: 1em;
   }
 
+
+	.idyll-text-container img {
+		margin: 2em auto;
+		width: 100%;
+  }
+
+  .idyll-scroll {
+    transform: translateX(-1em);
+  }
 }
 
 @media all and (max-width: 320px) {
@@ -2086,6 +2086,25 @@ button {
 
 
 
+
+@media all and (min-width: 1440px) {
+  .parametric-recirc-next-article {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .parametric-footer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+  }
+
+  .parametric-article-nav {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
 body {
   margin: 0;
 }
@@ -2139,7 +2158,7 @@ input {
 .aside {
   position: absolute;
   width: 300px;
-  right: calc((10vw + 600px + 150px) / -2);
+  left: 750px;
 }
 
 .fixed {
@@ -2355,6 +2374,12 @@ input {
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+.parametric-article-nav {
+  overflow-x: visible;
+}
 
 /* TODO FIX THIS FOR MOBILE (This is a hack) */
 .idyll-scroll {
@@ -2416,8 +2441,10 @@ input {
 }
 
 .large-aside-container {
-  display: none;
+  display: block;
   position: relative;
+  max-width: calc(100vw - 800px);
+  width: calc(100vw - 800px);
 }
 
 .large-aside-wrapper {
@@ -2447,12 +2474,35 @@ h1, h2, h3, h4, h6 {
 }
 
 
-.idyll-step p a {
-  color: #000000;
+.idyll-scroll-text .idyll-step {
+  background: #111111;
+  box-shadow: none;
 }
 
-.idyll-step p .emphasized {
-  color: #000000;
+.idyll-scroll-text .idyll-step p a {
+  color: #D8FFA2;
+}
+
+.idyll-scroll-text .idyll-step p {
+  color: #adadad;
+}
+.idyll-scroll-text .idyll-step p .emphasized {
+  color: #ffffff;
+}
+.idyll-citation {
+  color: #9CBBD7;
+}
+
+.parametric-recirc-next-article {
+  width: 100%;
+}
+
+.idyll-scroll-graphic > div {
+  max-width: calc(100vw - 15px);
+}
+
+.idyll-root > div > img {
+  margin-left: 50px;
 }
 
 @media all and (max-width: 1000px) {
@@ -2475,12 +2525,26 @@ h1, h2, h3, h4, h6 {
     margin-right: 0;
     position: static;
   }
+  .idyll-root > div > img {
+    margin-left: 1em;
+    width: calc(100% - 2em);
+  }
 }
 
 
 @media all and (max-width: 800px) {
+
   .idyll-root {
     max-width: none;
     padding: 0;
+  }
+  .idyll-scroll {
+    transform: translateX(-1em);
+  }
+
+
+  .large-aside-container {
+    max-width: calc(100vw - 2em);
+    width: calc(100vw - 2em);
   }
 }

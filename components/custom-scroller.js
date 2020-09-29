@@ -85,7 +85,7 @@ export default class Scroller extends React.Component {
   _size() {
     this.setState({
       graphicHeight: window.innerHeight + 'px',
-      graphicWidth: window.innerWidth + 'px'
+      graphicWidth: Math.min(window.innerWidth, 1440) + 'px'
     });
   }
 

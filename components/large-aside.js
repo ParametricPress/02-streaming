@@ -23,7 +23,7 @@ export default class LargeAside extends React.Component {
 
   _size() {
     this.setState({
-      width: window.innerWidth,
+      width: Math.min(window.innerWidth, 1440),
     })
   }
 
@@ -35,8 +35,8 @@ export default class LargeAside extends React.Component {
   render() {
     return (
       <div className="large-aside-container" style={{
-        width: this.state.width - 50,  // 50 = text margin
-        maxWidth: 1440 - 100
+        width: this.state.width - 100,  // 50 = text margin
+        maxWidth: this.state.width - 100
       }}>
         <div className="large-aside-wrapper">
           <div className="large-aside">

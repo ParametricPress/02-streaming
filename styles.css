@@ -7,6 +7,12 @@
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+.parametric-article-nav {
+  overflow-x: visible;
+}
 
 /* TODO FIX THIS FOR MOBILE (This is a hack) */
 .idyll-scroll {
@@ -128,6 +134,10 @@ h1, h2, h3, h4, h6 {
   max-width: calc(100vw - 15px);
 }
 
+.idyll-root > div > img {
+  margin-left: 50px;
+}
+
 @media all and (max-width: 1000px) {
   .idyll-root {
     max-width: none;
@@ -148,10 +158,15 @@ h1, h2, h3, h4, h6 {
     margin-right: 0;
     position: static;
   }
+  .idyll-root > div > img {
+    margin-left: 1em;
+    width: calc(100% - 2em);
+  }
 }
 
 
 @media all and (max-width: 800px) {
+
   .idyll-root {
     max-width: none;
     padding: 0;

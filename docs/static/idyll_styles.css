@@ -2416,7 +2416,7 @@ input {
 }
 
 .large-aside-container {
-  display: block;
+  display: none;
   position: relative;
 }
 

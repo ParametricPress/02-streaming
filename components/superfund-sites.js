@@ -25,14 +25,14 @@ export default class SuperfundMap extends Component {
     this.zoomScale =  scaleLinear({ range: [9, 10.5], domain: [300, 1440], clamp: true});
     this.latitudeScale = scaleLinear({ range: [37.222117, 37.322117], domain: [300, 1440], clamp: true });
     this.longitudeScale = scaleLinear({ range: [-121.955563, -121.955563], domain: [300, 1440], clamp: true });
-    
+
     this.resizeBounce = null;
     this._size = this._size.bind(this);
   }
 
   _size() {
     this._onChangeViewport({
-      width: Math.min(window.innerWidth, 1440),
+      width: '100%',
       height: window.innerHeight * (2/3),
       zoom: this.zoomScale(window.innerWidth),
       latitude: this.latitudeScale(window.innerWidth),
@@ -117,7 +117,7 @@ export default class SuperfundMap extends Component {
     }
 
     return (
-      <div key={'map'} style={{position: 'relative', width: 'calc(100% - 50px)', maxWidth: 1440}}>
+      <div key={'map'} style={{position: 'relative', width: '100%'}}>
         <MapGL
           {...viewport}
           onClick={() => this.props.updateProps({ zoomEnabled: !this.props.zoomEnabled })}

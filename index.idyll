@@ -1,15 +1,15 @@
-[meta title:"TK Article Title" description:"TK Article Description"
+[meta title:"The Hidden Cost of Digital Consumption" description:"TK Article Description"
   shareImageUrl:"https://parametric.press/issue-02/tk-article-slug/static/images/share.png"
   shareImageWidth:"880"
   shareImageHeight:"440" /]
 
-[var name:"parametricSlug" value:"tk-article-slug" /]
+[var name:"parametricSlug" value:"streaming" /]
 
 [Nav fullWidth:true /]
 
 [Header
-  title:`["The Hidden Cost", "of Digital Consumption"]`
-  longTitle:`["The Hidden Cost", "of Digital Consumption"]`
+  title:`["The Hidden Cost of Digital Consumption"]`
+  longTitle:`["The Hidden Cost of Digital Consumption"]`
   date:"May 15, 2020"
   dek:"You might not be aware of the environmental price that is being paid in this era of profound digital consumption."
   fullWidth:true

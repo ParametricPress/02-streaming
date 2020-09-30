@@ -182,7 +182,7 @@ Websites may make more requests for data as you scroll through and load more con
 // Variables
 [var name:"scrollerIndex" value:0 /]
 [var name:"stepProgress" value:0/]
-[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'worldmap3', 'datacenter', 'pop', 'cdn', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final']`/]
+[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'datacenter', 'pop', 'cdn', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final']`/]
 [var name:"showPops" value:false /]
 [var name:"showGgcs" value:false /]
 

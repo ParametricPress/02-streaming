@@ -115,14 +115,21 @@ export default class MediaAll extends React.PureComponent {
           border: "1px solid " + guideColor,
           position: "relative",
         }}
-        onMouseDown={this.handleMouseMove}
+        onTouchStart={this.handleMouseMove}
+        onTouchMoveCapture={(e) => {
+          if (this.state.mouseX !== null) {
+            this.handleMouseMove(e);
+          }
+        }}
+        onTouchEnd={this.clearMouse}
+
+        onMouseEnter={this.handleMouseMove}
         onMouseMove={(e) => {
           if (this.state.mouseX !== null) {
             this.handleMouseMove(e);
           }
         }}
         onMouseLeave={this.clearMouse}
-        onMouseUp={this.clearMouse}
       >
         {gridlines[type].map((d, i) => (
           <Grid key={i} left={xScaleVX[type](d)} />

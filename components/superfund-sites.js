@@ -140,7 +140,7 @@ export default class SuperfundMap extends Component {
             height: '100%',
             backgroundColor: 'black',
             opacity: this.props.zoomEnabled ? 0 : 0.2,
-            pointerEvents: 'none',
+            pointerEvents: this.props.zoomEnabled ? 'none' : 'auto',
             zIndex: 3
           }}
         />

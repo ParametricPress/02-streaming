@@ -118,7 +118,7 @@ export default class SuperfundMap extends Component {
 
     return (
       <div key={'map'} style={{position: 'relative', width: '100%'}}>
-        <caption
+        <span
           style={{
             position: 'absolute', 
             fontSize: '0.7em',
@@ -126,10 +126,11 @@ export default class SuperfundMap extends Component {
             left: '50%',
             transform: 'translateX(-50%)',
             pointerEvents: 'none',
+            color: '#D8FFA2',
             zIndex: 4
         }}>
           Click to {this.props.zoomEnabled ? 'disable' : 'enable'} pan / zoom
-        </caption>
+        </span>
         <div
           style={{
             position: 'absolute',
@@ -147,11 +148,13 @@ export default class SuperfundMap extends Component {
           {...viewport}
           onClick={() => this.props.updateProps({ zoomEnabled: !this.props.zoomEnabled })}
           mapStyle="mapbox://styles/mathisonian/cjv2tiyabes041fnuap89nfrt"
-          dragRotate={this.props.zoomEnabled}
+          dragPan={this.props.zoomEnabled}
           scrollZoom={this.props.zoomEnabled}
-          doubleClickZoom={false}
           mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN}
-          getCursor={({isDragging, isHovering}) => 'default'}
+          getCursor={({isDragging, isHovering}) => {
+            return !this.props.zoomEnabled ? 'default' :
+            isDragging ? 'grabbing' : 'grab'
+          }}
           onViewportChange={this._onChangeViewport.bind(this)}
         >
           <DeckGL

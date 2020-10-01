@@ -146,7 +146,7 @@ export default class SuperfundMap extends Component {
         />
         <MapGL
           {...viewport}
-          onClick={() => this.props.updateProps({ zoomEnabled: !this.props.zoomEnabled })}
+          // onClick={() => this.props.updateProps({ zoomEnabled: !this.props.zoomEnabled })}
           mapStyle="mapbox://styles/mathisonian/cjv2tiyabes041fnuap89nfrt"
           dragPan={this.props.zoomEnabled}
           dragRotate={this.props.zoomEnabled}

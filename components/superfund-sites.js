@@ -123,7 +123,7 @@ export default class SuperfundMap extends Component {
           style={{
             position: 'absolute', 
             fontSize: '0.7em',
-            top: '1em',
+            bottom: '1em',
             left: '50%',
             transform: 'translateX(-50%)',
             // pointerEvents: 'none',

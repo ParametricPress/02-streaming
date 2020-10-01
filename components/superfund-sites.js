@@ -149,6 +149,7 @@ export default class SuperfundMap extends Component {
           onClick={() => this.props.updateProps({ zoomEnabled: !this.props.zoomEnabled })}
           mapStyle="mapbox://styles/mathisonian/cjv2tiyabes041fnuap89nfrt"
           dragPan={this.props.zoomEnabled}
+          dragRotate={this.props.zoomEnabled}
           scrollZoom={this.props.zoomEnabled}
           mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN}
           getCursor={({isDragging, isHovering}) => {

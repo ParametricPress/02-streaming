@@ -1,15 +1,19 @@
 import * as React from "react";
+import ParametricGraphic from 'parametric-components/dist/cjs/issue-02/parametric-graphic';
 
 export default class Projection extends React.PureComponent {
   render() {
     return (
+      <ParametricGraphic
+        hed="Projection"
+        style={this.props.style}
+      >
       <svg
         width="100%"
         height="100%"
         viewBox="0 0 312 189"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        style={this.props.style}
       >
         <line y1="118.5" x2="309" y2="118.5" stroke="#464646" />
         <line x1="1" y1="22.5" x2="310" y2="22.5" stroke="#464646" />
@@ -83,6 +87,8 @@ export default class Projection extends React.PureComponent {
           strokeWidth="2"
         />
       </svg>
+      </ParametricGraphic>
+      
     );
   }
 }

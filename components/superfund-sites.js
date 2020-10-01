@@ -118,19 +118,19 @@ export default class SuperfundMap extends Component {
 
     return (
       <div key={'map'} style={{position: 'relative', width: '100%'}}>
-        <span
+        <button
+          onClick={() => this.props.updateProps({ zoomEnabled: !this.props.zoomEnabled })}
           style={{
             position: 'absolute', 
             fontSize: '0.7em',
             top: '1em',
             left: '50%',
             transform: 'translateX(-50%)',
-            pointerEvents: 'none',
-            color: '#D8FFA2',
+            // pointerEvents: 'none',
             zIndex: 4
         }}>
           Click to {this.props.zoomEnabled ? 'disable' : 'enable'} pan / zoom
-        </span>
+        </button>
         <div
           style={{
             position: 'absolute',

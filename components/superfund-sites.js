@@ -57,6 +57,8 @@ export default class SuperfundMap extends Component {
   componentDidMount() {
     window.addEventListener('resize', this._resize.bind(this));
     this._size();
+
+    this.touch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
   }
 
   getLayers() {
@@ -140,7 +142,7 @@ export default class SuperfundMap extends Component {
             height: '100%',
             backgroundColor: 'black',
             opacity: this.props.zoomEnabled ? 0 : 0.2,
-            pointerEvents: this.props.zoomEnabled ? 'none' : 'auto',
+            pointerEvents: (!this.touch || this.props.zoomEnabled) ? 'none' : 'auto',
             zIndex: 3
           }}
         />

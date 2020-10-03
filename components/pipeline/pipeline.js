@@ -129,8 +129,8 @@ export default class Pipeline extends React.PureComponent {
 
     const stageIndex = stages.indexOf(stage);
 
-    const showGraphic = stageIndex <= stages.indexOf("simple");
-    const showCompare = !showGraphic && stageIndex <= stages.indexOf("compare");
+    const showGraphic = stageIndex <= stages.indexOf("simple") || (stage === "compare" && progress === 0);
+    const showCompare = !showGraphic && (stageIndex <= stages.indexOf("compare") || (stage === "final" && progress === 0));
     const compareProgress = stage === "compare" ? progress : 100;
     const final = stage === 'final';
 
@@ -266,7 +266,7 @@ export default class Pipeline extends React.PureComponent {
             top: `calc(200% - ${yh}px)`,
             width: "100%",
             height: "100%",
-            opacity: stage === "final" ? 1 : 0,
+            opacity: stage === "final" ? progress / 100 : 0,
           }}
         />
       </div>

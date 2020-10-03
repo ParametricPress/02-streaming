@@ -89,6 +89,7 @@ date:"August 201"
 [equation] Y = 707 [/equation] represents the [a href:"https://www.epa.gov/energy/greenhouse-gases-equivalencies-calculator-calculations-and-references" target:"_blank"]EPA's[/a] U.S. national weighted average for grams of CO2 emitted for energy consumed.
 
 ### Websites
+[div className:"emissionsChartLarge"]
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Websites" style:`{padding: 0}`]
 [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
@@ -96,6 +97,7 @@ date:"August 201"
 [caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. Click and hold each bar to show a preview clip of the scroll. [/caption]
 [/ParametricGraphic]
 [/LargeAside]
+[/div]
 
 In order to load the Parametric Press article that you are currently reading, we estimate that ?? milligrams of CO2 were produced.
 [span className:"emphasized"]  These emissions are a result of loading data for the text, graphics, and visualizations[/span] that are then rendered on your device.
@@ -103,10 +105,21 @@ In order to load the Parametric Press article that you are currently reading, we
 The chart to the right displays the carbon emitted when loading various websites and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site).
 Clicking and holding each bar will show a preview of that scroll, sped up to a 5 second clip.
 
+[div className:"emissionsChartSmall"]
+[LargeAside]
+[ParametricGraphic hed:"Emissions of Websites" style:`{padding: 0}`]
+[MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
+[br/]
+[caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. Click and hold each bar to show a preview clip of the scroll. [/caption]
+[/ParametricGraphic]
+[/LargeAside]
+[/div]
+
 In the context of carbon emissions, one of the least expensive forms of media to load onto your device is text.
 As shown above, websites like Google, which are relatively simple because they primarily show static text, have much lower emissions than websites like Facebook, which load a lot of data-heavy media types to your device.
 
 ### Audio
+[div className:"emissionsChartLarge"]
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Audio" style:`{padding: 0}`]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
@@ -114,9 +127,20 @@ As shown above, websites like Google, which are relatively simple because they p
 [caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds.[/caption]
 [/ParametricGraphic]
 [/LargeAside]
+[/div]
 
 Let’s take a closer look at one common type of non-text media: audio.
 When you listen to audio onto your device, you generally load a compressed version of the original audio file.
+
+[div className:"emissionsChartSmall"]
+[LargeAside]
+[ParametricGraphic hed:"Emissions of Audio" style:`{padding: 0}`]
+[MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
+[br/]
+[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds.[/caption]
+[/ParametricGraphic]
+[/LargeAside]
+[/div]
 
 The NPR podcast shown in the visualization was compressed to 128 kilobits per second, while the song "Old Town Road", retrieved from Spotify, was compressed to 256 kilobits per second.
 This means that in the one minute timespan that both audio files played, twice as much data needed to be loaded for the song than for the podcast, which leads to the song having roughly twice as large of a carbon footprint.
@@ -124,6 +148,7 @@ Even so, these audio examples have lower carbon emissions than most of the multi
 
 
 ### Video
+[div className:"emissionsChartLarge"]
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Video" style:`{padding: 0}`]
 [MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
@@ -131,9 +156,20 @@ Even so, these audio examples have lower carbon emissions than most of the multi
 [caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p.[/caption]
 [/ParametricGraphic]
 [/LargeAside]
+[/div]
 
 Generally, digital activity that involves videos requires a large amount of data to be loaded on your device so that your device can render each frame as well as the associated audio.
 The chart below shows emissions for streaming different YouTube videos at two different qualities—360p and 1080p, for 60 seconds each.
+
+[div className:"emissionsChartSmall"]
+[LargeAside]
+[ParametricGraphic hed:"Emissions of Video" style:`{padding: 0}`]
+[MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
+[br/]
+[caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p.[/caption]
+[/ParametricGraphic]
+[/LargeAside]
+[/div]
 
 When you view a video at a higher quality, you receive a clearer image on your device because the video that you load contains more [span className:"terms"]pixels[/span]. Pixels are units of visual information.
 In the chart, the number in front of the "p" for quality refers to the height, in pixels, of the video.
@@ -157,6 +193,7 @@ Facebook produces more CO2 than any of the provided video examples, likely a res
 ## Packets
 [var name:"mediaPickerType" value:"bar"/]
 
+[div className:"emissionsChartLarge"]
 [LargeAside]
 [ParametricGraphic hed:"Media Emissions by Medium" style:`{padding: 0}`]
 [MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
@@ -165,6 +202,7 @@ Facebook produces more CO2 than any of the provided video examples, likely a res
 [button onClick:`mediaPickerType = mediaPickerType === 'bar' ? 'timeline' : 'bar'`]Switch Modes[/button]
 [/ParametricGraphic]
 [/LargeAside]
+[/div]
 
 In a lot of cases, when you stream content online, [span className:"emphasized"] you don’t receive all of the information for that content at once[/span].
 Instead, your device loads incremental pieces of the data as you consume the media.
@@ -172,6 +210,17 @@ These pieces are called [span className:"terms"]packets[/span].
 In these visualizations, we estimated emissions based on the size and quantity of the packets needed to load each type of media.
 
 Click the ‘Switch Modes’ button on the visualization to the right to see a timeline breakdown of each title.
+
+[div className:"emissionsChartSmall"]
+[LargeAside]
+[ParametricGraphic hed:"Media Emissions by Medium" style:`{padding: 0}`]
+[MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
+[br/]
+[caption]Click on the "Switch Modes" button to see a timeline of loading packets for each type of media.[/caption]
+[button onClick:`mediaPickerType = mediaPickerType === 'bar' ? 'timeline' : 'bar'`]Switch Modes[/button]
+[/ParametricGraphic]
+[/LargeAside]
+[/div]
 
 When we break down each digital media snapshot into a timeline of packets, we can see that the way in which packets arrive for video and audio differs from the pattern for websites.
 With video and audio, packets tend to travel to your device at regular intervals while you are playing the media.

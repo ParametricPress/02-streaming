@@ -183,13 +183,13 @@ h1, h2, h3, h4, h6 {
 }
 
 @media screen and (max-width: 1000px) {
-  .emissionsChartLarge {
+  .showLargeScreen {
     display: none;
   }
 }
 
 @media screen and (min-width: 1001px) {
-  .emissionsChartSmall {
+  .showSmallScreen {
     display: none;
   }
 }

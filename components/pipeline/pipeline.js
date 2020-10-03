@@ -56,7 +56,7 @@ const youtubeDataSimple = [
   {
     stage: "simple",
     emissions: 40,
-    emissionsString: "40%",
+    emissionsString: "40%†",
     name: "Devices",
   },
 ];

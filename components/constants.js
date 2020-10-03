@@ -8,6 +8,7 @@ export const textColor = '#EEEEEE';
 export const backgroundColor = '#222222';
 export const font = 'Graphik Web, Helvetica, sans-serif'
 
+export const co2PerMeter = 251;
 
 export const amazon = 'Amazon (product page)';
 export const facebook = 'Facebook (newsfeed)';

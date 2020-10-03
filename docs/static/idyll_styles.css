@@ -2391,6 +2391,10 @@ body {
   margin-left: calc(600px + 32px);
 }
 
+/* #pipeline .parametric-graphic > * {
+  text-align: left;
+} */
+
 .packet-animated {
   animation-name: packet-animation;
   animation-iteration-count: infinite;
@@ -2482,9 +2486,17 @@ body {
 }
 
 .superfund-map .parametric-graphic > *:not(.superfund-map) {
-  text-align: center;
-  padding-left: 50px;
-  padding-right: 50px;
+  text-align: right;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+@media all and (max-width: 1000px) {
+  .superfund-map .parametric-graphic > *:not(.superfund-map) {
+    text-align: left;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 }
 
 h1, h2, h3, h4, h6 {

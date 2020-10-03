@@ -119,7 +119,7 @@ export default class SuperfundMap extends Component {
     }
 
     return (
-      <div key={'map'} style={{position: 'relative', width: '100%'}}>
+      <div key={'map'} className="superfund-map" style={{position: 'relative', width: '100%'}}>
         <button
           onClick={() => this.props.updateProps({ zoomEnabled: !this.props.zoomEnabled })}
           style={{

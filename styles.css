@@ -109,6 +109,17 @@ body {
   cursor: default;
 }
 
+.superfund-map .parametric-graphic {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.superfund-map .parametric-graphic > *:not(.superfund-map) {
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 h1, h2, h3, h4, h6 {
   color: #D8FFA2;
   font-family: 'Editorial New';;

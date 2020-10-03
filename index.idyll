@@ -382,10 +382,12 @@ These [link text:"23 locations" url:"https://www.theatlantic.com/technology/arch
 
 [data name:"superfundSitesGeoJSON" source:"dist/superfund-sites.json"/]
 [var name:"zoomEnabled" value:false/]
-[div fullWidth:true]
+[div className:"superfund-map" fullWidth:true]
+[ParametricGraphic hed:"The Superfund Sites of Santa Clara Valley" source:"EPA"]
 [SuperfundSites map:"homes" zoomEnabled:zoomEnabled geoJSON:superfundSitesGeoJSON /]
-[/div]
 [caption]The 23 superfund sites of Santa Clara County. Hover over each one for more information. Larger Hazard Ranking System Scores are worse.[/caption]
+[/ParametricGraphic]
+[/div]
 
 Santa Clara County became “Silicon Valley” in the 1960s when companies in the area found ways to embed computer circuits into small wafers of silicon. 
 [span className:"emphasized"]Manufacturing these chips is inherently toxic[/span], and its chemical runoff has been linked to increases in cancer and birth defect rates around the Bay.

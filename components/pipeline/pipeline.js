@@ -5,6 +5,7 @@ import { stages } from "./constants";
 import Projection from "./projection";
 import PipelineMap from "./map";
 import { backgroundColor } from "../constants";
+import ParametricGraphic from "parametric-components/dist/cjs/issue-02/parametric-graphic";
 
 const youtubeData = [
   {
@@ -139,7 +140,28 @@ export default class Pipeline extends React.PureComponent {
     const showGgcs = stage === "cdn" && this.props.showGgcs
 
     const yh = this.state.youtubeEmissionsHeight;
+
+    let source;
+    if (showDatacenters) {
+      source = <a href="https://www.google.com/about/datacenters/locations/" target="_blank">Google</a>
+    } else if (showPops || showGgcs) {
+      source = <a href="https://peering.google.com/#/infrastructure" target="_blank">Google</a>
+    } else if (showGraphic) {
+      source = "Google, Durairajan et al. 2015"
+
+      if (stageIndex >= stages.indexOf('cdn')) {
+        source += ', Priest et al. 2017'
+      }
+    } else if (showCompare) {
+      source = "Priest et al. 2017, Belkhir & Elmeligi 2017"
+    } else if (stage === "final") {
+      source = "Belkhir & Elmeligi 2017"
+    }
+
     return (
+      <ParametricGraphic
+        source={source}
+      >
       <div
         style={{
           position: "relative",
@@ -245,7 +267,8 @@ export default class Pipeline extends React.PureComponent {
             display: "flex",
             flexDirection: "column-reverse",
             opacity: showCompare ? 1 : 0,
-            transition: 'opacity 200ms linear'
+            transition: 'opacity 200ms linear',
+            backgroundColor: backgroundColor
             // overflow: 'hidden'
           }}
         >
@@ -266,10 +289,12 @@ export default class Pipeline extends React.PureComponent {
             top: `calc(200% - ${yh}px)`,
             width: "100%",
             height: "100%",
-            opacity: stage === "final" ? progress / 100 : 0,
+            opacity: stage === "final" && progress !== 0 ? 1 : 0,
+            backgroundColor: backgroundColor
           }}
         />
       </div>
+      </ParametricGraphic>
     );
   }
 }

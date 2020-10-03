@@ -2,6 +2,7 @@ import React from "react";
 import * as vega from "vega";
 import ReactDOM from 'react-dom';
 import { backgroundColor, debounceTimer } from "../constants";
+import ParametricGraphic from "parametric-components/dist/cjs/issue-02/parametric-graphic";
 
 export default class PipelineMap extends React.PureComponent {
   constructor(props) {
@@ -26,7 +27,7 @@ export default class PipelineMap extends React.PureComponent {
   }
 
   _size() {
-    const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
+    const rect = ReactDOM.findDOMNode(this).children[2].getBoundingClientRect();
     this.setState({
       width: rect.width,
       height: rect.height
@@ -51,7 +52,7 @@ export default class PipelineMap extends React.PureComponent {
 
   componentDidMount() {
     setTimeout(() => {
-      const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
+      const rect = ReactDOM.findDOMNode(this).children[2].getBoundingClientRect();
       const runtime = vega.parse(spec(this.props.dataType, rect.width, rect.height));
       this.view = new vega.View(runtime, {
         logLevel: vega.Warn,
@@ -101,22 +102,40 @@ export default class PipelineMap extends React.PureComponent {
 
   render() {
     return (
-      <div
-        id={"vega-map-" + this.props.dataType}
+      <ParametricGraphic
+        hed={
+          this.props.dataType === "datacenters" ? "Google's Data Centers" :
+          this.props.dataType === "pops" ? "Google's Edge Points of Presence (POPs)" :
+          "Google Global Cache"
+        }
+        source="Google"
         style={{
           width: '100%',
           height: '100%',
-          cursor: this.state.isDragging ? "grabbing" : "grab"
+          position: 'relative',
+          boxSizing: 'border-box',
+          padding: 0,
+          display: 'flex',
+          flexDirection: 'column'
         }}
-        onMouseDown={this._handleMouseDown}
-        onMouseMove={this._handleMouseMove}
-        onMouseUp={this._handleMouseUp}
-        onMouseLeave={this._handleMouseUp}
+      >
+        <div
+          id={"vega-map-" + this.props.dataType}
+          style={{
+            width: '100%',
+            flexGrow: 1,
+            cursor: this.state.isDragging ? "grabbing" : "grab",
+          }}
+          onMouseDown={this._handleMouseDown}
+          onMouseMove={this._handleMouseMove}
+          onMouseUp={this._handleMouseUp}
+          onMouseLeave={this._handleMouseUp}
 
-        onTouchStart={this._handleMouseDown}
-        onTouchMove={this._handleMouseMove}
-        onTouchEnd={this._handleMouseUp}
-      ></div>
+          onTouchStart={this._handleMouseDown}
+          onTouchMove={this._handleMouseMove}
+          onTouchEnd={this._handleMouseUp}
+        ></div>
+      </ParametricGraphic>
     );
   }
 }

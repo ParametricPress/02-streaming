@@ -130,6 +130,7 @@ export default class Pipeline extends React.PureComponent {
     const stageIndex = stages.indexOf(stage);
 
     const showGraphic = stageIndex <= stages.indexOf("simple");
+    const showCompare = !showGraphic && stageIndex <= stages.indexOf("compare");
     const compareProgress = stage === "compare" ? progress : 100;
     const final = stage === 'final';
 
@@ -154,7 +155,12 @@ export default class Pipeline extends React.PureComponent {
             : `translateY(calc(-${100 + progress}% + ${yh}px))`
         }}
       >
-        <Graphic stage={stage} progress={progress} />
+        <Graphic
+          style={{
+            opacity: showGraphic && !(showDatacenters || showPops || showGgcs) ? 1 : 0,
+            transition: 'opacity 200ms linear'
+          }}
+          stage={stage} progress={progress} />
         <div style={{
           position: 'absolute',
           width: '100%',
@@ -165,7 +171,7 @@ export default class Pipeline extends React.PureComponent {
           opacity: showDatacenters ? 1 : 0,
           zIndex: showDatacenters ? 100 : 0,
           transform: 'translateZ(0)',
-          transition: 'opacity 200ms linear, z-index 200ms linear',
+          transition: 'opacity 200ms linear',
         }}>
           <PipelineMap dataType="datacenters" animate={showDatacenters} />
         </div>
@@ -179,7 +185,7 @@ export default class Pipeline extends React.PureComponent {
           opacity: showPops ? 1 : 0,
           zIndex: showPops ? 100 : 0,
           transform: 'translateZ(0)',
-          transition: 'opacity 200ms linear, z-index 200ms linear',
+          transition: 'opacity 200ms linear',
         }}>
           <PipelineMap dataType="pops" animate={showPops} />
         </div>
@@ -193,7 +199,7 @@ export default class Pipeline extends React.PureComponent {
           opacity: showGgcs ? 1 : 0,
           zIndex: showGgcs ? 100 : 0,
           transform: 'translateZ(0)',
-          transition: 'opacity 200ms linear, z-index 200ms linear',
+          transition: 'opacity 200ms linear',
         }}>
           <PipelineMap dataType="ggcs" animate={showGgcs}/>
         </div>
@@ -207,7 +213,9 @@ export default class Pipeline extends React.PureComponent {
               : youtubeDataSimple
           }
           style={{
-            marginTop: 16
+            marginTop: 16,
+            opacity: showGraphic || showCompare ? 1 : 0,
+            transition: 'opacity 200ms linear'
           }}
           showHomesText
         />
@@ -218,7 +226,8 @@ export default class Pipeline extends React.PureComponent {
               position: "absolute",
               fontSize: '0.75em',
               top: `calc(100% - ${this.state.youtubeEmissionsTextHeight}px)`,
-              opacity: stageIndex < stages.indexOf('compare') ? 0 : compareProgress / 100
+              opacity: !showCompare ? 0 : stageIndex < stages.indexOf('compare') ? 0 : compareProgress / 100,
+              transition: 'opacity 200ms linear'
             }}
           >
             YouTube (2016) [Priest et al.]
@@ -235,6 +244,8 @@ export default class Pipeline extends React.PureComponent {
             height: `calc(100% - ${yh}px)`,
             display: "flex",
             flexDirection: "column-reverse",
+            opacity: showCompare ? 1 : 0,
+            transition: 'opacity 200ms linear'
             // overflow: 'hidden'
           }}
         >

@@ -245,7 +245,7 @@ How does one of its videos arrive on your screen?
 
 [CustomScroller currentStep:scrollerIndex progress:stepProgress offset:0.65]
 [Graphic]
-  [div id:"pipeline" style:`{overflow: 'hidden'}`]
+  [div id:"pipeline"]
     [Pipeline stage:`scrollerStages[scrollerIndex]` progress:`stepProgress * 100` showPops:showPops showGgcs:showGgcs /]
   [/div]
 [/Graphic]

@@ -158,8 +158,24 @@ export default class Pipeline extends React.PureComponent {
       source = "Belkhir & Elmeligi 2017"
     }
 
+    let hed = "";
+    if (showDatacenters) {
+      hed = "Data Centers";
+    } else if (showPops) {
+      hed = "Edge Points of Presence";
+    } else if (showGgcs) {
+      hed = "Google Global Cache";
+    } else if (showGraphic) {
+      hed = "Components & Electricity Usage"
+    } else if (showCompare && progress !== 0) {
+      hed = "Comparing Emissions: YouTube and the ICT Sector"
+    } else if (stage === "final" && progress !== 0) {
+      hed = "Projections for ICT Share of Global GHG Emissions"
+    }
+
     return (
       <ParametricGraphic
+        hed={hed}
         source={source}
       >
       <div

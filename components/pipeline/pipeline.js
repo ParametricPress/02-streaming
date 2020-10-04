@@ -207,7 +207,7 @@ export default class Pipeline extends React.PureComponent {
           top: 0,
           left: 0,
           opacity: showDatacenters ? 1 : 0,
-          zIndex: showDatacenters ? 100 : 0,
+          zIndex: showDatacenters ? 100 : -2,
           transform: 'translateZ(0)',
           transition: 'opacity 200ms linear',
         }}>
@@ -221,7 +221,7 @@ export default class Pipeline extends React.PureComponent {
           top: 0,
           left: 0,
           opacity: showPops ? 1 : 0,
-          zIndex: showPops ? 100 : 0,
+          zIndex: showPops ? 100 : -2,
           transform: 'translateZ(0)',
           transition: 'opacity 200ms linear',
         }}>
@@ -235,7 +235,7 @@ export default class Pipeline extends React.PureComponent {
           top: 0,
           left: 0,
           opacity: showGgcs ? 1 : 0,
-          zIndex: showGgcs ? 100 : 0,
+          zIndex: showGgcs ? 100 : -2,
           transform: 'translateZ(0)',
           transition: 'opacity 200ms linear',
         }}>

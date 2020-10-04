@@ -2391,6 +2391,10 @@ body {
   margin-left: calc(600px + 32px);
 }
 
+/* #pipeline .parametric-graphic > * {
+  text-align: left;
+} */
+
 .packet-animated {
   animation-name: packet-animation;
   animation-iteration-count: infinite;
@@ -2459,6 +2463,14 @@ body {
   width: 100%;
 }
 
+.large-aside .parametric-graphic-source {
+  margin-top: 0;
+}
+
+.large-aside .parametric-graphic .parametric-caption {
+  margin-bottom: 1em;
+}
+
 .media-picker * {
   user-select: none;
   -webkit-user-select: none;
@@ -2466,6 +2478,25 @@ body {
   -ms-user-select: none;
   -webkit-touch-callout: none;
   cursor: default;
+}
+
+.superfund-map .parametric-graphic {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.superfund-map .parametric-graphic > *:not(.superfund-map) {
+  text-align: right;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+@media all and (max-width: 1000px) {
+  .superfund-map .parametric-graphic > *:not(.superfund-map) {
+    text-align: left;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 }
 
 h1, h2, h3, h4, h6 {
@@ -2559,4 +2590,30 @@ h1, h2, h3, h4, h6 {
   .showSmallScreen {
     display: none;
   }
+}
+
+@media (hover: none) {
+  .desktopInstructions {
+    display: none;
+  }
+  .touchscreenInstructions {
+    display: inline;
+  }
+}
+
+@media (hover: hover) {
+  .desktopInstructions {
+    display: inline;
+  }
+  .touchscreenInstructions {
+    display: none;
+  }
+}
+
+.fullWidthImage {
+  margin-left: 0px !important;
+}
+
+.fullWidthCaption {
+  margin-left: 50px !important;
 }

@@ -5,6 +5,7 @@ import { stages } from "./constants";
 import Projection from "./projection";
 import PipelineMap from "./map";
 import { backgroundColor } from "../constants";
+import ParametricGraphic from "parametric-components/dist/cjs/issue-02/parametric-graphic";
 
 const youtubeData = [
   {
@@ -55,7 +56,7 @@ const youtubeDataSimple = [
   {
     stage: "simple",
     emissions: 40,
-    emissionsString: "40%",
+    emissionsString: "40%†",
     name: "Devices",
   },
 ];
@@ -129,7 +130,8 @@ export default class Pipeline extends React.PureComponent {
 
     const stageIndex = stages.indexOf(stage);
 
-    const showGraphic = stageIndex <= stages.indexOf("simple");
+    const showGraphic = stageIndex <= stages.indexOf("simple") || (stage === "compare" && progress === 0);
+    const showCompare = !showGraphic && (stageIndex <= stages.indexOf("compare") || (stage === "final" && progress === 0));
     const compareProgress = stage === "compare" ? progress : 100;
     const final = stage === 'final';
 
@@ -138,7 +140,44 @@ export default class Pipeline extends React.PureComponent {
     const showGgcs = stage === "cdn" && this.props.showGgcs
 
     const yh = this.state.youtubeEmissionsHeight;
+
+    let source;
+    if (showDatacenters) {
+      source = <a href="https://www.google.com/about/datacenters/locations/" target="_blank">Google</a>
+    } else if (showPops || showGgcs) {
+      source = <a href="https://peering.google.com/#/infrastructure" target="_blank">Google</a>
+    } else if (showGraphic) {
+      source = "Google, Durairajan et al. 2015"
+
+      if (stageIndex >= stages.indexOf('cdn')) {
+        source += ', Priest et al. 2017'
+      }
+    } else if (showCompare) {
+      source = "Priest et al. 2017, Belkhir & Elmeligi 2017"
+    } else if (stage === "final") {
+      source = "Belkhir & Elmeligi 2017"
+    }
+
+    let hed = "";
+    if (showDatacenters) {
+      hed = "Data Centers";
+    } else if (showPops) {
+      hed = "Edge Points of Presence";
+    } else if (showGgcs) {
+      hed = "Google Global Cache";
+    } else if (showGraphic) {
+      hed = "Components & Electricity Usage"
+    } else if (showCompare && progress !== 0) {
+      hed = "Comparing Emissions: YouTube and the ICT Sector"
+    } else if (stage === "final" && progress !== 0) {
+      hed = "Projections for ICT Share of Global GHG Emissions"
+    }
+
     return (
+      <ParametricGraphic
+        hed={hed}
+        source={source}
+      >
       <div
         style={{
           position: "relative",
@@ -154,7 +193,12 @@ export default class Pipeline extends React.PureComponent {
             : `translateY(calc(-${100 + progress}% + ${yh}px))`
         }}
       >
-        <Graphic stage={stage} progress={progress} />
+        <Graphic
+          style={{
+            opacity: showGraphic && !(showDatacenters || showPops || showGgcs) ? 1 : 0,
+            transition: 'opacity 200ms linear'
+          }}
+          stage={stage} progress={progress} />
         <div style={{
           position: 'absolute',
           width: '100%',
@@ -163,9 +207,9 @@ export default class Pipeline extends React.PureComponent {
           top: 0,
           left: 0,
           opacity: showDatacenters ? 1 : 0,
-          zIndex: showDatacenters ? 100 : 0,
+          zIndex: showDatacenters ? 100 : -2,
           transform: 'translateZ(0)',
-          transition: 'opacity 200ms linear, z-index 200ms linear',
+          transition: 'opacity 200ms linear',
         }}>
           <PipelineMap dataType="datacenters" animate={showDatacenters} />
         </div>
@@ -177,9 +221,9 @@ export default class Pipeline extends React.PureComponent {
           top: 0,
           left: 0,
           opacity: showPops ? 1 : 0,
-          zIndex: showPops ? 100 : 0,
+          zIndex: showPops ? 100 : -2,
           transform: 'translateZ(0)',
-          transition: 'opacity 200ms linear, z-index 200ms linear',
+          transition: 'opacity 200ms linear',
         }}>
           <PipelineMap dataType="pops" animate={showPops} />
         </div>
@@ -191,9 +235,9 @@ export default class Pipeline extends React.PureComponent {
           top: 0,
           left: 0,
           opacity: showGgcs ? 1 : 0,
-          zIndex: showGgcs ? 100 : 0,
+          zIndex: showGgcs ? 100 : -2,
           transform: 'translateZ(0)',
-          transition: 'opacity 200ms linear, z-index 200ms linear',
+          transition: 'opacity 200ms linear',
         }}>
           <PipelineMap dataType="ggcs" animate={showGgcs}/>
         </div>
@@ -207,7 +251,9 @@ export default class Pipeline extends React.PureComponent {
               : youtubeDataSimple
           }
           style={{
-            marginTop: 16
+            marginTop: 16,
+            opacity: showGraphic || showCompare ? 1 : 0,
+            transition: 'opacity 200ms linear'
           }}
           showHomesText
         />
@@ -218,7 +264,8 @@ export default class Pipeline extends React.PureComponent {
               position: "absolute",
               fontSize: '0.75em',
               top: `calc(100% - ${this.state.youtubeEmissionsTextHeight}px)`,
-              opacity: stageIndex < stages.indexOf('compare') ? 0 : compareProgress / 100
+              opacity: !showCompare ? 0 : stageIndex < stages.indexOf('compare') ? 0 : compareProgress / 100,
+              transition: 'opacity 200ms linear'
             }}
           >
             YouTube (2016) [Priest et al.]
@@ -235,6 +282,9 @@ export default class Pipeline extends React.PureComponent {
             height: `calc(100% - ${yh}px)`,
             display: "flex",
             flexDirection: "column-reverse",
+            opacity: showCompare ? 1 : 0,
+            transition: 'opacity 200ms linear',
+            backgroundColor: backgroundColor
             // overflow: 'hidden'
           }}
         >
@@ -255,10 +305,12 @@ export default class Pipeline extends React.PureComponent {
             top: `calc(200% - ${yh}px)`,
             width: "100%",
             height: "100%",
-            opacity: stage === "final" ? 1 : 0,
+            opacity: stage === "final" && progress !== 0 ? 1 : 0,
+            backgroundColor: backgroundColor
           }}
         />
       </div>
+      </ParametricGraphic>
     );
   }
 }

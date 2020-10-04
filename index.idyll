@@ -89,25 +89,29 @@ date:"August 201"
 [equation] Y = 707 [/equation] represents the [a href:"https://www.epa.gov/energy/greenhouse-gases-equivalencies-calculator-calculations-and-references" target:"_blank"]EPA's[/a] U.S. national weighted average for grams of CO2 emitted for energy consumed.
 
 ### Websites
+[var name:"emissionGraphicPadding" value:`{paddingTop: 0, paddingLeft: 0, paddingRight: 0}`/]
 [div className:"showLargeScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Emissions of Websites" style:`{padding: 0}`]
-[MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
-[br/]
-[caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. Click and hold each bar to show a preview clip of the scroll. [/caption]
-[/ParametricGraphic]
+  [ParametricGraphic
+    hed:"Emissions of Websites" style:emissionGraphicPadding
+    source:"Aslan et al., EPA"
+  ]
+    [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
+    [br/]
+    [caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. Click and hold each bar to show a preview clip of the scroll.[/caption]
+  [/ParametricGraphic]
 [/LargeAside]
 [/div]
 
-In order to load the Parametric Press article that you are currently reading, we estimate that ?? milligrams of CO2 were produced.
+In order to load the Parametric Press article that you are currently reading, we estimate that ?? milligrams of CO2 were produced. The same amount would be produced by driving a [link text:"car ?? meters" url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle"/].
 [span className:"emphasized"]  These emissions are a result of loading data for the text, graphics, and visualizations[/span] that are then rendered on your device.
 
 The chart [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] displays the carbon emitted when loading various websites and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site).
-[span className:"showLargeScreen"] Clicking[/span][span className:"showSmallScreen"] Tapping[/span] and holding each bar will show a preview of that scroll, sped up to a 5 second clip.
+[span className:"desktopInstructions"] Clicking[/span][span className:"touchscreenInstructions"] Tapping[/span] and holding each bar will show a preview of that scroll, sped up to a 5 second clip.
 
 [div className:"showSmallScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Emissions of Websites" style:`{padding: 0}`]
+[ParametricGraphic hed:"Emissions of Websites" style:emissionGraphicPadding source:"Aslan et al., EPA"]
 [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
 [br/]
 [caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. Click and hold each bar to show a preview clip of the scroll. [/caption]
@@ -121,7 +125,7 @@ As shown [span className:"showLargeScreen"]to the right[/span][span className:"s
 ### Audio
 [div className:"showLargeScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Emissions of Audio" style:`{padding: 0}`]
+[ParametricGraphic hed:"Emissions of Audio" style:emissionGraphicPadding source:"Aslan et al., EPA"]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
 [br/]
 [caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds.[/caption]
@@ -134,7 +138,7 @@ When you listen to audio onto your device, you generally load a compressed versi
 
 [div className:"showSmallScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Emissions of Audio" style:`{padding: 0}`]
+[ParametricGraphic hed:"Emissions of Audio" style:emissionGraphicPadding source:"Aslan et al., EPA"]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
 [br/]
 [caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds.[/caption]
@@ -150,7 +154,7 @@ Even so, these audio examples have lower carbon emissions than most of the multi
 ### Video
 [div className:"showLargeScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Emissions of Video" style:`{padding: 0}`]
+[ParametricGraphic hed:"Emissions of Video" style:emissionGraphicPadding source:"Aslan et al., EPA"]
 [MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
 [br/]
 [caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p.[/caption]
@@ -163,7 +167,7 @@ The chart [span className:"showLargeScreen"]to the right[/span][span className:"
 
 [div className:"showSmallScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Emissions of Video" style:`{padding: 0}`]
+[ParametricGraphic hed:"Emissions of Video" style:emissionGraphicPadding source:"Aslan et al., EPA"]
 [MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
 [br/]
 [caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p.[/caption]
@@ -195,7 +199,7 @@ Facebook produces more CO2 than any of the provided video examples, likely a res
 
 [div className:"showLargeScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Media Emissions by Medium" style:`{padding: 0}`]
+[ParametricGraphic hed:"Media Emissions by Medium" style:emissionGraphicPadding source:"Aslan et al., EPA"]
 [MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
 [br/]
 [caption]Click on the "Switch Modes" button to see a timeline of loading packets for each type of media.[/caption]
@@ -209,11 +213,11 @@ Instead, your device loads incremental pieces of the data as you consume the med
 These pieces are called [span className:"terms"]packets[/span].
 In these visualizations, we estimated emissions based on the size and quantity of the packets needed to load each type of media.
 
-[span className:"showLargeScreen"] Click[/span][span className:"showSmallScreen"] Tap[/span] the ‘Switch Modes’ button on the visualization [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] to see a timeline breakdown of each title.
+[span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] the ‘Switch Modes’ button on the visualization [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] to see a timeline breakdown of each title.
 
 [div className:"showSmallScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Media Emissions by Medium" style:`{padding: 0}`]
+[ParametricGraphic hed:"Media Emissions by Medium" style:emissionGraphicPadding source:"Aslan et al., EPA"]
 [MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
 [br/]
 [caption]Click on the "Switch Modes" button to see a timeline of loading packets for each type of media.[/caption]
@@ -245,7 +249,7 @@ How does one of its videos arrive on your screen?
 
 [CustomScroller currentStep:scrollerIndex progress:stepProgress offset:0.65]
 [Graphic]
-  [div id:"pipeline" style:`{overflow: 'hidden'}`]
+  [div id:"pipeline"]
     [Pipeline stage:`scrollerStages[scrollerIndex]` progress:`stepProgress * 100` showPops:showPops showGgcs:showGgcs /]
   [/div]
 [/Graphic]
@@ -346,12 +350,18 @@ id:"ict-global-emissions"/].
 [Step]
 To compare the two, we can group the "Internet", "Residential Network", and "Cellular Network" sections into an umbrella "Networks".
 
-[caption]* Priest et al. note that Google purchases renewable energy to match their data center electricity consumption. [/caption]
+[caption]* Priest et al. note that Google purchases renewable energy to match their data center electricity consumption.
+[/caption]
+[caption]
+† Priest et al. do not account for the energy required to manufacture devices.
+[/caption]
 [/Step]
 [Step]
 Belkhir and Elmeligi provide estimates for both 2010 (retrospective) and 2020 (prospective).
 Most surprising is the weight Data Centers and CDNs have in this breakdown.
 We can speculate that the relatively high bandwidth required to transfer videos as a medium contributes at least partially to the overweightedness of the "Networks" category for YouTube.
+
+[caption]Note that, unlike Priest et al, Belkhir and Elmeligi **do** account for the emissions generated from the production of devices.[/caption]
 [/Step]
 [Step]
 In the same study, Belkhir and Elmeligi create two models to project the ICT sector's decades forward.
@@ -372,10 +382,12 @@ These [link text:"23 locations" url:"https://www.theatlantic.com/technology/arch
 
 [data name:"superfundSitesGeoJSON" source:"dist/superfund-sites.json"/]
 [var name:"zoomEnabled" value:false/]
-[div fullWidth:true]
+[div className:"superfund-map" fullWidth:true]
+[ParametricGraphic hed:"The Superfund Sites of Santa Clara Valley" source:"EPA"]
 [SuperfundSites map:"homes" zoomEnabled:zoomEnabled geoJSON:superfundSitesGeoJSON /]
-[/div]
 [caption]The 23 superfund sites of Santa Clara County. Hover over each one for more information. Larger Hazard Ranking System Scores are worse.[/caption]
+[/ParametricGraphic]
+[/div]
 
 Santa Clara County became “Silicon Valley” in the 1960s when companies in the area found ways to embed computer circuits into small wafers of silicon. 
 [span className:"emphasized"]Manufacturing these chips is inherently toxic[/span], and its chemical runoff has been linked to increases in cancer and birth defect rates around the Bay.
@@ -407,9 +419,11 @@ date:"December 2014"
 /].
 
 [div fullWidth:true]
-  [img src:"static/images/bayan2.jpg"/]
+  [img src:"static/images/bayan_aerial.jpg" className:"fullWidthImage"/]
+  [div className:"fullWidthCaption"]
+    [caption]Aerial view of the Bayan Obo mining district. (Credit: [a href:"https://commons.wikimedia.org/wiki/File:Bayan_Obo.jpg" target:"_blank"]Squishyhippie / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)[/a])[/caption]
+  [/div]
 [/div]
-[caption]A lake of toxic sludge at the Bayan Obo mining district. (Credit: [a href:"https://www.bbc.com/future/article/20150402-the-worst-place-on-earth" target:"_blank"]BBC - Liam Young, Unknown Fields[/a])[/caption]
 
 [span className:"emphasized"]The tech industry’s legacy of toxic mining and manufacturing [link text:"continues today" url:"https://increment.com/energy-environment/a-rare-and-toxic-age/" target:"_blank"/][/span] — with hardware giants like Apple taking the throne of Silicon Valley's founding industrialists — only now on a global scale.
 In 2009, [link text:"China produced 95% of the world’s “rare earth” minerals" url:"https://www.livescience.com/38094-facts-about-rare-earth-elements-infographic.html" target:"_blank"/], with an estimated [link text:"70% coming from the Bayan Obo mining district" url:"https://www.mindat.org/loc-720.html" target:"_blank"/] in Inner Mongolia.

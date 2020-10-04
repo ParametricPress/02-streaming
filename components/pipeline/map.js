@@ -2,6 +2,7 @@ import React from "react";
 import * as vega from "vega";
 import ReactDOM from 'react-dom';
 import { backgroundColor, debounceTimer } from "../constants";
+import ParametricGraphic from "parametric-components/dist/cjs/issue-02/parametric-graphic";
 
 export default class PipelineMap extends React.PureComponent {
   constructor(props) {
@@ -101,22 +102,22 @@ export default class PipelineMap extends React.PureComponent {
 
   render() {
     return (
-      <div
-        id={"vega-map-" + this.props.dataType}
-        style={{
-          width: '100%',
-          height: '100%',
-          cursor: this.state.isDragging ? "grabbing" : "grab"
-        }}
-        onMouseDown={this._handleMouseDown}
-        onMouseMove={this._handleMouseMove}
-        onMouseUp={this._handleMouseUp}
-        onMouseLeave={this._handleMouseUp}
+        <div
+          id={"vega-map-" + this.props.dataType}
+          style={{
+            width: '100%',
+            height: '100%',
+            cursor: this.state.isDragging ? "grabbing" : "grab",
+          }}
+          onMouseDown={this._handleMouseDown}
+          onMouseMove={this._handleMouseMove}
+          onMouseUp={this._handleMouseUp}
+          onMouseLeave={this._handleMouseUp}
 
-        onTouchStart={this._handleMouseDown}
-        onTouchMove={this._handleMouseMove}
-        onTouchEnd={this._handleMouseUp}
-      ></div>
+          onTouchStart={this._handleMouseDown}
+          onTouchMove={this._handleMouseMove}
+          onTouchEnd={this._handleMouseUp}
+        ></div>
     );
   }
 }

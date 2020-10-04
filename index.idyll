@@ -419,9 +419,11 @@ date:"December 2014"
 /].
 
 [div fullWidth:true]
-  [img src:"static/images/bayan2.jpg"/]
+  [img src:"static/images/bayan_aerial.jpg" className:"fullWidthImage"/]
+  [div className:"fullWidthCaption"]
+    [caption]Aerial view of the Bayan Obo mining district. (Credit: [a href:"https://commons.wikimedia.org/wiki/File:Bayan_Obo.jpg" target:"_blank"]Squishyhippie / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)[/a])[/caption]
+  [/div]
 [/div]
-[caption]A lake of toxic sludge at the Bayan Obo mining district. (Credit: [a href:"https://www.bbc.com/future/article/20150402-the-worst-place-on-earth" target:"_blank"]BBC - Liam Young, Unknown Fields[/a])[/caption]
 
 [span className:"emphasized"]The tech industry’s legacy of toxic mining and manufacturing [link text:"continues today" url:"https://increment.com/energy-environment/a-rare-and-toxic-age/" target:"_blank"/][/span] — with hardware giants like Apple taking the throne of Silicon Valley's founding industrialists — only now on a global scale.
 In 2009, [link text:"China produced 95% of the world’s “rare earth” minerals" url:"https://www.livescience.com/38094-facts-about-rare-earth-elements-infographic.html" target:"_blank"/], with an estimated [link text:"70% coming from the Bayan Obo mining district" url:"https://www.mindat.org/loc-720.html" target:"_blank"/] in Inner Mongolia.

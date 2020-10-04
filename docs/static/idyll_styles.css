@@ -2609,3 +2609,11 @@ h1, h2, h3, h4, h6 {
     display: none;
   }
 }
+
+.fullWidthImage {
+  margin-left: 0px !important;
+}
+
+.fullWidthCaption {
+  margin-left: 50px !important;
+}

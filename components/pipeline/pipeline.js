@@ -207,6 +207,10 @@ export default class Pipeline extends React.PureComponent {
         hed={hed}
         subhed={subhed}
         source={source}
+        style={{
+          opacity: stage === "none" ? 0 : 1,
+          transition: 'opacity 200ms linear'
+        }}
       >
       <div
         style={{

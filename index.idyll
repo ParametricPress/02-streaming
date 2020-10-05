@@ -247,7 +247,7 @@ In contrast, the packets for websites are weighted more heavily towards the begi
 // Variables
 [var name:"scrollerIndex" value:0 /]
 [var name:"stepProgress" value:0/]
-[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'datacenter', 'pop', 'cdn', 'alldatacenters', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final']`/]
+[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'datacenter', 'pop', 'cdn', 'alldatacenters', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final', 'none']`/]
 [var name:"showPops" value:false /]
 [var name:"showGgcs" value:false /]
 
@@ -390,12 +390,13 @@ We can speculate that the relatively high bandwidth required to transfer videos 
 In the same study, Belkhir and Elmeligi created two models to project the ICT sector's decades forward.
 Even their "unrealistically conservative" linear model put tech at a [span className:"emphasized"]6-7% share of GHG emissions in 2040[/span], and their exponential model had tech reaching over 14%.
 [/Step]
-[/CustomScroller]
-
+[Step]
 What is being done about this? Aside from increasing the efficiency of each part of the pipeline and taking advantage of renewable energy, mindful design could also go a long way.
 In the context of digital streaming, Priest et al. point out that much of YouTube's traffic comes from music videos, and a good number of those "views" are likely just "listens".
 If this "listen" to "view" ratio were even just 10%, [span className:"emphasized"]YouTube could have reduced its carbon footprint by about 117 thousand tons of CO2 in 2016[/span], just by intelligently sending audio when no video is required.
 That's over [link text:"2.2 million gallons of gasoline worth of CO2 in savings." url:"https://www.eia.gov/environment/emissions/co2_vol_mass.php" target:"_blank"/]
+[/Step]
+[/CustomScroller]
 
 ## Tech's Inconvenient Truths
 

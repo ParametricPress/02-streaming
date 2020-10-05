@@ -61,7 +61,7 @@ export const titleToPreview= {
   },
   [parametric]: {
     type: 'video',
-    url: null
+    url: 'parametricpress.mp4'
   },
   [oldtownroadVideo]: {
     type: 'video',

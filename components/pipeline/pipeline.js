@@ -9,7 +9,7 @@ import ParametricGraphic from "parametric-components/dist/cjs/issue-02/parametri
 
 const youtubeData = [
   {
-    stage: "cdn", // and also data center
+    stage: "alldatacenters", // and also data center
     emissions: 360,
     emissionsString: "360",
     homes: "32,000"
@@ -160,11 +160,11 @@ export default class Pipeline extends React.PureComponent {
 
     let hed = "";
     if (showDatacenters) {
-      hed = "Data Centers";
+      hed = "Components & Electricity Usage";
     } else if (showPops) {
-      hed = "Edge Points of Presence";
+      hed = "Components & Electricity Usage";
     } else if (showGgcs) {
-      hed = "Google Global Cache";
+      hed = "Components & Electricity Usage";
     } else if (showGraphic) {
       hed = "Components & Electricity Usage"
     } else if (showCompare && progress !== 0) {
@@ -173,10 +173,37 @@ export default class Pipeline extends React.PureComponent {
       hed = "Projections for ICT Share of Global GHG Emissions"
     }
 
+    let subhed = "—";
+    if (showDatacenters) {
+      subhed = "Primary Data Centers";
+    } else if (showPops) {
+      subhed = "Edge Points of Presence";
+    } else if (showGgcs) {
+      subhed = "Google Global Cache";
+    } else if (showGraphic && !(showDatacenters || showPops || showGgcs)) {
+      if (["worldmap2", "datacenter"].includes(stage)) {
+        subhed = "Primary Data Centers";
+      } else if (["pop", "pop2"].includes(stage)) {
+        subhed = "Edge Points of Presence";
+      } else if (stage === "cdn") {
+        subhed = "Google Global Cache";
+      } else if (stage === "alldatacenters") {
+        subhed = "All Data Centers";
+      } else if (stage === "internet") {
+        subhed = "The Internet";
+      } else if (stage === "residential") {
+        subhed = "Residential Networks";
+      } else if (stage === "cellular") {
+        subhed = "Cellular Networks";
+      } else if (stage === "device") {
+        subhed = "Devices";
+      }
+    }
+
     return (
       <ParametricGraphic
         hed={hed}
-        subhed="The Internet"
+        subhed={subhed}
         source={source}
       >
       <div

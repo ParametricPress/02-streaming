@@ -247,7 +247,7 @@ In contrast, the packets for websites are weighted more heavily towards the begi
 // Variables
 [var name:"scrollerIndex" value:0 /]
 [var name:"stepProgress" value:0/]
-[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'datacenter', 'pop', 'cdn', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final']`/]
+[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'datacenter', 'pop', 'cdn', 'alldatacenters', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final']`/]
 [var name:"showPops" value:false /]
 [var name:"showGgcs" value:false /]
 
@@ -292,14 +292,7 @@ Hide Globe
 [Step]
 From these POPs, data is routed through smaller data centers that form the "Google Global Cache" (GGC).
 There are 22 of these in this region. These are responsible for storing the more popular or recently watched videos for users in a given area, ensuring no single data center is overwhelmed and service stays zippy.
-Together, they form what is known as a [span className:"terms"]Content Delivery Network[/span] (CDN for short). Priest et al. estimate that all data centers account for [span className:"emphasized"]less than 2% of YouTube's electricity use[/span] [Cite
-authors:"Chris Preist, Daniel Schien, and Paul Shabajee"
-title:"Evaluating Sustainable Interaction Design of Digital Services: The Case of YouTube"
-url:"https://dl.acm.org/doi/10.1145/3290605.3300627"
-id:"youtube-paper"
-venue:"CHI"
-date:"2019"
-/].
+Together, they form what is known as a [span className:"terms"]Content Delivery Network[/span] (CDN for short).
 
 [Button onClick:`showGgcs = !showGgcs` style:`{opacity: scrollerStages[scrollerIndex] === "cdn" ? 1 : 0}`]
 [Conditional if:`!showGgcs`]
@@ -309,6 +302,16 @@ Show entire GGC
 Hide Globe
 [/Conditional]
 [/Button]
+[/Step]
+[Step]
+Priest et al. estimate that all data centers account for [span className:"emphasized"]less than 2% of YouTube's electricity use[/span] [Cite
+authors:"Chris Preist, Daniel Schien, and Paul Shabajee"
+title:"Evaluating Sustainable Interaction Design of Digital Services: The Case of YouTube"
+url:"https://dl.acm.org/doi/10.1145/3290605.3300627"
+id:"youtube-paper"
+venue:"CHI"
+date:"2019"
+/].
 [/Step]
 [Step]
 Google doesn't have their own network for communication between POPs and these smaller data centers.

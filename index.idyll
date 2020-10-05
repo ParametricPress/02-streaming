@@ -271,14 +271,14 @@ Videos are stored on servers called [span className:"terms"] "data centers"[/spa
 For global services, these are often placed around the world.
 [/Step]
 [Step]
-YouTube's parent company, Google, has 21 main data centers strategically placed throughout 4 continents (North America, South America, Europe, and Asia).
+YouTube's parent company, Google, has [link text:"21 main data centers" url:"https://www.google.com/about/datacenters/locations/"/] strategically placed throughout 4 continents (North America, South America, Europe, and Asia).
 Google does not disclose the data centers they use specifically for YouTube, so all of Google's data centers are shown here.
 [/Step]
 [Step]
 Let's take a closer look at one of these data centers. This one is in The Dalles, Oregon, on the West Coast of the United States.
 [/Step]
 [Step]
-For information to get from this data center to you, it first goes through Google's own specialized data network to what they call "Edge Points of Presence" (POPs for short), which bring data closer to high traffic areas.
+For information to get from this data center to you, it first goes through Google's own specialized data network to what they call [link text:"Edge Points of Presence" url:"https://peering.google.com/#/infrastructure" /] (POPs for short), which bring data closer to high traffic areas.
 There are three metro areas with POPs in this region: Seattle, San Francisco, and San Jose.
 [Button onClick:`showPops = !showPops` style:`{opacity: scrollerStages[scrollerIndex] === "pop" ? 1 : 0}`]
 [Conditional if:`!showPops`]
@@ -291,7 +291,7 @@ Hide Globe
 [/Step]
 [Step]
 From these POPs, data is routed through smaller data centers that form the "Google Global Cache" (GGC).
-There are 22 of these in this region. These are responsible for storing the more popular or recently watched videos for users in a given area, ensuring no single data center is overwhelmed and service stays zippy.
+There are 22 of these in this region. These are responsible for [link text:"storing the more popular or recently watched videos" url:"https://peering.google.com/#/infrastructure" /] for users in a given area, ensuring no single data center is overwhelmed and service stays zippy.
 Together, they form what is known as a [span className:"terms"]Content Delivery Network[/span] (CDN for short).
 
 [Button onClick:`showGgcs = !showGgcs` style:`{opacity: scrollerStages[scrollerIndex] === "cdn" ? 1 : 0}`]

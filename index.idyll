@@ -314,7 +314,7 @@ date:"2019"
 /].
 [/Step]
 [Step]
-Google doesn't have their own network for communication between POPs and these smaller data centers.
+Google doesn't have their own network for communication between POPs and the Google Global Cache.
 For that, they use the internet.
 [/Step]
 [Step]

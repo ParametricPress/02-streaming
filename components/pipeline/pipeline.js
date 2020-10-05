@@ -12,31 +12,31 @@ const youtubeData = [
     stage: "alldatacenters", // and also data center
     emissions: 360,
     emissionsString: "360",
-    homes: "32,000"
+    homes: "32,000",
   },
   {
     stage: "internet",
     emissions: 1900,
     emissionsString: "1,900",
-    homes: "170,000"
+    homes: "170,000",
   },
   {
     stage: "residential",
     emissions: 4400,
     emissionsString: "4,400",
-    homes: "400,000"
+    homes: "400,000",
   },
   {
     stage: "cellular",
     emissions: 6100,
     emissionsString: "6,100",
-    homes: "500,000"
+    homes: "500,000",
   },
   {
     stage: "device",
     emissions: 8500,
     emissionsString: "8,500",
-    homes: "750,000"
+    homes: "750,000",
   },
 ]; // total = 21,260
 
@@ -112,14 +112,16 @@ export default class Pipeline extends React.PureComponent {
       youtubeEmissionsTextHeight: 0,
     };
   }
-  
+
   componentDidMount() {
     setTimeout(() => {
       const youtubeEmissions = document.getElementById("youtube-emissions");
-      const youtubeEmissionsText = document.getElementById("youtube-emissions-text");
+      const youtubeEmissionsText = document.getElementById(
+        "youtube-emissions-text"
+      );
       this.setState({
         youtubeEmissionsHeight: youtubeEmissions.clientHeight,
-        youtubeEmissionsTextHeight: youtubeEmissionsText.clientHeight
+        youtubeEmissionsTextHeight: youtubeEmissionsText.clientHeight,
       });
     }, 1000);
   }
@@ -130,53 +132,79 @@ export default class Pipeline extends React.PureComponent {
 
     const stageIndex = stages.indexOf(stage);
 
-    const showGraphic = stageIndex <= stages.indexOf("simple") || (stage === "compare" && progress === 0);
-    const showCompare = !showGraphic && (stageIndex <= stages.indexOf("compare") || (stage === "final" && progress === 0));
+    const showGraphic =
+      stageIndex <= stages.indexOf("simple") ||
+      (stage === "compare" && progress === 0);
+    const showCompare =
+      !showGraphic &&
+      (stageIndex <= stages.indexOf("compare") ||
+        (stage === "final" && progress === 0));
     const compareProgress = stage === "compare" ? progress : 100;
-    const final = stage === 'final';
+    const final = stage === "final";
 
-    const showDatacenters = stage === "worldmap"
-    const showPops = stage === "pop" && this.props.showPops
-    const showGgcs = stage === "cdn" && this.props.showGgcs
+    const showDatacenters = stage === "worldmap";
+    const showPops = stage === "pop" && this.props.showPops;
+    const showGgcs = stage === "cdn" && this.props.showGgcs;
 
     const yh = this.state.youtubeEmissionsHeight;
 
-    let source;
+    let source = ["—"];
     if (showDatacenters) {
-      source = [{label: 'Google', url: "https://www.google.com/about/datacenters/locations/"}];
+      source = [
+        {
+          label: "Google",
+          url: "https://www.google.com/about/datacenters/locations/",
+        },
+      ];
     } else if (showPops || showGgcs) {
-      source = [{label: 'Google', url: "https://peering.google.com/#/infrastructure"}];
+      source = [
+        { label: "Google", url: "https://peering.google.com/#/infrastructure" },
+      ];
     } else if (showGraphic) {
       source = [
-        {label: 'Google', url: "https://peering.google.com/#/infrastructure"},
+        { label: "Google", url: "https://peering.google.com/#/infrastructure" },
         ", ",
         "Durairajan et al. 2015",
-        {label: "[4]", url: "https://dl.acm.org/doi/abs/10.1145/2785956.2787499"}
+        {
+          label: "[4]",
+          url: "https://dl.acm.org/doi/abs/10.1145/2785956.2787499",
+        },
       ];
 
-      if (stageIndex >= stages.indexOf('cdn')) {
+      if (stageIndex >= stages.indexOf("cdn")) {
         source = source.concat([
-          ', ',
-          'Priest et al. 2017',
-          {label: '[3]', url: 'https://dl.acm.org/doi/10.1145/3290605.3300627'}
+          ", ",
+          "Priest et al. 2017",
+          {
+            label: "[3]",
+            url: "https://dl.acm.org/doi/10.1145/3290605.3300627",
+          },
         ]);
       }
     } else if (showCompare) {
       source = [
-        'Priest et al. 2017',
-        {label: '[3]', url: 'https://dl.acm.org/doi/10.1145/3290605.3300627'},
-        ', ',
-        'Belkhir & Elmeligi 2017',
-        {label: '[1]', url: "https://www.sciencedirect.com/science/article/abs/pii/S095965261733233X"}
+        "Priest et al. 2017",
+        { label: "[3]", url: "https://dl.acm.org/doi/10.1145/3290605.3300627" },
+        ", ",
+        "Belkhir & Elmeligi 2017",
+        {
+          label: "[1]",
+          url:
+            "https://www.sciencedirect.com/science/article/abs/pii/S095965261733233X",
+        },
       ];
-    } else if (stage === "final") {
+    } else if (stage === "final" || stage === "none") {
       source = [
-        'Belkhir & Elmeligi 2017',
-        {label: '[1]', url: "https://www.sciencedirect.com/science/article/abs/pii/S095965261733233X"}
+        "Belkhir & Elmeligi 2017",
+        {
+          label: "[1]",
+          url:
+            "https://www.sciencedirect.com/science/article/abs/pii/S095965261733233X",
+        },
       ];
     }
 
-    let hed = "";
+    let hed = "—";
     if (showDatacenters) {
       hed = "Components & Electricity Usage";
     } else if (showPops) {
@@ -184,11 +212,11 @@ export default class Pipeline extends React.PureComponent {
     } else if (showGgcs) {
       hed = "Components & Electricity Usage";
     } else if (showGraphic) {
-      hed = "Components & Electricity Usage"
+      hed = "Components & Electricity Usage";
     } else if (showCompare && progress !== 0) {
-      hed = "Comparing Emissions: YouTube and the ICT Sector"
-    } else if (stage === "final" && progress !== 0) {
-      hed = "Projections for ICT Share of Global GHG Emissions"
+      hed = "Comparing Emissions: YouTube and the ICT Sector";
+    } else if ((stage === "final" && progress !== 0) || stage === "none") {
+      hed = "Projections for ICT Share of Global GHG Emissions";
     }
 
     let subhed = "—";
@@ -226,142 +254,196 @@ export default class Pipeline extends React.PureComponent {
         subhed={subhed}
         source={source}
         style={{
-          opacity: stage === "none" ? 0 : 1,
-          transition: 'opacity 200ms linear'
+          opacity: stage === "none" ? (100 - progress) / 100 : 1,
+          // transition: "opacity 200ms linear",
         }}
       >
-      <div
-        style={{
-          position: "relative",
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          transform: showGraphic
-            ? "translateY(0)"
-            : !final ? `translateY(calc(-${compareProgress}% + ${
-                (yh * compareProgress) / 100
-              }px))`
-            : `translateY(calc(-${100 + progress}% + ${yh}px))`
-        }}
-      >
-        <Graphic
-          style={{
-            opacity: showGraphic && !(showDatacenters || showPops || showGgcs) ? 1 : 0,
-            transition: 'opacity 200ms linear'
-          }}
-          stage={stage} progress={progress} />
-        <div style={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-          backgroundColor: backgroundColor,
-          top: 0,
-          left: 0,
-          opacity: showDatacenters ? 1 : 0,
-          zIndex: showDatacenters ? 100 : -2,
-          transform: 'translateZ(0)',
-          transition: 'opacity 200ms linear',
-        }}>
-          <PipelineMap dataType="datacenters" animate={showDatacenters} />
-        </div>
-        <div style={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-          backgroundColor: backgroundColor,
-          top: 0,
-          left: 0,
-          opacity: showPops ? 1 : 0,
-          zIndex: showPops ? 100 : -2,
-          transform: 'translateZ(0)',
-          transition: 'opacity 200ms linear',
-        }}>
-          <PipelineMap dataType="pops" animate={showPops} />
-        </div>
-        <div style={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-          backgroundColor: backgroundColor,
-          top: 0,
-          left: 0,
-          opacity: showGgcs ? 1 : 0,
-          zIndex: showGgcs ? 100 : -2,
-          transform: 'translateZ(0)',
-          transition: 'opacity 200ms linear',
-        }}>
-          <PipelineMap dataType="ggcs" animate={showGgcs}/>
-        </div>
-        <Emissions
-          id="youtube-emissions"
-          stage={stage}
-          progress={progress}
-          data={
-            stageIndex < stages.indexOf("simple")
-              ? youtubeData
-              : youtubeDataSimple
-          }
-          style={{
-            marginTop: 16,
-            opacity: showGraphic || showCompare ? 1 : 0,
-            transition: 'opacity 200ms linear'
-          }}
-          showHomesText
-        />
-        <div
-            style={{
-              width: "100%",
-              textAlign: "left",
-              position: "absolute",
-              fontSize: '0.75em',
-              top: `calc(100% - ${this.state.youtubeEmissionsTextHeight}px)`,
-              opacity: !showCompare ? 0 : stageIndex < stages.indexOf('compare') ? 0 : compareProgress / 100,
-              transition: 'opacity 200ms linear'
-            }}
-          >
-            YouTube (2016) [Priest et al.]
-            <br />
-            {/* <span style={{ fontSize: '0.65em' }}>
-              * Google purchases renewable energy to run its data centers.
-            </span> */}
-          </div>
         <div
           style={{
-            position: "absolute",
-            top: "100%",
             width: "100%",
-            height: `calc(100% - ${yh}px)`,
-            display: "flex",
-            flexDirection: "column-reverse",
-            opacity: showCompare ? 1 : 0,
-            transition: 'opacity 200ms linear',
-            backgroundColor: backgroundColor
-            // overflow: 'hidden'
+            overflow: "hidden",
           }}
         >
-          <Emissions id="2020-emissions" stage={stage} progress={progress} data={ict2010} showHomesText={false}/>
-          <div style={{ width: "100%", textAlign: "left", fontSize: '0.75em', lineHeight: '1.1em', marginTop: '1em'}}>
-            ICT Sector (2020, projected) [Belkhir & Elmeligi, 2017]
-          </div>
-          <Emissions id="2010-emissions" stage={stage} progress={progress} data={ict2020} showHomesText={false}/>
-          <div style={{ width: "100%", textAlign: "left", fontSize: '0.75em', lineHeight: '1.1em',
-            opacity: stageIndex < stages.indexOf('compare') ? 0 : compareProgress / 100
-          }}>
-            ICT Sector (2010) [Belkhir & Elmeligi, 2017]
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              transform: showGraphic
+                ? "translateY(0)"
+                : stageIndex < stages.indexOf('final')
+                ? `translateY(calc(-${compareProgress}% + ${
+                    (yh * compareProgress) / 100
+                  }px))`
+                : final ?
+                  `translateY(calc(-${100 + progress}% + ${yh}px))` :
+                  `translateY(calc(-${200}% + ${yh}px))`
+            }}
+          >
+            <Graphic
+              style={{
+                // opacity:
+                //   showGraphic && !(showDatacenters || showPops || showGgcs)
+                //     ? 1
+                //     : 0,
+                transition: "opacity 200ms linear",
+              }}
+              stage={stage}
+              progress={progress}
+            />
+            <div
+              style={{
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                backgroundColor: backgroundColor,
+                top: 0,
+                left: 0,
+                opacity: showDatacenters ? 1 : 0,
+                zIndex: showDatacenters ? 100 : -2,
+                transform: "translateZ(0)",
+                transition: "opacity 200ms linear",
+              }}
+            >
+              <PipelineMap dataType="datacenters" animate={showDatacenters} />
+            </div>
+            <div
+              style={{
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                backgroundColor: backgroundColor,
+                top: 0,
+                left: 0,
+                opacity: showPops ? 1 : 0,
+                zIndex: showPops ? 100 : -2,
+                transform: "translateZ(0)",
+                transition: "opacity 200ms linear",
+              }}
+            >
+              <PipelineMap dataType="pops" animate={showPops} />
+            </div>
+            <div
+              style={{
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                backgroundColor: backgroundColor,
+                top: 0,
+                left: 0,
+                opacity: showGgcs ? 1 : 0,
+                zIndex: showGgcs ? 100 : -2,
+                transform: "translateZ(0)",
+                transition: "opacity 200ms linear",
+              }}
+            >
+              <PipelineMap dataType="ggcs" animate={showGgcs} />
+            </div>
+            <Emissions
+              id="youtube-emissions"
+              stage={stage}
+              progress={progress}
+              data={
+                stageIndex < stages.indexOf("simple")
+                  ? youtubeData
+                  : youtubeDataSimple
+              }
+              style={{
+                marginTop: 16,
+                // opacity: showGraphic || showCompare ? 1 : 0,
+                transition: "opacity 200ms linear",
+              }}
+              showHomesText
+            />
+            <div
+              style={{
+                width: "100%",
+                textAlign: "left",
+                position: "absolute",
+                fontSize: "0.75em",
+                top: `calc(100% - ${this.state.youtubeEmissionsTextHeight}px)`,
+                opacity: !showCompare
+                  ? 0
+                  : stageIndex < stages.indexOf("compare")
+                  ? 0
+                  : compareProgress / 100,
+                transition: "opacity 200ms linear",
+              }}
+            >
+              YouTube (2016) [Priest et al.]
+              <br />
+              {/* <span style={{ fontSize: '0.65em' }}>
+              * Google purchases renewable energy to run its data centers.
+            </span> */}
+            </div>
+            <div
+              style={{
+                position: "absolute",
+                top: "100%",
+                width: "100%",
+                height: `calc(100% - ${yh}px)`,
+                display: "flex",
+                flexDirection: "column-reverse",
+                // opacity: showCompare ? 1 : 0,
+                transition: "opacity 200ms linear",
+                backgroundColor: backgroundColor,
+                // overflow: 'hidden'
+              }}
+            >
+              <Emissions
+                id="2020-emissions"
+                stage={stage}
+                progress={progress}
+                data={ict2010}
+                showHomesText={false}
+              />
+              <div
+                style={{
+                  width: "100%",
+                  textAlign: "left",
+                  fontSize: "0.75em",
+                  lineHeight: "1.1em",
+                  marginTop: "1em",
+                }}
+              >
+                ICT Sector (2020, projected) [Belkhir & Elmeligi, 2017]
+              </div>
+              <Emissions
+                id="2010-emissions"
+                stage={stage}
+                progress={progress}
+                data={ict2020}
+                showHomesText={false}
+              />
+              <div
+                style={{
+                  width: "100%",
+                  textAlign: "left",
+                  fontSize: "0.75em",
+                  lineHeight: "1.1em",
+                  // opacity:
+                  //   stageIndex < stages.indexOf("compare")
+                  //     ? 0
+                  //     : compareProgress / 100,
+                }}
+              >
+                ICT Sector (2010) [Belkhir & Elmeligi, 2017]
+              </div>
+            </div>
+            <Projection
+              style={{
+                position: "absolute",
+                top: `calc(200% - ${yh}px)`,
+                width: "100%",
+                height: "100%",
+                // opacity: stage === "final" && progress !== 0 ? 1 : 0,
+                backgroundColor: backgroundColor,
+              }}
+            />
           </div>
         </div>
-        <Projection
-          style={{
-            position: "absolute",
-            top: `calc(200% - ${yh}px)`,
-            width: "100%",
-            height: "100%",
-            opacity: stage === "final" && progress !== 0 ? 1 : 0,
-            backgroundColor: backgroundColor
-          }}
-        />
-      </div>
       </ParametricGraphic>
     );
   }

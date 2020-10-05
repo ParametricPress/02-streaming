@@ -2579,7 +2579,8 @@ h1, h2, h3, h4, h6 {
   }
   .idyll-root > div > img {
     margin-left: 1em;
-    width: calc(100% - 2em);
+    width: 100%;
+    /* width: calc(100% - 2em); */
   }
 }
 
@@ -2590,10 +2591,6 @@ h1, h2, h3, h4, h6 {
     max-width: none;
     padding: 0;
   }
-  .idyll-scroll {
-    transform: translateX(-1em);
-  }
-
 
   .large-aside-container {
     max-width: calc(100vw - 2em);

@@ -121,6 +121,7 @@ export default class MediaType extends React.PureComponent {
             fontSize: 12,
             paddingLeft: 8,
             marginBottom: 4,
+            lineHeight: '14px'
           }}
         >
           <b style={{ color: "#EE998B" }}>↑</b> A minute {maxVerb} {maxTitle} is equivalent to driving a car{" "}

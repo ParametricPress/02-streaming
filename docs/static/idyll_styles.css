@@ -2635,3 +2635,8 @@ h1, h2, h3, h4, h6 {
 .fullWidthImage {
   margin-left: 0px !important;
 }
+
+/* TODO: let matt know about this */
+.parametric-graphic-source-citation {
+  line-height: inherit;
+}

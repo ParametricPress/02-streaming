@@ -215,8 +215,9 @@ Notice that loading the website Facebook produced the most emissions, likely a r
 [ParametricGraphic hed:"Media Emissions by Medium" style:emissionGraphicPadding source:"Aslan et al., EPA"]
 [MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
 [br/]
-[caption][span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] on the "Switch Modes" button to see a timeline of loading packets for each type of media.[/caption]
-[button onClick:`mediaPickerType = mediaPickerType === 'bar' ? 'timeline' : 'bar'`]Switch Modes[/button]
+[caption][span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] on the "Show Timeline" button to see a timeline of loading packets for each type of media. [span className:"desktopInstructions"]Hover[/span][span className:"touchscreenInstructions"]Tap and drag[/span] to scrub through and view cumulative emissions.[/caption]
+[Conditional if:`mediaPickerType === 'bar'`][button onClick:`mediaPickerType = 'timeline'`]Show Timeline[/button][/Conditional]
+[Conditional if:`mediaPickerType === 'timeline'`][button onClick:`mediaPickerType = 'bar'`]Hide Timeline[/button][/Conditional]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -226,15 +227,16 @@ Instead, your device loads incremental pieces of the data as you consume the med
 These pieces are called [span className:"terms"]packets[/span].
 In each media emission visualization, we estimated emissions based on the size and quantity of the packets needed to load each type of media.
 
-[span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] the ‘Switch Modes’ button on the visualization [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] to see a timeline breakdown of each title.
+[span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] the ‘Show Timeline’ button on the visualization [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] to see a timeline breakdown of each title.
 
 [div className:"showSmallScreen"]
 [LargeAside]
 [ParametricGraphic hed:"Media Emissions by Medium" style:emissionGraphicPadding source:"Aslan et al., EPA"]
 [MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
 [br/]
-[caption][span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] on the "Switch Modes" button to see a timeline of loading packets for each type of media.[/caption]
-[button onClick:`mediaPickerType = mediaPickerType === 'bar' ? 'timeline' : 'bar'`]Switch Modes[/button]
+[caption][span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] on the "Show Timeline" button to see a timeline of loading packets for each type of media. [span className:"desktopInstructions"]Hover[/span][span className:"touchscreenInstructions"]Tap and drag[/span] to scrub through and view cumulative emissions.[/caption]
+[Conditional if:`mediaPickerType === 'bar'`][button onClick:`mediaPickerType = 'timeline'`]Show Timeline[/button][/Conditional]
+[Conditional if:`mediaPickerType === 'timeline'`][button onClick:`mediaPickerType = 'bar'`]Hide Timeline[/button][/Conditional]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]

@@ -436,7 +436,7 @@ date:"December 2014"
 [div fullWidth:true]
   [img src:"static/images/bayan_aerial.jpg" className:"fullWidthImage"/]
   [div className:"fullWidthCaption"]
-    [caption]Aerial view of the Bayan Obo mining district. (Credit: [a href:"https://commons.wikimedia.org/wiki/File:Bayan_Obo.jpg" target:"_blank"]Squishyhippie / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)[/a])[/caption]
+    [caption]Aerial view of the Bayan Obo mining district. (Credit: [a href:"https://earth.google.com/web/search/bayan+obo/@41.78380059,109.93209582,1610.25556031a,16680.42058981d,35y,-0h,0t,0r/data=CigiJgokCcTR8f5nsjhAEcLR8f5nsjjAGXUebCk3qkVAIUpA2yYEDVDA" target:"_blank"]Map data: Google, Maxar Technologies[/a])[/caption]
   [/div]
 [/div]
 

@@ -1,4 +1,5 @@
 import * as React from "react";
+import ReactDOM from 'react-dom';
 import MediaType from "./media-type";
 import {
   getMaxSize,
@@ -172,9 +173,17 @@ export default class MediaAll extends React.PureComponent {
   handleMouseMove(e) {
     clearTimeout(this.animateTimeout);
     if (this.props.type === "timeline" && !this.state.autoplaying) {
-      const mouseX = e.clientX - e.target.getBoundingClientRect().x;
-      const animate = false;
+      let mouseX;
 
+      const node = ReactDOM.findDOMNode(this);
+      
+      if (e.clientX !== undefined) {
+        mouseX = e.clientX - node.getBoundingClientRect().x;
+      } else {
+        mouseX = e.touches[0].clientX - node.getBoundingClientRect().x;
+      }
+
+      const animate = false;
       this.setState({ mouseX, animate });
       this.animateTimeout = setTimeout(
         () => this.setState({ animate: true }),

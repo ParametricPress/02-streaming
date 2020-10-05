@@ -47,11 +47,27 @@ export default class MediaType extends React.PureComponent {
         maxInTitle = d.packets[1080].reduce((s, p) => s + p.size, 0);
       }
 
-      return Math.max(maxInTitle, m);
-    }, 0);
+      if (maxInTitle > m.amount) {
+        return { title: d.title, amount: maxInTitle };
+      }
 
-    const carDistance = Math.round((maxInType * 1000 / co2PerMeter) * 100) / 100;
+      return m;
+    }, { title: '', amount: 0 });
 
+    const carDistance = Math.round((maxInType.amount * 1000 / co2PerMeter) * 100) / 100;
+    let maxTitle = maxInType.title.substring(0, maxInType.title.indexOf('(') - 1);
+    if (data.mediaType === "video") {
+      maxTitle += " at 1080p"
+    }
+
+    let maxVerb;
+    if (data.mediaType === "website") {
+      maxVerb = "scrolling through";
+    } else if (data.mediaType === "audio") {
+      maxVerb = "listening to";
+    } else if (data.mediaType === "video") {
+      maxVerb = "watching";
+    }
     return (
       <div
         style={{
@@ -107,7 +123,7 @@ export default class MediaType extends React.PureComponent {
             marginBottom: 4,
           }}
         >
-          <b style={{ color: "#EE998B" }}>↑</b> Equivalent to driving a car{" "}
+          <b style={{ color: "#EE998B" }}>↑</b> A minute {maxVerb} {maxTitle} is equivalent to driving a car{" "}
           <b style={{ color: "#EE998B" }}>{carDistance}</b> meters
         </div>
       </div>

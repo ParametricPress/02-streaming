@@ -120,6 +120,7 @@ export default class MediaType extends React.PureComponent {
           style={{
             fontSize: 12,
             paddingLeft: 8,
+            paddingRight: 8,
             marginBottom: 4,
             lineHeight: '14px'
           }}

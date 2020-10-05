@@ -137,6 +137,7 @@ export default class MediaPicker extends React.Component {
         style={{
           width: width,
           position: 'relative',
+          paddingBottom: '1em'
       }}>
         {previewDiv}
         { this.state.width ?

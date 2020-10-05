@@ -113,7 +113,7 @@ date:"August 201"
   ]
     [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
     [br/]
-    [caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. Click and hold each bar to show a preview clip of the scroll.[/caption]
+    [caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds.[span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] and hold each bar to show a preview clip of the scroll.[/caption]
   [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -129,7 +129,7 @@ The chart [span className:"showLargeScreen"]to the right[/span][span className:"
 [ParametricGraphic hed:"Emissions of Websites" style:emissionGraphicPadding source:"Aslan et al., EPA"]
 [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
 [br/]
-[caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. Click and hold each bar to show a preview clip of the scroll. [/caption]
+[caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. [span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] and hold each bar to show a preview clip of the scroll. [/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -215,7 +215,7 @@ Notice that loading the website Facebook produced the most emissions, likely a r
 [ParametricGraphic hed:"Media Emissions by Medium" style:emissionGraphicPadding source:"Aslan et al., EPA"]
 [MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
 [br/]
-[caption]Click on the "Switch Modes" button to see a timeline of loading packets for each type of media.[/caption]
+[caption][span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] on the "Switch Modes" button to see a timeline of loading packets for each type of media.[/caption]
 [button onClick:`mediaPickerType = mediaPickerType === 'bar' ? 'timeline' : 'bar'`]Switch Modes[/button]
 [/ParametricGraphic]
 [/LargeAside]
@@ -233,7 +233,7 @@ In each media emission visualization, we estimated emissions based on the size a
 [ParametricGraphic hed:"Media Emissions by Medium" style:emissionGraphicPadding source:"Aslan et al., EPA"]
 [MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
 [br/]
-[caption]Click on the "Switch Modes" button to see a timeline of loading packets for each type of media.[/caption]
+[caption][span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] on the "Switch Modes" button to see a timeline of loading packets for each type of media.[/caption]
 [button onClick:`mediaPickerType = mediaPickerType === 'bar' ? 'timeline' : 'bar'`]Switch Modes[/button]
 [/ParametricGraphic]
 [/LargeAside]
@@ -335,17 +335,23 @@ The off-ramps that packets take are either [span className:"terms"]"fixed line" 
 The physical infrastructure making up these two types networks differ, and therefore have distinct profiles of energy consumption and carbon emissions.
 [/Step]
 [Step]
-An estimated 88% of YouTube's traffic goes through fixed line networks (from your residential Cable, DSL, or Fiber-Optic providers), and this accounts for approximately [span className:"emphasized"]4,400 Gigawatt-hours of electricity usage—power for over 400,000 U.S. homes[/span].
+An estimated 88% of YouTube's traffic goes through fixed line networks (from your residential Cable, DSL, or Fiber-Optic providers), and this accounts for approximately [span className:"emphasized"]4,400 Gigawatt-hours of electricity usage—power for over 400,000 U.S. homes[/span] [Cite
+id:"youtube-paper"
+/].
 [/Step]
 [Step]
-In comparison, only 12% of YouTube’s traffic goes through cellular networks, but they are by far the most expensive part of YouTube’s content delivery pipeline, accounting for [span className:"emphasized"]6,100 Gigawatt-hours of electricity usage—over half a million U.S. homes[/span].
+In comparison, only 12% of YouTube’s traffic goes through cellular networks, but they are by far the most expensive part of YouTube’s content delivery pipeline, accounting for [span className:"emphasized"]6,100 Gigawatt-hours of electricity usage—over half a million U.S. homes[/span] [Cite
+id:"youtube-paper"
+/].
 At over 10 times the electricity usage per unit of traffic, the relative inefficiency of cellular transmission is clear.
 [/Step]
 [Step]
 Eventually, the video data reaches your device for viewing.
 While your device might not technically be part of Youtube’s content delivery pipeline, we can't overlook the cost of moving those pixels.
 Devices account for an estimated [span className:"emphasized"]8,500 Gigawatt-hours of electricity usage[/span]:
-that's over a 3/4 of a million U.S. homes worth of electricity.
+that's over a 3/4 of a million U.S. homes worth of electricity [Cite
+id:"youtube-paper"
+/].
 [/Step]
 [Step]
 In total, Priest et al.'s research estimated that [span className:"emphasized"]YouTube traffic consumed 19.6 Tetrawatt-hours of electricity in 2016[/span] [Cite
@@ -353,7 +359,9 @@ id:"youtube-paper"
 /].
 Using the world emissions factor for electricity generation as reported by the International Energy Agency, they place resulting [span className:"emphasized"]carbon emissions at 10.2 million metric tons of CO2[/span] (10.1 after renewable energy purchases for data center activities).
 
-This is as much as a small metropolitan area like Frankfurt, Germany or the [link text:"entire state of Rhode Island" url:"http://www.dem.ri.gov/programs/air/documents/righginvent16-d.pdf"/] in 2016.
+This is as much as a small metropolitan area like Frankfurt, Germany or the [link text:"entire state of Rhode Island" url:"http://www.dem.ri.gov/programs/air/documents/righginvent16-d.pdf"/] in 2016 [Cite
+id:"youtube-paper"
+/].
 Put in other words, 10.2 MtCO2 is equivalent to the yearly footprint of approximately [link text:"2.2 million cars in the United States." url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle" target:"_blank"/]
 YouTube's monthly active user count has since increased by a minimum of 33% since then (from [link text:"1.5 billion a year later in 2017" url:"https://techcrunch.com/2017/06/22/youtube-has-1-5-billion-logged-in-monthly-users-watching-a-ton-of-mobile-video/" target:"_blank"/] to over [link text:"2 billion last year" url:"https://variety.com/2019/digital/news/youtube-2-billion-users-tv-screen-watch-time-hours-1203204267/" target:"_blank"/]).
 [/Step]
@@ -414,11 +422,6 @@ url:"https://nyupress.org/9780814767092/the-silicon-valley-of-dreams/"
 date:"December 2002"
 /].
 
-[Aside]
-  [img src:"static/images/lorainneross.png"/]
-  [caption]"Leaking Chemicals in California's 'Silicon Valley' Alarm Neighbors": Lorraine Ross was one of the leaders of the protest movement responsible for shutting down Fairchild Semiconductor's South San Jose factory. (Credit: [a href:"https://www.nytimes.com/1982/05/20/us/leaking-chemicals-in-california-s-silicon-valley-alarm-neighbors.html" target:"_blank"]New York Times[/a])[/caption]
-[/Aside]
-
 Change in Silicon Valley never came easily.
 In the 1980s, residents around the Bay took matters into their own hands, mapping out patterns of illnesses around factories and formed environmental coalitions. 
 [span className:"emphasized"]It wasn't until this public outcry that one of the largest Silicon Valley manufacturers closed down a particularly problematic factory[/span] [Cite id:"silicon-valley-book"/].
@@ -436,7 +439,7 @@ date:"December 2014"
 [div fullWidth:true]
   [img src:"static/images/bayan_aerial.jpg" className:"fullWidthImage"/]
   [div className:"fullWidthCaption"]
-    [caption]Aerial view of the Bayan Obo mining district. (Credit: [a href:"https://commons.wikimedia.org/wiki/File:Bayan_Obo.jpg" target:"_blank"]Squishyhippie / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)[/a])[/caption]
+    [caption]Aerial view of the Bayan Obo mining district. (Credit: [a href:"https://earth.google.com/web/search/bayan+obo/@41.78380059,109.93209582,1610.25556031a,16680.42058981d,35y,-0h,0t,0r/data=CigiJgokCcTR8f5nsjhAEcLR8f5nsjjAGXUebCk3qkVAIUpA2yYEDVDA" target:"_blank"]Map data: Google, Maxar Technologies[/a])[/caption]
   [/div]
 [/div]
 

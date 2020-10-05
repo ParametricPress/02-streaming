@@ -24,6 +24,10 @@ body {
   margin-left: calc(600px + 32px);
 }
 
+#pipeline .parametric-graphic-subhed {
+  max-width: none;
+}
+
 /* #pipeline .parametric-graphic > * {
   text-align: left;
 } */

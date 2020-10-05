@@ -105,11 +105,13 @@ date:"August 201"
 
 ### Websites
 [var name:"emissionGraphicPadding" value:`{paddingTop: 0, paddingLeft: 0, paddingRight: 0}`/]
+[var name:"emissionSource" value:`["Aslan et al. 2017", {label: "[2]", url:"https://onlinelibrary.wiley.com/doi/full/10.1111/jiec.12630"}, ", ", {label:"EPA", url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle"}]`/]
+
 [div className:"showLargeScreen"]
 [LargeAside]
   [ParametricGraphic
     hed:"Emissions of Websites" style:emissionGraphicPadding
-    source:"Aslan et al., EPA"
+    source:emissionSource
   ]
     [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
     [br/]
@@ -126,7 +128,7 @@ The chart [span className:"showLargeScreen"]to the right[/span][span className:"
 
 [div className:"showSmallScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Emissions of Websites" style:emissionGraphicPadding source:"Aslan et al., EPA"]
+[ParametricGraphic hed:"Emissions of Websites" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
 [br/]
 [caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. [span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] and hold each bar to show a preview clip of the scroll. [/caption]
@@ -139,7 +141,7 @@ As shown [span className:"showLargeScreen"]to the right[/span][span className:"s
 ### Audio
 [div className:"showLargeScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Emissions of Audio" style:emissionGraphicPadding source:"Aslan et al., EPA"]
+[ParametricGraphic hed:"Emissions of Audio" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
 [br/]
 [caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds.[/caption]
@@ -152,7 +154,7 @@ When you listen to audio onto your device, you generally load a compressed versi
 
 [div className:"showSmallScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Emissions of Audio" style:emissionGraphicPadding source:"Aslan et al., EPA"]
+[ParametricGraphic hed:"Emissions of Audio" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
 [br/]
 [caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds.[/caption]
@@ -168,7 +170,7 @@ Even so, these audio examples have lower carbon emissions than most of the multi
 ### Video
 [div className:"showLargeScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Emissions of Video" style:emissionGraphicPadding source:"Aslan et al., EPA"]
+[ParametricGraphic hed:"Emissions of Video" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
 [br/]
 [caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p.[/caption]
@@ -181,7 +183,7 @@ The chart [span className:"showLargeScreen"]to the right[/span][span className:"
 
 [div className:"showSmallScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Emissions of Video" style:emissionGraphicPadding source:"Aslan et al., EPA"]
+[ParametricGraphic hed:"Emissions of Video" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
 [br/]
 [caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p.[/caption]
@@ -212,7 +214,7 @@ Notice that loading the website Facebook produced the most emissions, likely a r
 
 [div className:"showLargeScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Media Emissions by Medium" style:emissionGraphicPadding source:"Aslan et al., EPA"]
+[ParametricGraphic hed:"Media Emissions by Medium" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
 [br/]
 [caption][span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] on the "Show Timeline" button to see a timeline of loading packets for each type of media. [span className:"desktopInstructions"]Hover[/span][span className:"touchscreenInstructions"]Tap and drag[/span] to scrub through and view cumulative emissions.[/caption]
@@ -231,7 +233,7 @@ In each media emission visualization, we estimated emissions based on the size a
 
 [div className:"showSmallScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Media Emissions by Medium" style:emissionGraphicPadding source:"Aslan et al., EPA"]
+[ParametricGraphic hed:"Media Emissions by Medium" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
 [br/]
 [caption][span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] on the "Show Timeline" button to see a timeline of loading packets for each type of media. [span className:"desktopInstructions"]Hover[/span][span className:"touchscreenInstructions"]Tap and drag[/span] to scrub through and view cumulative emissions.[/caption]
@@ -325,7 +327,14 @@ The internet is a global “highway of information” that allows packets of dat
 In addition to the [span className:"emphasized"][link text:"550,000 miles of underwater cables" url:"https://www.businessinsider.com/how-internet-works-infrastructure-photos-2018-5#if-the-worlds-underwater-cables-were-laid-out-end-to-end-the-cables-could-extend-from-here-to-the-moon-and-back-again-and-then-wrap-around-the-earths-widest-point-almost-three-times-5" target:"_blank"/][/span] that form the backbone of the internet, countries have their own land-based networks.
 [/Step]
 [Step]
-Here's (roughly) what the [link text:"major internet lines of the west coast" url:"https://www.technologyreview.com/2015/09/15/166239/first-detailed-public-map-of-us-internet-backbone-could-make-it-stronger/"/] look like.
+Here's (roughly) what the major internet lines of the west coast" look like [Cite
+  authors:"Ramakrishnan Durairajan, Paul Barford, Joel Sommers, and Walter Willinger"
+  title:"InterTubes: A Study of the US Long-haul Fiber-optic Infrastructure"
+  url:"https://dl.acm.org/doi/abs/10.1145/2785956.2787499"
+  id:"internet-paper"
+  venue:"SIGCOMM '15"
+  date:"2015"
+/].
 Perhaps not surprisingly, it resembles our interstate highway system.
 Priest et al. estimate that this infrastructure consumes approximately [span className:"emphasized"]1,900 Gigawatt-hours of electricity to serve YouTube videos, enough to power [link text:"170,000 homes in the United States" url:"https://www.eia.gov/tools/faqs/faq.php?id=97&t=3" target:"_blank"/][/span] [Cite
 id:"youtube-paper"
@@ -409,7 +418,7 @@ These [link text:"23 locations" url:"https://www.theatlantic.com/technology/arch
 [data name:"superfundSitesGeoJSON" source:"dist/superfund-sites.json"/]
 [var name:"zoomEnabled" value:false/]
 [div className:"superfund-map" fullWidth:true]
-[ParametricGraphic hed:"The Superfund Sites of Santa Clara Valley" source:"EPA"]
+[ParametricGraphic hed:"The Superfund Sites of Santa Clara Valley" source:`[{label:"EPA", url:"https://www.epa.gov/superfund/search-superfund-sites-where-you-live"}]`]
 [SuperfundSites map:"homes" zoomEnabled:zoomEnabled geoJSON:superfundSitesGeoJSON /]
 [caption]The 23 superfund sites of Santa Clara County. Hover over each one for more information. Larger Hazard Ranking System Scores are worse.[/caption]
 [/ParametricGraphic]

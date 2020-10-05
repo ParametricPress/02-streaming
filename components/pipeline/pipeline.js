@@ -143,19 +143,37 @@ export default class Pipeline extends React.PureComponent {
 
     let source;
     if (showDatacenters) {
-      source = <a href="https://www.google.com/about/datacenters/locations/" target="_blank">Google</a>
+      source = [{label: 'Google', url: "https://www.google.com/about/datacenters/locations/"}];
     } else if (showPops || showGgcs) {
-      source = <a href="https://peering.google.com/#/infrastructure" target="_blank">Google</a>
+      source = [{label: 'Google', url: "https://peering.google.com/#/infrastructure"}];
     } else if (showGraphic) {
-      source = "Google, Durairajan et al. 2015"
+      source = [
+        {label: 'Google', url: "https://peering.google.com/#/infrastructure"},
+        ", ",
+        "Durairajan et al. 2015",
+        {label: "[4]", url: "https://dl.acm.org/doi/abs/10.1145/2785956.2787499"}
+      ];
 
       if (stageIndex >= stages.indexOf('cdn')) {
-        source += ', Priest et al. 2017'
+        source = source.concat([
+          ', ',
+          'Priest et al. 2017',
+          {label: '[3]', url: 'https://dl.acm.org/doi/10.1145/3290605.3300627'}
+        ]);
       }
     } else if (showCompare) {
-      source = "Priest et al. 2017, Belkhir & Elmeligi 2017"
+      source = [
+        'Priest et al. 2017',
+        {label: '[3]', url: 'https://dl.acm.org/doi/10.1145/3290605.3300627'},
+        ', ',
+        'Belkhir & Elmeligi 2017',
+        {label: '[1]', url: "https://www.sciencedirect.com/science/article/abs/pii/S095965261733233X"}
+      ];
     } else if (stage === "final") {
-      source = "Belkhir & Elmeligi 2017"
+      source = [
+        'Belkhir & Elmeligi 2017',
+        {label: '[1]', url: "https://www.sciencedirect.com/science/article/abs/pii/S095965261733233X"}
+      ];
     }
 
     let hed = "";

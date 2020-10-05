@@ -132,6 +132,8 @@ export default class MediaPicker extends React.Component {
 
     return (
       <div className="media-picker"
+        onContextMenu={function(e) { e.preventDefault();}}
+
         style={{
           width: width,
           position: 'relative',

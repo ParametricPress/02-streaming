@@ -262,9 +262,13 @@ export default class Pipeline extends React.PureComponent {
           style={{
             width: "100%",
             overflow: "hidden",
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
           }}
         >
           <div
+            className="pipeline-graphic-container"
             style={{
               position: "relative",
               width: "100%",
@@ -386,7 +390,7 @@ export default class Pipeline extends React.PureComponent {
                 height: `calc(100% - ${yh}px)`,
                 display: "flex",
                 flexDirection: "column-reverse",
-                // opacity: showCompare ? 1 : 0,
+                opacity: showCompare ? 1 : 0,
                 transition: "opacity 200ms linear",
                 backgroundColor: backgroundColor,
                 // overflow: 'hidden'

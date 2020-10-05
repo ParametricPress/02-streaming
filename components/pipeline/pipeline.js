@@ -176,6 +176,7 @@ export default class Pipeline extends React.PureComponent {
     return (
       <ParametricGraphic
         hed={hed}
+        subhed="The Internet"
         source={source}
       >
       <div

@@ -33,10 +33,11 @@ export default class LargeAside extends React.Component {
   }
 
   render() {
+    const margin = this.state.width <= 1000 ? 50 : 100;
     return (
       <div className="large-aside-container" style={{
-        width: this.state.width - 100,  // 50 = text margin
-        maxWidth: this.state.width - 100
+        width: this.state.width - margin,  // 50 = text margin
+        maxWidth: this.state.width - margin
       }}>
         <div className="large-aside-wrapper">
           <div className="large-aside">

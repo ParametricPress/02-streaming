@@ -69,6 +69,7 @@ export default class MediaAll extends React.PureComponent {
       mouseX: null,
       mouseMax: null,
       animate: true,
+      autoplaying: false,
     };
 
     this.hasBeenTimeline = false;
@@ -93,11 +94,12 @@ export default class MediaAll extends React.PureComponent {
             if (this.state.mouseX >= width) {
               setTimeout(() => {
                 clearInterval(this.autoplayInterval);
-                this.setState({ mouseX: null });
+                this.setState({ mouseX: null, autoplaying: false });
               }, 0);
             }
             this.setState({
-              mouseX: this.state.mouseX === null ? 0 : this.state.mouseX + 5,
+              mouseX: !this.state.autoplaying ? 0 : this.state.mouseX + 0.01 * width,
+              autoplaying: true
             });
           }, 10);
         }, 700);
@@ -116,19 +118,11 @@ export default class MediaAll extends React.PureComponent {
           position: "relative",
         }}
         onTouchStart={this.handleMouseMove}
-        onTouchMoveCapture={(e) => {
-          if (this.state.mouseX !== null) {
-            this.handleMouseMove(e);
-          }
-        }}
+        onTouchMoveCapture={this.handleMouseMove}
         onTouchEnd={this.clearMouse}
 
         onMouseEnter={this.handleMouseMove}
-        onMouseMove={(e) => {
-          if (this.state.mouseX !== null) {
-            this.handleMouseMove(e);
-          }
-        }}
+        onMouseMove={this.handleMouseMove}
         onMouseLeave={this.clearMouse}
       >
         {gridlines[type].map((d, i) => (
@@ -177,7 +171,7 @@ export default class MediaAll extends React.PureComponent {
 
   handleMouseMove(e) {
     clearTimeout(this.animateTimeout);
-    if (this.props.type === "timeline") {
+    if (this.props.type === "timeline" && !this.state.autoplaying) {
       const mouseX = e.clientX - e.target.getBoundingClientRect().x;
       const animate = false;
 
@@ -191,11 +185,13 @@ export default class MediaAll extends React.PureComponent {
 
   clearMouse() {
     clearTimeout(this.animateTimeout);
-    this.setState({ mouseX: null, animate: false });
-    this.animateTimeout = setTimeout(
-      () => this.setState({ animate: true }),
-      200
-    );
+    if (!this.state.autoplaying) {
+      this.setState({ mouseX: null, animate: false });
+      this.animateTimeout = setTimeout(
+        () => this.setState({ animate: true }),
+        200
+      );
+    }
   }
 }
 

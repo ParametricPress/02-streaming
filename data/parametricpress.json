@@ -1,126 +1,101 @@
 {
   "media": {
     "type": "website",
-    "title": "Parametric Press (you are here)"
+    "title": "Parametric Press"
   },
   "data": [
     {
       "time": 0.0,
-      "sizeInBytes": 42963,
-      "size": 0.000182249046
+      "sizeInBytes": 342773,
+      "size": 0.0014540430659999999
     },
     {
-      "time": 0.101,
-      "sizeInBytes": 3902,
-      "size": 1.6552284e-05
+      "time": 0.14,
+      "sizeInBytes": 21643,
+      "size": 9.180960599999999e-05
     },
     {
-      "time": 0.102,
-      "sizeInBytes": 16446,
-      "size": 6.9763932e-05
+      "time": 0.141,
+      "sizeInBytes": 52217,
+      "size": 0.00022150451399999998
     },
     {
-      "time": 0.103,
-      "sizeInBytes": 119567,
-      "size": 0.0005072032139999999
-    },
-    {
-      "time": 0.104,
-      "sizeInBytes": 2691659,
-      "size": 0.011418017478
-    },
-    {
-      "time": 0.258,
-      "sizeInBytes": 35489,
-      "size": 0.000150544338
-    },
-    {
-      "time": 0.259,
+      "time": 0.295,
       "sizeInBytes": 37813,
       "size": 0.00016040274599999997
     },
     {
-      "time": 0.26,
-      "sizeInBytes": 81200,
-      "size": 0.00034445039999999997
+      "time": 0.296,
+      "sizeInBytes": 20416,
+      "size": 8.660467199999998e-05
     },
     {
-      "time": 0.261,
-      "sizeInBytes": 72420,
-      "size": 0.00030720564
+      "time": 0.297,
+      "sizeInBytes": 53730,
+      "size": 0.00022792266
     },
     {
-      "time": 0.262,
-      "sizeInBytes": 7636,
-      "size": 3.2391912e-05
+      "time": 0.323,
+      "sizeInBytes": 7019698,
+      "size": 0.029777558916000004
     },
     {
-      "time": 1.14,
-      "sizeInBytes": 8283,
-      "size": 3.513648599999999e-05
+      "time": 0.33,
+      "sizeInBytes": 52876,
+      "size": 0.00022429999199999998
     },
     {
-      "time": 1.141,
-      "sizeInBytes": 79819,
-      "size": 0.000338592198
+      "time": 1.559,
+      "sizeInBytes": 34832,
+      "size": 0.000147757344
     },
     {
-      "time": 1.142,
-      "sizeInBytes": 24391,
-      "size": 0.000103466622
+      "time": 1.673,
+      "sizeInBytes": 50564,
+      "size": 0.000214492488
     },
     {
-      "time": 1.143,
-      "sizeInBytes": 8283,
-      "size": 3.513648599999999e-05
+      "time": 1.687,
+      "sizeInBytes": 29877,
+      "size": 0.000126738234
     },
     {
-      "time": 1.144,
-      "sizeInBytes": 8283,
-      "size": 3.513648599999999e-05
+      "time": 1.688,
+      "sizeInBytes": 7185,
+      "size": 3.0478769999999995e-05
     },
     {
-      "time": 1.145,
-      "sizeInBytes": 24391,
-      "size": 0.000103466622
+      "time": 1.927,
+      "sizeInBytes": 119410,
+      "size": 0.0005065372199999999
     },
     {
-      "time": 1.146,
-      "sizeInBytes": 760,
-      "size": 3.22392e-06
+      "time": 1.934,
+      "sizeInBytes": 119410,
+      "size": 0.0005065372199999999
     },
     {
-      "time": 1.147,
-      "sizeInBytes": 8283,
-      "size": 3.513648599999999e-05
+      "time": 2.134,
+      "sizeInBytes": 119410,
+      "size": 0.0005065372199999999
     },
     {
-      "time": 1.148,
-      "sizeInBytes": 8283,
-      "size": 3.513648599999999e-05
+      "time": 2.249,
+      "sizeInBytes": 15618,
+      "size": 6.6251556e-05
     },
     {
-      "time": 1.149,
-      "sizeInBytes": 8283,
-      "size": 3.513648599999999e-05
+      "time": 2.25,
+      "sizeInBytes": 19265,
+      "size": 8.172213e-05
     },
     {
-      "time": 1.15,
-      "sizeInBytes": 79819,
-      "size": 0.000338592198
+      "time": 2.251,
+      "sizeInBytes": 26136,
+      "size": 0.00011086891199999998
     },
     {
-      "time": 1.151,
-      "sizeInBytes": 45958,
-      "size": 0.000194953836
-    },
-    {
-      "time": 1.225,
-      "sizeInBytes": 35,
-      "size": 1.4847e-07
-    },
-    {
-      "time": 1.637,
+      "time": 3.273,
       "sizeInBytes": 15406,
       "size": 6.5352252e-05
     }

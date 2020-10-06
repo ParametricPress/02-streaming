@@ -72,9 +72,12 @@ export default class SuperfundMap extends Component {
       pickable: true,
       getLineColor: d => [238, 152, 139],
       getFillColor: d => [238, 152, 139],
-      getRadius: 4,
-      radiusMinPixels: 4,
-      pointRadiusMinPixels: 4,
+      // getRadius: 5,
+      // radiusMinPixels: 5,
+      getRadius: 100,
+      pointRadiusMinPixels: 3,
+      pointRadiusMaxPixels: 25,
+      pointRadiusScale: this.touch ? 4 : 3,
       onHover: (info) => {
         this.setState({
           hoveredObject: info.object,
@@ -131,7 +134,7 @@ export default class SuperfundMap extends Component {
             // pointerEvents: 'none',
             zIndex: 4
         }}>
-          Click to {this.props.zoomEnabled ? 'disable' : 'enable'} pan / zoom
+          {this.props.zoomEnabled ? 'Disable' : 'Enable'} {this.touch ? 'touch' : 'pan / zoom'}
         </button>
         <div
           style={{

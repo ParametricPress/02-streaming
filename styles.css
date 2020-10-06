@@ -103,7 +103,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  margin-left: calc(600px + 5vw + 75px);
+  left: 750px;
   margin-right: 75px;
 }
 

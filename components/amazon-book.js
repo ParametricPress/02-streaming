@@ -27,9 +27,9 @@ export default class AmazonBook extends React.PureComponent {
       <rect x="209" y="28" width="16" height="16" fill="#EE998B"/>
       <rect x="259" y="28" width="16" height="16" rx="8" fill="#EE998B"/>
       <path d="M65 24.68H89V0.68H65V24.68Z" fill="url(#pattern0)"/>
-      <path d="M182 24.26H164V6.26H182V24.26Z" fill="url(#pattern1)" transform="scale(-1,1)" transform-origin="174"/>
+      <path style={{transform: 'scaleX(-1)', transformOrigin: '174px'}} d="M182 24.26H164V6.26H182V24.26Z" fill="url(#pattern1)"/>
       <path d="M278 23.26H260V5.26H278V23.26Z" fill="url(#pattern2)"/>
-      <path d="M251 23.26H233V5.26H251V23.26Z" fill="url(#pattern3)" transform="scale(-1,1)" transform-origin="242"/>
+      <path style={{transform: 'scaleX(-1)', transformOrigin: '242px'}} d="M251 23.26H233V5.26H251V23.26Z" fill="url(#pattern3)"/>
       <defs>
       <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
       <use xlinkHref="#image0" transform="scale(0.015625)"/>

@@ -277,3 +277,11 @@ h1, h2, h3, h4, h6 {
 .parametric-graphic-source-citation {
   line-height: inherit;
 }
+
+.parametric-header-metadata-component {
+  flex-wrap: wrap;
+}
+
+.parametric-header-metadata-component > div {
+  margin-bottom: 1em;
+}

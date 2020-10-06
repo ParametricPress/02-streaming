@@ -117,21 +117,21 @@ export default class MediaPicker extends React.Component {
 
         style = previewStyle(previewWidth, translateY, top)
       } else {
-        style = { position: 'absolute', visibility: 'hidden' };
+        style = { position: 'absolute', visibility: 'hidden', width: 0, height: 0 };
         // style = previewStyle(previewWidth, translateY, top)
       }
 
       if (item.type === "video") {
         if (title === selectedTitle) {
           return (
-            <video key={title} style={style} autoPlay loop muted>
+            <video key={title} style={style} autoPlay loop muted playsInline>
               <source src={`./static/images/${item.url}`} type="video/mp4"/>
             </video>
           );
         }
 
         return (
-          <video key={title} style={style} autoPlay loop muted>
+          <video key={title} style={style} autoPlay loop muted playsInline>
             <source src={`./static/images/${item.url}`} type="video/mp4"/>
           </video>
         );

@@ -119,7 +119,7 @@ date:"August 201"
 [/LargeAside]
 [/div]
 
-In order to load the Parametric Press article that you are currently reading, we estimate that 53 milligrams of CO2 were produced. The same amount would be produced by driving a [link text:"car 0.21 meters" url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle"/].
+In order to load the _Parametric Press_ article that you are currently reading, we estimate that 53 milligrams of CO2 were produced. The same amount would be produced by driving a [link text:"car 0.21 meters" url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle"/].
 [span className:"emphasized"]  These emissions are a result of loading data for the text, graphics, and visualizations[/span] that are then rendered on your device.
 
 The chart [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] displays the carbon emitted when loading various websites and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site).
@@ -158,7 +158,7 @@ When you listen to audio on your device, you generally load a compressed version
 [/LargeAside]
 [/div]
 
-The NPR podcast shown in the visualization was compressed to 128 kilobits per second, while the song "Old Town Road", retrieved from Spotify, was compressed to 256 kilobits per second.
+The _NPR_ podcast shown in the visualization was compressed to 128 kilobits per second, while the song "Old Town Road", retrieved from Spotify, was compressed to 256 kilobits per second.
 This means that in the one minute timespan that both audio files played, twice as much data needed to be loaded for the song than for the podcast, which leads to the song having roughly twice as large of a carbon footprint.
 Even so, these audio examples have lower carbon emissions than most of the multimedia websites shown earlier.
 
@@ -195,10 +195,10 @@ While ads don’t contribute to a website or video you may be watching, digital 
 When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), [span className:"emphasized"][link text:"the size of its website decreased from 5000 to 500 kilobytes" url:"https://newrepublic.com/article/155993/can-internet-survive-climate-change" target:"_blank"/] with no significant changes to the appearance of the site[/span]. 
 [/Aside]
 
-Over a one minute period, the Old Town Road music video (which is a live action video) emits more emissions than the 3Blue1Brown animation.
+Over a one minute period, the "Old Town Road" music video (which is a live action video) emits more emissions than the 3Blue1Brown animation.
 You might notice there is a lot of empty black space in the 3Blue1Brown video, while the music video exhibits a large range of colors and frequent visual changes, both of which require more data to render.
 In the examples provided, videos produced far more CO2 than audio over the same time span.
-This is especially apparent when comparing the emissions for the audio of Old Town Road and its corresponding music video.
+This is especially apparent when comparing the emissions for the audio of "Old Town Road" and its corresponding music video.
 Not only does a video require loading both audio and visual data, but [span className:"emphasized"]visual data is also particularly heavy in information[/span].
 Notice that loading the website Facebook produced the most emissions, likely a result of loading multiple videos and other heavy data.
 
@@ -443,7 +443,7 @@ date:"December 2014"
 [div fullWidth:true]
   [img src:"static/images/bayan_aerial.jpg" className:"fullWidthImage"/]
 [/div]
-[caption]Aerial view of the Bayan Obo mining district. (Credit: [a href:"https://earth.google.com/web/search/bayan+obo/@41.78380059,109.93209582,1610.25556031a,16680.42058981d,35y,-0h,0t,0r/data=CigiJgokCcTR8f5nsjhAEcLR8f5nsjjAGXUebCk3qkVAIUpA2yYEDVDA" target:"_blank"]Map data: Google, Maxar Technologies[/a])[/caption]
+[caption]Aerial view of the Bayan Obo mining district. The open pit mines and lakes of toxic waste can be seen clearly even from sattelite images. (Credit: [a href:"https://earth.google.com/web/search/bayan+obo/@41.78380059,109.93209582,1610.25556031a,16680.42058981d,35y,-0h,0t,0r/data=CigiJgokCcTR8f5nsjhAEcLR8f5nsjjAGXUebCk3qkVAIUpA2yYEDVDA" target:"_blank"]Map data: Google, Maxar Technologies[/a])[/caption]
 
 [span className:"emphasized"]The tech industry’s legacy of toxic mining and manufacturing [link text:"continues today" url:"https://increment.com/energy-environment/a-rare-and-toxic-age/" target:"_blank"/][/span] — with hardware giants like Apple taking the throne of Silicon Valley's founding industrialists — only now on a global scale.
 In 2009, [link text:"China produced 95% of the world’s “rare earth” minerals" url:"https://www.livescience.com/38094-facts-about-rare-earth-elements-infographic.html" target:"_blank"/], with an estimated [link text:"70% coming from the Bayan Obo mining district" url:"https://www.mindat.org/loc-720.html" target:"_blank"/] in Inner Mongolia.
@@ -464,7 +464,7 @@ In fact, the [link text:"oil industry invested an estimated $1.75 billion in 201
 [link text:"Facebook has come under fire" url:"https://www.scientificamerican.com/article/climate-denial-spreads-on-facebook-as-scientists-face-restrictions/" target:"_blank"/] for lax action against climate change denial on their platform, where disinformation can easily spread without diligent fact-checking.
 [Aside]
   [img src:"static/images/amazon_protest_lilian.jpg"/]
-  [caption]Amazon employees joined the global "climate strike" in September 2019 to protest their company's complicity in the climate crisis. (Credit: Lilian Liang)[/caption]
+  [caption]Amazon employees joined the global "climate strike" in September 2019 to protest their company's complicity in the climate crisis. Someone holds a sign that says "No AWS For Gas and Oil". (Credit: Lilian Liang)[/caption]
 [/Aside]
 
 Our purpose in throwing light onto this destructive behavior is not simply to paint a bleak future.

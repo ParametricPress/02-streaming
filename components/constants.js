@@ -71,22 +71,22 @@ export const titleToPreview= {
     type: 'video',
     url: '3blue1brown.mp4',
   },
-  [drstrange]: {
-    type: 'video',
-    url: 'drstrange.mp4',
-  },
-  [slideshow]: {
-    type: 'video',
-    url: 'slideshow.mp4',
-  },
+  // [drstrange]: {
+  //   type: 'video',
+  //   url: 'drstrange.mp4',
+  // },
+  // [slideshow]: {
+  //   type: 'video',
+  //   url: 'slideshow.mp4',
+  // },
   [npr]: {
     type: 'image',
     url: 'podcast.png'
   },
-  [righteous]: {
-    type: 'image',
-    url: 'song.png'
-  },
+  // [righteous]: {
+  //   type: 'image',
+  //   url: 'song.png'
+  // },
   [oldtownroadAudio]: {
     type: 'image',
     url: 'oldtownroad.jpg'

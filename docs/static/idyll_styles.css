@@ -2397,6 +2397,8 @@ input {
 
 body {
   overflow-x: hidden;
+  overscroll-behavior-x: none;
+  -webkit-overflow-scrolling: touch;
 }
 .parametric-article-nav {
   overflow-x: visible;

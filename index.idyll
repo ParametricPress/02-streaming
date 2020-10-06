@@ -147,7 +147,7 @@ As shown [span className:"showLargeScreen"]to the right[/span][span className:"s
 [/div]
 
 Let’s take a closer look at one common type of non-text media: audio.
-When you listen to audio onto your device, you generally load a compressed version of the original audio file.
+When you listen to audio on your device, you generally load a compressed version of the original audio file.
 
 [div className:"showSmallScreen"]
 [LargeAside]

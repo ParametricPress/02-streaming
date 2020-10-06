@@ -2407,6 +2407,9 @@ body {
   transform: translateX(-50px);
 }
 
+.idyll-scroll-graphic > div {
+  padding-top: 65px;
+}
 
 #pipeline {
   margin-left: calc(600px + 32px);
@@ -2414,6 +2417,14 @@ body {
 
 #pipeline .parametric-graphic-subhed {
   max-width: none;
+}
+
+#pipeline .parametric-graphic-source {
+  margin-top: 0;
+}
+
+.pipeline-graphic-container {
+  max-height: calc(100vh - 65px - 20px - 20px - 40px - 100px);
 }
 
 /* #pipeline .parametric-graphic > * {
@@ -2521,6 +2532,10 @@ body {
     text-align: left;
     margin-left: 1em;
     margin-right: 1em;
+  }
+
+  .pipeline-graphic-container {
+    max-height: calc(100vh - 65px - 20px - 20px - 100px);
   }
 }
 

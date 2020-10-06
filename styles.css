@@ -199,8 +199,8 @@ h1, h2, h3, h4, h6 {
   }
 
   #pipeline {
-    margin-left: 25px;
-    margin-right: 8px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .large-aside-wrapper {
@@ -212,6 +212,10 @@ h1, h2, h3, h4, h6 {
     margin-left: 1em;
     width: 100%;
     /* width: calc(100% - 2em); */
+  }
+
+  .idyll-scroll-graphic > div {
+    padding-right: 1em;
   }
 }
 
@@ -226,6 +230,10 @@ h1, h2, h3, h4, h6 {
   .large-aside-container {
     max-width: calc(100vw - 2em);
     width: calc(100vw - 2em);
+  }
+
+  .idyll-scroll-graphic > div {
+    padding-right: 1em;
   }
 }
 

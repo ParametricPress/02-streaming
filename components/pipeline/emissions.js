@@ -15,7 +15,7 @@ export default class Emissions extends React.PureComponent {
     const stage = this.props.stage;
     const stageIndex = stages.indexOf(stage);
     const hasLabel = [
-      "cdn",
+      "alldatacenters",
       "internet",
       "residential",
       "cellular",

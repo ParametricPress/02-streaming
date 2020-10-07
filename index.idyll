@@ -335,7 +335,7 @@ id:"youtube-paper"
 [Step]
 The packets traveling across this information highway need “off-ramps” to reach your screen.
 The off-ramps that packets take are either [span className:"terms"]"fixed line" residential networks[/span] (wired connections from homes to the internet) or [span className:"terms"]cellular networks[/span] (wireless connections from cell phones to the internet).
-The physical infrastructure making up these two types networks differ, and therefore have distinct profiles of energy consumption and carbon emissions.
+The physical infrastructure making up these two types of networks differ, and therefore have distinct profiles of energy consumption and carbon emissions.
 [/Step]
 [Step]
 An estimated 88% of YouTube's traffic goes through fixed line networks (from your residential Cable, DSL, or Fiber-Optic providers), and this accounts for approximately [span className:"emphasized"]4,400 Gigawatt-hours of electricity usage—power for over 400,000 U.S. homes[/span] [Cite

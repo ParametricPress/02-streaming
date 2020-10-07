@@ -101,18 +101,14 @@ export default class MediaPicker extends React.Component {
 
         let translateY;
         let top;
-        if (mediaType) {
-          top = '100%';
-          translateY = `translateY(24px)`
+
+        top = 0;
+        let y = selectedY;
+  
+        if (!mediaType && y + offset + previewHeight >= this.height) {
+          translateY = `translateY(calc(${y - previewPadding}px - 100%))`
         } else {
-          top = 0;
-          let y = selectedY;
-    
-          if (y + offset + previewHeight >= this.height) {
-            translateY = `translateY(calc(${y - previewPadding}px - 100%))`
-          } else {
-            translateY = `translateY(${y + offset}px)`;
-          }
+          translateY = `translateY(${y + offset}px)`;
         }
 
         style = previewStyle(previewWidth, translateY, top)

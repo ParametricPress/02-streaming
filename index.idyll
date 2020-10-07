@@ -464,7 +464,7 @@ In fact, the [link text:"oil industry invested an estimated $1.75 billion in 201
 [link text:"Facebook has come under fire" url:"https://www.scientificamerican.com/article/climate-denial-spreads-on-facebook-as-scientists-face-restrictions/" target:"_blank"/] for lax action against climate change denial on their platform, where disinformation can easily spread without diligent fact-checking.
 [Aside]
   [img src:"static/images/amazon_protest_lilian.jpg"/]
-  [caption]Amazon employees joined the global "climate strike" in September 2019 to protest their company's complicity in the climate crisis. Someone holds a sign that says "No AWS For Gas and Oil". (Credit: Lilian Liang)[/caption]
+  [caption]Amazon employees joined the global "climate strike" in September 2019 to protest their company's complicity in the climate crisis. Someone holds a sign that says "No AWS For Gas And Oil". (Credit: Lilian Liang)[/caption]
 [/Aside]
 
 Our purpose in throwing light onto this destructive behavior is not simply to paint a bleak future.
@@ -473,15 +473,13 @@ In 2019, after the Amazon Employees for Climate Justice organization [link text:
 Similarly, in response to [link text:"employee pressure" url:"https://medium.com/@googworkersac/ruth-porat-497bbb841b52" target:"_blank"/], Google pledged to [link text:"stop funding climate change deniers in 2020" url:"https://agreenergoogle.com/" target:"_blank"/].
 Google also promised to [link text:"rescind all future contracts" url:"https://www.cnbc.com/2020/05/20/google-ai-greenpeace-oil-gas.html" target:"_blank"/] with oil companies in response to a [link text:"Greenpeace report" url:"https://www.greenpeace.org/usa/reports/oil-in-the-cloud/" target:"_blank"/] about tech’s oil contracts.
 
-Regarding digital consumption and its associated emissions, companies like [link text:"Facebook" url:"https://sustainability.fb.com/reports/sustainability-report-2019/" target:"_blank"/], [link text:"Microsoft" url:"https://blogs.microsoft.com/blog/2020/01/16/microsoft-will-be-carbon-negative-by-2030/" target:"_blank"/], [link text:"Apple" url:"https://www.apple.com/newsroom/2020/07/apple-commits-to-be-100-percent-carbon-neutral-for-its-supply-chain-and-products-by-2030/" target:"_blank"/], and [link text:"Amazon" url:"https://sustainability.aboutamazon.com/about/the-climate-pledge" target:"_blank"/] are making pledges to become carbon neutral between 2030 (Facebook, Microsoft, Apple) and 2040 (Amazon). 
-This means that all the emissions from the products these companies produce will be offset by investments in carbon reducing projects (e.g., renewable energy or planting trees). 
+Regarding digital consumption and its associated emissions, many tech companies have set varying carbon footprint targets for 2030 and beyond. Some of these companies will [link text:"rely on offsetting carbon emissions" url:"https://sustainability.aboutamazon.com/about/the-climate-pledge" target:"_blank"/] (e.g., by [link text:"planting trees" url:"https://www.nationalgeographic.com/science/2019/12/what-are-carbon-offsets/" target:"_blank"/]). Others plan to run their operations [link text:"completely on carbon-free energy sources" url:"https://blog.google/outreach-initiatives/sustainability/our-third-decade-climate-action-realizing-carbon-free-future/" target:"_blank"/]. It's important to note, however, that these pledges often don't include emissions produced by usage from sources the company doesn't "own" but is ultimately responsible for. For example, Google pledging carbon-free doesn't mean the YouTube videos sent over the internet and viewed on devices will be emission-less.
 
 [Aside]
-Google has actually been carbon neutral since 2007, and have pledged this year to run their operations on carbon-free energy by 2030.
+[link text:"The efficacy of carbon offsets is debated" url:"https://www.wired.com/story/do-carbon-offsets-really-work-it-depends-on-the-details/" target:"_blank"/]: there are no guarantees that carbon offsets actually result in the desired amount of greenhouse gas removed from the atmosphere, and it is never instantaneous.
 [/Aside]
 
-
-These pledges are not enough to fully mitigate these companies' destructive practices. In our present climate crisis, [span className:"emphasized"]carbon neutrality cannot come soon enough, and carbon free technology should be the ultimate goal[/span]. In addition, they don’t account for the climate impact tech has through the other avenues we've discussed. The good news is that public pressure and collective organizing have the power to raise the bar for climate accountability—change can only occur if we understand and acknowledge the hidden, yet harmful consequences of the technology we use. 
+These pledges are not enough to fully mitigate these companies' destructive practices. In our present climate crisis, [span className:"emphasized"]carbon reductions cannot come soon enough, and carbon free technology should be the ultimate goal[/span]. In addition, they don’t account for the climate impact tech has through the other avenues we've discussed. The good news is that public pressure and collective organizing have the power to raise the bar for climate accountability—change can only occur if we understand and acknowledge the hidden, yet harmful consequences of the technology we use. 
 
 [AuthorBio]
 

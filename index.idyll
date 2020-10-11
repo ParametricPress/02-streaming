@@ -343,7 +343,7 @@ id:"youtube-paper"
 /].
 [/Step]
 [Step]
-In comparison, only 12% of YouTube’s traffic goes through cellular networks, but they are by far the most expensive part of YouTube’s content delivery pipeline, accounting for [span className:"emphasized"]6,100 Gigawatt-hours of electricity usage—over half a million U.S. homes[/span] [Cite
+In comparison, only 12% of YouTube’s traffic goes through cellular networks, but they are by far the most expensive part of YouTube’s content delivery pipeline, accounting for [span className:"emphasized"]6,100 Gigawatt-hours of electricity usage—enough to power over half a million U.S. homes[/span] [Cite
 id:"youtube-paper"
 /].
 At over 10 times the electricity usage per unit of traffic, the relative inefficiency of cellular transmission is clear.
@@ -390,7 +390,7 @@ We can speculate that the relatively high bandwidth required to transfer videos 
 [caption]Note that, unlike Priest et al, Belkhir and Elmeligi **do** account for the emissions generated from the production of devices.[/caption]
 [/Step]
 [Step]
-In the same study, Belkhir and Elmeligi created two models to project the ICT sector's decades forward.
+In the same study, Belkhir and Elmeligi created two models to project the ICT sector's emissions decades forward.
 Even their "unrealistically conservative" linear model put tech at a [span className:"emphasized"]6-7% share of GHG emissions in 2040[/span], and their exponential model had tech reaching over 14%.
 [/Step]
 [Step]

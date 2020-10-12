@@ -39,25 +39,32 @@ export default class MediaType extends React.PureComponent {
     const hasSelected = this.props.hasSelected;
     const selectedTitle = this.props.selectedTitle;
 
-    const maxInType = data.titles.reduce((m, d) => {
-      let maxInTitle;
-      if (d.packets.length) {
-        maxInTitle = d.packets.reduce((s, p) => s + p.size, 0);
-      } else {
-        maxInTitle = d.packets[1080].reduce((s, p) => s + p.size, 0);
-      }
+    const maxInType = data.titles.reduce(
+      (m, d) => {
+        let maxInTitle;
+        if (d.packets.length) {
+          maxInTitle = d.packets.reduce((s, p) => s + p.size, 0);
+        } else {
+          maxInTitle = d.packets[1080].reduce((s, p) => s + p.size, 0);
+        }
 
-      if (maxInTitle > m.amount) {
-        return { title: d.title, amount: maxInTitle };
-      }
+        if (maxInTitle > m.amount) {
+          return { title: d.title, amount: maxInTitle };
+        }
 
-      return m;
-    }, { title: '', amount: 0 });
+        return m;
+      },
+      { title: "", amount: 0 }
+    );
 
-    const carDistance = Math.round((maxInType.amount * 1000 / co2PerMeter) * 100) / 100;
-    let maxTitle = maxInType.title.substring(0, maxInType.title.indexOf('(') - 1);
+    const carDistance =
+      Math.round(((maxInType.amount * 1000) / co2PerMeter) * 100) / 100;
+    let maxTitle = maxInType.title.substring(
+      0,
+      maxInType.title.indexOf("(") - 1
+    );
     if (data.mediaType === "video") {
-      maxTitle += " at 1080p"
+      maxTitle += " at 1080p";
     }
 
     let maxVerb;
@@ -116,18 +123,21 @@ export default class MediaType extends React.PureComponent {
             );
             return mediaTitle;
           })}
-        <div
-          style={{
-            fontSize: 12,
-            paddingLeft: 8,
-            paddingRight: 8,
-            marginBottom: 4,
-            lineHeight: '14px'
-          }}
-        >
-          <b style={{ color: "#EE998B" }}>↑</b> A minute {maxVerb} {maxTitle} is equivalent to driving a car{" "}
-          <b style={{ color: "#EE998B" }}>{carDistance}</b> meters
-        </div>
+        {this.props.showCarEquivalent ? (
+          <div
+            style={{
+              fontSize: 12,
+              paddingLeft: 8,
+              paddingRight: 8,
+              marginBottom: 4,
+              lineHeight: "14px",
+            }}
+          >
+            <b style={{ color: "#EE998B" }}>↑</b> A minute {maxVerb} {maxTitle}{" "}
+            is equivalent to driving a car{" "}
+            <b style={{ color: "#EE998B" }}>{carDistance}</b> meters
+          </div>
+        ) : null}
       </div>
     );
   }

@@ -149,6 +149,7 @@ export default class MediaAll extends React.PureComponent {
                 <MediaType
                   type={type}
                   data={d}
+                  showCarEquivalent={this.props.mediaType}
                   xScaleVX={xScaleVX}
                   animate={this.state.animate}
                   mouseX={type === "timeline" ? this.state.mouseX : null}

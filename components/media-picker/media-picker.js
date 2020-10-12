@@ -84,7 +84,9 @@ export default class MediaPicker extends React.Component {
     const selectedHeight = this.state.selectedHeight;
     const selectedTitle = this.state.selectedTitle;
     const mediaType = this.props.mediaType;
-
+    const mediaTitle = this.props.mediaTitle;
+    const inline = this.props.inline;
+    const noAutoplayTimeline = this.props.noAutoplayTimeline;
 
     const previews = Object.keys(titleToPreview)
     .filter(title => data.filter(d => d.title === title).length > 0)
@@ -148,7 +150,8 @@ export default class MediaPicker extends React.Component {
         {previews}
         { this.state.width ?
           <MediaAll type={type}
-            mediaType={mediaType} data={data} width={this.state.width} headers={headers}
+            mediaType={mediaType} mediaTitle={mediaTitle} noAutoplayTimeline={noAutoplayTimeline}
+            data={data} width={this.state.width} headers={headers} inline={inline}
             selectTitle={this.selectTitle}
             hasSelected={this.state.selectedY !== null}
             selectedTitle={selectedTitle}

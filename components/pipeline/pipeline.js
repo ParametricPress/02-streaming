@@ -280,10 +280,10 @@ export default class Pipeline extends React.PureComponent {
                 : stageIndex < stages.indexOf('final')
                 ? `translateY(calc(-${compareProgress}% + ${
                     (yh * compareProgress) / 100
-                  }px))`
+                  }px + 1em))`
                 : final ?
-                  `translateY(calc(-${100 + progress}% + ${yh}px))` :
-                  `translateY(calc(-${200}% + ${yh}px))`
+                  `translateY(calc(-${100 + progress}% + ${yh}px + 1em))` :
+                  `translateY(calc(-${200}% + ${yh}px + 1em))`
             }}
           >
             <Graphic
@@ -367,7 +367,7 @@ export default class Pipeline extends React.PureComponent {
                 textAlign: "left",
                 position: "absolute",
                 fontSize: "0.75em",
-                top: `calc(100% - ${this.state.youtubeEmissionsTextHeight}px)`,
+                top: `calc(100% - ${yh}px - 1.33em)`,
                 opacity: !showCompare
                   ? 0
                   : stageIndex < stages.indexOf("compare")
@@ -439,7 +439,7 @@ export default class Pipeline extends React.PureComponent {
             <Projection
               style={{
                 position: "absolute",
-                top: `calc(200% - ${yh}px)`,
+                top: `calc(200% - ${yh}px - 1em)`,
                 width: "100%",
                 height: "100%",
                 // opacity: stage === "final" && progress !== 0 ? 1 : 0,

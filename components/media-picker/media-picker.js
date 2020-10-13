@@ -87,56 +87,64 @@ export default class MediaPicker extends React.Component {
     const mediaTitle = this.props.mediaTitle;
     const inline = this.props.inline;
     const noAutoplayTimeline = this.props.noAutoplayTimeline;
+    const shouldPreload = this.props.shouldPreload;
 
-    const previews = Object.keys(titleToPreview)
-    .filter(title => data.filter(d => d.title === title).length > 0)
-    .map(title => {
-      const item = titleToPreview[title];
-      
-      let style;
-      if (title === selectedTitle) {
-        const pType = item.type;
-        const previewWidth = this.state.width - previewPadding * 2;
-        const previewHeight = previewWidth * (pType === 'video' ? 0.6 : 1);
-
-        const offset = selectedHeight + previewPadding;
-
-        let translateY;
-        let top;
-
-        top = 0;
-        let y = selectedY;
+    let previews;
+    if (shouldPreload) {
+      previews = Object.keys(titleToPreview)
+      .filter(title => data.filter(d => d.title === title).length > 0)
+      .map(title => {
+        const item = titleToPreview[title];
+        
+        const style = { position: 'absolute', width: 100, height: 100, top: 0, left: 0, opacity: 0};
   
-        if (!mediaType && y + offset + previewHeight >= this.height) {
-          translateY = `translateY(calc(${y - previewPadding}px - 100%))`
-        } else {
-          translateY = `translateY(${y + offset}px)`;
-        }
-
-        style = previewStyle(previewWidth, translateY, top)
-      } else {
-        style = { position: 'absolute', visibility: 'hidden', width: 0, height: 0 };
-        // style = previewStyle(previewWidth, translateY, top)
-      }
-
-      if (item.type === "video") {
-        if (title === selectedTitle) {
+        if (item.type === "video") {
           return (
-            <video key={title} style={style} autoPlay loop muted playsInline>
+            <video key={title + "-preload"} style={style} preload="auto" autoPlay loop muted playsInline>
               <source src={`./static/images/${item.url}`} type="video/mp4"/>
             </video>
           );
+        } else {
+          return <img style={style} src={`./static/images/${item.url}`} />
         }
+      });
+    }
 
-        return (
-          <video key={title} style={style} autoPlay loop muted playsInline>
-            <source src={`./static/images/${item.url}`} type="video/mp4"/>
+    let preview;
+    if (selectedTitle) {
+      const item = titleToPreview[selectedTitle];
+    
+      const pType = item.type;
+      const previewWidth = this.state.width - previewPadding * 2;
+      const previewHeight = previewWidth * (pType === 'video' ? 0.6 : 1);
+
+      const offset = selectedHeight + previewPadding;
+
+      let translateY;
+      let top;
+
+      top = 0;
+      let y = selectedY;
+
+      if (!mediaType && y + offset + previewHeight >= this.height) {
+        translateY = `translateY(calc(${y - previewPadding}px - 100%))`
+      } else {
+        translateY = `translateY(${y + offset}px)`;
+      }
+
+      const style = previewStyle(previewWidth, translateY, top);
+
+      if (item.type === "video") {
+        preview = (
+          <video style={style} autoPlay loop muted playsInline>
+              <source src={`./static/images/${item.url}`} type="video/mp4"/>
           </video>
         );
       } else {
-        return <img style={style} src={`./static/images/${item.url}`} />
+        preview = <img style={style} src={`./static/images/${item.url}`} />
       }
-    });
+    }
+    
 
     return (
       <div className="media-picker"
@@ -148,6 +156,7 @@ export default class MediaPicker extends React.Component {
           paddingBottom: '1em'
       }}>
         {previews}
+        {preview}
         { this.state.width ?
           <MediaAll type={type}
             mediaType={mediaType} mediaTitle={mediaTitle} noAutoplayTimeline={noAutoplayTimeline}

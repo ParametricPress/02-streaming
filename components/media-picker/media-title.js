@@ -76,6 +76,7 @@ export default class MediaTitle extends React.PureComponent {
           <MediaStrip
             type={type}
             data={data.packets}
+            inline={this.props.inline}
             xScale={xScaleVX}
             mouseX={mouseX}
             animate={animate}

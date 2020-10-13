@@ -63,6 +63,11 @@ export default class MediaAll extends React.PureComponent {
     if (mediaType) {
       this.data = this.data.filter((d) => d.mediaType === mediaType);
     }
+
+    const mediaTitle = props.mediaTitle;
+    if (mediaTitle) {
+      this.data = this.data.filter(d => mediaTitle.includes(d.title));
+    }
     this.groupData = groupByType(groupByTitle(this.data));
 
     this.animateTimeout = -1;
@@ -85,10 +90,12 @@ export default class MediaAll extends React.PureComponent {
     const width = this.props.width;
     const hasSelected = this.props.hasSelected;
     const selectedTitle = this.props.selectedTitle;
+    const inline = this.props.inline;
+    const noAutoplayTimeline = this.props.noAutoplayTimeline;
 
     const xScaleVX = MediaAll.getXScaleVX(width, this.maxTotal);
 
-    if (type === "timeline") {
+    if (type === "timeline" && !noAutoplayTimeline) {
       if (!this.hasBeenTimeline) {
         setTimeout(() => {
           this.autoplayInterval = setInterval(() => {
@@ -113,9 +120,9 @@ export default class MediaAll extends React.PureComponent {
       <div
         style={{
           width: "100%",
-          paddingTop: 8,
+          paddingTop: inline ? 2 : 8,
           paddingBottom: 2,
-          border: "1px solid " + guideColor,
+          border: inline ? null : "1px solid " + guideColor,
           position: "relative",
         }}
         onTouchStart={this.handleMouseMove}
@@ -126,7 +133,7 @@ export default class MediaAll extends React.PureComponent {
         onMouseMove={this.handleMouseMove}
         onMouseLeave={this.clearMouse}
       >
-        {gridlines[type].map((d, i) => (
+        {inline ? null : gridlines[type].map((d, i) => (
           <Grid key={i} left={xScaleVX[type](d)} />
         ))}
         {this.groupData
@@ -142,12 +149,13 @@ export default class MediaAll extends React.PureComponent {
                 style={{
                   width: "100%",
                   position: "relative",
-                  marginBottom:
+                  marginBottom: inline ? 0 :
                     i === this.groupData.length - 1 ? 0 : mediaTypePadding,
                 }}
               >
                 <MediaType
                   type={type}
+                  inline={inline}
                   data={d}
                   showCarEquivalent={this.props.mediaType}
                   xScaleVX={xScaleVX}
@@ -163,7 +171,7 @@ export default class MediaAll extends React.PureComponent {
 
             return mediaType;
           })}
-        {gridlines[type].map((d, i) => {
+        {inline ? null : gridlines[type].map((d, i) => {
           const val = type === "bar" ? d * 1000 + " mg" : d + " s";
           return <Label key={i} value={val} left={xScaleVX[type](d)} />;
         })}

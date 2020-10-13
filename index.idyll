@@ -199,8 +199,22 @@ Over a one minute period, the "Old Town Road" music video (which is a live actio
 You might notice there is a lot of empty black space in the 3Blue1Brown video, while the music video exhibits a large range of colors and frequent visual changes, both of which require more data to render.
 In the examples provided, videos produced far more CO₂ than audio over the same time span.
 This is especially apparent when comparing the emissions for the audio of "Old Town Road" and its corresponding music video.
+
+[MediaPicker type:"bar"
+  mediaTitle:`[
+    "Old Town Road (song)",
+    "Old Town Road (music video)"
+  ]`
+  data:mediaPickerData width:"100%" headers:false inline:true/]
+
 Not only does a video require loading both audio and visual data, but [span className:"emphasized"]visual data is also particularly heavy in information[/span].
 Notice that loading the website Facebook produced the most emissions, likely a result of loading multiple videos and other heavy data.
+
+[MediaPicker type:"bar"
+  mediaTitle:`[
+    "Facebook (newsfeed)",
+  ]`
+  data:mediaPickerData width:"100%" headers:false inline:true/]
 
 
 ## Packets
@@ -237,7 +251,24 @@ In each media emission visualization, we estimated emissions based on the size a
 
 In this timeline breakdown, we can see that the way in which packets arrive for video and audio differs from the pattern for websites.
 When playing video and audio, packets tend to travel to your device at regular intervals.
+
+[MediaPicker type:"timeline"
+  mediaTitle:`[
+    "Old Town Road (song)",
+    "Old Town Road (music video)"
+  ]`
+  noAutoplayTimeline:true
+  data:mediaPickerData width:"100%" headers:false inline:true/]
+
 In contrast, the packets for websites are weighted more heavily towards the beginning of the timeline, but websites may make more requests for data as you scroll through and load more content.
+
+[MediaPicker type:"timeline"
+  mediaTitle:`[
+    "Google (search result)",
+    "Amazon (product page)"
+  ]`
+  noAutoplayTimeline:true
+  data:mediaPickerData width:"100%" headers:false inline:true/]
 
 ## A Case Study: YouTube's Carbon Emissions
 // Variables

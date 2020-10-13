@@ -54,6 +54,7 @@ export default class MediaStrip extends React.PureComponent {
     const mouseX = this.props.mouseX;
     const animate = this.props.animate;
     const quality = this.props.quality;
+    const inline = this.props.inline;
 
     const timeline = type === 'timeline';
 

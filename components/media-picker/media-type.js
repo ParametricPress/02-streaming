@@ -116,6 +116,7 @@ export default class MediaType extends React.PureComponent {
                   mouseX={mouseX}
                   animate={animate}
                   selectTitle={this.props.selectTitle}
+                  inline={this.props.inline}
                   hasSelected={hasSelected}
                   selectedTitle={selectedTitle}
                 />

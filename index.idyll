@@ -243,7 +243,7 @@ In contrast, the packets for websites are weighted more heavily towards the begi
 // Variables
 [var name:"scrollerIndex" value:0 /]
 [var name:"stepProgress" value:0/]
-[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'datacenter', 'pop', 'cdn', 'alldatacenters', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final', 'none']`/]
+[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'datacenter', 'pop', 'cdn', 'datacentersall', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'all2', 'all3', 'beforesimple', 'simple', 'compare', 'final', 'none']`/]
 [var name:"showPops" value:false /]
 [var name:"showGgcs" value:false /]
 

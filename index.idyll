@@ -106,6 +106,7 @@ date:"August 201"
 ### Websites
 [var name:"emissionGraphicPadding" value:`{paddingTop: 0, paddingLeft: 0, paddingRight: 0}`/]
 [var name:"emissionSource" value:`["Aslan et al. 2017", {label: "[2]", url:"https://onlinelibrary.wiley.com/doi/full/10.1111/jiec.12630"}, ", ", {label:"EPA", url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle"}]`/]
+[var name:"emissionSourceMinusEpa" value:`["Aslan et al. 2017", {label: "[2]", url:"https://onlinelibrary.wiley.com/doi/full/10.1111/jiec.12630"}]`/]
 
 [div className:"showLargeScreen"]
 [LargeAside]
@@ -222,7 +223,7 @@ Notice that loading the website Facebook produced the most emissions, likely a r
 
 [div className:"showLargeScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Media Emissions by Medium" style:emissionGraphicPadding source:emissionSource]
+[ParametricGraphic hed:"Media Emissions by Medium" style:emissionGraphicPadding source:emissionSourceMinusEpa]
 [MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
 [caption][span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] on the "Show Timeline" button to see a timeline of loading packets for each type of media. [span className:"desktopInstructions"]Hover[/span][span className:"touchscreenInstructions"]Tap and drag[/span] to scrub through and view cumulative emissions.[/caption]
 [Conditional if:`mediaPickerType === 'bar'`][button onClick:`mediaPickerType = 'timeline'`]Show Timeline[/button][/Conditional]
@@ -240,7 +241,7 @@ In each media emission visualization, we estimated emissions based on the size a
 
 [div className:"showSmallScreen"]
 [LargeAside]
-[ParametricGraphic hed:"Media Emissions by Medium" style:emissionGraphicPadding source:emissionSource]
+[ParametricGraphic hed:"Media Emissions by Medium" style:emissionGraphicPadding source:emissionSourceMinusEpa]
 [MediaPicker type:mediaPickerType data:mediaPickerData width:"100%" headers:true/]
 [caption][span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] on the "Show Timeline" button to see a timeline of loading packets for each type of media. [span className:"desktopInstructions"]Hover[/span][span className:"touchscreenInstructions"]Tap and drag[/span] to scrub through and view cumulative emissions.[/caption]
 [Conditional if:`mediaPickerType === 'bar'`][button onClick:`mediaPickerType = 'timeline'`]Show Timeline[/button][/Conditional]

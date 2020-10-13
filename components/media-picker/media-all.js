@@ -122,7 +122,7 @@ export default class MediaAll extends React.PureComponent {
           width: "100%",
           paddingTop: inline ? 2 : 8,
           paddingBottom: 2,
-          border: "1px solid " + guideColor,
+          border: inline ? null : "1px solid " + guideColor,
           position: "relative",
         }}
         onTouchStart={this.handleMouseMove}
@@ -133,7 +133,7 @@ export default class MediaAll extends React.PureComponent {
         onMouseMove={this.handleMouseMove}
         onMouseLeave={this.clearMouse}
       >
-        {gridlines[type].map((d, i) => (
+        {inline ? null : gridlines[type].map((d, i) => (
           <Grid key={i} left={xScaleVX[type](d)} />
         ))}
         {this.groupData
@@ -155,6 +155,7 @@ export default class MediaAll extends React.PureComponent {
               >
                 <MediaType
                   type={type}
+                  inline={inline}
                   data={d}
                   showCarEquivalent={this.props.mediaType}
                   xScaleVX={xScaleVX}

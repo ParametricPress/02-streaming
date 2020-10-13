@@ -15,18 +15,20 @@ export default class Emissions extends React.PureComponent {
     const stage = this.props.stage;
     const stageIndex = stages.indexOf(stage);
     const hasLabel = [
-      "alldatacenters",
+      "datacentersall",
       "internet",
       "residential",
       "cellular",
       "device",
       "all",
+      "all2",
+      "all3"
     ].includes(this.props.stage);
 
     const simplified =
       stage === "simple" || stage === "compare" || stage === "final";
     const filteredData =
-      stage === "all"
+      stage.startsWith("all")
         ? [
             data.reduce(
               (p, d) => {
@@ -112,7 +114,7 @@ export default class Emissions extends React.PureComponent {
                     boxSizing: "border-box",
                     borderStyle: "solid",
                     borderColor: backgroundColor,
-                    borderWidth: stage === "all" ? 0 : 2,
+                    borderWidth: stage.startsWith("all") ? 0 : 2,
                     backgroundColor: "white",
                     marginTop: 4,
                     transition: "opacity 200ms linear",

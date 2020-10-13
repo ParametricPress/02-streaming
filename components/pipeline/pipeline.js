@@ -9,7 +9,7 @@ import ParametricGraphic from "parametric-components/dist/cjs/issue-02/parametri
 
 const youtubeData = [
   {
-    stage: "alldatacenters", // and also data center
+    stage: "datacentersall", // and also data center
     emissions: 360,
     emissionsString: "360",
     homes: "32,000",
@@ -233,7 +233,7 @@ export default class Pipeline extends React.PureComponent {
         subhed = "Edge Points of Presence";
       } else if (stage === "cdn") {
         subhed = "Google Global Cache";
-      } else if (stage === "alldatacenters") {
+      } else if (stage === "datacentersall") {
         subhed = "All Data Centers";
       } else if (stage === "internet") {
         subhed = "The Internet";

@@ -243,7 +243,7 @@ In contrast, the packets for websites are weighted more heavily towards the begi
 // Variables
 [var name:"scrollerIndex" value:0 /]
 [var name:"stepProgress" value:0/]
-[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'datacenter', 'pop', 'cdn', 'alldatacenters', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final', 'none']`/]
+[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'datacenter', 'pop', 'cdn', 'datacentersall', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'all2', 'all3', 'beforesimple', 'simple', 'compare', 'final', 'none']`/]
 [var name:"showPops" value:false /]
 [var name:"showGgcs" value:false /]
 
@@ -361,12 +361,15 @@ In total, Priest et al.'s research estimated that [span className:"emphasized"]Y
 id:"youtube-paper"
 /].
 Using the world emissions factor for electricity generation as reported by the International Energy Agency, they place resulting [span className:"emphasized"]carbon emissions at 10.2 million metric tons of CO₂[/span] (10.1 after renewable energy purchases for data center activities).
-
+[/Step]
+[Step]
 This is as much as a small metropolitan area like Frankfurt, Germany or the [link text:"entire state of Rhode Island" url:"http://www.dem.ri.gov/programs/air/documents/righginvent16-d.pdf"/] in 2016 [Cite
 id:"youtube-paper"
 /].
 Put in other words, 10.2 MtCO₂ is equivalent to the yearly footprint of approximately [link text:"2.2 million cars in the United States." url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle" target:"_blank"/]
-YouTube's monthly active user count has since increased by a minimum of 33% since then (from [link text:"1.5 billion a year later in 2017" url:"https://techcrunch.com/2017/06/22/youtube-has-1-5-billion-logged-in-monthly-users-watching-a-ton-of-mobile-video/" target:"_blank"/] to over [link text:"2 billion last year" url:"https://variety.com/2019/digital/news/youtube-2-billion-users-tv-screen-watch-time-hours-1203204267/" target:"_blank"/]).
+[/Step]
+[Step]
+YouTube's monthly active user count has since increased by a minimum of 33% since 2016, (from [link text:"1.5 billion a year later in 2017" url:"https://techcrunch.com/2017/06/22/youtube-has-1-5-billion-logged-in-monthly-users-watching-a-ton-of-mobile-video/" target:"_blank"/] to over [link text:"2 billion last year in 2019" url:"https://variety.com/2019/digital/news/youtube-2-billion-users-tv-screen-watch-time-hours-1203204267/" target:"_blank"/]). This means its current CO₂ emissions in 2020 could be even higher than Priest et al.’s 2016 prediction.
 [/Step]
 [Step]
 If we assume that the emissions factor for electricity usage is similar for each part of the pipeline, we can get a rough idea of the carbon footprint profile of YouTube. However, it's important to note that this [span className:"emphasized"]breakdown isn't necessarily representative of the entirety of the information and technology sector[/span].

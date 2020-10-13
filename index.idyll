@@ -86,7 +86,7 @@ Understanding how these digital products and services work is a crucial first st
 ## A Look at Different Types of Media
 [data name:"mediaPickerData" source:"dist/media-emissions.json"/]
 Each type of digital activity produces a different level of emissions, and as a result has different consequences on the physical world.
-[span className:"emphasized"]  The amount of carbon dioxide emitted is a factor the type and quantity of information that needs to be loaded[/span] for a particular digital activity.
+[span className:"emphasized"]  The amount of carbon dioxide emitted is a factor of the type and quantity of information that needs to be loaded[/span] for a particular digital activity.
 
 More specifically, emissions can be computed using the following equation:
 

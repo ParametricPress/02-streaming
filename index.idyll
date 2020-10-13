@@ -331,7 +331,8 @@ Hide Globe
 [/Button]
 [/Step]
 [Step]
-Priest et al. estimate that all data centers account for [span className:"emphasized"]less than 2% of YouTube's electricity use[/span] [Cite
+In 2019, researchers from the University of Bristol used publically available data to estimate the energy consumption of each step of YouTube's pipeline.
+In the paper they published, Chris Preist, Daniel Schien and Paul Shabajee estimate that all data centers account for [span className:"emphasized"]less than 2% of YouTube's electricity use[/span] [Cite
 authors:"Chris Preist, Daniel Schien, and Paul Shabajee"
 title:"Evaluating Sustainable Interaction Design of Digital Services: The Case of YouTube"
 url:"https://dl.acm.org/doi/10.1145/3290605.3300627"

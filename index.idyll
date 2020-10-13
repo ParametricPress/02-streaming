@@ -114,12 +114,12 @@ date:"August 201"
     source:emissionSource
   ]
     [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
-    [caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds.[span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] and hold each bar to show a preview clip of the scroll.[/caption]
+    [caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds.  Car distance equivalent is calculated using the fuel economy of an average car. [span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] and hold each bar to show a preview clip of the scroll.[/caption]
   [/ParametricGraphic]
 [/LargeAside]
 [/div]
 
-In order to load the _Parametric Press_ article that you are currently reading, we estimate that 53 milligrams of CO₂ were produced. The same amount would be produced by driving a [link text:"car 0.21 meters" url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle"/].
+In order to load the _Parametric Press_ article that you are currently reading, we estimate that 53 milligrams of CO₂ were produced. The same amount would be produced by driving a car 0.21 meters (based on the fuel economy of an average car, [link text:"according to the EPA" url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle"/]).
 [span className:"emphasized"]  These emissions are a result of loading data for the text, graphics, and visualizations[/span] that are then rendered on your device.
 
 The chart [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] displays the carbon emitted when loading various websites and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site).
@@ -129,7 +129,7 @@ The chart [span className:"showLargeScreen"]to the right[/span][span className:"
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Websites" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. [span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] and hold each bar to show a preview clip of the scroll. [/caption]
+[caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. Car distance equivalent is calculated using the fuel economy of an average car, according to the EPA. [span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] and hold each bar to show a preview clip of the scroll. [/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -141,7 +141,7 @@ As shown [span className:"showLargeScreen"]to the right[/span][span className:"s
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Audio" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds.[/caption]
+[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds. (No audio preview).[/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -153,7 +153,7 @@ When you listen to audio on your device, you generally load a compressed version
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Audio" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds.[/caption]
+[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds. (No audio preview).[/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -168,7 +168,7 @@ Even so, these audio examples have lower carbon emissions than most of the multi
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Video" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p.[/caption]
+[caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p. (To reduce the size of this article, there is only one 360p preview for both qualities).[/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -180,7 +180,7 @@ The chart [span className:"showLargeScreen"]to the right[/span][span className:"
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Video" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p.[/caption]
+[caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p. (To reduce the size of this article, there is only one 360p preview for both qualities).[/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -199,8 +199,22 @@ Over a one minute period, the "Old Town Road" music video (which is a live actio
 You might notice there is a lot of empty black space in the 3Blue1Brown video, while the music video exhibits a large range of colors and frequent visual changes, both of which require more data to render.
 In the examples provided, videos produced far more CO₂ than audio over the same time span.
 This is especially apparent when comparing the emissions for the audio of "Old Town Road" and its corresponding music video.
+
+[MediaPicker type:"bar"
+  mediaTitle:`[
+    "Old Town Road (song)",
+    "Old Town Road (music video)"
+  ]`
+  data:mediaPickerData width:"100%" headers:false inline:true/]
+
 Not only does a video require loading both audio and visual data, but [span className:"emphasized"]visual data is also particularly heavy in information[/span].
 Notice that loading the website Facebook produced the most emissions, likely a result of loading multiple videos and other heavy data.
+
+[MediaPicker type:"bar"
+  mediaTitle:`[
+    "Facebook (newsfeed)",
+  ]`
+  data:mediaPickerData width:"100%" headers:false inline:true/]
 
 
 ## Packets
@@ -237,13 +251,30 @@ In each media emission visualization, we estimated emissions based on the size a
 
 In this timeline breakdown, we can see that the way in which packets arrive for video and audio differs from the pattern for websites.
 When playing video and audio, packets tend to travel to your device at regular intervals.
+
+[MediaPicker type:"timeline"
+  mediaTitle:`[
+    "Old Town Road (song)",
+    "Old Town Road (music video)"
+  ]`
+  noAutoplayTimeline:true
+  data:mediaPickerData width:"100%" headers:false inline:true/]
+
 In contrast, the packets for websites are weighted more heavily towards the beginning of the timeline, but websites may make more requests for data as you scroll through and load more content.
+
+[MediaPicker type:"timeline"
+  mediaTitle:`[
+    "Google (search result)",
+    "Amazon (product page)"
+  ]`
+  noAutoplayTimeline:true
+  data:mediaPickerData width:"100%" headers:false inline:true/]
 
 ## A Case Study: YouTube's Carbon Emissions
 // Variables
 [var name:"scrollerIndex" value:0 /]
 [var name:"stepProgress" value:0/]
-[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'datacenter', 'pop', 'cdn', 'alldatacenters', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'beforesimple', 'simple', 'compare', 'final', 'none']`/]
+[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'datacenter', 'pop', 'cdn', 'datacentersall', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'all2', 'all3', 'beforesimple', 'simple', 'compare', 'final', 'none']`/]
 [var name:"showPops" value:false /]
 [var name:"showGgcs" value:false /]
 
@@ -361,12 +392,15 @@ In total, Priest et al.'s research estimated that [span className:"emphasized"]Y
 id:"youtube-paper"
 /].
 Using the world emissions factor for electricity generation as reported by the International Energy Agency, they place resulting [span className:"emphasized"]carbon emissions at 10.2 million metric tons of CO₂[/span] (10.1 after renewable energy purchases for data center activities).
-
+[/Step]
+[Step]
 This is as much as a small metropolitan area like Frankfurt, Germany or the [link text:"entire state of Rhode Island" url:"http://www.dem.ri.gov/programs/air/documents/righginvent16-d.pdf"/] in 2016 [Cite
 id:"youtube-paper"
 /].
 Put in other words, 10.2 MtCO₂ is equivalent to the yearly footprint of approximately [link text:"2.2 million cars in the United States." url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle" target:"_blank"/]
-YouTube's monthly active user count has since increased by a minimum of 33% since then (from [link text:"1.5 billion a year later in 2017" url:"https://techcrunch.com/2017/06/22/youtube-has-1-5-billion-logged-in-monthly-users-watching-a-ton-of-mobile-video/" target:"_blank"/] to over [link text:"2 billion last year" url:"https://variety.com/2019/digital/news/youtube-2-billion-users-tv-screen-watch-time-hours-1203204267/" target:"_blank"/]).
+[/Step]
+[Step]
+YouTube's monthly active user count has since increased by a minimum of 33% since 2016, (from [link text:"1.5 billion a year later in 2017" url:"https://techcrunch.com/2017/06/22/youtube-has-1-5-billion-logged-in-monthly-users-watching-a-ton-of-mobile-video/" target:"_blank"/] to over [link text:"2 billion last year in 2019" url:"https://variety.com/2019/digital/news/youtube-2-billion-users-tv-screen-watch-time-hours-1203204267/" target:"_blank"/]). This means its current CO₂ emissions in 2020 could be even higher than Priest et al.’s 2016 prediction.
 [/Step]
 [Step]
 If we assume that the emissions factor for electricity usage is similar for each part of the pipeline, we can get a rough idea of the carbon footprint profile of YouTube. However, it's important to note that this [span className:"emphasized"]breakdown isn't necessarily representative of the entirety of the information and technology sector[/span].

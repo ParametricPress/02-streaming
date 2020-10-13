@@ -260,7 +260,7 @@ export default class PipelineGraphic extends React.PureComponent {
           width = w2;
           height = h2;
 
-          if (currentStage === "alldatacenters") {
+          if (currentStage === "datacentersall") {
             opacity = 1;
           } else {
             opacity = 0.2
@@ -291,10 +291,10 @@ export default class PipelineGraphic extends React.PureComponent {
         if (
           m.stage === currentStage || m.stage === "border" ||
           (m.stage === "worldmap" && (currentStage === "worldmap2" || currentStage === "worldmap3")) ||
-          (currentStage === "all" && m.stage !== "worldmap") ||
-          (m.stage === "datacenter" && currentStage === "alldatacenters") ||
-          ((m.stage === "pop" || m.stage === "pop2") && currentStage === "alldatacenters") ||
-          (m.stage === "cdn" && currentStage === "alldatacenters") ||
+          (currentStage.startsWith("all") && m.stage !== "worldmap") ||
+          (m.stage === "datacenter" && currentStage === "datacentersall") ||
+          ((m.stage === "pop" || m.stage === "pop2") && currentStage === "datacentersall") ||
+          (m.stage === "cdn" && currentStage === "datacentersall") ||
           (m.id === "datacenter" && currentStage === "worldmap") ||
           (m.stay && stages.indexOf(m.stage) <= currentStageIndex)
         ) {

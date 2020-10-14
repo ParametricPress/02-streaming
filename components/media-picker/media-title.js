@@ -5,6 +5,7 @@ import { scaleBand } from '@vx/scale';
 import MediaStrip from './media-strip';
 import { Container, Text, Rect } from './components';
 import { textColor, font } from '../constants';
+import { isTouchScreen } from '../util';
 
 /** Props:
 type: 'timeline' | 'bar',
@@ -31,6 +32,7 @@ export default class MediaTitle extends React.PureComponent {
 
     this._handleMouseDown = this._handleMouseDown.bind(this);
     this._handleMouseUp = this._handleMouseUp.bind(this);
+    this._handleTouchStart = this._handleTouchStart.bind(this);
   }
   
   componentDidMount() {
@@ -38,16 +40,31 @@ export default class MediaTitle extends React.PureComponent {
     const rect = node.getBoundingClientRect();
     this.height = rect.height;
     this.y = node.parentElement.offsetTop + node.parentElement.parentElement.parentElement.offsetTop;
+    this.touch = isTouchScreen();
   }
 
-  _handleMouseDown() {
-    if (this.props.type === 'bar') {
+  _handleMouseDown(e) {
+    if (this.props.type === 'bar' && !this.touch) {  // not touch screen
       this.props.selectTitle(this.y, this.height, this.props.data.title);
     }
   }
 
-  _handleMouseUp() {
-    this.props.selectTitle(null, null, null);
+  _handleTouchStart(e) {
+    if (this.props.type === 'bar') {
+      if (this.props.selectedTitle === this.props.data.title) {
+        console.log('has selected');
+        this.props.selectTitle(null, null, null);
+      } else {
+        this.props.selectTitle(this.y, this.height, this.props.data.title);
+      }
+    }
+  }
+
+  _handleMouseUp(e) {
+    if (!this.touch) {
+      console.log('mouse up');
+      this.props.selectTitle(null, null, null);
+    }
   }
 
   render() {
@@ -122,8 +139,8 @@ export default class MediaTitle extends React.PureComponent {
         onMouseUp={this._handleMouseUp}
         onMouseLeave={this._handleMouseUp}
 
-        onTouchStart={this._handleMouseDown}
-        onTouchEnd={this._handleMouseUp}
+        onTouchStart={this._handleTouchStart}
+        // onTouchEnd={this._handleMouseUp}
       >
         <div
           style={{

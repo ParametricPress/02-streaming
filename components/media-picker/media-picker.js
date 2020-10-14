@@ -136,7 +136,7 @@ export default class MediaPicker extends React.Component {
 
       if (item.type === "video") {
         preview = (
-          <video style={style} autoPlay loop muted playsInline>
+          <video style={style} autoPlay muted playsInline>
               <source src={`./static/images/${item.url}`} type="video/mp4"/>
           </video>
         );

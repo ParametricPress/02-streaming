@@ -115,7 +115,7 @@ date:"August 2017"
     source:emissionSource
   ]
     [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
-    [caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds.  Car distance equivalent is calculated using the fuel economy of an average car. [span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] and hold each bar to show a preview clip of the scroll.[/caption]
+    [caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds.  Car distance equivalent is calculated using the fuel economy of an average car. [span className:"desktopInstructions"] Click and hold[/span][span className:"touchscreenInstructions"] Tap[/span] each bar to show a preview clip of the scroll.[/caption]
   [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -130,7 +130,7 @@ The chart [span className:"showLargeScreen"]to the right[/span][span className:"
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Websites" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. Car distance equivalent is calculated using the fuel economy of an average car, according to the EPA. [span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] and hold each bar to show a preview clip of the scroll. [/caption]
+[caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. Car distance equivalent is calculated using the fuel economy of an average car, according to the EPA. [span className:"desktopInstructions"] Click and hold[/span][span className:"touchscreenInstructions"] Tap[/span] each bar to show a preview clip of the scroll. [/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]

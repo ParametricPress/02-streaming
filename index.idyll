@@ -115,7 +115,7 @@ date:"August 2017"
     source:emissionSource
   ]
     [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
-    [caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds.  Car distance equivalent is calculated using the fuel economy of an average car. [span className:"desktopInstructions"] Click and hold[/span][span className:"touchscreenInstructions"] Tap[/span] each bar to show a preview clip of the scroll.[/caption]
+    [caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds.  Car distance equivalent is calculated using the fuel economy of an average car. [span className:"desktopInstructions"]Click[/span][span className:"touchscreenInstructions"]Tap[/span] each bar to show a preview clip of the scroll.[/caption]
   [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -124,13 +124,13 @@ In order to load the _Parametric Press_ article that you are currently reading, 
 [span className:"emphasized"]  These emissions are a result of loading data for the text, graphics, and visualizations[/span] that are then rendered on your device.
 
 The chart [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] displays the carbon emitted when loading various websites* and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site). All data collection was done using a Chrome web browser under a 100mbps Wi-Fi connection.
-[span className:"desktopInstructions"] Clicking[/span][span className:"touchscreenInstructions"] Tapping[/span] and holding each bar in the chart will show a preview of that scroll, sped up to a 5 second clip.
+[span className:"desktopInstructions"] Clicking[/span][span className:"touchscreenInstructions"] Tapping[/span] each bar in the chart will show a preview of that scroll, sped up to a 5 second clip.
 
 [div className:"showSmallScreen"]
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Websites" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"website" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. Car distance equivalent is calculated using the fuel economy of an average car, according to the EPA. [span className:"desktopInstructions"] Click and hold[/span][span className:"touchscreenInstructions"] Tap[/span] each bar to show a preview clip of the scroll. [/caption]
+[caption]Each bar represents the carbon emitted when scrolling through a website for 60 seconds. Car distance equivalent is calculated using the fuel economy of an average car, according to the EPA. [span className:"desktopInstructions"]Click[/span][span className:"touchscreenInstructions"]Tap[/span] a bar to show a preview clip of the scroll. [/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]

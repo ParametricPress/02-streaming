@@ -120,8 +120,8 @@ export default class MediaAll extends React.PureComponent {
       <div
         style={{
           width: "100%",
-          paddingTop: inline ? 2 : 8,
-          paddingBottom: 2,
+          paddingTop: inline ? 0 : 8,
+          paddingBottom: inline ? 0 : 2,
           border: inline ? null : "1px solid " + guideColor,
           position: "relative",
         }}

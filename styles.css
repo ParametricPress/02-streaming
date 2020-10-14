@@ -284,6 +284,14 @@ h1, h2, h3, h4, h6 {
   margin-bottom: 1em;
 }
 
+.parametric-graphic-source-citation {
+  text-align: start;
+}
+
+.parametric-graphic-source-watermark {
+  text-align: end;
+}
+
 @media screen and (max-width: 450px) {
   .parametric-graphic-source {
     flex-direction: column;
@@ -304,6 +312,7 @@ h1, h2, h3, h4, h6 {
     margin-bottom: 0.5em;
   }
 }
+
 .idyll-scroll {
   margin-top: 0;
   margin-bottom: 0;

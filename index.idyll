@@ -123,7 +123,7 @@ date:"August 201"
 In order to load the _Parametric Press_ article that you are currently reading, we estimate that 53 milligrams of CO₂ were produced. The same amount would be produced by driving a car 0.21 meters (based on the fuel economy of an average car, [link text:"according to the EPA" url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle"/]).
 [span className:"emphasized"]  These emissions are a result of loading data for the text, graphics, and visualizations[/span] that are then rendered on your device.
 
-The chart [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] displays the carbon emitted when loading various websites and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site). All data collection was done using a Chrome web browser under a 100mbps Wi-Fi connection.
+The chart [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] displays the carbon emitted when loading various websites* and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site). All data collection was done using a Chrome web browser under a 100mbps Wi-Fi connection.
 [span className:"desktopInstructions"] Clicking[/span][span className:"touchscreenInstructions"] Tapping[/span] and holding each bar in the chart will show a preview of that scroll, sped up to a 5 second clip.
 
 [div className:"showSmallScreen"]
@@ -136,6 +136,8 @@ The chart [span className:"showLargeScreen"]to the right[/span][span className:"
 [/div]
 
 As shown [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]above[/span], loading websites like Google, which are relatively simple because they primarily show text, produces much lower emissions than loading websites like Facebook, which load a lot of data-heavy media types to your device.
+
+[caption]*Subsequent visits to websites may produce fewer emissions, as parts of the site may be saved in something called a [link text:"cache" url:"https://www.bigcommerce.com/ecommerce-answers/what-browser-cache-and-why-it-important/" target:"_blank"/].[/caption]
 
 ### Audio
 [div className:"showLargeScreen"]
@@ -518,8 +520,8 @@ Regarding digital consumption and its associated emissions, many tech companies 
 
 These pledges are not enough to fully mitigate these companies' destructive practices. In our present climate crisis, [span className:"emphasized"]carbon reductions cannot come soon enough, and carbon free technology should be the ultimate goal[/span]. In addition, they don’t account for the climate impact tech has through the other avenues we've discussed. The good news is that public pressure and collective organizing have the power to raise the bar for climate accountability—change can only occur if we understand and acknowledge the hidden, yet harmful consequences of the technology we use. 
 
+[caption]
 [AuthorBio]
-
 [b][a href:"https://haldenl.com"]Halden Lin[/a][/b] is a visualization designer, developer, and researcher. He's currently creating visualization experiences at Apple.
 
 [b][a href:""]Aishwarya Nirmal[/a][/b] works as a software engineer at Airbnb, and enjoys visual design and writing in her spare time. 
@@ -529,8 +531,8 @@ These pledges are not enough to fully mitigate these companies' destructive prac
 [b][a href:""]Lilian Liang[/a][/b] is a writer and software engineer at Apple.
 
 // Edited by TK editor list.
-
 [/AuthorBio]
+[/caption]
 
 [Cite.References/]
 

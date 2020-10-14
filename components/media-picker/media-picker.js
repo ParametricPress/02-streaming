@@ -35,6 +35,7 @@ export default class MediaPicker extends React.Component {
     };
 
     this.selectTitle = this.selectTitle.bind(this);
+    this.clearTitle = this.clearTitle.bind(this);
 
     this.resizeBounce = null;
     this._size = this._size.bind(this);
@@ -48,7 +49,17 @@ export default class MediaPicker extends React.Component {
     })
   }
 
+  clearTitle() {
+    this.selectTitle(null, null, null);
+  }
+
   componentDidMount() {
+    this.node = ReactDOM.findDOMNode(this);
+    window.addEventListener('click', (e) => {
+      if (!e.target.isSameNode(this.node)) {
+        this.clearTitle();
+      }
+    });
     setTimeout(() => {
       this._size();
       window.addEventListener('resize', this._onResize.bind(this));
@@ -126,7 +137,7 @@ export default class MediaPicker extends React.Component {
       top = 0;
       let y = selectedY;
 
-      if (!mediaType && y + offset + previewHeight >= this.height) {
+      if (!mediaType && !inline && y + offset + previewHeight >= this.height) {
         translateY = `translateY(calc(${y - previewPadding}px - 100%))`
       } else {
         translateY = `translateY(${y + offset}px)`;
@@ -136,7 +147,7 @@ export default class MediaPicker extends React.Component {
 
       if (item.type === "video") {
         preview = (
-          <video style={style} autoPlay loop muted playsInline>
+          <video key={selectedTitle} style={style} autoPlay muted playsInline>
               <source src={`./static/images/${item.url}`} type="video/mp4"/>
           </video>
         );

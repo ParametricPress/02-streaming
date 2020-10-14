@@ -299,11 +299,11 @@ Videos are stored on servers called [span className:"terms"] "data centers"[/spa
 For global services, these are often placed around the world.
 [/Step]
 [Step]
-YouTube's parent company, Google, has [link text:"21 main data centers" url:"https://www.google.com/about/datacenters/locations/"/] strategically placed throughout 4 continents (North America, South America, Europe, and Asia).
+YouTube's parent company, Google, has [link text:"21 origin data centers" url:"https://www.google.com/about/datacenters/locations/"/] strategically placed throughout 4 continents (North America, South America, Europe, and Asia).
 Google does not disclose the data centers they use specifically for YouTube, so all of Google's data centers are shown here.
 [/Step]
 [Step]
-Let's take a closer look at one of these data centers. This one is in The Dalles, Oregon, on the West Coast of the United States.
+Let's take a closer look at one of these origin data centers. This one is in The Dalles, Oregon, on the West Coast of the United States.
 [/Step]
 [Step]
 For information to get from this data center to you, it first goes through Google's own specialized data network to what they call [link text:"Edge Points of Presence" url:"https://peering.google.com/#/infrastructure" /] (POPs for short), which bring data closer to high traffic areas.
@@ -332,7 +332,9 @@ Hide Globe
 [/Button]
 [/Step]
 [Step]
-Priest et al. estimate that all data centers account for [span className:"emphasized"]less than 2% of YouTube's electricity use[/span] [Cite
+In 2018, researchers from the University of Bristol used publically available data from 2016 to estimate the energy consumption of each step of YouTube's pipeline.
+
+As we have noted Google does not share which data centers are used specifically for YouTube. Therefore, Chris Preist, Daniel Schien and Paul Shabajee used the energy consumption numbers released for a similar service's (Netflix) data centers to estimate YouTube's data center energy consumption. They found that all data centers account for [span className:"emphasized"] less than 2% of YouTube's electricity use[/span] [Cite
 authors:"Chris Preist, Daniel Schien, and Paul Shabajee"
 title:"Evaluating Sustainable Interaction Design of Digital Services: The Case of YouTube"
 url:"https://dl.acm.org/doi/10.1145/3290605.3300627"
@@ -360,9 +362,9 @@ Here's (roughly) what the major internet lines of the west coast" look like [Cit
   date:"2015"
 /].
 Perhaps not surprisingly, it resembles our interstate highway system.
-Priest et al. estimate that this infrastructure consumes approximately [span className:"emphasized"]1,900 Gigawatt-hours of electricity to serve YouTube videos, enough to power [link text:"170,000 homes in the United States" url:"https://www.eia.gov/tools/faqs/faq.php?id=97&t=3" target:"_blank"/][/span] [Cite
+Preist et al. estimate that this infrastructure consumes approximately [span className:"emphasized"]1,900 Gigawatt-hours of electricity to serve YouTube videos [Cite
 id:"youtube-paper"
-/].
+/], enough to power 170,000 homes in the United States [link text:"according to the EIA" url:"https://www.eia.gov/tools/faqs/faq.php?id=97&t=3" target:"_blank"/][/span].
 [/Step]
 [Step]
 The packets traveling across this information highway need “off-ramps” to reach your screen.
@@ -389,7 +391,7 @@ id:"youtube-paper"
 /].
 [/Step]
 [Step]
-In total, Priest et al.'s research estimated that [span className:"emphasized"]YouTube traffic consumed 19.6 Tetrawatt-hours of electricity in 2016[/span] [Cite
+In total, Preist et al.'s research estimated that [span className:"emphasized"]YouTube traffic consumed 19.6 Tetrawatt-hours of electricity in 2016[/span] [Cite
 id:"youtube-paper"
 /].
 Using the world emissions factor for electricity generation as reported by the International Energy Agency, they place resulting [span className:"emphasized"]carbon emissions at 10.2 million metric tons of CO₂[/span] (10.1 after renewable energy purchases for data center activities).
@@ -401,20 +403,20 @@ id:"youtube-paper"
 Put in other words, 10.2 MtCO₂ is equivalent to the yearly footprint of approximately [link text:"2.2 million cars in the United States." url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle" target:"_blank"/]
 [/Step]
 [Step]
-YouTube's monthly active user count has since increased by a minimum of 33% since 2016, (from [link text:"1.5 billion a year later in 2017" url:"https://techcrunch.com/2017/06/22/youtube-has-1-5-billion-logged-in-monthly-users-watching-a-ton-of-mobile-video/" target:"_blank"/] to over [link text:"2 billion last year in 2019" url:"https://variety.com/2019/digital/news/youtube-2-billion-users-tv-screen-watch-time-hours-1203204267/" target:"_blank"/]). This means its current CO₂ emissions in 2020 could be even higher than Priest et al.’s 2016 prediction.
+YouTube's monthly active user count has since increased by a minimum of 33% since 2016, (from [link text:"1.5 billion a year later in 2017" url:"https://techcrunch.com/2017/06/22/youtube-has-1-5-billion-logged-in-monthly-users-watching-a-ton-of-mobile-video/" target:"_blank"/] to over [link text:"2 billion last year in 2019" url:"https://variety.com/2019/digital/news/youtube-2-billion-users-tv-screen-watch-time-hours-1203204267/" target:"_blank"/]). This means its current CO₂ emissions in 2020 could be even higher than Preist et al.’s 2016 prediction.
 [/Step]
 [Step]
 If we assume that the emissions factor for electricity usage is similar for each part of the pipeline, we can get a rough idea of the carbon footprint profile of YouTube. However, it's important to note that this [span className:"emphasized"]breakdown isn't necessarily representative of the entirety of the information and technology sector[/span].
-A 2018 study by Belkhir and Elmeligi paints a surprisingly different picture for the sector as a whole [Cite
+A 2018 study by McMaster University researchers Lotfi Belkhir and Ahmed Elmeligi paints a surprisingly different picture for the sector as a whole [Cite
 id:"ict-global-emissions"/]. 
 [/Step]
 [Step]
 To compare the two studies, we can group the "Internet", "Residential Network", and "Cellular Network" sections into an umbrella "Networks".
 
-[caption]* Priest et al. note that Google purchases renewable energy to match their data center electricity consumption.
+[caption]* Preist et al. note that Google purchases renewable energy to match their data center electricity consumption.
 [/caption]
 [caption]
-† Priest et al. do not account for the energy required to manufacture devices.
+† Preist et al. do not account for the energy required to manufacture devices.
 [/caption]
 [/Step]
 [Step]
@@ -422,7 +424,7 @@ Belkhir and Elmeligi provide emission estimates for both 2010 (retrospective) an
 Most surprising is the weight Data Centers and CDNs have in this breakdown.
 We can speculate that the relatively high bandwidth required to transfer videos as a medium contributes at least partially to the overweightedness of the "Networks" category for YouTube.
 
-[caption]Note that, unlike Priest et al, Belkhir and Elmeligi **do** account for the emissions generated from the production of devices.[/caption]
+[caption]Note that, unlike Preist et al, Belkhir and Elmeligi **do** account for the emissions generated from the production of devices.[/caption]
 [/Step]
 [Step]
 In the same study, Belkhir and Elmeligi created two models to project the ICT sector's emissions decades forward.
@@ -430,7 +432,7 @@ Even their "unrealistically conservative" linear model put tech at a [span class
 [/Step]
 [Step]
 What is being done about this? Aside from increasing the efficiency of each part of the pipeline and taking advantage of renewable energy, mindful design could also go a long way.
-In the context of digital streaming, Priest et al. point out that much of YouTube's traffic comes from music videos, and a good number of those "views" are likely just "listens".
+In the context of digital streaming, Preist et al. point out that much of YouTube's traffic comes from music videos, and a good number of those "views" are likely just "listens".
 If this "listen" to "view" ratio were even just 10%, [span className:"emphasized"]YouTube could have reduced its carbon footprint by about 117 thousand tons of CO₂ in 2016[/span], just by intelligently sending audio when no video is required.
 That's over [link text:"2.2 million gallons of gasoline worth of CO₂ in savings." url:"https://www.eia.gov/environment/emissions/CO₂_vol_mass.php" target:"_blank"/]
 [/Step]

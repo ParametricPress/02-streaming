@@ -174,16 +174,21 @@ export default class Pipeline extends React.PureComponent {
       if (stageIndex >= stages.indexOf("cdn")) {
         source = source.concat([
           ", ",
-          "Priest et al. 2017",
+          "Preist et al. 2017",
           {
             label: "[3]",
             url: "https://dl.acm.org/doi/10.1145/3290605.3300627",
           },
+          ", ",
+          {
+            label: "EIA",
+            url: "https://www.eia.gov/tools/faqs/faq.php?id=97&t=3",
+          }
         ]);
       }
     } else if (showCompare) {
       source = [
-        "Priest et al. 2017",
+        "Preist et al. 2017",
         { label: "[3]", url: "https://dl.acm.org/doi/10.1145/3290605.3300627" },
         ", ",
         "Belkhir & Elmeligi 2017",
@@ -221,14 +226,14 @@ export default class Pipeline extends React.PureComponent {
 
     let subhed = "—";
     if (showDatacenters) {
-      subhed = "Primary Data Centers";
+      subhed = "Origin Data Centers";
     } else if (showPops) {
       subhed = "Edge Points of Presence";
     } else if (showGgcs) {
       subhed = "Google Global Cache";
     } else if (showGraphic && !(showDatacenters || showPops || showGgcs)) {
       if (["worldmap2", "datacenter"].includes(stage)) {
-        subhed = "Primary Data Centers";
+        subhed = "Origin Data Centers";
       } else if (["pop", "pop2"].includes(stage)) {
         subhed = "Edge Points of Presence";
       } else if (stage === "cdn") {
@@ -376,7 +381,7 @@ export default class Pipeline extends React.PureComponent {
                 transition: "opacity 200ms linear",
               }}
             >
-              YouTube (2016) [Priest et al.]
+              YouTube (2016) [Preist et al. 2017]
               <br />
               {/* <span style={{ fontSize: '0.65em' }}>
               * Google purchases renewable energy to run its data centers.
@@ -412,7 +417,7 @@ export default class Pipeline extends React.PureComponent {
                   marginTop: "1em",
                 }}
               >
-                ICT Sector (2020, projected) [Belkhir & Elmeligi, 2017]
+                ICT Sector (2020, projected) [Belkhir & Elmeligi 2017]
               </div>
               <Emissions
                 id="2010-emissions"
@@ -433,7 +438,7 @@ export default class Pipeline extends React.PureComponent {
                   //     : compareProgress / 100,
                 }}
               >
-                ICT Sector (2010) [Belkhir & Elmeligi, 2017]
+                ICT Sector (2010) [Belkhir & Elmeligi 2017]
               </div>
             </div>
             <Projection

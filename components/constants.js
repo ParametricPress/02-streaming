@@ -15,13 +15,13 @@ export const facebook = 'Facebook (newsfeed)';
 export const google = 'Google (search result)';
 export const nyt = 'The New York Times (interactive article)';
 export const parametric = 'Parametric Press (you are here)';
-export const oldtownroadVideo = 'Old Town Road (music video)';
-export const threeblueonebrown = '3Blue1Brown (animation)';
+export const oldtownroadVideo = 'Lil Nas X: Old Town Road (music video)';
+export const threeblueonebrown = '3Blue1Brown: The most unexpected answer to a counting puzzle';
 export const drstrange = 'Dr Strange Trailer';
 export const slideshow = 'Slideshow';
-export const npr = 'NPR: Digging into "American Dirt" (podcast)';
+export const npr = 'NPR: Digging into "American Dirt"';
 export const righteous = 'Righteous (song)';
-export const oldtownroadAudio = 'Old Town Road (song)';
+export const oldtownroadAudio = 'Lil Nas X: Old Town Road (song)';
 export const thedaily = 'The Daily (podcast)';
 
 export const typeOrder = [

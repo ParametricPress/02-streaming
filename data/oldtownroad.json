@@ -6,271 +6,36 @@
   "data": [
     {
       "time": 0.0,
-      "sizeInBytes": 205,
-      "size": 8.6961e-07
-    },
-    {
-      "time": 0.146,
-      "sizeInBytes": 392,
-      "size": 1.6628639999999998e-06
-    },
-    {
-      "time": 0.951,
-      "sizeInBytes": 849,
-      "size": 3.6014579999999994e-06
-    },
-    {
-      "time": 1.013,
-      "sizeInBytes": 13686,
-      "size": 5.8056012e-05
-    },
-    {
-      "time": 1.102,
-      "sizeInBytes": 378,
-      "size": 1.603476e-06
-    },
-    {
-      "time": 1.103,
-      "sizeInBytes": 587,
-      "size": 2.4900539999999992e-06
-    },
-    {
-      "time": 1.213,
-      "sizeInBytes": 2,
-      "size": 8.484e-09
-    },
-    {
-      "time": 1.216,
-      "sizeInBytes": 13,
-      "size": 5.5145999999999996e-08
-    },
-    {
-      "time": 1.218,
-      "sizeInBytes": 849,
-      "size": 3.6014579999999994e-06
-    },
-    {
-      "time": 1.22,
-      "sizeInBytes": 111,
-      "size": 4.708619999999999e-07
-    },
-    {
-      "time": 1.221,
-      "sizeInBytes": 40,
-      "size": 1.6968e-07
-    },
-    {
-      "time": 1.259,
-      "sizeInBytes": 849,
-      "size": 3.6014579999999994e-06
-    },
-    {
-      "time": 1.276,
-      "sizeInBytes": 702,
-      "size": 2.977884e-06
-    },
-    {
-      "time": 1.314,
-      "sizeInBytes": 378,
-      "size": 1.603476e-06
-    },
-    {
-      "time": 1.348,
-      "sizeInBytes": 117,
-      "size": 4.96314e-07
-    },
-    {
-      "time": 1.615,
-      "sizeInBytes": 1079,
-      "size": 4.577118e-06
-    },
-    {
-      "time": 1.677,
-      "sizeInBytes": 32171,
-      "size": 0.00013646938199999998
-    },
-    {
-      "time": 1.7,
-      "sizeInBytes": 72,
-      "size": 3.0542399999999994e-07
-    },
-    {
-      "time": 1.707,
-      "sizeInBytes": 10188,
-      "size": 4.321749599999999e-05
-    },
-    {
-      "time": 1.71,
-      "sizeInBytes": 378,
-      "size": 1.603476e-06
-    },
-    {
-      "time": 2.101,
-      "sizeInBytes": 72,
-      "size": 3.0542399999999994e-07
-    },
-    {
-      "time": 2.106,
-      "sizeInBytes": 378,
-      "size": 1.603476e-06
-    },
-    {
-      "time": 2.109,
-      "sizeInBytes": 7848,
-      "size": 3.3291216e-05
-    },
-    {
-      "time": 2.111,
-      "sizeInBytes": 4117,
-      "size": 1.7464313999999996e-05
-    },
-    {
-      "time": 2.125,
-      "sizeInBytes": 13,
-      "size": 5.5145999999999996e-08
-    },
-    {
-      "time": 2.57,
-      "sizeInBytes": 58,
-      "size": 2.46036e-07
-    },
-    {
-      "time": 2.828,
-      "sizeInBytes": 378,
-      "size": 1.603476e-06
-    },
-    {
-      "time": 2.962,
-      "sizeInBytes": 13,
-      "size": 5.5145999999999996e-08
-    },
-    {
-      "time": 2.963,
-      "sizeInBytes": 111,
-      "size": 4.708619999999999e-07
-    },
-    {
-      "time": 2.977,
-      "sizeInBytes": 378,
-      "size": 1.603476e-06
-    },
-    {
-      "time": 3.134,
-      "sizeInBytes": 45,
-      "size": 1.9088999999999998e-07
-    },
-    {
-      "time": 3.382,
-      "sizeInBytes": 600,
-      "size": 2.5452e-06
-    },
-    {
-      "time": 3.386,
-      "sizeInBytes": 15292,
-      "size": 6.486866399999999e-05
-    },
-    {
-      "time": 3.532,
       "sizeInBytes": 324988,
       "size": 0.001378599096
     },
     {
-      "time": 3.537,
-      "sizeInBytes": 152,
-      "size": 6.44784e-07
-    },
-    {
-      "time": 3.592,
-      "sizeInBytes": 378,
-      "size": 1.603476e-06
-    },
-    {
-      "time": 3.619,
-      "sizeInBytes": 45,
-      "size": 1.9088999999999998e-07
-    },
-    {
-      "time": 3.9,
-      "sizeInBytes": 483,
-      "size": 2.0488859999999996e-06
-    },
-    {
-      "time": 3.904,
-      "sizeInBytes": 27,
-      "size": 1.14534e-07
-    },
-    {
-      "time": 3.92,
-      "sizeInBytes": 14,
-      "size": 5.9387999999999996e-08
-    },
-    {
-      "time": 3.923,
-      "sizeInBytes": 15282,
-      "size": 6.482624399999999e-05
-    },
-    {
-      "time": 4.218,
+      "time": 0.686,
       "sizeInBytes": 325537,
       "size": 0.0013809279539999998
     },
     {
-      "time": 4.473,
-      "sizeInBytes": 378,
-      "size": 1.603476e-06
-    },
-    {
-      "time": 4.845,
-      "sizeInBytes": 378,
-      "size": 1.603476e-06
-    },
-    {
-      "time": 4.907,
-      "sizeInBytes": 15282,
-      "size": 6.482624399999999e-05
-    },
-    {
-      "time": 5.564,
-      "sizeInBytes": 378,
-      "size": 1.603476e-06
-    },
-    {
-      "time": 5.708,
-      "sizeInBytes": 13,
-      "size": 5.5145999999999996e-08
-    },
-    {
-      "time": 10.402,
-      "sizeInBytes": 14,
-      "size": 5.9387999999999996e-08
-    },
-    {
-      "time": 14.154,
+      "time": 10.622,
       "sizeInBytes": 325161,
       "size": 0.001379332962
     },
     {
-      "time": 24.154,
+      "time": 20.622,
       "sizeInBytes": 325451,
       "size": 0.001380563142
     },
     {
-      "time": 33.907,
-      "sizeInBytes": 15282,
-      "size": 6.482624399999999e-05
-    },
-    {
-      "time": 34.282,
+      "time": 30.75,
       "sizeInBytes": 325530,
       "size": 0.00138089826
     },
     {
-      "time": 44.153,
+      "time": 40.621,
       "sizeInBytes": 324945,
       "size": 0.0013784166899999998
     },
     {
-      "time": 54.155,
+      "time": 50.623,
       "sizeInBytes": 325534,
       "size": 0.0013809152279999999
     }

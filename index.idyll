@@ -120,7 +120,7 @@ date:"August 2017"
 [/LargeAside]
 [/div]
 
-In order to load the _Parametric Press_ article that you are currently reading, we estimate that 53 milligrams of CO₂ were produced. The same amount would be produced by driving a car 0.21 meters (based on the fuel economy of an average car, [link text:"according to the EPA" url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle"/]).
+In order to load the _Parametric Press_ article that you are currently reading, we estimate that 53 milligrams of CO₂ were produced. The same amount would be produced by driving a car 0.21 meters (based on the fuel economy of an average car, [link text:"according to the EPA" url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle" target:"_blank"/]).
 [span className:"emphasized"]  These emissions are a result of loading data for the text, graphics, and visualizations[/span] that are then rendered on your device.
 
 The chart [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] displays the carbon emitted when loading various websites* and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site). All data collection was done using a Chrome web browser under a 100mbps Wi-Fi connection.
@@ -150,7 +150,8 @@ As shown [span className:"showLargeScreen"]to the right[/span][span className:"s
 [/div]
 
 Let’s take a closer look at one common type of non-text media: audio.
-When you listen to audio on your device, you generally load a compressed version of the original audio file.
+When you listen to audio on your device, you generally load a version of the original audio file that has been compressed into a smaller size. 
+In practice, this size is often determined by the choice of [span className:"terms"]bitrate[/span], which refers to the average amount of information in a unit of time.
 
 [div className:"showSmallScreen"]
 [LargeAside]
@@ -161,10 +162,12 @@ When you listen to audio on your device, you generally load a compressed version
 [/LargeAside]
 [/div]
 
-The _NPR_ podcast shown in the visualization was compressed to 128 kilobits per second, while the song "Old Town Road", retrieved from Spotify, was compressed to 256 kilobits per second.
-This means that in the one minute timespan that both audio files played, twice as much data needed to be loaded for the song than for the podcast, which leads to the song having roughly twice as large of a carbon footprint.
-Even so, these audio examples have lower carbon emissions than most of the multimedia websites shown earlier.
+The _NPR_ podcast shown in the visualization was compressed to a bitrate of 128 kilobits per second (there are 8 bits in a byte), while the song "Old Town Road", retrieved from Spotify, was compressed to 256 kilobits per second.
+This means that in the one minute timespan that both audio files were played, roughly twice as much data needed to be loaded for "Old Town Road" than for "Digging into 'American Dirt'", which leads to the song having about twice as large of a carbon footprint†.
+The fact that the song has greater carbon emissions is not a reflection on the carbon footprint of songs versus podcasts, but rather the difference in the bitrate of each audio file.
+These audio examples have lower carbon emissions than most of the multimedia websites shown earlier.
 
+[caption]†The emissions shown from these audio examples represent one minute of streaming each audio file, but the amount of data loaded may represent more than a minute's worth due to [link text:"buffering" url:"https://www.satelliteinternet.com/resources/how-to-stop-buffering/" target:"_blank" /].[/caption]
 
 ### Video
 [div className:"showLargeScreen"]
@@ -176,7 +179,7 @@ Even so, these audio examples have lower carbon emissions than most of the multi
 [/LargeAside]
 [/div]
 
-Generally, digital activity that involves videos requires a large amount of data to be loaded on your device so that your device can render each frame as well as the associated audio.
+Videos are a particularly heavy digital medium.
 The chart [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] shows emissions for streaming different YouTube videos at two different qualities—360p and 1080p, for 60 seconds each.
 
 [div className:"showSmallScreen"]
@@ -190,16 +193,13 @@ The chart [span className:"showLargeScreen"]to the right[/span][span className:"
 
 When you view a video at a higher quality, you receive a clearer image on your device because the video that you load contains more [span className:"terms"]pixels[/span]. Pixels are units of visual information.
 In the chart, the number in front of the "p" for quality refers to the height, in pixels, of the video.
-This is why there are greater emissions for videos at 1080p than those at 360p: more pixels means more data loaded.
+This is why there are greater emissions for videos at 1080p than those at 360p: more pixels means more data loaded per frame.
 
-[Aside]
-Ads are another form of digital content, and thus produce carbon dioxide as the ads are delivered to your screen.
-While ads don’t contribute to a website or video you may be watching, digital media providers include advertisements as a method of extra revenue.
-When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), [span className:"emphasized"][link text:"the size of its website decreased from 5000 to 500 kilobytes" url:"https://newrepublic.com/article/155993/can-internet-survive-climate-change" target:"_blank"/] with no significant changes to the appearance of the site[/span]. 
-[/Aside]
+Bitrate also [link text:"plays a role in video streaming" url:"https://www.bbc.co.uk/bitesize/guides/z7vc7ty/revision/6" target:"_blank"/].
+In this context, bitrate refers to the amount of visual and audio data loaded to your device over some timespan.
+From the chart, it is clear that the "Old Town Road" music video has a higher bitrate than the 3Blue1Brown animation at both qualities. 
+This difference could be attributed to a variety of factors, such as the frame rate, compression algorithm, and the producers' desired video fidelity.
 
-Over a one minute period, the "Old Town Road" music video (which is a live action video) emits more emissions than the 3Blue1Brown animation.
-You might notice there is a lot of empty black space in the 3Blue1Brown video, while the music video exhibits a large range of colors and frequent visual changes, both of which require more data to render.
 In the examples provided, videos produced far more CO₂ than audio over the same time span.
 This is especially apparent when comparing the emissions for the audio of "Old Town Road" and its corresponding music video.
 
@@ -210,6 +210,14 @@ This is especially apparent when comparing the emissions for the audio of "Old T
   ]`
   data:mediaPickerData width:"100%" headers:false inline:true/]
 
+[div className:"showLargeScreen"]
+[Aside]
+Ads are another form of digital content, and thus produce carbon dioxide as the ads are delivered to your screen.
+While ads don’t contribute to a website or video you may be watching, digital media providers include advertisements as a method of extra revenue.
+When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), [span className:"emphasized"][link text:"the size of its website decreased from 5000 to 500 kilobytes" url:"https://newrepublic.com/article/155993/can-internet-survive-climate-change" target:"_blank"/] with no significant changes to the appearance of the site[/span]. 
+[/Aside]
+[/div]
+
 Not only does a video require loading both audio and visual data, but [span className:"emphasized"]visual data is also particularly heavy in information[/span].
 Notice that loading the website Facebook produced the most emissions, likely a result of loading multiple videos and other heavy data.
 
@@ -219,6 +227,13 @@ Notice that loading the website Facebook produced the most emissions, likely a r
   ]`
   data:mediaPickerData width:"100%" headers:false inline:true/]
 
+[div className:"showSmallScreen"]
+[Aside]
+Ads are another form of digital content, and thus produce carbon dioxide as the ads are delivered to your screen.
+While ads don’t contribute to a website or video you may be watching, digital media providers include advertisements as a method of extra revenue.
+When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), [span className:"emphasized"][link text:"the size of its website decreased from 5000 to 500 kilobytes" url:"https://newrepublic.com/article/155993/can-internet-survive-climate-change" target:"_blank"/] with no significant changes to the appearance of the site[/span]. 
+[/Aside]
+[/div]
 
 ## Packets
 [var name:"mediaPickerType" value:"bar"/]
@@ -239,7 +254,7 @@ Instead, your device loads incremental pieces of the data as you consume the med
 These pieces are called [span className:"terms"]packets[/span].
 In each media emission visualization, we estimated emissions based on the size and quantity of the packets needed to load each type of media.
 
-[span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] the ‘Show Timeline’ button on the visualization [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] to see a timeline breakdown of each title.
+[span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] the ‘Show Timeline’ button on the visualization [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] to see a timeline breakdown of each type of media.
 
 [div className:"showSmallScreen"]
 [LargeAside]
@@ -478,6 +493,11 @@ venue:"Applied Geography"
 id:"spatial-inequity"
 date:"December 2014"
 /].
+
+[div fullWidth:true]
+  [img src:"static/images/bayan_aerial.jpg" className:"fullWidthImage"/]
+[/div]
+[caption]Satellite view of the Bayan Obo mining district. The open pit mines and lakes of toxic waste can be seen clearly even from sattelite images. (Credit: [a href:"https://earth.google.com/web/search/bayan+obo/@41.78380059,109.93209582,1610.25556031a,16680.42058981d,35y,-0h,0t,0r/data=CigiJgokCcTR8f5nsjhAEcLR8f5nsjjAGXUebCk3qkVAIUpA2yYEDVDA" target:"_blank"]Google, Maxar Technologies[/a])[/caption]
 
 [span className:"emphasized"]The tech industry’s legacy of toxic mining and manufacturing [link text:"continues today" url:"https://increment.com/energy-environment/a-rare-and-toxic-age/" target:"_blank"/][/span] — with hardware giants like Apple taking the throne of Silicon Valley's founding industrialists — only now on a global scale.
 In 2009, [link text:"China produced 95% of the world’s “rare earth” minerals" url:"https://www.livescience.com/38094-facts-about-rare-earth-elements-infographic.html" target:"_blank"/], with an estimated [link text:"70% coming from the Bayan Obo mining district" url:"https://www.mindat.org/loc-720.html" target:"_blank"/] in Inner Mongolia.

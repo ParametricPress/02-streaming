@@ -2,24 +2,30 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 import MediaAll from './media-all';
 import { debounceTimer, titleToPreview } from '../constants';
+import { stripPadding, titleFontSize } from './media-title';
+import { mediaTitlePadding } from './media-type';
 
 const previewHeight = 135;
 const previewPadding = 8;
 
-const previewStyle = (previewWidth, translateY, top) => {
+const boxShadow = '0px 0px 12px 0px rgba(0,0,0,0.75)';
+
+const getOverlayStyle = (width, translateY) => {
   return {
     position: 'absolute',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     zIndex: 2,
     left: 0,
     right: 0,
     top,
     marginLeft: 'auto',
     marginRight: 'auto',
-    maxWidth: previewWidth,
+    maxWidth: width,
     transform: `${translateY} translateZ(0)`,
-    lineHeight: 0,
-    boxShadow: '0px 0px 12px 0px rgba(0,0,0,0.75)',
-    backgroundColor: '#000'
+    boxShadow: boxShadow,
+    lineHeight: 0
   }
 }
 
@@ -41,16 +47,17 @@ export default class MediaPicker extends React.Component {
     this._size = this._size.bind(this);
   }
 
-  selectTitle(y, h, t) {
+  selectTitle(y, h, t, th) {
     this.setState({
       selectedY: y,
       selectedHeight: h,
-      selectedTitle: t
+      selectedTitle: t,
+      selectedTitleHeight: th
     })
   }
 
   clearTitle() {
-    this.selectTitle(null, null, null);
+    this.selectTitle(null, null, null, null);
   }
 
   componentDidMount() {
@@ -94,6 +101,7 @@ export default class MediaPicker extends React.Component {
     const selectedY = this.state.selectedY;
     const selectedHeight = this.state.selectedHeight;
     const selectedTitle = this.state.selectedTitle;
+    const selectedTitleHeight = this.state.selectedTitleHeight;
     const mediaType = this.props.mediaType;
     const mediaTitle = this.props.mediaTitle;
     const inline = this.props.inline;
@@ -109,57 +117,81 @@ export default class MediaPicker extends React.Component {
         
         const style = { position: 'absolute', width: 100, height: 100, top: 0, left: 0, opacity: 0};
   
-        if (item.type === "video") {
+        if (item.preview) {
           return (
             <video key={title + "-preload"} style={style} preload="auto" autoPlay loop muted playsInline>
               <source src={`./static/images/${item.url}`} type="video/mp4"/>
             </video>
           );
-        } else {
-          return <img style={style} src={`./static/images/${item.url}`} />
         }
       });
     }
 
     let preview;
+    let overlayStyle;
+    let link;
     if (selectedTitle) {
       const item = titleToPreview[selectedTitle];
-    
-      const pType = item.type;
-      const previewWidth = this.state.width - previewPadding * 2;
-      const previewHeight = previewWidth * (pType === 'video' ? 0.6 : 1);
+      if (item.preview) {
+        const offset = selectedHeight + previewPadding;
+        const translateY = `translateY(${selectedY + offset}px)`;
+        const overlayWidth = this.state.width - previewPadding * 2;
+        overlayStyle = getOverlayStyle(overlayWidth, translateY);
+        
+        if (item.link) {
+          link = (
+              <button
+                onClick={function() { window.open(item.link, "_blank"); }}
+                style={{margin: 0, width: '100%', cursor: 'pointer'}}>
+                  visit webpage
+              </button>
+          );
+        }
 
-      const offset = selectedHeight + previewPadding;
-
-      let translateY;
-      let top;
-
-      top = 0;
-      let y = selectedY;
-
-      if (!mediaType && !inline && y + offset + previewHeight >= this.height) {
-        translateY = `translateY(calc(${y - previewPadding}px - 100%))`
-      } else {
-        translateY = `translateY(${y + offset}px)`;
-      }
-
-      const style = previewStyle(previewWidth, translateY, top);
-
-      if (item.type === "video") {
+        const style = {
+          width: overlayWidth,
+          backgroundColor: '#000',
+          marginBottom: previewPadding
+        };
         preview = (
-          <video key={selectedTitle} style={style} autoPlay muted playsInline>
-              <source src={`./static/images/${item.url}`} type="video/mp4"/>
+          <video style={style} key={selectedTitle} autoPlay muted playsInline>
+            <source src={`./static/images/${item.url}`} type="video/mp4"/>
           </video>
         );
       } else {
-        preview = <img style={style} src={`./static/images/${item.url}`} />
+        overlayStyle = {
+          position: 'absolute',
+          right: previewPadding,
+          top: selectedY + selectedTitleHeight - 12,
+          zIndex: 2,
+          // transform: 'translateY(-50%)'
+        }
+
+        link =
+          <button
+          onClick={function() { window.open(item.link, "_blank"); }}
+          style={{
+            width: '4em', 
+            height: selectedHeight - selectedTitleHeight,
+            textAlign: 'center',
+            padding: 0,
+            cursor: 'pointer',
+            boxShadow: boxShadow
+        }}>❞</button>;
       }
     }
+
+    const overlay = (
+      <div key={selectedTitle || 'overlay'} style={overlayStyle}>
+        {preview}
+        {link}
+      </div>
+    )
     
 
     return (
       <div className="media-picker"
-        onContextMenu={function(e) { e.preventDefault();}}
+        // onContextMenu={function(e) { e.preventDefault();}}
 
         style={{
           width: width,
@@ -167,7 +199,7 @@ export default class MediaPicker extends React.Component {
           paddingBottom: '1em'
       }}>
         {previews}
-        {preview}
+        {overlay}
         { this.state.width ?
           <MediaAll type={type}
             mediaType={mediaType} mediaTitle={mediaTitle} noAutoplayTimeline={noAutoplayTimeline}

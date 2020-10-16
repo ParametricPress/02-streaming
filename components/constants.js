@@ -44,57 +44,60 @@ export const titleOrder = [
 
 export const titleToPreview= {
   [amazon]: {
-    type: 'video',
+    preview: true,
     url: 'amazon.mp4',
+    link: 'https://www.amazon.com/Uninhabitable-Earth-Life-After-Warming/dp/0525576711/ref=sr_1_8?dchild=1&keywords=climate+change&qid=1602823273&sr=8-8'
   },
   [facebook]: {
-    type: 'video',
+    preview: true,
     url: 'facebook.mp4',
+    link: 'https://www.facebook.com'
   },
   [google]: {
-    type: 'video',
-    url: 'google.mp4'
+    preview: true,
+    url: 'google.mp4',
+    link: 'https://www.google.com/search?sxsrf=ALeKk00O79kGgr0mBB9CXZiHW4rWbwUw2Q%3A1602823226434&source=hp&ei=OiSJX6H9F7aS0PEPvbS-kAk&q=climate+change&oq=climate+change&gs_lcp=CgZwc3ktYWIQAzIHCCMQyQMQJzICCAAyCggAELEDEIMBEEMyBQgAELEDMgIIADICCAAyBQgAELEDMggIABCxAxCDATIICAAQsQMQgwEyAggAOgQIIxAnOgUIABCRAjoLCC4QsQMQxwEQowI6CAguELEDEIMBOgUILhCxAzoECC4QQzoHCAAQsQMQQzoHCC4QsQMQQzoLCC4QsQMQxwEQrwE6BAgAEEM6CAguEMcBEK8BOgUIABDJAzoFCAAQkgNQqQZYvA5gnA9oAHAAeACAAWmIAaYJkgEEMTIuMpgBAKABAaoBB2d3cy13aXo&sclient=psy-ab&ved=0ahUKEwihgrDopbjsAhU2CTQIHT2aD5IQ4dUDCAk&uact=5'
   },
-  [nyt]: {
-    type: 'video',
-    url: 'nytimes.mp4'
-  },
+  // [nyt]: {
+  //   type: 'video',
+  //   url: 'nytimes.mp4'
+  // },
   [parametric]: {
-    type: 'video',
+    preview: true,
     url: 'parametricpress.mp4'
   },
   [oldtownroadVideo]: {
-    type: 'video',
-    url: 'oldtownroad.mp4'
+    preview: false,
+    link: 'https://www.youtube.com/watch?v=w2Ov5jzm3j8'
   },
   [threeblueonebrown]: {
-    type: 'video',
-    url: '3blue1brown.mp4',
+    preview: false,
+    link: 'https://www.youtube.com/watch?v=HEfHFsfGXjs&vl=it',
   },
   // [drstrange]: {
-  //   type: 'video',
+  //   preview: false,
   //   url: 'drstrange.mp4',
   // },
   // [slideshow]: {
-  //   type: 'video',
+  //   preview: false,
   //   url: 'slideshow.mp4',
   // },
   [npr]: {
-    type: 'image',
-    url: 'podcast.png'
+    preview: false,
+    link: 'https://www.npr.org/2020/01/29/800964001/digging-into-american-dirt'
   },
   // [righteous]: {
-  //   type: 'image',
+  //   preview: false,
   //   url: 'song.png'
   // },
   [oldtownroadAudio]: {
-    type: 'image',
-    url: 'oldtownroad.jpg'
+    preview: false,
+    link: 'https://open.spotify.com/track/2YpeDb67231RjR0MgVLzsG?si=xT8IPnGLQrGiY2hjIazJtw',
   },
-  [thedaily]: {
-    type: 'image',
-    url: 'thedaily.png'
-  }
+  // [thedaily]: {
+  //   preview: false,
+  //   url: 'thedaily.png'
+  // }
 };
 
 export const debounceTimer = 200;

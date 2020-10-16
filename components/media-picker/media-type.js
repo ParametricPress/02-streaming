@@ -19,7 +19,7 @@ data: {
 ],
 xScaleVX: vx.scaleLinear
 */
-const mediaTitlePadding = {
+export const mediaTitlePadding = {
   bottom: 8,
   left: 2,
 };

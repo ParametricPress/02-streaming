@@ -224,7 +224,7 @@ export default class Pipeline extends React.PureComponent {
       hed = "Projections for ICT Share of Global GHG Emissions";
     }
 
-    let subhed = "—";
+    let subhed = <div>&nbsp;</div>;
     if (showDatacenters) {
       subhed = "Origin Data Centers";
     } else if (showPops) {

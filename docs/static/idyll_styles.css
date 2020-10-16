@@ -2683,3 +2683,8 @@ h1, h2, h3, h4, h6 {
 .parametric-header-metadata-component > div {
   margin-bottom: 1em;
 }
+
+.idyll-scroll {
+  margin-top: 0;
+  margin-bottom: 0;
+}

@@ -2618,6 +2618,11 @@ h1, h2, h3, h4, h6 {
     padding-right: 0;
     max-width: 100%;
   }
+
+  .idyll-scroll-text .idyll-step {
+    margin-top: calc(100vh - 65px);
+    margin-bottom: calc(100vh - 65px);
+  }
 }
 
 

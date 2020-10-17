@@ -79,13 +79,13 @@ body {
 
 .emphasized {
   font-weight: bold;
-  color: #DDDDDD;
+  color: #BEBEBE;
 }
 
 .terms {
   font-weight: bold;
   font-style: italic;
-  color: #EEEEEE;
+  color: #BEBEBE;
 }
 
 .parametric-header-metadata-component > div {
@@ -174,7 +174,7 @@ h1, h2, h3, h4, h6 {
   color: #adadad;
 }
 .idyll-scroll-text .idyll-step p .emphasized {
-  color: #DDDDDD;
+  color:#FFFFFF;
 }
 .idyll-citation {
   color: #9CBBD7;

@@ -20,8 +20,8 @@ export default class AmazonBook extends React.PureComponent {
   render() {
     return (
       <svg width="100%" height="100%" viewBox="0 0 278 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-      <path d="M9 36H267.5" stroke="#606060" stroke-width="7"/>
-      <path d="M9 36H267.5" stroke="white" stroke-width="9"/>
+      <path d="M9 36H267.5" stroke="#606060" strokeWidth="7"/>
+      <path d="M9 36H267.5" stroke="white" strokeWidth="9"/>
       <rect y="28" width="16" height="16" fill="#EE998B"/>
       <rect x="122" y="28" width="16" height="16" fill="#EE998B"/>
       <rect x="209" y="28" width="16" height="16" fill="#EE998B"/>

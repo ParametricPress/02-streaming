@@ -342,47 +342,47 @@ export default class PipelineGraphic extends React.PureComponent {
 <path d="M378.803 95.6139L384.666 95.6378L389.966 95.5901L402.877 95.6974L415.845 95.769H419.566L434.281 95.6139H435.07L450.462 95.6855L450.519 105.125V113.706V114.577V120.84V128.447V129.005L450.575 139.209V147.628V160.577V166.977V169.788V173.381V181.556L436.593 181.623H431.349H416.972L414.943 181.611L406.485 181.544L399.269 181.522L389.853 181.544L372.037 181.578L357.153 181.645H356.363L340.689 181.623V176.336L340.746 169.472L340.689 160.577V149.725L340.746 138.875V132.5V128.505L340.689 118.005V107.267L340.52 103.015L340.746 95.5901L346.046 95.8048L360.31 95.5781L378.803 95.6139Z" fill="#2D2D2D" stroke="#222222" strokeMiterlimit="10"/>
 </g>
         {/* REST OF FIGMA GRAPHIC (lock the data center and west coast map) */}
-<path d="M182 81H164.5V40" stroke="#1F1F1F" stroke-width="2"/>
-<path d="M182 89H161V248" stroke="#1F1F1F" stroke-width="2"/>
-<path d="M182 89H161V257H168" stroke="#1F1F1F" stroke-width="2"/>
+<path d="M182 81H164.5V40" stroke="#1F1F1F" strokeWidth="2"/>
+<path d="M182 89H161V248" stroke="#1F1F1F" strokeWidth="2"/>
+<path d="M182 89H161V257H168" stroke="#1F1F1F" strokeWidth="2"/>
 <path d="M163 26V21H167V19" stroke="#606060"/>
 <path opacity="0.99" d="M165 21V23.5" stroke="#606060"/>
 <path d="M165 28H171V24H173" stroke="#606060"/>
 <path opacity="0.99" d="M171 28V29.5" stroke="#606060"/>
-<path d="M167 34H204.5V37H307.5V42.5H371" stroke="#606060" stroke-width="3"/>
-<path d="M167 34H200V69L324 171V186" stroke="#606060" stroke-width="3"/>
-<path opacity="0.99" d="M317 44V149H297" stroke="#606060" stroke-width="3"/>
-<path d="M166.5 255V269.5H190.5L220 298" stroke="#606060" stroke-width="3"/>
-<path d="M176 259H181V235H200V216L236 186H353V176H371" stroke="#606060" stroke-width="3"/>
-<path d="M166.5 255V245H155V85" stroke="#606060" stroke-width="3"/>
-<path opacity="0.99" d="M155.5 162H173V85H219.5" stroke="#606060" stroke-width="3"/>
-<path d="M161.5 40V76H155V85H219.5" stroke="#606060" stroke-width="3"/>
-<path opacity="0.98" d="M173.5 110H176" stroke="#606060" stroke-width="3"/>
-<path opacity="0.98" d="M200 279V266" stroke="#606060" stroke-width="3"/>
-<path d="M176 259H181V229H155V85" stroke="#606060" stroke-width="3"/>
-<path d="M278.5 284.5L321 250.5V186H353V176H371" stroke="#606060" stroke-width="3"/>
-<path opacity="0.98" d="M243 37.5V60" stroke="#606060" stroke-width="3"/>
-<path opacity="0.98" d="M289 37.5V48" stroke="#606060" stroke-width="3"/>
-<path opacity="0.98" d="M332 44V39" stroke="#606060" stroke-width="3"/>
-<path opacity="0.98" d="M163 32V30" stroke="#606060" stroke-width="3"/>
-<path opacity="0.98" d="M154.5 112H149" stroke="#606060" stroke-width="3"/>
-<path opacity="0.98" d="M173 230V227" stroke="#606060" stroke-width="3"/>
-<path opacity="0.98" d="M200 216V211" stroke="#606060" stroke-width="3"/>
-<path opacity="0.98" d="M297 271V260" stroke="#606060" stroke-width="3"/>
-<path opacity="0.98" d="M309 260H327" stroke="#606060" stroke-width="3"/>
-<path opacity="0.98" d="M284 138L284 145" stroke="#606060" stroke-width="3"/>
-<path opacity="0.98" d="M256 115V123" stroke="#606060" stroke-width="3"/>
-<path opacity="0.98" d="M208 38.5V40" stroke="#606060" stroke-width="2"/>
-<path opacity="0.98" d="M194 35.5V36" stroke="#606060" stroke-width="2"/>
-<path d="M277 286L263 298" stroke="#606060" stroke-width="3"/>
-<path d="M180.5 242H179" stroke="#606060" stroke-width="3"/>
-<path d="M163 30V32" stroke="#606060" stroke-width="2"/>
-<path d="M161 256V258" stroke="#606060" stroke-width="2"/>
-<path d="M172 261V263" stroke="#606060" stroke-width="2"/>
-<path d="M277 282V280" stroke="#606060" stroke-width="2"/>
+<path d="M167 34H204.5V37H307.5V42.5H371" stroke="#606060" strokeWidth="3"/>
+<path d="M167 34H200V69L324 171V186" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.99" d="M317 44V149H297" stroke="#606060" strokeWidth="3"/>
+<path d="M166.5 255V269.5H190.5L220 298" stroke="#606060" strokeWidth="3"/>
+<path d="M176 259H181V235H200V216L236 186H353V176H371" stroke="#606060" strokeWidth="3"/>
+<path d="M166.5 255V245H155V85" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.99" d="M155.5 162H173V85H219.5" stroke="#606060" strokeWidth="3"/>
+<path d="M161.5 40V76H155V85H219.5" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.98" d="M173.5 110H176" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.98" d="M200 279V266" stroke="#606060" strokeWidth="3"/>
+<path d="M176 259H181V229H155V85" stroke="#606060" strokeWidth="3"/>
+<path d="M278.5 284.5L321 250.5V186H353V176H371" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.98" d="M243 37.5V60" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.98" d="M289 37.5V48" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.98" d="M332 44V39" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.98" d="M163 32V30" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.98" d="M154.5 112H149" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.98" d="M173 230V227" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.98" d="M200 216V211" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.98" d="M297 271V260" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.98" d="M309 260H327" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.98" d="M284 138L284 145" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.98" d="M256 115V123" stroke="#606060" strokeWidth="3"/>
+<path opacity="0.98" d="M208 38.5V40" stroke="#606060" strokeWidth="2"/>
+<path opacity="0.98" d="M194 35.5V36" stroke="#606060" strokeWidth="2"/>
+<path d="M277 286L263 298" stroke="#606060" strokeWidth="3"/>
+<path d="M180.5 242H179" stroke="#606060" strokeWidth="3"/>
+<path d="M163 30V32" stroke="#606060" strokeWidth="2"/>
+<path d="M161 256V258" stroke="#606060" strokeWidth="2"/>
+<path d="M172 261V263" stroke="#606060" strokeWidth="2"/>
+<path d="M277 282V280" stroke="#606060" strokeWidth="2"/>
 <path opacity="0.98" d="M295 258L257 258L257 234.5" stroke="#606060"/>
-<circle cx="257" cy="235" r="1" stroke="#606060" stroke-width="2"/>
-<circle cx="206" cy="150" r="1" stroke="#606060" stroke-width="2"/>
+<circle cx="257" cy="235" r="1" stroke="#606060" strokeWidth="2"/>
+<circle cx="206" cy="150" r="1" stroke="#606060" strokeWidth="2"/>
 <circle opacity="0.99" cx="257" cy="235" r="7.5" stroke="#606060"/>
 <circle opacity="0.99" cx="206" cy="150" r="7.5" stroke="#606060"/>
 <circle opacity="0.98" cx="257" cy="235" r="20.5" stroke="#606060"/>
@@ -450,96 +450,96 @@ export default class PipelineGraphic extends React.PureComponent {
 <path d="M163 64H169V68" stroke="#606060"/>
 <path d="M153.5 199H147V201.5" stroke="#606060"/>
 <path d="M319.5 213H308.5" stroke="#606060"/>
-<path opacity="0.98" d="M182 81H164.5V40" stroke="white" stroke-width="4"/>
-<path opacity="0.98" d="M182 89H161V248" stroke="white" stroke-width="4"/>
-<path opacity="0.98" d="M182 89H161V241V257H168" stroke="white" stroke-width="4"/>
-<path d="M163 26V21H167V19" stroke="white" stroke-width="2"/>
-<path d="M163 26V21H165V24" stroke="white" stroke-width="2"/>
-<path d="M165 28H171V24H173" stroke="white" stroke-width="2"/>
-<path d="M165 28H171V30" stroke="white" stroke-width="2"/>
-<path d="M153 83H151.222V78H149" stroke="white" stroke-width="2"/>
-<path d="M153 83H151.222V81H147" stroke="white" stroke-width="2"/>
-<path d="M157 82.5H159.5V80H166" stroke="white" stroke-width="2"/>
-<path opacity="0.99" d="M162 80V81.5" stroke="white" stroke-width="2"/>
-<path d="M177 244V247.5H170V251" stroke="white" stroke-width="2"/>
-<path d="M177 244V247.5H171.5V243H169" stroke="white" stroke-width="2"/>
-<path d="M177 244V247.5H174V251" stroke="white" stroke-width="2"/>
-<path d="M177 240V236.5H160V240" stroke="white" stroke-width="2"/>
-<path d="M177 240V236.5H164V234" stroke="white" stroke-width="2"/>
-<path d="M177 240V236.5H168V240" stroke="white" stroke-width="2"/>
-<path d="M321 181V177H315" stroke="white" stroke-width="2"/>
-<path d="M321 181V177H318V173" stroke="white" stroke-width="2"/>
-<path d="M319 183H311V180" stroke="white" stroke-width="2"/>
-<path d="M319 183H315V180" stroke="white" stroke-width="2"/>
-<path d="M176 259H181V229H173V227" stroke="white" stroke-width="4"/>
-<path d="M167 34H204.5V37H307.5V42H371" stroke="white" stroke-width="4"/>
-<path d="M167 34H204.5V37H307.5V42H317V125H321" stroke="white" stroke-width="4"/>
-<path opacity="0.99" d="M167 34H204.5V37H307.5V42H317V66H331V73" stroke="white" stroke-width="2"/>
-<path d="M167 34H204.5V37H307.5V42H332V39" stroke="white" stroke-width="4"/>
-<path d="M167 34H204.5V37H289V48" stroke="white" stroke-width="4"/>
-<path opacity="0.99" d="M167 34H204.5V37H254V22" stroke="white" stroke-width="2"/>
-<path d="M167 34H204.5V37H243V60" stroke="white" stroke-width="4"/>
-<path d="M167 34H204.5V37H208V40" stroke="white" stroke-width="4"/>
-<path d="M167 34H194V36" stroke="white" stroke-width="4"/>
-<path d="M167 34H200V69L256 115V123" stroke="white" stroke-width="4"/>
-<path d="M167 34H200V69L284 138V145" stroke="white" stroke-width="4"/>
-<path d="M167 34H200V69L298 149.5H317V139H315" stroke="white" stroke-width="4"/>
-<path opacity="0.99" d="M167 34H200V64H211" stroke="white" stroke-width="2"/>
-<path d="M162 40V76H155V81" stroke="white" stroke-width="4"/>
-<path d="M162 40V76H155V81V85H173V110H176" stroke="white" stroke-width="4"/>
-<path opacity="0.99" d="M162 40V64H169V68" stroke="white" stroke-width="2"/>
-<path d="M166.5 255V269.5H190.5L220 298" stroke="white" stroke-width="4"/>
-<path d="M166 255V269.5H190L200 278.5V266" stroke="white" stroke-width="4"/>
-<path d="M176 259H181V235H200V216L236 186H353V176H371" stroke="white" stroke-width="4"/>
-<path d="M176 259H181V235H200V216L236 186H321V185" stroke="white" stroke-width="4"/>
-<path d="M176 259H181V235H200V211" stroke="white" stroke-width="4"/>
-<path opacity="0.99" d="M176 259H181V235H200V215.5L236 186H241V171H248" stroke="white" stroke-width="2"/>
-<path d="M166.5 255V245H155V112H149" stroke="white" stroke-width="4"/>
-<path opacity="0.98" d="M166.5 255V245H155V162H173V150H206" stroke="white" stroke-width="2"/>
-<path opacity="0.99" d="M166.5 255V245H155V199H147V202" stroke="white" stroke-width="2"/>
-<path opacity="0.99" d="M166.5 255V245H155V182L155.5 182H166" stroke="white" stroke-width="2"/>
-<path d="M278.5 284.5L321 251V186H353V176H372" stroke="white" stroke-width="4"/>
-<path opacity="0.99" d="M278 284.5L320.5 251V213H308" stroke="white" stroke-width="2"/>
-<path d="M279 284L297 269.5V260" stroke="white" stroke-width="4"/>
-<path d="M279 284L310 260H327" stroke="white" stroke-width="4"/>
-<path opacity="0.98" d="M295 258L257 258L257 234.5" stroke="white" stroke-width="2"/>
-<path d="M275 287.5L263 298" stroke="white" stroke-width="4"/>
-<path d="M147 110V105H144" stroke="white" stroke-width="2"/>
-<path d="M145 112H143V109" stroke="white" stroke-width="2"/>
-<path d="M147 114V116H151" stroke="white" stroke-width="2"/>
-<path d="M180 110H183V107" stroke="white" stroke-width="2"/>
-<path d="M178 112V114H183" stroke="white" stroke-width="2"/>
-<path d="M321 123V118H324" stroke="white" stroke-width="2"/>
-<path d="M313.5 137V132H310.5" stroke="white" stroke-width="2"/>
-<path d="M311 139H308V136.5" stroke="white" stroke-width="2"/>
-<path d="M287 50L282 50L282 53" stroke="white" stroke-width="2"/>
-<path d="M289 52L289 56L286 56" stroke="white" stroke-width="2"/>
-<path d="M330 37L325 37L325 34" stroke="white" stroke-width="2"/>
-<path d="M334 37L336 37L336 33" stroke="white" stroke-width="2"/>
-<path d="M258 125H260V129" stroke="white" stroke-width="2"/>
-<path d="M256 127V132H258" stroke="white" stroke-width="2"/>
-<path d="M282 147H279" stroke="white" stroke-width="2"/>
-<path d="M171 225H164V222.5" stroke="white" stroke-width="2"/>
-<path d="M173 223V220H177" stroke="white" stroke-width="2"/>
-<path d="M200 207V204" stroke="white" stroke-width="2"/>
-<path d="M329 258V253H333" stroke="white" stroke-width="2"/>
-<path d="M331 260H335" stroke="white" stroke-width="2"/>
-<path d="M174 265H186V260" stroke="white" stroke-width="2"/>
-<path opacity="0.99" d="M177 265V267" stroke="white" stroke-width="2"/>
-<path opacity="0.99" d="M183 264.5V263" stroke="white" stroke-width="2"/>
-<path d="M194 40V43.5H187V47" stroke="white" stroke-width="2"/>
-<path d="M194 40V43.5H191V48" stroke="white" stroke-width="2"/>
-<path d="M208 44V47.5H215V51" stroke="white" stroke-width="2"/>
-<path d="M208 44V47.5H213.5V43H219" stroke="white" stroke-width="2"/>
-<path d="M277 276V270H270V272" stroke="white" stroke-width="2"/>
-<path d="M277 276V270H272V267" stroke="white" stroke-width="2"/>
-<path d="M277 276V273H280" stroke="white" stroke-width="2"/>
-<path d="M275 278H271" stroke="white" stroke-width="2"/>
-<path d="M161 261V264" stroke="white" stroke-width="2"/>
-<path d="M202 264H204V260" stroke="white" stroke-width="2"/>
-<path d="M243 64L243 68L246 68" stroke="white" stroke-width="2"/>
-<path d="M241 62L239 62L239 66" stroke="white" stroke-width="2"/>
-<path d="M161 28H158V25" stroke="white" stroke-width="2"/>
+<path opacity="0.98" d="M182 81H164.5V40" stroke="white" strokeWidth="4"/>
+<path opacity="0.98" d="M182 89H161V248" stroke="white" strokeWidth="4"/>
+<path opacity="0.98" d="M182 89H161V241V257H168" stroke="white" strokeWidth="4"/>
+<path d="M163 26V21H167V19" stroke="white" strokeWidth="2"/>
+<path d="M163 26V21H165V24" stroke="white" strokeWidth="2"/>
+<path d="M165 28H171V24H173" stroke="white" strokeWidth="2"/>
+<path d="M165 28H171V30" stroke="white" strokeWidth="2"/>
+<path d="M153 83H151.222V78H149" stroke="white" strokeWidth="2"/>
+<path d="M153 83H151.222V81H147" stroke="white" strokeWidth="2"/>
+<path d="M157 82.5H159.5V80H166" stroke="white" strokeWidth="2"/>
+<path opacity="0.99" d="M162 80V81.5" stroke="white" strokeWidth="2"/>
+<path d="M177 244V247.5H170V251" stroke="white" strokeWidth="2"/>
+<path d="M177 244V247.5H171.5V243H169" stroke="white" strokeWidth="2"/>
+<path d="M177 244V247.5H174V251" stroke="white" strokeWidth="2"/>
+<path d="M177 240V236.5H160V240" stroke="white" strokeWidth="2"/>
+<path d="M177 240V236.5H164V234" stroke="white" strokeWidth="2"/>
+<path d="M177 240V236.5H168V240" stroke="white" strokeWidth="2"/>
+<path d="M321 181V177H315" stroke="white" strokeWidth="2"/>
+<path d="M321 181V177H318V173" stroke="white" strokeWidth="2"/>
+<path d="M319 183H311V180" stroke="white" strokeWidth="2"/>
+<path d="M319 183H315V180" stroke="white" strokeWidth="2"/>
+<path d="M176 259H181V229H173V227" stroke="white" strokeWidth="4"/>
+<path d="M167 34H204.5V37H307.5V42H371" stroke="white" strokeWidth="4"/>
+<path d="M167 34H204.5V37H307.5V42H317V125H321" stroke="white" strokeWidth="4"/>
+<path opacity="0.99" d="M167 34H204.5V37H307.5V42H317V66H331V73" stroke="white" strokeWidth="2"/>
+<path d="M167 34H204.5V37H307.5V42H332V39" stroke="white" strokeWidth="4"/>
+<path d="M167 34H204.5V37H289V48" stroke="white" strokeWidth="4"/>
+<path opacity="0.99" d="M167 34H204.5V37H254V22" stroke="white" strokeWidth="2"/>
+<path d="M167 34H204.5V37H243V60" stroke="white" strokeWidth="4"/>
+<path d="M167 34H204.5V37H208V40" stroke="white" strokeWidth="4"/>
+<path d="M167 34H194V36" stroke="white" strokeWidth="4"/>
+<path d="M167 34H200V69L256 115V123" stroke="white" strokeWidth="4"/>
+<path d="M167 34H200V69L284 138V145" stroke="white" strokeWidth="4"/>
+<path d="M167 34H200V69L298 149.5H317V139H315" stroke="white" strokeWidth="4"/>
+<path opacity="0.99" d="M167 34H200V64H211" stroke="white" strokeWidth="2"/>
+<path d="M162 40V76H155V81" stroke="white" strokeWidth="4"/>
+<path d="M162 40V76H155V81V85H173V110H176" stroke="white" strokeWidth="4"/>
+<path opacity="0.99" d="M162 40V64H169V68" stroke="white" strokeWidth="2"/>
+<path d="M166.5 255V269.5H190.5L220 298" stroke="white" strokeWidth="4"/>
+<path d="M166 255V269.5H190L200 278.5V266" stroke="white" strokeWidth="4"/>
+<path d="M176 259H181V235H200V216L236 186H353V176H371" stroke="white" strokeWidth="4"/>
+<path d="M176 259H181V235H200V216L236 186H321V185" stroke="white" strokeWidth="4"/>
+<path d="M176 259H181V235H200V211" stroke="white" strokeWidth="4"/>
+<path opacity="0.99" d="M176 259H181V235H200V215.5L236 186H241V171H248" stroke="white" strokeWidth="2"/>
+<path d="M166.5 255V245H155V112H149" stroke="white" strokeWidth="4"/>
+<path opacity="0.98" d="M166.5 255V245H155V162H173V150H206" stroke="white" strokeWidth="2"/>
+<path opacity="0.99" d="M166.5 255V245H155V199H147V202" stroke="white" strokeWidth="2"/>
+<path opacity="0.99" d="M166.5 255V245H155V182L155.5 182H166" stroke="white" strokeWidth="2"/>
+<path d="M278.5 284.5L321 251V186H353V176H372" stroke="white" strokeWidth="4"/>
+<path opacity="0.99" d="M278 284.5L320.5 251V213H308" stroke="white" strokeWidth="2"/>
+<path d="M279 284L297 269.5V260" stroke="white" strokeWidth="4"/>
+<path d="M279 284L310 260H327" stroke="white" strokeWidth="4"/>
+<path opacity="0.98" d="M295 258L257 258L257 234.5" stroke="white" strokeWidth="2"/>
+<path d="M275 287.5L263 298" stroke="white" strokeWidth="4"/>
+<path d="M147 110V105H144" stroke="white" strokeWidth="2"/>
+<path d="M145 112H143V109" stroke="white" strokeWidth="2"/>
+<path d="M147 114V116H151" stroke="white" strokeWidth="2"/>
+<path d="M180 110H183V107" stroke="white" strokeWidth="2"/>
+<path d="M178 112V114H183" stroke="white" strokeWidth="2"/>
+<path d="M321 123V118H324" stroke="white" strokeWidth="2"/>
+<path d="M313.5 137V132H310.5" stroke="white" strokeWidth="2"/>
+<path d="M311 139H308V136.5" stroke="white" strokeWidth="2"/>
+<path d="M287 50L282 50L282 53" stroke="white" strokeWidth="2"/>
+<path d="M289 52L289 56L286 56" stroke="white" strokeWidth="2"/>
+<path d="M330 37L325 37L325 34" stroke="white" strokeWidth="2"/>
+<path d="M334 37L336 37L336 33" stroke="white" strokeWidth="2"/>
+<path d="M258 125H260V129" stroke="white" strokeWidth="2"/>
+<path d="M256 127V132H258" stroke="white" strokeWidth="2"/>
+<path d="M282 147H279" stroke="white" strokeWidth="2"/>
+<path d="M171 225H164V222.5" stroke="white" strokeWidth="2"/>
+<path d="M173 223V220H177" stroke="white" strokeWidth="2"/>
+<path d="M200 207V204" stroke="white" strokeWidth="2"/>
+<path d="M329 258V253H333" stroke="white" strokeWidth="2"/>
+<path d="M331 260H335" stroke="white" strokeWidth="2"/>
+<path d="M174 265H186V260" stroke="white" strokeWidth="2"/>
+<path opacity="0.99" d="M177 265V267" stroke="white" strokeWidth="2"/>
+<path opacity="0.99" d="M183 264.5V263" stroke="white" strokeWidth="2"/>
+<path d="M194 40V43.5H187V47" stroke="white" strokeWidth="2"/>
+<path d="M194 40V43.5H191V48" stroke="white" strokeWidth="2"/>
+<path d="M208 44V47.5H215V51" stroke="white" strokeWidth="2"/>
+<path d="M208 44V47.5H213.5V43H219" stroke="white" strokeWidth="2"/>
+<path d="M277 276V270H270V272" stroke="white" strokeWidth="2"/>
+<path d="M277 276V270H272V267" stroke="white" strokeWidth="2"/>
+<path d="M277 276V273H280" stroke="white" strokeWidth="2"/>
+<path d="M275 278H271" stroke="white" strokeWidth="2"/>
+<path d="M161 261V264" stroke="white" strokeWidth="2"/>
+<path d="M202 264H204V260" stroke="white" strokeWidth="2"/>
+<path d="M243 64L243 68L246 68" stroke="white" strokeWidth="2"/>
+<path d="M241 62L239 62L239 66" stroke="white" strokeWidth="2"/>
+<path d="M161 28H158V25" stroke="white" strokeWidth="2"/>
 <rect x="159" y="32" width="8" height="8" fill="#D1FF99"/>
 <rect x="157" y="248" width="8" height="8" fill="#D1FF99"/>
 <rect x="168" y="253" width="8" height="8" fill="#D1FF99"/>
@@ -644,7 +644,7 @@ export default class PipelineGraphic extends React.PureComponent {
 <path opacity="0.97" d="M50.69 24H52.73V21.44H53.21L54.66 24H56.82L55.11 21.04C55.86 20.75 56.4 20.18 56.4 19.16V19.12C56.4 17.61 55.36 16.85 53.49 16.85H50.69V24ZM52.73 20.11V18.39H53.4C54.06 18.39 54.42 18.62 54.42 19.2V19.24C54.42 19.82 54.08 20.11 53.39 20.11H52.73ZM59.8088 24.12C61.3888 24.12 62.2988 23.45 62.4588 22.27H60.7788C60.7088 22.62 60.4588 22.89 59.8688 22.89C59.2288 22.89 58.8288 22.49 58.7788 21.8H62.4588V21.33C62.4588 19.45 61.2288 18.63 59.7988 18.63C58.2188 18.63 56.9688 19.69 56.9688 21.37V21.45C56.9688 23.16 58.1688 24.12 59.8088 24.12ZM58.7988 20.79C58.8888 20.16 59.2588 19.81 59.7988 19.81C60.3788 19.81 60.6888 20.16 60.7188 20.79H58.7988ZM65.3241 24.12C66.7741 24.12 67.6941 23.56 67.6941 22.32C67.6941 21.2 66.9941 20.82 65.5441 20.64C64.9041 20.56 64.6641 20.46 64.6641 20.21C64.6641 19.97 64.8641 19.8 65.2541 19.8C65.6641 19.8 65.8541 19.97 65.9241 20.32H67.5441C67.4241 19.07 66.5241 18.63 65.2341 18.63C64.0241 18.63 62.9941 19.19 62.9941 20.35C62.9941 21.44 63.5841 21.85 64.9841 22.03C65.7041 22.13 65.9541 22.25 65.9541 22.5C65.9541 22.76 65.7541 22.93 65.3141 22.93C64.8041 22.93 64.6341 22.72 64.5741 22.34H62.9241C62.9641 23.5 63.8341 24.12 65.3241 24.12ZM68.4706 24H70.2606V18.77H68.4706V24ZM69.3606 18.27C69.9206 18.27 70.3506 17.88 70.3506 17.35C70.3506 16.82 69.9206 16.42 69.3606 16.42C68.8006 16.42 68.3806 16.82 68.3806 17.35C68.3806 17.88 68.8006 18.27 69.3606 18.27ZM73.3098 24.12C74.0998 24.12 74.6798 23.69 74.9398 23.15V24H76.7298V16.47H74.9398V19.51C74.6398 18.98 74.1498 18.63 73.3298 18.63C72.0898 18.63 71.1098 19.58 71.1098 21.36V21.44C71.1098 23.25 72.0998 24.12 73.3098 24.12ZM73.9398 22.75C73.3198 22.75 72.9298 22.3 72.9298 21.42V21.34C72.9298 20.43 73.2898 19.98 73.9598 19.98C74.6198 19.98 74.9898 20.45 74.9898 21.33V21.41C74.9898 22.3 74.5898 22.75 73.9398 22.75ZM80.3459 24.12C81.9259 24.12 82.8359 23.45 82.9959 22.27H81.3159C81.2459 22.62 80.9959 22.89 80.4059 22.89C79.7659 22.89 79.3659 22.49 79.3159 21.8H82.9959V21.33C82.9959 19.45 81.7659 18.63 80.3359 18.63C78.7559 18.63 77.5059 19.69 77.5059 21.37V21.45C77.5059 23.16 78.7059 24.12 80.3459 24.12ZM79.3359 20.79C79.4259 20.16 79.7959 19.81 80.3359 19.81C80.9159 19.81 81.2259 20.16 81.2559 20.79H79.3359ZM83.7624 24H85.5524V21.07C85.5524 20.4 85.9124 20.08 86.4424 20.08C86.9624 20.08 87.1924 20.37 87.1924 20.96V24H88.9824V20.6C88.9824 19.26 88.2824 18.63 87.2724 18.63C86.4024 18.63 85.8324 19.07 85.5524 19.61V18.77H83.7624V24ZM92.0827 24.12C92.5027 24.12 92.8427 24.03 93.0727 23.97V22.61C92.9127 22.67 92.7627 22.7 92.5627 22.7C92.2227 22.7 92.0327 22.53 92.0327 22.15V19.99H93.0627V18.77H92.0327V17.68H90.2427V18.77H89.6127V19.99H90.2427V22.32C90.2427 23.55 90.9027 24.12 92.0827 24.12ZM93.9394 24H95.7294V18.77H93.9394V24ZM94.8294 18.27C95.3894 18.27 95.8194 17.88 95.8194 17.35C95.8194 16.82 95.3894 16.42 94.8294 16.42C94.2694 16.42 93.8494 16.82 93.8494 17.35C93.8494 17.88 94.2694 18.27 94.8294 18.27ZM98.3086 24.12C99.1486 24.12 99.6086 23.77 99.8586 23.39V24H101.599V20.61C101.599 19.22 100.679 18.63 99.2386 18.63C97.8086 18.63 96.8186 19.25 96.7386 20.51H98.4186C98.4586 20.18 98.6386 19.89 99.1286 19.89C99.6986 19.89 99.8186 20.22 99.8186 20.72V20.84H99.3186C97.5786 20.84 96.5386 21.32 96.5386 22.55C96.5386 23.66 97.3686 24.12 98.3086 24.12ZM98.9286 22.91C98.5086 22.91 98.3086 22.72 98.3086 22.42C98.3086 21.99 98.6286 21.85 99.3486 21.85H99.8186V22.17C99.8186 22.62 99.4386 22.91 98.9286 22.91ZM102.67 24H104.45V16.47H102.67V24ZM107.692 24H109.492V19.51L112.102 24H114.082V16.85H112.292V20.88L110.002 16.85H107.692V24ZM117.817 24.12C119.397 24.12 120.307 23.45 120.467 22.27H118.787C118.717 22.62 118.467 22.89 117.877 22.89C117.237 22.89 116.837 22.49 116.787 21.8H120.467V21.33C120.467 19.45 119.237 18.63 117.807 18.63C116.227 18.63 114.977 19.69 114.977 21.37V21.45C114.977 23.16 116.177 24.12 117.817 24.12ZM116.807 20.79C116.897 20.16 117.267 19.81 117.807 19.81C118.387 19.81 118.697 20.16 118.727 20.79H116.807ZM123.313 24.12C123.733 24.12 124.073 24.03 124.303 23.97V22.61C124.143 22.67 123.993 22.7 123.793 22.7C123.453 22.7 123.263 22.53 123.263 22.15V19.99H124.293V18.77H123.263V17.68H121.473V18.77H120.843V19.99H121.473V22.32C121.473 23.55 122.133 24.12 123.313 24.12ZM126.26 24H128L128.81 21.08L129.59 24H131.3L132.96 18.77H131.26L130.41 21.9L129.63 18.77H128.19L127.31 21.9L126.55 18.77H124.68L126.26 24ZM135.903 22.79C135.213 22.79 134.863 22.3 134.863 21.4V21.32C134.863 20.44 135.233 19.97 135.903 19.97C136.583 19.97 136.933 20.46 136.933 21.34V21.42C136.933 22.29 136.573 22.79 135.903 22.79ZM135.893 24.12C137.503 24.12 138.753 23.1 138.753 21.4V21.32C138.753 19.66 137.513 18.63 135.903 18.63C134.283 18.63 133.033 19.69 133.033 21.37V21.45C133.033 23.14 134.283 24.12 135.893 24.12ZM139.534 24H141.324V21.52C141.324 20.68 141.924 20.34 143.014 20.37V18.7C142.204 18.69 141.654 19.03 141.324 19.81V18.77H139.534V24ZM143.811 24H145.601V21.71L147.011 24H149.011L147.161 21.12L148.871 18.77H147.011L145.601 20.84V16.47H143.811V24ZM151.486 24.12C152.936 24.12 153.856 23.56 153.856 22.32C153.856 21.2 153.156 20.82 151.706 20.64C151.066 20.56 150.826 20.46 150.826 20.21C150.826 19.97 151.026 19.8 151.416 19.8C151.826 19.8 152.016 19.97 152.086 20.32H153.706C153.586 19.07 152.686 18.63 151.396 18.63C150.186 18.63 149.156 19.19 149.156 20.35C149.156 21.44 149.746 21.85 151.146 22.03C151.866 22.13 152.116 22.25 152.116 22.5C152.116 22.76 151.916 22.93 151.476 22.93C150.966 22.93 150.796 22.72 150.736 22.34H149.086C149.126 23.5 149.996 24.12 151.486 24.12Z" fill="white"/>
 <path opacity="0.96" d="M226.05 218.12C227.9 218.12 229.24 217.16 229.38 215.31H227.34C227.24 216.1 226.73 216.48 226.01 216.48C225.03 216.48 224.48 215.75 224.48 214.46V214.38C224.48 213.08 225.06 212.36 225.98 212.36C226.7 212.36 227.1 212.76 227.18 213.49H229.29C229.12 211.6 227.83 210.74 225.97 210.74C223.88 210.74 222.32 212.19 222.32 214.39V214.47C222.32 216.66 223.55 218.12 226.05 218.12ZM232.727 218.12C234.307 218.12 235.217 217.45 235.377 216.27H233.697C233.627 216.62 233.377 216.89 232.787 216.89C232.147 216.89 231.747 216.49 231.697 215.8H235.377V215.33C235.377 213.45 234.147 212.63 232.717 212.63C231.137 212.63 229.887 213.69 229.887 215.37V215.45C229.887 217.16 231.087 218.12 232.727 218.12ZM231.717 214.79C231.807 214.16 232.177 213.81 232.717 213.81C233.297 213.81 233.607 214.16 233.637 214.79H231.717ZM236.193 218H237.973V210.47H236.193V218ZM239.133 218H240.913V210.47H239.133V218ZM244.155 218H245.955V213.51L248.565 218H250.545V210.85H248.755V214.88L246.465 210.85H244.155V218ZM254.279 218.12C255.859 218.12 256.769 217.45 256.929 216.27H255.249C255.179 216.62 254.929 216.89 254.339 216.89C253.699 216.89 253.299 216.49 253.249 215.8H256.929V215.33C256.929 213.45 255.699 212.63 254.269 212.63C252.689 212.63 251.439 213.69 251.439 215.37V215.45C251.439 217.16 252.639 218.12 254.279 218.12ZM253.269 214.79C253.359 214.16 253.729 213.81 254.269 213.81C254.849 213.81 255.159 214.16 255.189 214.79H253.269ZM259.776 218.12C260.196 218.12 260.536 218.03 260.766 217.97V216.61C260.606 216.67 260.456 216.7 260.256 216.7C259.916 216.7 259.726 216.53 259.726 216.15V213.99H260.756V212.77H259.726V211.68H257.936V212.77H257.306V213.99H257.936V216.32C257.936 217.55 258.596 218.12 259.776 218.12ZM262.723 218H264.463L265.273 215.08L266.053 218H267.763L269.423 212.77H267.723L266.873 215.9L266.093 212.77H264.653L263.773 215.9L263.013 212.77H261.143L262.723 218ZM272.366 216.79C271.676 216.79 271.326 216.3 271.326 215.4V215.32C271.326 214.44 271.696 213.97 272.366 213.97C273.046 213.97 273.396 214.46 273.396 215.34V215.42C273.396 216.29 273.036 216.79 272.366 216.79ZM272.356 218.12C273.966 218.12 275.216 217.1 275.216 215.4V215.32C275.216 213.66 273.976 212.63 272.366 212.63C270.746 212.63 269.496 213.69 269.496 215.37V215.45C269.496 217.14 270.746 218.12 272.356 218.12ZM275.997 218H277.787V215.52C277.787 214.68 278.387 214.34 279.477 214.37V212.7C278.667 212.69 278.117 213.03 277.787 213.81V212.77H275.997V218ZM280.274 218H282.064V215.71L283.474 218H285.474L283.624 215.12L285.334 212.77H283.474L282.064 214.84V210.47H280.274V218ZM287.949 218.12C289.399 218.12 290.319 217.56 290.319 216.32C290.319 215.2 289.619 214.82 288.169 214.64C287.529 214.56 287.289 214.46 287.289 214.21C287.289 213.97 287.489 213.8 287.879 213.8C288.289 213.8 288.479 213.97 288.549 214.32H290.169C290.049 213.07 289.149 212.63 287.859 212.63C286.649 212.63 285.619 213.19 285.619 214.35C285.619 215.44 286.209 215.85 287.609 216.03C288.329 216.13 288.579 216.25 288.579 216.5C288.579 216.76 288.379 216.93 287.939 216.93C287.429 216.93 287.259 216.72 287.199 216.34H285.549C285.589 217.5 286.459 218.12 287.949 218.12Z" fill="white"/>
 <path opacity="0.95" d="M221.75 153.42V149.43H222.2C223.44 149.43 223.98 150.01 223.98 151.37V151.45C223.98 152.78 223.44 153.42 222.22 153.42H221.75ZM219.69 155H222.28C224.8 155 226.12 153.65 226.12 151.42V151.34C226.12 149.12 224.83 147.85 222.29 147.85H219.69V155ZM229.522 155.12C231.102 155.12 232.012 154.45 232.172 153.27H230.492C230.422 153.62 230.172 153.89 229.582 153.89C228.942 153.89 228.542 153.49 228.492 152.8H232.172V152.33C232.172 150.45 230.942 149.63 229.512 149.63C227.932 149.63 226.682 150.69 226.682 152.37V152.45C226.682 154.16 227.882 155.12 229.522 155.12ZM228.512 151.79C228.602 151.16 228.972 150.81 229.512 150.81C230.092 150.81 230.402 151.16 230.432 151.79H228.512ZM234.213 155H236.163L238.073 149.77H236.363L235.293 153.14L234.203 149.77H232.293L234.213 155ZM238.721 155H240.511V149.77H238.721V155ZM239.611 149.27C240.171 149.27 240.601 148.88 240.601 148.35C240.601 147.82 240.171 147.42 239.611 147.42C239.051 147.42 238.631 147.82 238.631 148.35C238.631 148.88 239.051 149.27 239.611 149.27ZM244.09 155.12C245.78 155.12 246.67 154.26 246.72 152.94H245.11C245.05 153.51 244.7 153.81 244.2 153.81C243.52 153.81 243.17 153.34 243.17 152.43V152.35C243.17 151.47 243.54 151.02 244.17 151.02C244.69 151.02 244.93 151.29 245.01 151.78H246.69C246.59 150.19 245.41 149.63 244.13 149.63C242.59 149.63 241.34 150.63 241.34 152.37V152.45C241.34 154.21 242.53 155.12 244.09 155.12ZM250.01 155.12C251.59 155.12 252.5 154.45 252.66 153.27H250.98C250.91 153.62 250.66 153.89 250.07 153.89C249.43 153.89 249.03 153.49 248.98 152.8H252.66V152.33C252.66 150.45 251.43 149.63 250 149.63C248.42 149.63 247.17 150.69 247.17 152.37V152.45C247.17 154.16 248.37 155.12 250.01 155.12ZM249 151.79C249.09 151.16 249.46 150.81 250 150.81C250.58 150.81 250.89 151.16 250.92 151.79H249ZM255.525 155.12C256.975 155.12 257.895 154.56 257.895 153.32C257.895 152.2 257.195 151.82 255.745 151.64C255.105 151.56 254.865 151.46 254.865 151.21C254.865 150.97 255.065 150.8 255.455 150.8C255.865 150.8 256.055 150.97 256.125 151.32H257.745C257.625 150.07 256.725 149.63 255.435 149.63C254.225 149.63 253.195 150.19 253.195 151.35C253.195 152.44 253.785 152.85 255.185 153.03C255.905 153.13 256.155 153.25 256.155 153.5C256.155 153.76 255.955 153.93 255.515 153.93C255.005 153.93 254.835 153.72 254.775 153.34H253.125C253.165 154.5 254.035 155.12 255.525 155.12Z" fill="white"/>
-<rect x="2" y="2" width="371" height="276" stroke="#606060" stroke-width="5"/>
+<rect x="2" y="2" width="371" height="276" stroke="#606060" strokeWidth="5"/>
         {/* DATA CENTERS (from figma) */}
         <rect
           id="datacenter"

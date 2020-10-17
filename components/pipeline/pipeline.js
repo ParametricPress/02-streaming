@@ -4,8 +4,9 @@ import Emissions from "./emissions";
 import { stages } from "./constants";
 import Projection from "./projection";
 import PipelineMap from "./map";
-import { backgroundColor } from "../constants";
+import { backgroundColor, debounceTimer } from "../constants";
 import ParametricGraphic from "parametric-components/dist/cjs/issue-02/parametric-graphic";
+
 
 const world = require('../../data/dist/world.json');
 
@@ -113,19 +114,38 @@ export default class Pipeline extends React.PureComponent {
       youtubeEmissionsHeight: 0,
       youtubeEmissionsTextHeight: 0,
     };
+
+    this.resizeBounce = null;
+
+    this._size = this._size.bind(this);
   }
+
+  _size() {
+    const youtubeEmissions = document.getElementById("youtube-emissions");
+    const youtubeEmissionsText = document.getElementById(
+      "youtube-emissions-text"
+    );
+    this.setState({
+      youtubeEmissionsHeight: youtubeEmissions.clientHeight,
+      youtubeEmissionsTextHeight: youtubeEmissionsText.clientHeight,
+    });
+  }
+
+  handleResize() {
+    if (this.resizeBounce) {
+      clearTimeout(this.resizeBounce);
+    }
+
+    this.resizeBounce = setTimeout(this._size, debounceTimer );
+  }
+
 
   componentDidMount() {
     setTimeout(() => {
-      const youtubeEmissions = document.getElementById("youtube-emissions");
-      const youtubeEmissionsText = document.getElementById(
-        "youtube-emissions-text"
-      );
-      this.setState({
-        youtubeEmissionsHeight: youtubeEmissions.clientHeight,
-        youtubeEmissionsTextHeight: youtubeEmissionsText.clientHeight,
-      });
+      this._size();
     }, 1000);
+
+    window.addEventListener('resize', this.handleResize.bind(this));
   }
 
   render() {

@@ -49,7 +49,6 @@ export default class MediaTitle extends React.PureComponent {
     const rect = node.getBoundingClientRect();
     this.height = rect.height;
     this.y = node.parentElement.offsetTop + node.parentElement.parentElement.parentElement.offsetTop;
-    this.titleHeight = this.titleRef.getBoundingClientRect().height;
     this.touch = isTouchScreen();
   }
   
@@ -61,9 +60,9 @@ export default class MediaTitle extends React.PureComponent {
   _handleMouseDown(e) {
     if (this.props.type === 'bar') {
       if (this.props.selectedTitle === this.props.data.title) {
-        this.props.selectTitle(null, null, null, null);
+        this.props.selectTitle(null, null, null);
       } else {
-        this.props.selectTitle(this.y, this.height, this.props.data.title, this.titleHeight);
+        this.props.selectTitle(this.y, this.height, this.props.data.title);
       }
     }
 

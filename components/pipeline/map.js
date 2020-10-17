@@ -94,11 +94,13 @@ export default class PipelineMap extends React.PureComponent {
   }
 
   movePan(x) {
-    const diff = x - this.state.startX;
-    this.setState({
-      startX: currentX,
-      rotate: this.state.rotate + diff
-    })
+    if (this.state.isDragging) {
+      const diff = x - this.state.startX;
+      this.setState({
+        startX: x,
+        rotate: this.state.rotate + diff
+      })
+    }
   }
 
   endPan() {

@@ -4,7 +4,7 @@ import { Group } from '@vx/group';
 import { scaleBand } from '@vx/scale';
 import MediaStrip from './media-strip';
 import { Container, Text, Rect } from './components';
-import { textColor, font } from '../constants';
+import { textColor, font, debounceTimer } from '../constants';
 import { isTouchScreen } from '../util';
 
 /** Props:
@@ -18,12 +18,12 @@ xScaleVX: {
 }
 */
 
-const titleFontSize = 10;
-const titleHeight = 12;
+export const titleFontSize = 10;
 const titlePadding = {
-  left: 2
+  left: 2,
+  bottom: 4
 };
-const stripPadding = 2;
+export const stripPadding = 2;
 
 export default class MediaTitle extends React.PureComponent {
   constructor(props) {
@@ -31,29 +31,53 @@ export default class MediaTitle extends React.PureComponent {
 
 
     this._handleMouseDown = this._handleMouseDown.bind(this);
+
+    this._size = this._size.bind(this);
+
+    this.titleRef = null;
+    this.setTitleRef = e => {
+      this.titleRef = e;
+    }
+
+    this.resizeBounce = null;
     // this._handleMouseUp = this._handleMouseUp.bind(this);
     // this._handleTouchStart = this._handleTouchStart.bind(this);
   }
-  
-  componentDidMount() {
+
+  _size() {
     const node = ReactDOM.findDOMNode(this);
     const rect = node.getBoundingClientRect();
     this.height = rect.height;
     this.y = node.parentElement.offsetTop + node.parentElement.parentElement.parentElement.offsetTop;
+    this.titleHeight = this.titleRef.getBoundingClientRect().height;
     this.touch = isTouchScreen();
+  }
+  
+  componentDidMount() {
+    this._size();
+    window.addEventListener('resize', this._handleResize.bind(this));
   }
 
   _handleMouseDown(e) {
     if (this.props.type === 'bar') {
       if (this.props.selectedTitle === this.props.data.title) {
-        this.props.selectTitle(null, null, null);
+        this.props.selectTitle(null, null, null, null);
       } else {
-        this.props.selectTitle(this.y, this.height, this.props.data.title);
+        this.props.selectTitle(this.y, this.height, this.props.data.title, this.titleHeight);
       }
     }
 
     e.stopPropagation();
   }
+
+  _handleResize() {
+    if (this.resizeBounce) {
+      clearTimeout(this.resizeBounce);
+    }
+
+    this.resizeBounce = setTimeout(this._size, debounceTimer);
+  }
+
 
   render() {
     const type = this.props.type;
@@ -131,13 +155,16 @@ export default class MediaTitle extends React.PureComponent {
         // onTouchEnd={this._handleMouseUp}
       >
         <div
+          ref={this.setTitleRef}
           style={{
             paddingLeft: titlePadding.left,
+            paddingBottom: titlePadding.bottom,
             fontSize: titleFontSize,
             fontFamily: font,
             userSelect: 'none',
             WebkitTouchCallout: 'none',
             transform: 'translateZ(1)',
+            lineHeight: '1.2em',
             color: textColor
           }}
         >{data.title}</div>

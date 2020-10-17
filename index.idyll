@@ -144,7 +144,7 @@ As shown [span className:"showLargeScreen"]to the right[/span][span className:"s
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Audio" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds. (No audio preview).[/caption]
+[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds. (No audio preview).
 [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -157,7 +157,7 @@ In practice, this size is often determined by the choice of [span className:"ter
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Audio" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds. (No audio preview).[/caption]
+[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds. (No audio preview).
 [/ParametricGraphic]
 [/LargeAside]
 [/div]

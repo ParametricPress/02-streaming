@@ -174,7 +174,7 @@ h1, h2, h3, h4, h6 {
   color: #adadad;
 }
 .idyll-scroll-text .idyll-step p .emphasized {
-  color:#FFFFFF;
+  color: #ffffff;
 }
 .idyll-citation {
   color: #9CBBD7;
@@ -285,6 +285,7 @@ h1, h2, h3, h4, h6 {
 .parametric-header-metadata-component > div {
   margin-bottom: 1em;
 }
+<<<<<<< HEAD
 
 .parametric-graphic-source-citation {
   text-align: start;
@@ -328,3 +329,5 @@ h1, h2, h3, h4, h6 {
   line-height: 1.25;
   font-weight: 400;
 }
+=======
+>>>>>>> Update styles.css

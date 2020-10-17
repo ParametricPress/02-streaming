@@ -3,6 +3,7 @@ import * as vega from "vega";
 import ReactDOM from 'react-dom';
 import { backgroundColor, debounceTimer } from "../constants";
 import ParametricGraphic from "parametric-components/dist/cjs/issue-02/parametric-graphic";
+import { isTouchScreen } from "../util";
 
 export default class PipelineMap extends React.PureComponent {
   constructor(props) {
@@ -19,6 +20,11 @@ export default class PipelineMap extends React.PureComponent {
     this._handleMouseDown = this._handleMouseDown.bind(this);
     this._handleMouseMove = this._handleMouseMove.bind(this);
     this._handleMouseUp = this._handleMouseUp.bind(this);
+
+    this._handleTouchStart = this._handleTouchStart.bind(this);
+    this._handleTouchMove = this._handleTouchMove.bind(this);
+    this._handleTouchEnd = this._handleTouchEnd.bind(this);
+
     this._handleResize = this._handleResize.bind(this);
     this._rotateOne = this._rotateOne.bind(this);
 
@@ -66,6 +72,8 @@ export default class PipelineMap extends React.PureComponent {
       setInterval(this._rotateOne, 50);
 
       this._size();
+
+      this.touch = isTouchScreen();
   
       window.addEventListener('resize', this._handleResize)
     }, 100);  // need to wait a split second for size to update for some reason
@@ -78,26 +86,59 @@ export default class PipelineMap extends React.PureComponent {
     this.view.runAsync();
   }
 
-  _handleMouseDown(e) {
+  startPan(x) {
     this.setState({
-      startX: e.clientX,
-      isDragging: true,
-    });
+      startX: x,
+      isDragging: true
+    })
+  }
+
+  movePan(x) {
+    const diff = x - this.state.startX;
+    this.setState({
+      startX: currentX,
+      rotate: this.state.rotate + diff
+    })
+  }
+
+  endPan() {
+    this.setState({ startX: null, isDragging: false });
+  }
+
+  _handleMouseDown(e) {
+    if (!this.touch) {
+      this.startPan(e.clientX);
+    }
   }
 
   _handleMouseMove(e) {
-    if (this.state.startX !== null) {
-      const currentX = e.clientX;
-      const diff = currentX - this.state.startX;
-      this.setState({
-        startX: currentX,
-        rotate: this.state.rotate + diff,
-      });
+    if(!this.touch) {
+      this.movePan(e.clientX);
     }
   }
 
   _handleMouseUp(e) {
-    this.setState({ startX: null, isDragging: false });
+    if (!this.touch) {
+      this.endPan();
+    }
+  }
+
+  _handleTouchStart(e) {
+    if (this.touch) {
+      this.startPan(e.touches[0].clientX)
+    }
+  }
+
+  _handleTouchMove(e) {
+    if (this.touch) {
+      this.movePan(e.touches[0].clientX)
+    }
+  }
+
+  _handleTouchEnd(e) {
+    if (this.touch) {
+      this.endPan();
+    }
   }
 
   render() {
@@ -114,9 +155,9 @@ export default class PipelineMap extends React.PureComponent {
           onMouseUp={this._handleMouseUp}
           onMouseLeave={this._handleMouseUp}
 
-          onTouchStart={this._handleMouseDown}
-          onTouchMove={this._handleMouseMove}
-          onTouchEnd={this._handleMouseUp}
+          onTouchStart={this._handleTouchStart}
+          onTouchMove={this._handleTouchMove}
+          onTouchEnd={this._handleTouchEnd}
         ></div>
     );
   }

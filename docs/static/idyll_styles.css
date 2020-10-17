@@ -2730,6 +2730,14 @@ h1, h2, h3, h4, h6 {
   margin-bottom: 0;
 }
 
+.idyll-scroll-text {
+  padding-top: 0;
+}
+
+.idyll-scroll-text .idyll-step:last-of-type {
+  margin-bottom: 0;
+}
+
 .footnote {
   font-family: "Graphik Web";
   font-size: 14px;

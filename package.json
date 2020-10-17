@@ -26,7 +26,7 @@
     "@vx/scale": "^0.0.198",
     "d3": "^5.15.0",
     "d3-array": "^2.7.1",
-    "deck.gl": "^8.2.8",
+    "deck.gl": "^8.3.1",
     "idyll": "^4.0.7",
     "idyll-d3-component": "^2.0.0",
     "parametric-components": "^2.1.26",

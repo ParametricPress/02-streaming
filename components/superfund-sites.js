@@ -58,7 +58,7 @@ export default class SuperfundMap extends Component {
     window.addEventListener('resize', this._resize.bind(this));
     this._size();
 
-    this.touch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+    this.touch = window.matchMedia('(hover: none)').matches;
   }
 
   getLayers() {

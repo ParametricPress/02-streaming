@@ -23,7 +23,6 @@ files.forEach(f => {
 });
 
 const nolist = [
-  'The New York Times (interactive article)',
   'Digging into American Dirt (podcast) (old)',
   'Righteous (song)',
   'Slideshow',

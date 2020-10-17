@@ -44,60 +44,58 @@ export const titleOrder = [
 
 export const titleToPreview= {
   [amazon]: {
-    preview: true,
+    type: 'video',
+    media: 'website',
     url: 'amazon.mp4',
     link: 'https://www.amazon.com/Uninhabitable-Earth-Life-After-Warming/dp/0525576711/ref=sr_1_8?dchild=1&keywords=climate+change&qid=1602823273&sr=8-8'
   },
   [facebook]: {
-    preview: true,
+    type: 'video',
+    media: 'website',
     url: 'facebook.mp4',
     link: 'https://www.facebook.com'
   },
   [google]: {
-    preview: true,
+    type: 'video',
+    media: 'website',
     url: 'google.mp4',
     link: 'https://www.google.com/search?sxsrf=ALeKk00O79kGgr0mBB9CXZiHW4rWbwUw2Q%3A1602823226434&source=hp&ei=OiSJX6H9F7aS0PEPvbS-kAk&q=climate+change&oq=climate+change&gs_lcp=CgZwc3ktYWIQAzIHCCMQyQMQJzICCAAyCggAELEDEIMBEEMyBQgAELEDMgIIADICCAAyBQgAELEDMggIABCxAxCDATIICAAQsQMQgwEyAggAOgQIIxAnOgUIABCRAjoLCC4QsQMQxwEQowI6CAguELEDEIMBOgUILhCxAzoECC4QQzoHCAAQsQMQQzoHCC4QsQMQQzoLCC4QsQMQxwEQrwE6BAgAEEM6CAguEMcBEK8BOgUIABDJAzoFCAAQkgNQqQZYvA5gnA9oAHAAeACAAWmIAaYJkgEEMTIuMpgBAKABAaoBB2d3cy13aXo&sclient=psy-ab&ved=0ahUKEwihgrDopbjsAhU2CTQIHT2aD5IQ4dUDCAk&uact=5'
   },
-  // [nyt]: {
-  //   type: 'video',
-  //   url: 'nytimes.mp4'
-  // },
+  [nyt]: {
+    type: 'video',
+    media: 'website',
+    url: 'nytimes.mp4',
+    link: 'https://www.nytimes.com/interactive/2020/07/22/us/covid-testing-rising-cases.html'
+  },
   [parametric]: {
-    preview: true,
+    type: 'video',
+    media: 'website',
     url: 'parametricpress.mp4'
   },
   [oldtownroadVideo]: {
-    preview: false,
+    type: 'video',
+    media: 'video',
+    url: 'oldtownroad.mp4',
     link: 'https://www.youtube.com/watch?v=w2Ov5jzm3j8'
   },
   [threeblueonebrown]: {
-    preview: false,
+    type: 'video',
+    media: 'video',
+    url: '3blue1brown.mp4',
     link: 'https://www.youtube.com/watch?v=HEfHFsfGXjs&vl=it',
   },
-  // [drstrange]: {
-  //   preview: false,
-  //   url: 'drstrange.mp4',
-  // },
-  // [slideshow]: {
-  //   preview: false,
-  //   url: 'slideshow.mp4',
-  // },
   [npr]: {
-    preview: false,
-    link: 'https://www.npr.org/2020/01/29/800964001/digging-into-american-dirt'
+    type: 'image',
+    media: 'audio',
+    url: 'podcast.png',
+    link: 'https://www.npr.org/2020/01/29/800964001/digging-into-american-dirt',
   },
-  // [righteous]: {
-  //   preview: false,
-  //   url: 'song.png'
-  // },
   [oldtownroadAudio]: {
-    preview: false,
+    type: 'image',
+    media: 'audio',
+    url: 'oldtownroad.jpg',
     link: 'https://open.spotify.com/track/2YpeDb67231RjR0MgVLzsG?si=xT8IPnGLQrGiY2hjIazJtw',
   },
-  // [thedaily]: {
-  //   preview: false,
-  //   url: 'thedaily.png'
-  // }
 };
 
 export const debounceTimer = 200;

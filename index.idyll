@@ -123,7 +123,7 @@ date:"August 2017"
 In order to load the _Parametric Press_ article that you are currently reading, we estimate that 53 milligrams of CO₂ were produced. The same amount would be produced by driving a car 0.21 meters (based on the fuel economy of an average car, [link text:"according to the EPA" url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle" target:"_blank"/]).
 [span className:"emphasized"]  These emissions are a result of loading data for the text, graphics, and visualizations[/span] that are then rendered on your device.
 
-The chart [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] displays the carbon emitted when loading various websites* and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site). All data collection was done using a Chrome web browser under a 100mbps Wi-Fi connection.
+The chart [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] displays the carbon emitted when loading various websites† and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site). All data collection was done using a Chrome web browser under a 100mbps Wi-Fi connection.
 [span className:"desktopInstructions"] Clicking[/span][span className:"touchscreenInstructions"] Tapping[/span] each bar in the chart will show a preview of that scroll, sped up to a 5 second clip.
 
 [div className:"showSmallScreen"]
@@ -137,14 +137,14 @@ The chart [span className:"showLargeScreen"]to the right[/span][span className:"
 
 As shown [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]above[/span], loading websites like Google, which are relatively simple because they primarily show text, produces much lower emissions than loading websites like Facebook, which load a lot of data-heavy media types to your device.
 
-[div className:"footnote"]*Subsequent visits to websites may produce fewer emissions, as parts of the site may be saved in something called a [link text:"cache" url:"https://www.bigcommerce.com/ecommerce-answers/what-browser-cache-and-why-it-important/" target:"_blank"/].[/div]
+[div className:"footnote"]†Subsequent visits to websites may produce fewer emissions, as parts of the site may be saved in something called a [link text:"cache" url:"https://www.bigcommerce.com/ecommerce-answers/what-browser-cache-and-why-it-important/" target:"_blank"/].[/div]
 
 ### Audio
 [div className:"showLargeScreen"]
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Audio" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds. (No audio preview).[/caption]
+[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds. (No audio preview). Note: The amount of data loaded may represent more than a minute's worth due to [link text:"buffering" url:"https://www.satelliteinternet.com/resources/how-to-stop-buffering/" target:"_blank" /].[/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -157,24 +157,22 @@ In practice, this size is often determined by the choice of [span className:"ter
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Audio" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds. (No audio preview).[/caption]
+[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds. (No audio preview). Note: The amount of data loaded may represent more than a minute's worth due to [link text:"buffering" url:"https://www.satelliteinternet.com/resources/how-to-stop-buffering/" target:"_blank" /].[/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]
 
 The _NPR_ podcast shown in the visualization was compressed to a bitrate of 128 kilobits per second (there are 8 bits in a byte), while the song "Old Town Road", retrieved from Spotify, was compressed to 256 kilobits per second.
-This means that in the one minute timespan that both audio files were played, roughly twice as much data needed to be loaded for "Old Town Road" than for "Digging into 'American Dirt'", which leads to the song having about twice as large of a carbon footprint†.
+This means that in the one minute timespan that both audio files were played, roughly twice as much data needed to be loaded for "Old Town Road" than for "Digging into 'American Dirt'", which leads to the song having about twice as large of a carbon footprint.
 The fact that the song has greater carbon emissions is not a reflection on the carbon footprint of songs versus podcasts, but rather the difference in the bitrate of each audio file.
 These audio examples have lower carbon emissions than most of the multimedia websites shown earlier.
-
-[div className:"footnote"]†The emissions shown from these audio examples represent one minute of streaming each audio file, but the amount of data loaded may represent more than a minute's worth due to [link text:"buffering" url:"https://www.satelliteinternet.com/resources/how-to-stop-buffering/" target:"_blank" /].[/div]
 
 ### Video
 [div className:"showLargeScreen"]
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Video" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p. (To reduce the size of this article, there is only one 360p preview for both qualities).[/caption]
+[caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p. (To reduce the size of this article, there is only one 360p preview for both qualities). Note: Like audio, videos are buffered, which means that playing the video may have loaded more than 60 seconds of content.[/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -186,7 +184,7 @@ The chart [span className:"showLargeScreen"]to the right[/span][span className:"
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Video" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p. (To reduce the size of this article, there is only one 360p preview for both qualities).[/caption]
+[caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p. (To reduce the size of this article, there is only one 360p preview for both qualities). Note: Like audio, videos are buffered, which means that playing the video may have loaded more than 60 seconds of content.[/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]

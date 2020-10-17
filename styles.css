@@ -288,3 +288,12 @@ h1, h2, h3, h4, h6 {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.footnote {
+  font-family: "Graphik Web";
+  font-size: 14px;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  line-height: 1.25;
+  font-weight: 400;
+}

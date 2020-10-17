@@ -80,10 +80,12 @@ export default class PipelineMap extends React.PureComponent {
   }
 
   componentDidUpdate() {
-    this.view.signal("rotate0", this.state.rotate);
-    this.view.signal("width", this.state.width);
-    this.view.signal("height", this.state.height);
-    this.view.runAsync();
+    if (this.view) {
+      this.view.signal("rotate0", this.state.rotate);
+      this.view.signal("width", this.state.width);
+      this.view.signal("height", this.state.height);
+      this.view.runAsync();
+    }
   }
 
   startPan(x) {

@@ -53,7 +53,7 @@ export default class PipelineMap extends React.PureComponent {
   componentDidMount() {
     setTimeout(() => {
       const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
-      const runtime = vega.parse(spec(this.props.dataType, rect.width, rect.height));
+      const runtime = vega.parse(spec(this.props.world, this.props.dataType, rect.width, rect.height));
       this.view = new vega.View(runtime, {
         logLevel: vega.Warn,
         renderer: "canvas",
@@ -157,7 +157,7 @@ const getDataDeclaration = (dataType) => {
   };
 }
 
-const spec = (dataType, initWidth, initHeight) => {
+const spec = (worldMap, dataType, initWidth, initHeight) => {
   return {
     $schema: "https://vega.github.io/schema/vega/v5.json",
     description: "A configurable map of countries of the world.",
@@ -197,8 +197,7 @@ const spec = (dataType, initWidth, initHeight) => {
     data: [
       {
         name: "world",
-        url:
-          "https://raw.githubusercontent.com/vega/vega-datasets/master/data/world-110m.json",
+        values: worldMap,
         format: {
           type: "topojson",
           feature: "countries",

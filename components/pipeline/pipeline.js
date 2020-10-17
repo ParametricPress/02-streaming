@@ -7,6 +7,8 @@ import PipelineMap from "./map";
 import { backgroundColor } from "../constants";
 import ParametricGraphic from "parametric-components/dist/cjs/issue-02/parametric-graphic";
 
+const world = require('../../data/dist/world.json');
+
 const youtubeData = [
   {
     stage: "datacentersall", // and also data center
@@ -316,7 +318,7 @@ export default class Pipeline extends React.PureComponent {
                 transition: "opacity 200ms linear",
               }}
             >
-              <PipelineMap dataType="datacenters" animate={showDatacenters} />
+              <PipelineMap world={world} dataType="datacenters" animate={showDatacenters} />
             </div>
             <div
               style={{
@@ -332,7 +334,7 @@ export default class Pipeline extends React.PureComponent {
                 transition: "opacity 200ms linear",
               }}
             >
-              <PipelineMap dataType="pops" animate={showPops} />
+              <PipelineMap world={world} dataType="pops" animate={showPops} />
             </div>
             <div
               style={{
@@ -348,7 +350,7 @@ export default class Pipeline extends React.PureComponent {
                 transition: "opacity 200ms linear",
               }}
             >
-              <PipelineMap dataType="ggcs" animate={showGgcs} />
+              <PipelineMap world={world} dataType="ggcs" animate={showGgcs} />
             </div>
             <Emissions
               id="youtube-emissions"

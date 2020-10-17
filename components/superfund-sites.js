@@ -33,7 +33,7 @@ export default class SuperfundMap extends Component {
   _size() {
     this._onChangeViewport({
       width: '100%',
-      height: window.innerHeight * (2/3),
+      height: window.outerHeight * (3/5),  // user outerHeight s.t. doesnt resize when mobile scroll up / down.
       zoom: this.zoomScale(window.innerWidth),
       latitude: this.latitudeScale(window.innerWidth),
       longitude: this.longitudeScale(window.innerWidth)

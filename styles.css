@@ -284,6 +284,35 @@ h1, h2, h3, h4, h6 {
   margin-bottom: 1em;
 }
 
+.parametric-graphic-source-citation {
+  text-align: start;
+}
+
+.parametric-graphic-source-watermark {
+  text-align: end;
+}
+
+@media screen and (max-width: 450px) {
+  .parametric-graphic-source {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .parametric-graphic-source-label-wrapper {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .parametric-graphic-source-label {
+    margin-bottom: 0.5em;
+  }
+
+  .parametric-graphic-source-citation {
+    text-align: start;
+    margin-bottom: 0.5em;
+  }
+}
+
 .idyll-scroll {
   margin-top: 0;
   margin-bottom: 0;

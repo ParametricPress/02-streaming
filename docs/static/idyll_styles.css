@@ -2479,11 +2479,13 @@ body {
 
 .emphasized {
   font-weight: bold;
+  color: #BEBEBE;
 }
 
 .terms {
   font-weight: bold;
   font-style: italic;
+  color: #BEBEBE;
 }
 
 .parametric-header-metadata-component > div {
@@ -2683,6 +2685,7 @@ h1, h2, h3, h4, h6 {
 .parametric-header-metadata-component > div {
   margin-bottom: 1em;
 }
+<<<<<<< HEAD
 
 .parametric-graphic-source-citation {
   text-align: start;
@@ -2726,3 +2729,5 @@ h1, h2, h3, h4, h6 {
   line-height: 1.25;
   font-weight: 400;
 }
+=======
+>>>>>>> Update styles.css

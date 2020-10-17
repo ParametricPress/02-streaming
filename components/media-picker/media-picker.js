@@ -48,12 +48,11 @@ export default class MediaPicker extends React.Component {
     this._measure = this._measure.bind(this);
   }
 
-  selectTitle(y, h, t, th) {
+  selectTitle(y, h, t) {
     this.setState({
       selectedY: y,
       selectedHeight: h,
       selectedTitle: t,
-      selectedTitleHeight: th,
     });
   }
 
@@ -109,7 +108,6 @@ export default class MediaPicker extends React.Component {
     const selectedY = this.state.selectedY;
     const selectedHeight = this.state.selectedHeight;
     const selectedTitle = this.state.selectedTitle;
-    const selectedTitleHeight = this.state.selectedTitleHeight;
     const mediaType = this.props.mediaType;
     const mediaTitle = this.props.mediaTitle;
     const inline = this.props.inline;

@@ -430,18 +430,19 @@ id:"ict-global-emissions"/].
 [Step]
 To compare the two studies, we can group the "Internet", "Residential Network", and "Cellular Network" sections into an umbrella "Networks".
 
-[caption]* Preist et al. note that Google purchases renewable energy to match their data center electricity consumption.
-[/caption]
-[caption]
+[div className:"footnote"]* Preist et al. note that Google purchases renewable energy to match their data center electricity consumption.
+[/div]
+
+[div className:"footnote"]
 † Preist et al. do not account for the energy required to manufacture devices.
-[/caption]
+[/div]
 [/Step]
 [Step]
 Belkhir and Elmeligi provide emission estimates for both 2010 (retrospective) and 2020 (prospective).
 Most surprising is the weight Data Centers and CDNs have in this breakdown.
 We can speculate that the relatively high bandwidth required to transfer videos as a medium contributes at least partially to the overweightedness of the "Networks" category for YouTube.
 
-[caption]Note that, unlike Preist et al, Belkhir and Elmeligi **do** account for the emissions generated from the production of devices.[/caption]
+[div className:"footnote"]Note that, unlike Preist et al, Belkhir and Elmeligi **do** account for the emissions generated from the production of devices.[/div]
 [/Step]
 [Step]
 In the same study, Belkhir and Elmeligi created two models to project the ICT sector's emissions decades forward.

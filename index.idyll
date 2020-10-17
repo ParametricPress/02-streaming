@@ -212,9 +212,10 @@ This is especially apparent when comparing the emissions for the audio of "Old T
 
 [div className:"showLargeScreen"]
 [Aside]
-Ads are another form of digital content, and thus produce carbon dioxide as the ads are delivered to your screen.
-While ads don’t contribute to a website or video you may be watching, digital media providers include advertisements as a method of extra revenue.
-When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), [span className:"emphasized"][link text:"the size of its website decreased from 5000 to 500 kilobytes" url:"https://newrepublic.com/article/155993/can-internet-survive-climate-change" target:"_blank"/] with no significant changes to the appearance of the site[/span]. 
+Ads are another common form of digital content.
+Digital media providers often include advertisements as a method of extra revenue.
+When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), [link text:"the size of its website decreased from 5000 to 500 kilobytes" url:"https://newrepublic.com/article/155993/can-internet-survive-climate-change" target:"_blank"/] with no significant changes to the appearance of the site.
+This means that the [span className:"emphasized"]updated, ad-free version of the website produced roughly 10 times less CO₂ on each load than the original[/span]. 
 [/Aside]
 [/div]
 
@@ -229,9 +230,10 @@ Notice that loading the website Facebook produced the most emissions, likely a r
 
 [div className:"showSmallScreen"]
 [Aside]
-Ads are another form of digital content, and thus produce carbon dioxide as the ads are delivered to your screen.
-While ads don’t contribute to a website or video you may be watching, digital media providers include advertisements as a method of extra revenue.
-When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), [span className:"emphasized"][link text:"the size of its website decreased from 5000 to 500 kilobytes" url:"https://newrepublic.com/article/155993/can-internet-survive-climate-change" target:"_blank"/] with no significant changes to the appearance of the site[/span]. 
+Ads are another common form of digital content.
+Digital media providers often include advertisements as a method of extra revenue.
+When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), [link text:"the size of its website decreased from 5000 to 500 kilobytes" url:"https://newrepublic.com/article/155993/can-internet-survive-climate-change" target:"_blank"/] with no significant changes to the appearance of the site.
+This means that the [span className:"emphasized"]updated, ad-free version of the website produced roughly 10 times less CO₂ on each load than the original[/span]. 
 [/Aside]
 [/div]
 

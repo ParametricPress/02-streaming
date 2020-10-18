@@ -231,7 +231,7 @@ export default class Pipeline extends React.PureComponent {
       ];
     }
 
-    let hed = "—";
+    let hed = <div>&nbsp;</div>;
     if (showDatacenters) {
       hed = "Components & Electricity Usage";
     } else if (showPops) {
@@ -240,7 +240,7 @@ export default class Pipeline extends React.PureComponent {
       hed = "Components & Electricity Usage";
     } else if (showGraphic) {
       hed = "Components & Electricity Usage";
-    } else if (showCompare && progress !== 0) {
+    } else if ((showCompare && progress !== 0) || (stage === "final" && progress === 0)) {
       hed = "Comparing Emissions: YouTube and the ICT Sector";
     } else if ((stage === "final" && progress !== 0) || stage === "none") {
       hed = "Projections for ICT Share of Global GHG Emissions";

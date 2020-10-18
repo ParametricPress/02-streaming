@@ -339,7 +339,6 @@ For global services, these are often placed around the world.
 [/Step]
 [Step]
 YouTube's parent company, Google, has [link text:"21 origin data centers" url:"https://www.google.com/about/datacenters/locations/" target:"_blank"/] strategically placed throughout 4 continents (North America, South America, Europe, and Asia).
-Google does not disclose the data centers they use specifically for YouTube (and its possible there is no distinction at all), so all of Google's data centers are shown here.
 [/Step]
 [Step]
 Let's take a closer look at one of these origin data centers. This one is in The Dalles, Oregon, on the West Coast of the United States.
@@ -371,9 +370,9 @@ Hide Globe
 [/Button]
 [/Step]
 [Step]
-In 2018, researchers from the University of Bristol used publically available data from 2016 to estimate the energy consumption of each step of YouTube's pipeline.
+In 2018, researchers from the University of Bristol used publically available data to estimate the energy consumption of each step of YouTube's pipeline in 2016.
 
-As we have noted Google does not share which data centers are used specifically for YouTube. Therefore, Chris Preist, Daniel Schien and Paul Shabajee used the energy consumption numbers released for a similar service's (Netflix) data centers to estimate YouTube's data center energy consumption. They found that all data centers account for [span className:"emphasized"] less than 2% of YouTube's electricity use[/span] [Cite
+Google does not disclose its data center energy consumption for YouTube traffic specifically. Therefore, Chris Preist, Daniel Schien and Paul Shabajee used the energy consumption numbers released for a similar service's (Netflix) data centers to estimate YouTube's data center energy consumption. They found that all data centers accounted for [span className:"emphasized"] less than 2% of YouTube's electricity use[/span] in 2016 [Cite
 authors:"Chris Preist, Daniel Schien, and Paul Shabajee"
 title:"Evaluating Sustainable Interaction Design of Digital Services: The Case of YouTube"
 url:"https://dl.acm.org/doi/10.1145/3290605.3300627"
@@ -392,7 +391,7 @@ The internet is a global “highway of information” that allows packets of dat
 In addition to the [span className:"emphasized"][link text:"550,000 miles of underwater cables" url:"https://www.businessinsider.com/how-internet-works-infrastructure-photos-2018-5#if-the-worlds-underwater-cables-were-laid-out-end-to-end-the-cables-could-extend-from-here-to-the-moon-and-back-again-and-then-wrap-around-the-earths-widest-point-almost-three-times-5" target:"_blank"/][/span] that form the backbone of the internet, regions have their own land-based networks.
 [/Step]
 [Step]
-Here's (roughly) what the major internet lines of the west coast" look like [Cite
+Here's (roughly) what the major internet lines of the west coast look like [Cite
   authors:"Ramakrishnan Durairajan, Paul Barford, Joel Sommers, and Walter Willinger"
   title:"InterTubes: A Study of the US Long-haul Fiber-optic Infrastructure"
   url:"https://dl.acm.org/doi/abs/10.1145/2785956.2787499"
@@ -401,9 +400,9 @@ Here's (roughly) what the major internet lines of the west coast" look like [Cit
   date:"2015"
 /].
 Perhaps not surprisingly, it resembles our interstate highway system.
-Preist et al. estimate that this infrastructure consumes approximately [span className:"emphasized"]1,900 Gigawatt-hours of electricity to serve YouTube videos [Cite
+Preist et al. estimate that this infrastructure consumed approximately [span className:"emphasized"]1,900 Gigawatt-hours of electricity to serve YouTube videos [Cite
 id:"youtube-paper"
-/], enough to power 170,000 homes in the United States [link text:"according to the EIA" url:"https://www.eia.gov/tools/faqs/faq.php?id=97&t=3" target:"_blank"/][/span].
+/] in 2016, enough to power 170,000 homes in the United States for a year, [link text:"according to the EIA" url:"https://www.eia.gov/tools/faqs/faq.php?id=97&t=3" target:"_blank"/][/span].
 [/Step]
 [Step]
 The packets traveling across this information highway need “off-ramps” to reach your screen.
@@ -411,12 +410,12 @@ The off-ramps that packets take are either [span className:"terms"]"fixed line" 
 The physical infrastructure making up these two types of networks differ, and therefore have distinct profiles of energy consumption and carbon emissions.
 [/Step]
 [Step]
-An estimated 88% of YouTube's traffic goes through fixed line networks (from your residential Cable, DSL, or Fiber-Optic providers), and this accounts for approximately [span className:"emphasized"]4,400 Gigawatt-hours of electricity usage—enough to power over 400,000 U.S. homes[/span] [Cite
+An estimated 88% of YouTube's traffic went through fixed line networks (from your residential Cable, DSL, or Fiber-Optic providers), and this accounted for approximately [span className:"emphasized"]4,400 Gigawatt-hours of electricity usage—enough to power over 400,000 U.S. homes[/span] [Cite
 id:"youtube-paper"
 /].
 [/Step]
 [Step]
-In comparison, only 12% of YouTube’s traffic goes through cellular networks, but they are by far the most expensive part of YouTube’s content delivery pipeline, accounting for [span className:"emphasized"]6,100 Gigawatt-hours of electricity usage—enough to power over half a million U.S. homes[/span] [Cite
+In comparison, only 12% of YouTube’s traffic went through cellular networks, but they were by far the most expensive part of YouTube’s content delivery pipeline, accounting for [span className:"emphasized"]6,100 Gigawatt-hours of electricity usage—enough to power over half a million U.S. homes[/span] [Cite
 id:"youtube-paper"
 /].
 At over 10 times the electricity usage per unit of traffic, the relative inefficiency of cellular transmission is clear.
@@ -424,8 +423,8 @@ At over 10 times the electricity usage per unit of traffic, the relative ineffic
 [Step]
 Eventually, the video data reaches your device for viewing.
 While your device might not technically be part of YouTube’s content delivery pipeline, we can't overlook the cost of moving those pixels.
-Devices account for an estimated [span className:"emphasized"]8,500 Gigawatt-hours of electricity usage[/span]:
-that's over a 3/4 of a million U.S. homes worth of electricity [Cite
+Devices accounted for an estimated [span className:"emphasized"]8,500 Gigawatt-hours of electricity usage[/span]:
+that's over 750,000 U.S. homes worth of electricity [Cite
 id:"youtube-paper"
 /].
 [/Step]
@@ -433,7 +432,7 @@ id:"youtube-paper"
 In total, Preist et al.'s research estimated that [span className:"emphasized"]YouTube traffic consumed 19.6 Tetrawatt-hours of electricity in 2016[/span] [Cite
 id:"youtube-paper"
 /].
-Using the world emissions factor for electricity generation as reported by the International Energy Agency, they place the resulting [span className:"emphasized"]carbon emissions at 10.2 million metric tons of CO₂[/span] (10.1 after Google's renewable energy purchases for its data center activities).
+Using the world emissions factor for electricity generation as reported by the International Energy Agency, they place the resulting [span className:"emphasized"]carbon emissions at 10.2 million metric tons of CO₂[/span] (offset to 10.1 after Google's renewable energy purchases for its data center activities).
 [/Step]
 [Step]
 YouTube emitted nearly as much CO₂ as a metropolitan area like [link text: "Auckland, New Zealand" url:"https://knowledgeauckland.org.nz/media/1057/tr2019-002-aucklands-greenhouse-gas-inventory-to-2016.pdf"/] did in 2016.
@@ -481,7 +480,7 @@ That's over [link text:"2.2 million gallons of gasoline worth of CO₂ in saving
 ## Tech's Inconvenient Truths
 
 Digital streaming is not the only instance where environmentally harmful aspects of technology are outside of public consciousness. 
-[span className:"emphasized"]Tech is rarely perceived as environmentally toxic, but here's a surprising fact: Santa Clara County (the heart of "Silicon Valley") leads the nation in the number of EPA classified "superfund" (highly polluted) sites[/span].
+Tech is rarely perceived as environmentally toxic, but here's a surprising fact: [span className:"emphasized"]Santa Clara County, the heart of "Silicon Valley", has the most EPA classified "superfund" (highly polluted) sites in the nation[/span].
 These [link text:"23 locations" url:"https://www.theatlantic.com/technology/archive/2019/09/silicon-valley-full-superfund-sites/598531/#:~:text=Santa%20Clara%20County%20has%2023,these%20chemicals%20may%20be%20impossible." target:"_blank"/] may be impossible to fully clean. Silicon Valley is primarily to blame.
 
 [data name:"superfundSitesGeoJSON" source:"dist/superfund-sites.json"/]

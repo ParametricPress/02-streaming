@@ -175,8 +175,6 @@ export default class MediaPicker extends React.Component {
         translateY = selectedY + offset;
       }
 
-      console.log(translateY);
-
       overlayStyle = getOverlayStyle(overlayWidth,  translateY, orient);
 
       let linkText;

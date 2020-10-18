@@ -45,7 +45,7 @@
 
 In 2014, Google had to [link text:"shark-proof" url:"https://www.wired.com/2014/08/shark-cable/" target:"_blank"/] their underwater cables.
 It turned out that sharks were fond of chewing on the high-speed cables that make up the internet.
-While these "attacks" are preventable, they are a reminder that both the internet and sharks share the same home.
+While these "attacks" are no longer an issue, they are a reminder that both the internet and sharks share the same home.
 
 [LargeAside]
   [ParametricGraphic]
@@ -88,18 +88,20 @@ Understanding how these digital products and services work is a crucial first st
 Each type of digital activity produces different levels of emissions.
 [span className:"emphasized"]  The amount of carbon dioxide emitted by a particular digital activity is a factor of the quantity of information that needs to be loaded[/span]. More specifically, we can estimate emissions using the following formula:
 
-[div style:`{textAlign: 'center'}`][Equation display:false]n [/Equation] bytes [Equation display:false] \times X [/Equation] KwH/byte  [Equation display:false]\times Y [/Equation] g CO₂/KwH[/div][br/]
+[div style:`{textAlign: 'center'}`][span className:"emphasized"][Equation display:false]n [/Equation][/span] bytes [Equation display:false] \times [/Equation][span className:"emphasized"][Equation display:false] X [/Equation][/span] KwH/byte  [Equation display:false]\times[/Equation][span className:"emphasized"][Equation display:false] Y [/Equation][/span] g CO₂/KwH[/div][br/]
 
-A [span className:"terms"]byte[/span] is a unit for information.[br/]
-[Equation display:false]X = 6 \times 10^{-11} [/Equation] is the global average for energy consumed for transmitting one byte of data, as calculated by Aslan et al. (2017) [Cite
+A [span className:"terms"]byte[/span] is a unit for information.
+
+[span className:"emphasized"][Equation display:false]X = 6 \times 10^{-11} [/Equation][/span] is the global average for energy consumed for transmitting one byte of data, as calculated by Aslan et al. (2017) [Cite
 authors:"Joshua Aslan, Kieren Mayers, Jonathan G. Koomey, and Chris France"
 title:"Electricity Intensity of Internet Data Transmission: Untangling the Estimates"
 url:"https://onlinelibrary.wiley.com/doi/full/10.1111/jiec.12630"
 id:"data-transmission-estimates"
 venue:"Journal of Industrial Ecology"
 date:"August 2017"
-/].[br/]
-[equation] Y = 707 [/equation] represents the [a href:"https://www.epa.gov/energy/greenhouse-gases-equivalencies-calculator-calculations-and-references" target:"_blank"]EPA's[/a] U.S. national weighted average for grams of CO₂ emitted for electricity consumed.
+/].
+
+[span className:"emphasized"][Equation display:false] Y = 707 [/Equation][/span] represents the [a href:"https://www.epa.gov/energy/greenhouse-gases-equivalencies-calculator-calculations-and-references" target:"_blank"]EPA's[/a] U.S. national weighted average for grams of CO₂ emitted for electricity consumed.
 
 ### Websites
 [var name:"emissionGraphicPadding" value:`{paddingTop: 0, paddingLeft: 0, paddingRight: 0}`/]

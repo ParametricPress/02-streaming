@@ -2564,7 +2564,6 @@ body {
 }
 
 .superfund-map .parametric-graphic > *:not(.superfund-map) {
-  text-align: right;
   margin-left: 50px;
   margin-right: 50px;
 }
@@ -2707,6 +2706,10 @@ h1, h2, h3, h4, h6 {
 /* TODO: let matt know about this */
 .parametric-graphic-source-citation {
   line-height: inherit;
+}
+
+.parametric-graphic-hed {
+  color: #ffffff;
 }
 
 .parametric-header-metadata-component {

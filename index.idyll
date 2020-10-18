@@ -68,7 +68,7 @@ The reality is, just as a package purchased on Amazon must be transported throug
 And that's the thing: your digital actions are only possible because of the physical infrastructure built to support them.
 Digital actions are physical ones. This means that Google has to be mindful of sharks.
 This also means that we should be mindful of the carbon emissions produced by running the world's data centers and internet networks.
-According to one study, [span className:"emphasized"]the Information and Communications Technology sector is expected to account for 3 - 3.6% of global greenhouse gas emissions in 2020[/span] [Cite
+According to one study, [span className:"emphasized"]the Information and Communications Technology sector is expected to account for 3–3.6% of global greenhouse gas emissions in 2020[/span] [Cite
 authors:"Lotfi Belkhir and Ahmed Elmelgi"
 title:"Assessing ICT global emissions footprint: Trends to 2040 & recommendations"
 url:"https://www.sciencedirect.com/science/article/abs/pii/S095965261733233X"
@@ -391,12 +391,12 @@ The off-ramps that packets take are either [span className:"terms"]"fixed line" 
 The physical infrastructure making up these two types of networks differ, and therefore have distinct profiles of energy consumption and carbon emissions.
 [/Step]
 [Step]
-An estimated 88% of YouTube's traffic goes through fixed line networks (from your residential Cable, DSL, or Fiber-Optic providers), and this accounts for approximately [span className:"emphasized"]4,400 Gigawatt-hours of electricity usage — enough to power over 400,000 U.S. homes[/span] [Cite
+An estimated 88% of YouTube's traffic goes through fixed line networks (from your residential Cable, DSL, or Fiber-Optic providers), and this accounts for approximately [span className:"emphasized"]4,400 Gigawatt-hours of electricity usage—enough to power over 400,000 U.S. homes[/span] [Cite
 id:"youtube-paper"
 /].
 [/Step]
 [Step]
-In comparison, only 12% of YouTube’s traffic goes through cellular networks, but they are by far the most expensive part of YouTube’s content delivery pipeline, accounting for [span className:"emphasized"]6,100 Gigawatt-hours of electricity usage — enough to power over half a million U.S. homes[/span] [Cite
+In comparison, only 12% of YouTube’s traffic goes through cellular networks, but they are by far the most expensive part of YouTube’s content delivery pipeline, accounting for [span className:"emphasized"]6,100 Gigawatt-hours of electricity usage—enough to power over half a million U.S. homes[/span] [Cite
 id:"youtube-paper"
 /].
 At over 10 times the electricity usage per unit of traffic, the relative inefficiency of cellular transmission is clear.
@@ -446,7 +446,7 @@ We can speculate that the relatively high bandwidth required to transfer videos 
 [/Step]
 [Step]
 In the same study, Belkhir and Elmeligi created two models to project the ICT sector's emissions decades forward.
-Even their "unrealistically conservative" linear model put tech at a [span className:"emphasized"]6-7% share of GHG emissions in 2040[/span], and their exponential model had tech reaching over 14%.
+Even their "unrealistically conservative" linear model put tech at a [span className:"emphasized"]6–7% share of GHG emissions in 2040[/span], and their exponential model had tech reaching over 14%.
 [/Step]
 [Step]
 What is being done about this? Aside from increasing the efficiency of each part of the pipeline and taking advantage of renewable energy, mindful design could also go a long way.
@@ -495,7 +495,7 @@ id:"spatial-inequity"
 date:"December 2014"
 /].
 
-[span className:"emphasized"]The tech industry’s legacy of toxic mining and manufacturing [link text:"continues today" url:"https://increment.com/energy-environment/a-rare-and-toxic-age/" target:"_blank"/][/span] — with hardware giants like Apple taking the throne of Silicon Valley's founding industrialists — only now on a global scale.
+[span className:"emphasized"]The tech industry’s legacy of toxic mining and manufacturing [link text:"continues today" url:"https://increment.com/energy-environment/a-rare-and-toxic-age/" target:"_blank"/][/span]—with hardware giants like Apple taking the throne of Silicon Valley's founding industrialists—only now on a global scale.
 In 2009, [link text:"China produced 95% of the world’s “rare earth” minerals" url:"https://www.livescience.com/38094-facts-about-rare-earth-elements-infographic.html" target:"_blank"/], with an estimated [link text:"70% coming from the Bayan Obo mining district" url:"https://www.mindat.org/loc-720.html" target:"_blank"/] in Inner Mongolia.
 In her book [i]Rare Earth Frontiers[/i], Julie Klinger discusses how the process of mining “rare earth” minerals releases contaminated water into the Yellow River, Bayan Obo's local water supply.
 The local population has suffered devastating effects, as farmland has turned to lakes of [link text:"toxic waste" url:"https://www.bbc.com/future/article/20150402-the-worst-place-on-earth" target:"_blank"/], and cancer related deaths have spiked. Since 2004, villagers have organized to compel the government to take action. While the state has not fully fixed the devastation it’s caused, it has responded to public pressure by removing some of the toxic waste and providing the people of Bayan Obo better access to healthcare [Cite

@@ -281,7 +281,7 @@ export default class Pipeline extends React.PureComponent {
         subhed={subhed}
         source={source}
         style={{
-          opacity: stage === "none" ? (100 - progress) / 100 : 1,
+          opacity: stage === "none2" ? 0 : stage === "none" ? (100 - progress) / 100 : 1,
           // transition: "opacity 200ms linear",
         }}
       >

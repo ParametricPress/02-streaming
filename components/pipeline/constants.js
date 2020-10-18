@@ -1,1 +1,1 @@
-export const stages = ['worldmap', 'worldmap2', 'datacenter', 'pop', 'pop2', 'cdn', 'datacentersall', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'all2', 'all3', 'beforesimple', 'simple', 'compare', 'final', 'none'];
+export const stages = ['worldmap', 'worldmap2', 'datacenter', 'pop', 'pop2', 'cdn', 'datacentersall', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'all2', 'all3', 'beforesimple', 'simple', 'compare', 'final', 'none', 'none2'];

@@ -47,6 +47,7 @@ In 2014, Google had to [link text:"shark-proof" url:"https://www.wired.com/2014/
 It turned out that sharks were fond of chewing on the high-speed cables that make up the internet.
 While these "attacks" are no longer an issue, they are a reminder that both the internet and sharks share the same home.
 
+[div className:"showLargeScreen"]
 [LargeAside]
   [ParametricGraphic]
 
@@ -59,11 +60,27 @@ While these "attacks" are no longer an issue, they are a reminder that both the 
 
   [/ParametricGraphic]
 [/LargeAside]
+[/div]
 
 When you buy a book on Amazon, the environmental consequences are difficult to ignore.
 From the jet fuel and gasoline burned to transport the packages, to the cardboard boxes cluttering your house, the whole process is filled with reminders that your actions have tangible, permanent consequences.
 Download that book onto an e-reader, however, and this trail of evidence seems to vanish.
 The reality is, just as a package purchased on Amazon must be transported through warehouses and shipping centers to get to your home, a downloaded book must be transported from data centers and networks across the world to arrive on your screen.
+
+[div className:"showSmallScreen"]
+[LargeAside]
+  [ParametricGraphic]
+
+    [AmazonBook/]
+    Book [span style:`{color: 'white'}`][b] →[/b][/span]
+    [br/][br/]
+    [AmazonEbook /]
+    E-Book [span style:`{color: 'white'}`][b] →[/b][/span]
+    [caption]It is difficult to ignore the environmental consequences of ordering a physical book on Amazon. But what happens when you download an E-Book instead?[/caption]
+
+  [/ParametricGraphic]
+[/LargeAside]
+[/div]
 
 And that's the thing: your digital actions are only possible because of the physical infrastructure built to support them.
 Digital actions are physical ones. This means that Google has to be mindful of sharks.
@@ -146,7 +163,7 @@ As shown [span className:"showLargeScreen"]to the right[/span][span className:"s
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Audio" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds. (No audio preview). Note: The amount of data loaded may represent more than a minute's worth due to [link text:"buffering" url:"https://www.satelliteinternet.com/resources/how-to-stop-buffering/" target:"_blank" /].[/caption]
+[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds (no audio preview). Note: The amount of data loaded may represent more than a minute's worth due to [link text:"buffering" url:"https://www.satelliteinternet.com/resources/how-to-stop-buffering/" target:"_blank" /].[/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -159,7 +176,7 @@ In practice, this size is often determined by the choice of [span className:"ter
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Audio" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"audio" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds. (No audio preview). Note: The amount of data loaded may represent more than a minute's worth due to [link text:"buffering" url:"https://www.satelliteinternet.com/resources/how-to-stop-buffering/" target:"_blank" /].[/caption]
+[caption]Each bar represents the carbon emitted when listening to an audio clip for 60 seconds (no audio preview). Note: The amount of data loaded may represent more than a minute's worth due to [link text:"buffering" url:"https://www.satelliteinternet.com/resources/how-to-stop-buffering/" target:"_blank" /].[/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -174,7 +191,7 @@ These audio examples have lower carbon emissions than most of the multimedia web
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Video" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p. (To reduce the size of this article, there is only one 360p preview for both qualities). Note: Like audio, videos are buffered, which means that playing the video may have loaded more than 60 seconds of content.[/caption]
+[caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p (to reduce the size of this article, there is only one 360p preview for both qualities). Note: like audio, videos are buffered, which means that playing the video may have loaded more than 60 seconds of content.[/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -186,7 +203,7 @@ The chart [span className:"showLargeScreen"]to the right[/span][span className:"
 [LargeAside]
 [ParametricGraphic hed:"Emissions of Video" style:emissionGraphicPadding source:emissionSource]
 [MediaPicker type:"bar" mediaType:"video" data:mediaPickerData width:"100%" headers:false/]
-[caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p. (To reduce the size of this article, there is only one 360p preview for both qualities). Note: Like audio, videos are buffered, which means that playing the video may have loaded more than 60 seconds of content.[/caption]
+[caption]Each bar represents the carbon emitted when watching a video for 60 seconds at two different qualities, 360p and 1080p (to reduce the size of this article, there is only one 360p preview for both qualities). Note: like audio, videos are buffered, which means that playing the video may have loaded more than 60 seconds of content.[/caption]
 [/ParametricGraphic]
 [/LargeAside]
 [/div]
@@ -231,7 +248,7 @@ Notice that loading the website Facebook produced the most emissions, likely a r
 [div className:"showSmallScreen"]
 [Aside]
 Ads are another common form of digital content.
-Digital media providers often include advertisements as a method of extra revenue.
+Digital media providers often include advertisements as a method of generating revenue.
 When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), [link text:"the size of its website decreased from 5000 to 500 kilobytes" url:"https://newrepublic.com/article/155993/can-internet-survive-climate-change" target:"_blank"/] with no significant changes to the appearance of the site.
 This means that the [span className:"emphasized"]updated, ad-free version of the website produced roughly 10 times less CO₂ on each load than the original[/span]. 
 [/Aside]
@@ -256,7 +273,7 @@ Instead, your device loads incremental pieces of the data as you consume the med
 These pieces are called [span className:"terms"]packets[/span].
 In each media emission visualization, we estimated emissions based on the size and quantity of the packets needed to load each type of media.
 
-[span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] the ‘Show Timeline’ button at the bottom of the visualization [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] to see a timeline breakdown of each type of media.
+[span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] the "Show Timeline" button at the bottom of the visualization [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] to see a timeline breakdown of each type of media.
 
 [div className:"showSmallScreen"]
 [LargeAside]
@@ -294,7 +311,7 @@ In contrast, the packets for websites are weighted more heavily towards the begi
 // Variables
 [var name:"scrollerIndex" value:0 /]
 [var name:"stepProgress" value:0/]
-[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'datacenter', 'pop', 'cdn', 'datacentersall', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'all2', 'all3', 'beforesimple', 'simple', 'compare', 'final', 'none']`/]
+[var name:"scrollerStages" value:`['worldmap', 'worldmap2', 'datacenter', 'pop', 'cdn', 'datacentersall', 'spacer1', 'spacer2', 'internet', 'spacer3', 'residential', 'cellular', 'device', 'all', 'all2', 'all3', 'beforesimple', 'simple', 'compare', 'final', 'none', 'none2']`/]
 [var name:"showPops" value:false /]
 [var name:"showGgcs" value:false /]
 
@@ -450,6 +467,8 @@ Even their "unrealistically conservative" linear model put tech at a [span class
 [/Step]
 [Step]
 What is being done about this? Aside from increasing the efficiency of each part of the pipeline and taking advantage of renewable energy, mindful design could also go a long way.
+[/Step]
+[Step]
 In the context of digital streaming, Preist et al. point out that much of YouTube's traffic comes from music videos, and a good number of those "views" are likely just "listens".
 If this "listen" to "view" ratio were even just 10%, [span className:"emphasized"]YouTube could have reduced its carbon footprint by about 117 thousand tons of CO₂ in 2016[/span], just by intelligently sending audio when no video is required.
 That's over [link text:"2.2 million gallons of gasoline worth of CO₂ in savings." url:"https://www.eia.gov/environment/emissions/CO₂_vol_mass.php" target:"_blank"/]
@@ -512,7 +531,7 @@ date:"2017"/].
 
 Tech's complicity in environmental destruction is not just limited to toxic manufacturing waste and a large carbon footprint. 
 [span className:"emphasized"]Companies also have a large influence on the climate crisis in the context of policy, the broader economy, and the flow of information[/span].
-Reports in 2019 revealed that Google has made significant contributions to [link text:"climate denialist groups" url:"https://www.theguardian.com/environment/2019/oct/11/google-contributions-climate-change-deniers" target:"_blank"/], including the Competitive Enterprise Institute (CEI), which helped convince the Trump administration to withdraw from the Paris Agreement in 2017.
+Reports in 2019 revealed that Google has made significant contributions to [link text:"climate denialist groups" url:"https://www.theguardian.com/environment/2019/oct/11/google-contributions-climate-change-deniers" target:"_blank"/], including the Competitive Enterprise Institute (CEI), which helped convince the Trump administration to withdraw from the Paris Agreement in 2017. 
 [link text:"Facebook has come under fire" url:"https://www.scientificamerican.com/article/climate-denial-spreads-on-facebook-as-scientists-face-restrictions/" target:"_blank"/] for lax action against climate change denial on their platform, where disinformation can easily spread without diligent fact-checking. 
 [link text:"Google, Microsoft, and Amazon" url:"https://www.vox.com/recode/2020/1/3/21030688/google-amazon-ai-oil-gas" target:"_blank"/] have partnered with large oil companies to build machine learning tools that streamline oil production.
 In fact, the [link text:"oil industry invested an estimated $1.75 billion in 2018 into machine learning tools" url:"https://www.globenewswire.com/news-release/2019/07/18/1884499/0/en/Global-AI-In-Oil-and-Gas-Market-Will-Reach-to-USD-4-01-Billion-By-2025-Zion-Market-Research.html" target:"_blank"/], which is projected to grow to $4.01 billion by 2025. 

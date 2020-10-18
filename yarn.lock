@@ -9565,10 +9565,10 @@ param-case@^3.0.3:
     dot-case "^3.0.3"
     tslib "^1.10.0"
 
-parametric-components@^2.1.30:
-  version "2.1.30"
-  resolved "https://registry.yarnpkg.com/parametric-components/-/parametric-components-2.1.30.tgz#cc644b28ed4e0aa16987fb2da7108089e1cde604"
-  integrity sha512-jE/drBqttPziNkCMAZfnXNpgK8k8FRi59aoGe2eaBJNPrC+ExZusS8i4wtiKkGb5mPh0+xBMFQRKMM3lzIBXPg==
+parametric-components@^2.1.31:
+  version "2.1.32"
+  resolved "https://registry.yarnpkg.com/parametric-components/-/parametric-components-2.1.32.tgz#a628dd5970b7dc4172aba809564e2cf540bd1434"
+  integrity sha512-1Qts70nkm1PTY01VgpXdNJo8koF7jNS1vXnlbsNQlCcy+uWrmlQesj1tUNCSXLRr1y9y62CGAEEmtvpIqU1Hhw==
   dependencies:
     idyll-components "^3.12.1"
     react-tooltip "^3.11.6"

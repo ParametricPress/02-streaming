@@ -85,10 +85,8 @@ Understanding how these digital products and services work is a crucial first st
 
 ## A Look at Different Types of Media
 [data name:"mediaPickerData" source:"dist/media-emissions.json"/]
-Each type of digital activity produces a different level of emissions, and as a result has different consequences on the physical world.
-[span className:"emphasized"]  The amount of carbon dioxide emitted is a factor of the type and quantity of information that needs to be loaded[/span] for a particular digital activity.
-
-More specifically, emissions can be computed using the following equation:
+Each type of digital activity produces different levels of emissions.
+[span className:"emphasized"]  The amount of carbon dioxide emitted by a particular digital activity is a factor of the quantity of information that needs to be loaded[/span]. More specifically, we can estimate emissions using the following formula:
 
 [div style:`{textAlign: 'center'}`][Equation display:false]n [/Equation] bytes [Equation display:false] \times X [/Equation] KwH/byte  [Equation display:false]\times Y [/Equation] g CO₂/KwH[/div][br/]
 
@@ -120,7 +118,7 @@ date:"August 2017"
 [/LargeAside]
 [/div]
 
-In order to load the _Parametric Press_ article that you are currently reading, we estimate that 53 milligrams of CO₂ were produced. The same amount would be produced by driving a car 0.21 meters (based on the fuel economy of an average car, [link text:"according to the EPA" url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle" target:"_blank"/]).
+In order to load the _Parametric Press_ article that you are currently reading, we estimate that 53 milligrams of CO₂ were produced. The same amount of CO₂ would be produced by driving a car 0.21 meters (based on the fuel economy of an average car, [link text:"according to the EPA" url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle" target:"_blank"/]).
 [span className:"emphasized"]  These emissions are a result of loading data for the text, graphics, and visualizations[/span] that are then rendered on your device.
 
 The chart [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] displays the carbon emitted when loading various websites† and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site). All data collection was done using a Chrome web browser under a 100mbps Wi-Fi connection.
@@ -135,7 +133,7 @@ The chart [span className:"showLargeScreen"]to the right[/span][span className:"
 [/LargeAside]
 [/div]
 
-As shown [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]above[/span], loading websites like Google, which are relatively simple because they primarily show text, produces much lower emissions than loading websites like Facebook, which load a lot of data-heavy media types to your device.
+As shown [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]above[/span], loading websites like Google, which primarily show text, produces much lower emissions than loading websites like Facebook, which load many photos and videos to your device.
 
 [div className:"footnote"]†Subsequent visits to websites may produce fewer emissions, as parts of the site may be saved in something called a [link text:"cache" url:"https://www.bigcommerce.com/ecommerce-answers/what-browser-cache-and-why-it-important/" target:"_blank"/].[/div]
 
@@ -194,7 +192,7 @@ In the chart, the number in front of the "p" for quality refers to the height, i
 This is why there are greater emissions for videos at 1080p than those at 360p: more pixels means more data loaded per frame.
 
 Bitrate also [link text:"plays a role in video streaming" url:"https://www.bbc.co.uk/bitesize/guides/z7vc7ty/revision/6" target:"_blank"/].
-In this context, bitrate refers to the amount of visual and audio data loaded to your device over some timespan.
+Here, bitrate refers to the amount of visual and audio data loaded to your device over some timespan.
 From the chart, it is clear that the "Old Town Road" music video has a higher bitrate than the 3Blue1Brown animation at both qualities. 
 This difference could be attributed to a variety of factors, such as the frame rate, compression algorithm, and the producers' desired video fidelity.
 
@@ -211,7 +209,7 @@ This is especially apparent when comparing the emissions for the audio of "Old T
 [div className:"showLargeScreen"]
 [Aside]
 Ads are another common form of digital content.
-Digital media providers often include advertisements as a method of extra revenue.
+Digital media providers often include advertisements as a method of generating revenue.
 When the European version of the USA Today website removed ads and tracking scripts to comply with GDPR (General Data Protection Regulation), [link text:"the size of its website decreased from 5000 to 500 kilobytes" url:"https://newrepublic.com/article/155993/can-internet-survive-climate-change" target:"_blank"/] with no significant changes to the appearance of the site.
 This means that the [span className:"emphasized"]updated, ad-free version of the website produced roughly 10 times less CO₂ on each load than the original[/span]. 
 [/Aside]
@@ -254,7 +252,7 @@ Instead, your device loads incremental pieces of the data as you consume the med
 These pieces are called [span className:"terms"]packets[/span].
 In each media emission visualization, we estimated emissions based on the size and quantity of the packets needed to load each type of media.
 
-[span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] the ‘Show Timeline’ button on the visualization [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] to see a timeline breakdown of each type of media.
+[span className:"desktopInstructions"] Click[/span][span className:"touchscreenInstructions"] Tap[/span] the ‘Show Timeline’ button at the bottom of the visualization [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] to see a timeline breakdown of each type of media.
 
 [div className:"showSmallScreen"]
 [LargeAside]
@@ -316,14 +314,14 @@ Videos are stored on servers called [span className:"terms"] "data centers"[/spa
 For global services, these are often placed around the world.
 [/Step]
 [Step]
-YouTube's parent company, Google, has [link text:"21 origin data centers" url:"https://www.google.com/about/datacenters/locations/"/] strategically placed throughout 4 continents (North America, South America, Europe, and Asia).
+YouTube's parent company, Google, has [link text:"21 origin data centers" url:"https://www.google.com/about/datacenters/locations/" target:"_blank"/] strategically placed throughout 4 continents (North America, South America, Europe, and Asia).
 Google does not disclose the data centers they use specifically for YouTube (and its possible there is no distinction at all), so all of Google's data centers are shown here.
 [/Step]
 [Step]
 Let's take a closer look at one of these origin data centers. This one is in The Dalles, Oregon, on the West Coast of the United States.
 [/Step]
 [Step]
-For information to get from this data center to you, it first goes through Google's own specialized data network to what they call [link text:"Edge Points of Presence" url:"https://peering.google.com/#/infrastructure" /] (POPs for short), which bring data closer to high traffic areas.
+For information to get from this data center to you, it first goes through Google's own specialized data network to what they call [link text:"Edge Points of Presence" url:"https://peering.google.com/#/infrastructure" target:"_blank" /] (POPs for short), which bring data closer to high traffic areas.
 There are three metro areas with POPs in this region: Seattle, San Francisco, and San Jose.
 [Button onClick:`showPops = !showPops` style:`{opacity: scrollerStages[scrollerIndex] === "pop" ? 1 : 0}`]
 [Conditional if:`!showPops`]
@@ -336,8 +334,8 @@ Hide Globe
 [/Step]
 [Step]
 From these POPs, data is routed through smaller data centers that form the "Google Global Cache" (GGC).
-There are 22 of these in this region. These are responsible for [link text:"storing the more popular or recently watched videos" url:"https://peering.google.com/#/infrastructure" /] for users in a given area, ensuring no single data center is overwhelmed and service stays zippy.
-Together, they form what is known as a [span className:"terms"]Content Delivery Network[/span] (CDN for short).
+These data centers are responsible for [link text:"storing the more popular or recently watched videos" url:"https://peering.google.com/#/infrastructure" target:"_blank"/] for users in a given area, ensuring no single data center is overwhelmed and service stays zippy. There are 22 in the region shown on the map. 
+A more general term for this collection of smaller data centers is a [span className:"terms"]Content Delivery Network[/span] (CDN for short). 
 
 [Button onClick:`showGgcs = !showGgcs` style:`{opacity: scrollerStages[scrollerIndex] === "cdn" ? 1 : 0}`]
 [Conditional if:`!showGgcs`]
@@ -367,7 +365,7 @@ For that, they use the internet.
 [Step]
 The internet is a global “highway of information” that allows packets of data to be transmitted as electrical impulses. 
 [link text:"A packet is routed" url:"https://medium.com/@User3141592/how-does-the-internet-work-edc2e22e7eb8" target:"_blank"/] from a source computer, through cables and intermediary computers, before arriving at its destination.
-In addition to the [span className:"emphasized"][link text:"550,000 miles of underwater cables" url:"https://www.businessinsider.com/how-internet-works-infrastructure-photos-2018-5#if-the-worlds-underwater-cables-were-laid-out-end-to-end-the-cables-could-extend-from-here-to-the-moon-and-back-again-and-then-wrap-around-the-earths-widest-point-almost-three-times-5" target:"_blank"/][/span] that form the backbone of the internet, countries have their own land-based networks.
+In addition to the [span className:"emphasized"][link text:"550,000 miles of underwater cables" url:"https://www.businessinsider.com/how-internet-works-infrastructure-photos-2018-5#if-the-worlds-underwater-cables-were-laid-out-end-to-end-the-cables-could-extend-from-here-to-the-moon-and-back-again-and-then-wrap-around-the-earths-widest-point-almost-three-times-5" target:"_blank"/][/span] that form the backbone of the internet, regions have their own land-based networks.
 [/Step]
 [Step]
 Here's (roughly) what the major internet lines of the west coast" look like [Cite
@@ -389,12 +387,12 @@ The off-ramps that packets take are either [span className:"terms"]"fixed line" 
 The physical infrastructure making up these two types of networks differ, and therefore have distinct profiles of energy consumption and carbon emissions.
 [/Step]
 [Step]
-An estimated 88% of YouTube's traffic goes through fixed line networks (from your residential Cable, DSL, or Fiber-Optic providers), and this accounts for approximately [span className:"emphasized"]4,400 Gigawatt-hours of electricity usage—power for over 400,000 U.S. homes[/span] [Cite
+An estimated 88% of YouTube's traffic goes through fixed line networks (from your residential Cable, DSL, or Fiber-Optic providers), and this accounts for approximately [span className:"emphasized"]4,400 Gigawatt-hours of electricity usage — enough to power over 400,000 U.S. homes[/span] [Cite
 id:"youtube-paper"
 /].
 [/Step]
 [Step]
-In comparison, only 12% of YouTube’s traffic goes through cellular networks, but they are by far the most expensive part of YouTube’s content delivery pipeline, accounting for [span className:"emphasized"]6,100 Gigawatt-hours of electricity usage—enough to power over half a million U.S. homes[/span] [Cite
+In comparison, only 12% of YouTube’s traffic goes through cellular networks, but they are by far the most expensive part of YouTube’s content delivery pipeline, accounting for [span className:"emphasized"]6,100 Gigawatt-hours of electricity usage — enough to power over half a million U.S. homes[/span] [Cite
 id:"youtube-paper"
 /].
 At over 10 times the electricity usage per unit of traffic, the relative inefficiency of cellular transmission is clear.
@@ -411,7 +409,7 @@ id:"youtube-paper"
 In total, Preist et al.'s research estimated that [span className:"emphasized"]YouTube traffic consumed 19.6 Tetrawatt-hours of electricity in 2016[/span] [Cite
 id:"youtube-paper"
 /].
-Using the world emissions factor for electricity generation as reported by the International Energy Agency, they place resulting [span className:"emphasized"]carbon emissions at 10.2 million metric tons of CO₂[/span] (10.1 after renewable energy purchases for data center activities).
+Using the world emissions factor for electricity generation as reported by the International Energy Agency, they place the resulting [span className:"emphasized"]carbon emissions at 10.2 million metric tons of CO₂[/span] (10.1 after Google's renewable energy purchases for its data center activities).
 [/Step]
 [Step]
 YouTube emitted nearly as much CO₂ as a metropolitan area like [link text: "Auckland, New Zealand" url:"https://knowledgeauckland.org.nz/media/1057/tr2019-002-aucklands-greenhouse-gas-inventory-to-2016.pdf"/] did in 2016.
@@ -495,7 +493,7 @@ date:"December 2014"
 
 [span className:"emphasized"]The tech industry’s legacy of toxic mining and manufacturing [link text:"continues today" url:"https://increment.com/energy-environment/a-rare-and-toxic-age/" target:"_blank"/][/span] — with hardware giants like Apple taking the throne of Silicon Valley's founding industrialists — only now on a global scale.
 In 2009, [link text:"China produced 95% of the world’s “rare earth” minerals" url:"https://www.livescience.com/38094-facts-about-rare-earth-elements-infographic.html" target:"_blank"/], with an estimated [link text:"70% coming from the Bayan Obo mining district" url:"https://www.mindat.org/loc-720.html" target:"_blank"/] in Inner Mongolia.
-In their book [i]Rare Earth Frontiers[/i], Julie Klinger discusses how the process of mining “rare earth” minerals releases contaminated water into the Yellow River, Bayan Obo's local water supply.
+In her book [i]Rare Earth Frontiers[/i], Julie Klinger discusses how the process of mining “rare earth” minerals releases contaminated water into the Yellow River, Bayan Obo's local water supply.
 The local population has suffered devastating effects, as farmland has turned to lakes of [link text:"toxic waste" url:"https://www.bbc.com/future/article/20150402-the-worst-place-on-earth" target:"_blank"/], and cancer related deaths have spiked. Since 2004, villagers have organized to compel the government to take action. While the state has not fully fixed the devastation it’s caused, it has responded to public pressure by removing some of the toxic waste and providing the people of Bayan Obo better access to healthcare [Cite
 authors:"Julie Michelle Klinger"
 title:"Rare Earth Frontiers: From Terrestrial Subsoils to Lunar Landscapes"
@@ -510,10 +508,11 @@ date:"2017"/].
 
 Tech's complicity in environmental destruction is not just limited to toxic manufacturing waste and a large carbon footprint. 
 [span className:"emphasized"]Companies also have a large influence on the climate crisis in the context of policy, the broader economy, and the flow of information[/span].
-Reports in 2019 revealed that Google has made significant contributions to [link text:"climate denialist groups" url:"https://www.theguardian.com/environment/2019/oct/11/google-contributions-climate-change-deniers" target:"_blank"/], including the Competitive Enterprise Institute (CEI), which helped convince the Trump administration to withdraw from the Paris Agreement in 2017. 
+Reports in 2019 revealed that Google has made significant contributions to [link text:"climate denialist groups" url:"https://www.theguardian.com/environment/2019/oct/11/google-contributions-climate-change-deniers" target:"_blank"/], including the Competitive Enterprise Institute (CEI), which helped convince the Trump administration to withdraw from the Paris Agreement in 2017.
+[link text:"Facebook has come under fire" url:"https://www.scientificamerican.com/article/climate-denial-spreads-on-facebook-as-scientists-face-restrictions/" target:"_blank"/] for lax action against climate change denial on their platform, where disinformation can easily spread without diligent fact-checking. 
 [link text:"Google, Microsoft, and Amazon" url:"https://www.vox.com/recode/2020/1/3/21030688/google-amazon-ai-oil-gas" target:"_blank"/] have partnered with large oil companies to build machine learning tools that streamline oil production.
 In fact, the [link text:"oil industry invested an estimated $1.75 billion in 2018 into machine learning tools" url:"https://www.globenewswire.com/news-release/2019/07/18/1884499/0/en/Global-AI-In-Oil-and-Gas-Market-Will-Reach-to-USD-4-01-Billion-By-2025-Zion-Market-Research.html" target:"_blank"/], which is projected to grow to $4.01 billion by 2025. 
-[link text:"Facebook has come under fire" url:"https://www.scientificamerican.com/article/climate-denial-spreads-on-facebook-as-scientists-face-restrictions/" target:"_blank"/] for lax action against climate change denial on their platform, where disinformation can easily spread without diligent fact-checking.
+
 
 [Aside]
   [img src:"static/images/amazon_protest_lilian.jpg"/]

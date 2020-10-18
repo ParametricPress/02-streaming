@@ -68,7 +68,7 @@ The reality is, just as a package purchased on Amazon must be transported throug
 And that's the thing: your digital actions are only possible because of the physical infrastructure built to support them.
 Digital actions are physical ones. This means that Google has to be mindful of sharks.
 This also means that we should be mindful of the carbon emissions produced by running the world's data centers and internet networks.
-According to one study, [span className:"emphasized"]the Information and Communications Technology sector is expected to account for between 3 - 3.6% of global greenhouse gas emissions in 2020[/span] [Cite
+According to one study, [span className:"emphasized"]the Information and Communications Technology sector is expected to account for 3 - 3.6% of global greenhouse gas emissions in 2020[/span] [Cite
 authors:"Lotfi Belkhir and Ahmed Elmelgi"
 title:"Assessing ICT global emissions footprint: Trends to 2040 & recommendations"
 url:"https://www.sciencedirect.com/science/article/abs/pii/S095965261733233X"
@@ -121,8 +121,12 @@ date:"August 2017"
 In order to load the _Parametric Press_ article that you are currently reading, we estimate that 53 milligrams of CO₂ were produced. The same amount of CO₂ would be produced by driving a car 0.21 meters (based on the fuel economy of an average car, [link text:"according to the EPA" url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle" target:"_blank"/]).
 [span className:"emphasized"]  These emissions are a result of loading data for the text, graphics, and visualizations[/span] that are then rendered on your device.
 
-The chart [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] displays the carbon emitted when loading various websites† and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site). All data collection was done using a Chrome web browser under a 100mbps Wi-Fi connection.
+The chart [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] displays the carbon emitted when loading various websites and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site). All data collection was done using a Chrome web browser under a 100mbps Wi-Fi connection.
 [span className:"desktopInstructions"] Clicking[/span][span className:"touchscreenInstructions"] Tapping[/span] each bar in the chart will show a preview of that scroll, sped up to a 5 second clip.
+
+[div className:"footnote"]
+ Note: Subsequent visits to websites may produce fewer emissions, as parts of the site may be saved in something called a [link text:"cache" url:"https://www.bigcommerce.com/ecommerce-answers/what-browser-cache-and-why-it-important/" target:"_blank"/].
+[/div]
 
 [div className:"showSmallScreen"]
 [LargeAside]
@@ -134,8 +138,6 @@ The chart [span className:"showLargeScreen"]to the right[/span][span className:"
 [/div]
 
 As shown [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]above[/span], loading websites like Google, which primarily show text, produces much lower emissions than loading websites like Facebook, which load many photos and videos to your device.
-
-[div className:"footnote"]†Subsequent visits to websites may produce fewer emissions, as parts of the site may be saved in something called a [link text:"cache" url:"https://www.bigcommerce.com/ecommerce-answers/what-browser-cache-and-why-it-important/" target:"_blank"/].[/div]
 
 ### Audio
 [div className:"showLargeScreen"]

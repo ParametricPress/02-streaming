@@ -323,7 +323,7 @@ Let's take a closer look at one of these origin data centers. This one is in The
 [Step]
 For information to get from this data center to you, it first goes through Google's own specialized data network to what they call [link text:"Edge Points of Presence" url:"https://peering.google.com/#/infrastructure" target:"_blank" /] (POPs for short), which bring data closer to high traffic areas.
 There are three metro areas with POPs in this region: Seattle, San Francisco, and San Jose.
-[Button onClick:`showPops = !showPops` style:`{opacity: scrollerStages[scrollerIndex] === "pop" ? 1 : 0}`]
+[Button onClick:`showPops = !showPops` style:`{opacity: scrollerStages[scrollerIndex] === 'pop' ? 1 : 0}`]
 [Conditional if:`!showPops`]
 Show worldwide POPs
 [/Conditional]
@@ -426,11 +426,11 @@ id:"ict-global-emissions"/].
 [Step]
 To compare the two studies, we can group the "Internet", "Residential Network", and "Cellular Network" sections into an umbrella "Networks".
 
-[div className:"footnote"]* Preist et al. note that Google purchases renewable energy to match their data center electricity consumption.
+[div className:"footnote"]* For data center emissions: Preist et al. note that Google purchases renewable energy to match its data center electricity consumption.
 [/div]
 
 [div className:"footnote"]
-† Preist et al. do not account for the energy required to manufacture devices.
+† For device emissions: Preist et al. do not account for the energy required to manufacture devices.
 [/div]
 [/Step]
 [Step]

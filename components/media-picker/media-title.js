@@ -142,6 +142,7 @@ export default class MediaTitle extends React.PureComponent {
 
     return (
       <div 
+        className={this.props.type === 'bar' ? "pointer" : null}
         style={{
           width: '100%',
           opacity: hasSelected ? selectedTitle === data.title ? 1 : 0.2 : 1

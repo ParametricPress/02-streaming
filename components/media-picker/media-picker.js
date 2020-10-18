@@ -115,38 +115,38 @@ export default class MediaPicker extends React.Component {
     const shouldPreload = this.props.shouldPreload;
 
     let previews;
-    if (shouldPreload) {
-      previews = Object.keys(titleToPreview)
-        .filter((title) => data.filter((d) => d.title === title).length > 0)
-        .map((title) => {
-          const item = titleToPreview[title];
+    // if (shouldPreload) {
+    //   previews = Object.keys(titleToPreview)
+    //     .filter((title) => data.filter((d) => d.title === title).length > 0)
+    //     .map((title) => {
+    //       const item = titleToPreview[title];
 
-          const style = {
-            position: "absolute",
-            width: 100,
-            height: 100,
-            top: 0,
-            left: 0,
-            opacity: 0,
-          };
+    //       const style = {
+    //         position: "absolute",
+    //         width: 100,
+    //         height: 100,
+    //         top: 0,
+    //         left: 0,
+    //         opacity: 0,
+    //       };
 
-          if (item.type === "video") {
-            return (
-              <video
-                key={title + "-preload"}
-                style={style}
-                preload="auto"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src={`./static/images/${item.url}`} type="video/mp4" />
-              </video>
-            );
-          }
-        });
-    }
+    //       if (item.type === "video") {
+    //         return (
+    //           <video
+    //             key={title + "-preload"}
+    //             style={style}
+    //             preload="auto"
+    //             autoPlay
+    //             loop
+    //             muted
+    //             playsInline
+    //           >
+    //             <source src={`./static/images/${item.url}`} type="video/mp4" />
+    //           </video>
+    //         );
+    //       }
+    //     });
+    // }
 
     let preview;
     let overlayStyle;

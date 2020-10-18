@@ -487,9 +487,8 @@ These [link text:"23 locations" url:"https://www.theatlantic.com/technology/arch
 [data name:"superfundSitesGeoJSON" source:"dist/superfund-sites.json"/]
 [var name:"zoomEnabled" value:false/]
 [div className:"superfund-map" fullWidth:true]
-[ParametricGraphic hed:"The Superfund Sites of Santa Clara Valley" source:`[{label:"EPA", url:"https://www.epa.gov/superfund/search-superfund-sites-where-you-live"}]`]
+[ParametricGraphic hed:"The Superfund Sites of Santa Clara Valley" subhed:"The 23 superfund sites of Santa Clara County. Hover over each one for more information. Larger Hazard Ranking System Scores are worse." source:`[{label:"EPA", url:"https://www.epa.gov/superfund/search-superfund-sites-where-you-live"}]`]
 [SuperfundSites map:"homes" zoomEnabled:zoomEnabled geoJSON:superfundSitesGeoJSON /]
-[caption]The 23 superfund sites of Santa Clara County. Hover over each one for more information. Larger Hazard Ranking System Scores are worse.[/caption]
 [/ParametricGraphic]
 [/div]
 

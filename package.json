@@ -30,7 +30,7 @@
     "idyll": "^4.0.7",
     "idyll-d3-component": "^2.0.0",
     "parametric-components": "^2.1.36",
-    "parametric-styles": "^2.2.26",
+    "parametric-styles": "^2.2.27",
     "react-map-gl": "^5.2.8",
     "react-vega": "^7.4.1",
     "vega": "^5.15.0",

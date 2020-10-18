@@ -241,7 +241,7 @@ export default class MediaPicker extends React.Component {
           paddingBottom: "1em",
         }}
       >
-        {previews}
+        {previews ? <div style={{position: 'fixed', left: 0, top: 0, opacity: 0 }}>{previews}</div> : null}
         {overlay}
         {this.state.width ? (
           <MediaAll

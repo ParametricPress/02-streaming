@@ -99,6 +99,9 @@ A well-designed, frictionless digital experience means that users don't [i]need[
 This is problematic: the idea of "hidden costs" runs contrary to principles of environmental awareness.
 Understanding how these digital products and services work is a crucial first step towards addressing their environmental impact.
 
+[Aside]
+  [Newsletter /]
+[/Aside]
 
 ## A Look at Different Types of Media
 [data name:"mediaPickerData" source:"dist/media-emissions.json"/]
@@ -499,6 +502,10 @@ id:"silicon-valley-book"
 url:"https://nyupress.org/9780814767092/the-silicon-valley-of-dreams/"
 date:"December 2002"
 /].
+
+[Aside]
+  [Recirc slug:parametricSlug /]
+[/Aside]
 
 Change in Silicon Valley never came easily.
 In the 1980s, residents around the Bay took matters into their own hands, mapping out patterns of illnesses around factories and formed environmental coalitions. 

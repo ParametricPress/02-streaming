@@ -140,7 +140,7 @@ date:"August 2017"
 [/LargeAside]
 [/div]
 
-In order to load the _Parametric Press_ article that you are currently reading, we estimate that 53 milligrams of CO₂ were produced. The same amount of CO₂ would be produced by driving a car 0.21 meters (based on the fuel economy of an average car, [link text:"according to the EPA" url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle" target:"_blank"/]).
+In order to load the _Parametric Press_ article that you are currently reading, we estimate that 51 milligrams of CO₂ were produced. The same amount of CO₂ would be produced by driving a car 0.20 meters (based on the fuel economy of an average car, [link text:"according to the EPA" url:"https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle" target:"_blank"/]).
 [span className:"emphasized"]  These emissions are a result of loading data for the text, graphics, and visualizations[/span] that are then rendered on your device.
 
 The chart [span className:"showLargeScreen"]to the right[/span][span className:"showSmallScreen"]below[/span] displays the carbon emitted when loading various websites and scrolling through each at a constant speed for 60 seconds (this scrolling may incur more loading, depending on the site). All data collection was done using a Chrome web browser under a 100mbps Wi-Fi connection.

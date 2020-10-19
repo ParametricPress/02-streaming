@@ -4141,268 +4141,173 @@
     "packets": [
       {
         "time": 0,
-        "sizeInBytes": 393434,
-        "size": 0.0016689470279999997
+        "sizeInBytes": 442166,
+        "size": 0.0018756681719999998
       },
       {
-        "time": 0.309,
+        "time": 0.265,
+        "sizeInBytes": 20618,
+        "size": 0.00008746155600000001
+      },
+      {
+        "time": 0.266,
         "sizeInBytes": 21643,
         "size": 0.00009180960599999999
       },
       {
-        "time": 0.318,
-        "sizeInBytes": 52594,
-        "size": 0.000223103748
+        "time": 0.267,
+        "sizeInBytes": 54574,
+        "size": 0.000231502908
       },
       {
-        "time": 0.321,
-        "sizeInBytes": 32324,
-        "size": 0.00013711840799999998
-      },
-      {
-        "time": 0.428,
-        "sizeInBytes": 8768,
-        "size": 0.000037193855999999996
-      },
-      {
-        "time": 0.432,
-        "sizeInBytes": 7064992,
-        "size": 0.029969696064
-      },
-      {
-        "time": 0.529,
+        "time": 0.494,
         "sizeInBytes": 35489,
         "size": 0.000150544338
       },
       {
-        "time": 0.53,
-        "sizeInBytes": 37813,
-        "size": 0.00016040274599999997
+        "time": 0.495,
+        "sizeInBytes": 33920,
+        "size": 0.00014388864
       },
       {
-        "time": 0.531,
+        "time": 0.496,
+        "sizeInBytes": 51044,
+        "size": 0.00021652864799999997
+      },
+      {
+        "time": 0.498,
+        "sizeInBytes": 51742,
+        "size": 0.000219489564
+      },
+      {
+        "time": 0.499,
+        "sizeInBytes": 52876,
+        "size": 0.00022429999199999998
+      },
+      {
+        "time": 0.501,
         "sizeInBytes": 33096,
         "size": 0.000140393232
       },
       {
-        "time": 0.532,
+        "time": 0.504,
+        "sizeInBytes": 20416,
+        "size": 0.00008660467199999998
+      },
+      {
+        "time": 0.507,
         "sizeInBytes": 53730,
         "size": 0.00022792266
       },
       {
-        "time": 0.581,
+        "time": 0.683,
+        "sizeInBytes": 20341,
+        "size": 0.00008628652200000001
+      },
+      {
+        "time": 0.684,
+        "sizeInBytes": 7415705,
+        "size": 0.03145742061
+      },
+      {
+        "time": 0.691,
         "sizeInBytes": 65536,
         "size": 0.000278003712
       },
       {
-        "time": 0.582,
-        "sizeInBytes": 49152,
-        "size": 0.000208502784
-      },
-      {
-        "time": 0.583,
-        "sizeInBytes": 65536,
-        "size": 0.000278003712
-      },
-      {
-        "time": 0.585,
-        "sizeInBytes": 24576,
-        "size": 0.000104251392
-      },
-      {
-        "time": 0.588,
-        "sizeInBytes": 65536,
-        "size": 0.000278003712
-      },
-      {
-        "time": 0.59,
-        "sizeInBytes": 40960,
-        "size": 0.00017375232
-      },
-      {
-        "time": 0.591,
-        "sizeInBytes": 65536,
-        "size": 0.000278003712
-      },
-      {
-        "time": 0.592,
-        "sizeInBytes": 24576,
-        "size": 0.000104251392
-      },
-      {
-        "time": 0.594,
-        "sizeInBytes": 76755,
-        "size": 0.00032559471
-      },
-      {
-        "time": 0.595,
+        "time": 0.693,
         "sizeInBytes": 107145,
         "size": 0.00045450909
       },
       {
-        "time": 0.596,
-        "sizeInBytes": 8192,
-        "size": 0.000034750464
-      },
-      {
-        "time": 0.598,
-        "sizeInBytes": 231100,
-        "size": 0.0009803262
-      },
-      {
-        "time": 0.599,
-        "sizeInBytes": 49152,
-        "size": 0.000208502784
-      },
-      {
-        "time": 0.601,
-        "sizeInBytes": 16384,
-        "size": 0.000069500928
-      },
-      {
-        "time": 0.604,
-        "sizeInBytes": 65536,
-        "size": 0.000278003712
-      },
-      {
-        "time": 0.605,
+        "time": 0.694,
         "sizeInBytes": 32768,
         "size": 0.000139001856
       },
       {
-        "time": 0.607,
-        "sizeInBytes": 65536,
-        "size": 0.000278003712
+        "time": 0.695,
+        "sizeInBytes": 231100,
+        "size": 0.0009803262
       },
       {
-        "time": 0.609,
-        "sizeInBytes": 24576,
-        "size": 0.000104251392
+        "time": 0.696,
+        "sizeInBytes": 327680,
+        "size": 0.00139001856
       },
       {
-        "time": 0.611,
-        "sizeInBytes": 630855,
-        "size": 0.00267608691
+        "time": 0.697,
+        "sizeInBytes": 262144,
+        "size": 0.001112014848
       },
       {
-        "time": 0.614,
-        "sizeInBytes": 40960,
-        "size": 0.00017375232
+        "time": 0.698,
+        "sizeInBytes": 76755,
+        "size": 0.00032559471
       },
       {
-        "time": 0.619,
-        "sizeInBytes": 65536,
-        "size": 0.000278003712
-      },
-      {
-        "time": 0.62,
-        "sizeInBytes": 24576,
-        "size": 0.000104251392
-      },
-      {
-        "time": 0.623,
-        "sizeInBytes": 49152,
-        "size": 0.000208502784
-      },
-      {
-        "time": 0.624,
-        "sizeInBytes": 776796,
-        "size": 0.003295168632
-      },
-      {
-        "time": 0.746,
-        "sizeInBytes": 992126,
-        "size": 0.004208598492
-      },
-      {
-        "time": 0.748,
-        "sizeInBytes": 65536,
-        "size": 0.000278003712
-      },
-      {
-        "time": 0.75,
-        "sizeInBytes": 49152,
-        "size": 0.000208502784
-      },
-      {
-        "time": 0.752,
-        "sizeInBytes": 65536,
-        "size": 0.000278003712
-      },
-      {
-        "time": 0.759,
-        "sizeInBytes": 65536,
-        "size": 0.000278003712
-      },
-      {
-        "time": 0.927,
+        "time": 1.018,
         "sizeInBytes": 4185,
         "size": 0.000017752769999999995
       },
       {
-        "time": 1.118,
-        "sizeInBytes": 23132,
-        "size": 0.000098125944
-      },
-      {
-        "time": 1.232,
-        "sizeInBytes": 364633,
-        "size": 0.001546773186
-      },
-      {
-        "time": 3.021,
-        "sizeInBytes": 34832,
-        "size": 0.000147757344
-      },
-      {
-        "time": 3.055,
-        "sizeInBytes": 50564,
-        "size": 0.000214492488
-      },
-      {
-        "time": 3.347,
-        "sizeInBytes": 119410,
-        "size": 0.0005065372199999999
-      },
-      {
-        "time": 3.356,
-        "sizeInBytes": 119410,
-        "size": 0.0005065372199999999
-      },
-      {
-        "time": 3.365,
-        "sizeInBytes": 119410,
-        "size": 0.0005065372199999999
-      },
-      {
-        "time": 3.554,
-        "sizeInBytes": 8263,
-        "size": 0.000035051646
-      },
-      {
-        "time": 3.63,
-        "sizeInBytes": 15618,
-        "size": 0.000066251556
-      },
-      {
-        "time": 3.631,
-        "sizeInBytes": 19265,
-        "size": 0.00008172213
-      },
-      {
-        "time": 3.632,
-        "sizeInBytes": 26136,
-        "size": 0.00011086891199999998
-      },
-      {
-        "time": 4.755,
+        "time": 1.17,
         "sizeInBytes": 9086,
         "size": 0.000038542812
       },
       {
-        "time": 7.942,
-        "sizeInBytes": 15406,
-        "size": 0.000065352252
+        "time": 1.299,
+        "sizeInBytes": 364633,
+        "size": 0.001546773186
+      },
+      {
+        "time": 1.312,
+        "sizeInBytes": 8263,
+        "size": 0.000035051646
+      },
+      {
+        "time": 2.149,
+        "sizeInBytes": 34832,
+        "size": 0.000147757344
+      },
+      {
+        "time": 2.218,
+        "sizeInBytes": 50564,
+        "size": 0.000214492488
+      },
+      {
+        "time": 2.928,
+        "sizeInBytes": 926590,
+        "size": 0.00393059478
+      },
+      {
+        "time": 3.151,
+        "sizeInBytes": 23471,
+        "size": 0.00009956398199999999
+      },
+      {
+        "time": 3.169,
+        "sizeInBytes": 434247,
+        "size": 0.001842075774
+      },
+      {
+        "time": 3.252,
+        "sizeInBytes": 15669,
+        "size": 0.00006646789799999999
+      },
+      {
+        "time": 3.255,
+        "sizeInBytes": 19265,
+        "size": 0.00008172213
+      },
+      {
+        "time": 3.261,
+        "sizeInBytes": 26136,
+        "size": 0.00011086891199999998
+      },
+      {
+        "time": 3.732,
+        "sizeInBytes": 580527,
+        "size": 0.0024625955339999997
       }
     ]
   }

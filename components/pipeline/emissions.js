@@ -80,6 +80,7 @@ export default class Emissions extends React.PureComponent {
                 style={{
                   display: "flex",
                   flexDirection: "column",
+                  alignItems: stage === "device" ? 'flex-end' : undefined,
                   width: (d.emissions / total) * 100 + "%",
                 }}
               >
@@ -95,8 +96,8 @@ export default class Emissions extends React.PureComponent {
                         : 0,
                     color: "white",
                     whiteSpace: "nowrap",
-                    marginLeft: stage === "cdn" ? 2 : 0,
-                    textAlign: stage === "cdn" ? "left" : "center",
+                    marginLeft: stage === "cdn" || stage === "device" ? 2 : 0,
+                    textAlign: stage === "cdn" ? "left" : stage === "device" ? "right" : "center",
                     fontSize: simplified ? '0.6em' : undefined,
                   }}
                 >

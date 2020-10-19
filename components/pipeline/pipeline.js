@@ -31,35 +31,35 @@ const youtubeData = [
   },
   {
     stage: "cellular",
-    emissions: 6100,
-    emissionsString: "6,100",
-    homes: "500,000",
-  },
-  {
-    stage: "device",
     emissions: 8500,
     emissionsString: "8,500",
     homes: "750,000",
+  },
+  {
+    stage: "device",
+    emissions: 6100,
+    emissionsString: "6,100",
+    homes: "500,000",
   },
 ]; // total = 21,250
 
 const youtubeDataSimple = [
   {
     stage: "simple",
-    emissions: 2,
-    emissionsString: "2%*",
+    emissions: 1.5,
+    emissionsString: "<2%*",
     name: "Data Centers",
   },
   {
     stage: "simple",
-    emissions: 58,
-    emissionsString: "58%",
+    emissions: 70,
+    emissionsString: "70%",
     name: "Networks",
   },
   {
     stage: "simple",
-    emissions: 40,
-    emissionsString: "40%†",
+    emissions: 30,
+    emissionsString: "29%†",
     name: "Devices",
   },
 ];

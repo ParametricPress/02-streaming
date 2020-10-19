@@ -415,7 +415,7 @@ id:"youtube-paper"
 /].
 [/Step]
 [Step]
-In comparison, only 12% of YouTube’s traffic went through cellular networks, but they were by far the most expensive part of YouTube’s content delivery pipeline, accounting for [span className:"emphasized"]6,100 Gigawatt-hours of electricity usage—enough to power over half a million U.S. homes[/span] [Cite
+In comparison, only 12% of YouTube’s traffic went through cellular networks, but they were by far the most expensive part of YouTube’s content delivery pipeline, accounting for approximately [span className:"emphasized"]8,500 Gigawatt-hours of electricity usage—enough to power over 750,000 U.S. homes[/span] [Cite
 id:"youtube-paper"
 /].
 At over 10 times the electricity usage per unit of traffic, the relative inefficiency of cellular transmission is clear.
@@ -423,8 +423,8 @@ At over 10 times the electricity usage per unit of traffic, the relative ineffic
 [Step]
 Eventually, the video data reaches your device for viewing.
 While your device might not technically be part of YouTube’s content delivery pipeline, we can't overlook the cost of moving those pixels.
-Devices accounted for an estimated [span className:"emphasized"]8,500 Gigawatt-hours of electricity usage[/span]:
-that's over 750,000 U.S. homes worth of electricity [Cite
+Devices accounted for an estimated [span className:"emphasized"]6,100 Gigawatt-hours of electricity usage[/span]:
+that's over half a million U.S. homes worth of electricity [Cite
 id:"youtube-paper"
 /].
 [/Step]

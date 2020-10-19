@@ -33,8 +33,8 @@
     role: "",
     url: "https://twitter.com/liang_lilian"
   }]`
-  doi:"https://doi.org/10.5281/zenodo.4105556"
-  archive:`'https://parametric-press-archives.s3.amazonaws.com/issue-02/' + parametricSlug + '.warc.gz'`
+  doi:"https://doi.org/10.5281/zenodo.4105556"  
+  archive:"https://parametric-press-archives.s3-us-west-2.amazonaws.com/issue-02.wacz"
   source:`"https://github.com/ParametricPress/02-" + parametricSlug `
 /]
 

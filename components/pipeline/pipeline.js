@@ -13,8 +13,8 @@ const world = require('../../data/dist/world.json');
 const youtubeData = [
   {
     stage: "datacentersall", // and also data center
-    emissions: 360,
-    emissionsString: "360",
+    emissions: 350,
+    emissionsString: "350",
     homes: "32,000",
   },
   {
@@ -41,7 +41,7 @@ const youtubeData = [
     emissionsString: "8,500",
     homes: "750,000",
   },
-]; // total = 21,260
+]; // total = 21,250
 
 const youtubeDataSimple = [
   {

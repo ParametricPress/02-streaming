@@ -400,9 +400,9 @@ Here's (roughly) what the major internet lines of the west coast look like [Cite
   date:"2015"
 /].
 Perhaps not surprisingly, it resembles our interstate highway system.
-Preist et al. estimate that this infrastructure consumed approximately [span className:"emphasized"]1,900 Gigawatt-hours of electricity to serve YouTube videos [Cite
+Preist et al. estimate that this infrastructure consumed approximately [span className:"emphasized"]1,900 Gigawatt-hours of electricity to serve YouTube videos in 2016 [Cite
 id:"youtube-paper"
-/] in 2016, enough to power 170,000 homes in the United States for a year, [link text:"according to the EIA" url:"https://www.eia.gov/tools/faqs/faq.php?id=97&t=3" target:"_blank"/][/span].
+/], enough to power 170,000 homes in the United States for a year, [link text:"according to the EIA" url:"https://www.eia.gov/tools/faqs/faq.php?id=97&t=3" target:"_blank"/][/span].
 [/Step]
 [Step]
 The packets traveling across this information highway need “off-ramps” to reach your screen.
@@ -410,9 +410,9 @@ The off-ramps that packets take are either [span className:"terms"]"fixed line" 
 The physical infrastructure making up these two types of networks differ, and therefore have distinct profiles of energy consumption and carbon emissions.
 [/Step]
 [Step]
-An estimated 88% of YouTube's traffic went through fixed line networks (from your residential Cable, DSL, or Fiber-Optic providers), and this accounted for approximately [span className:"emphasized"]4,400 Gigawatt-hours of electricity usage—enough to power over 400,000 U.S. homes[/span] [Cite
+An estimated 88% of YouTube's traffic went through fixed line networks (from your residential Cable, DSL, or Fiber-Optic providers), and this accounted for approximately [span className:"emphasized"]4,400 Gigawatt-hours of electricity usage [Cite
 id:"youtube-paper"
-/].
+/]—enough to power over 400,000 U.S. homes[/span].
 [/Step]
 [Step]
 In comparison, only 12% of YouTube’s traffic went through cellular networks, but they were by far the most expensive part of YouTube’s content delivery pipeline, accounting for approximately [span className:"emphasized"]8,500 Gigawatt-hours of electricity usage—enough to power over 750,000 U.S. homes[/span] [Cite
@@ -423,10 +423,10 @@ At over 10 times the electricity usage per unit of traffic, the relative ineffic
 [Step]
 Eventually, the video data reaches your device for viewing.
 While your device might not technically be part of YouTube’s content delivery pipeline, we can't overlook the cost of moving those pixels.
-Devices accounted for an estimated [span className:"emphasized"]6,100 Gigawatt-hours of electricity usage[/span]:
-that's over half a million U.S. homes worth of electricity [Cite
+Devices accounted for an estimated [span className:"emphasized"]6,100 Gigawatt-hours of electricity usage[/span] [Cite
 id:"youtube-paper"
-/].
+/]:
+that's over half a million U.S. homes worth of electricity.
 [/Step]
 [Step]
 In total, Preist et al.'s research estimated that [span className:"emphasized"]YouTube traffic consumed 19.6 Tetrawatt-hours of electricity in 2016[/span] [Cite

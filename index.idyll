@@ -483,10 +483,18 @@ Digital streaming is not the only instance where environmentally harmful aspects
 Tech is rarely perceived as environmentally toxic, but here's a surprising fact: [span className:"emphasized"]Santa Clara County, the heart of "Silicon Valley", has the most EPA classified "superfund" (highly polluted) sites in the nation[/span].
 These [link text:"23 locations" url:"https://www.theatlantic.com/technology/archive/2019/09/silicon-valley-full-superfund-sites/598531/#:~:text=Santa%20Clara%20County%20has%2023,these%20chemicals%20may%20be%20impossible." target:"_blank"/] may be impossible to fully clean. Silicon Valley is primarily to blame.
 
+[var name:"isTouchScreen" value:false /]
+[TouchscreenDetector isTouchScreen:isTouchScreen /]
+
+[derived name:"superfundCaption" value:`"The 23 superfund sites of Santa Clara County. " +
+  (isTouchScreen ? 'Press the "Enable Touch" button, then tap each site for more information.' :
+    'Hover over each one for more information.') +
+  ' Larger Hazard Ranking System Scores are worse.'`/]
+
 [data name:"superfundSitesGeoJSON" source:"dist/superfund-sites.json"/]
 [var name:"zoomEnabled" value:false/]
 [div className:"superfund-map" fullWidth:true]
-[ParametricGraphic hed:"The Superfund Sites of Santa Clara Valley" subhed:"The 23 superfund sites of Santa Clara County. Hover over each one for more information. Larger Hazard Ranking System Scores are worse." source:`[{label:"EPA", url:"https://www.epa.gov/superfund/search-superfund-sites-where-you-live"}]`]
+[ParametricGraphic hed:"The Superfund Sites of Santa Clara Valley" subhed:superfundCaption source:`[{label:"EPA", url:"https://www.epa.gov/superfund/search-superfund-sites-where-you-live"}]`]
 [SuperfundSites map:"homes" zoomEnabled:zoomEnabled geoJSON:superfundSitesGeoJSON /]
 [/ParametricGraphic]
 [/div]

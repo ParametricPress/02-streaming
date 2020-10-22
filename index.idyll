@@ -112,7 +112,7 @@ Each type of digital activity produces different levels of emissions.
 
 A [span className:"terms"]byte[/span] is a unit for information.
 
-[span className:"emphasized"][Equation display:false]X = 6 \times 10^{-11} [/Equation][/span] is the global average for energy consumed for transmitting one byte of data, as calculated by Aslan et al. (2017) [Cite
+[span className:"emphasized"][Equation display:false]X = 6 \times 10^{-11} [/Equation][/span] is the global average for energy consumed for transmitting one byte of data in 2015, as calculated by Aslan et al. (2017) [Cite
 authors:"Joshua Aslan, Kieren Mayers, Jonathan G. Koomey, and Chris France"
 title:"Electricity Intensity of Internet Data Transmission: Untangling the Estimates"
 url:"https://onlinelibrary.wiley.com/doi/full/10.1111/jiec.12630"
@@ -122,6 +122,8 @@ date:"August 2017"
 /].
 
 [span className:"emphasized"][Equation display:false] Y = 707 [/Equation][/span] represents the [a href:"https://www.epa.gov/energy/greenhouse-gases-equivalencies-calculator-calculations-and-references" target:"_blank"]EPA's[/a] U.S. national weighted average for grams of CO₂ emitted for electricity consumed.
+
+Ideally, this formula would also include the energy usage of the data source and your device, but these will vary across digital media providers, users, and activities. This formula therefore provides a reasonable lower bound for emissions.
 
 ### Websites
 [var name:"emissionGraphicPadding" value:`{paddingTop: 0, paddingLeft: 0, paddingRight: 0}`/]

@@ -264,7 +264,7 @@ export default class Pipeline extends React.PureComponent {
         subhed = "Cellular Networks";
       } else if (stage === "device") {
         subhed = "Devices";
-      } else if (stage === "all") {
+      } else if (stage.startsWith("all")) {
         subhed = "The Entire Pipeline";
       }
     }

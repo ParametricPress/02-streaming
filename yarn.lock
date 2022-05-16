@@ -9565,18 +9565,18 @@ param-case@^3.0.3:
     dot-case "^3.0.3"
     tslib "^1.10.0"
 
-parametric-components@^2.1.36:
-  version "2.1.36"
-  resolved "https://registry.yarnpkg.com/parametric-components/-/parametric-components-2.1.36.tgz#fd574388dc11fd161efa44f79c2968c37fa6ce84"
-  integrity sha512-B4vB58YIJXTfoMIPbmiIlzn5Hh2O/qCdBRNaq8Rzja4ebc2zT4htVR7tRDiDfSgPSxjDN3JLSUtvZ4h7IBtWoQ==
+parametric-components@^2.1.40:
+  version "2.1.40"
+  resolved "https://registry.yarnpkg.com/parametric-components/-/parametric-components-2.1.40.tgz#9886feff341183ed971db80b480326ce08e4ee77"
+  integrity sha512-D8kcIT84w4SqAqctzKpXuTWogIfsdPMKvAqDEA8SGyjLleNI8e5Oazp2Lx13wS5zQvBnegQ8/Ew22nEA31PaFg==
   dependencies:
     idyll-components "^3.12.1"
     react-tooltip "^3.11.6"
 
-parametric-styles@^2.2.27:
-  version "2.2.27"
-  resolved "https://registry.yarnpkg.com/parametric-styles/-/parametric-styles-2.2.27.tgz#2fc68dc594f028ce1da32615fd46810d9b17e6a3"
-  integrity sha512-eOduRHvO4E/yJg7TvC/LQILZOEZQCr01FohrS/nfG4QBCbzKDqhBE7rr2Dyb6+djDe82XFRkZdvvj5El4uFQQQ==
+parametric-styles@^2.2.31:
+  version "2.2.31"
+  resolved "https://registry.yarnpkg.com/parametric-styles/-/parametric-styles-2.2.31.tgz#b2985c18e3e6ee7226e74f8998b2b6af0bb65a0b"
+  integrity sha512-I+XHnOHANYtE89Pr0UhGbReMznFXwNjVVOeCKT8CXMIwY/cI9otBaaBNa8DA9RTEbYG7cU4E+sH5l753W483dQ==
 
 parent-module@^1.0.0:
   version "1.0.1"
@@ -12461,9 +12461,9 @@ url-parse-lax@^1.0.0:
     prepend-http "^1.0.1"
 
 url-parse@^1.4.3:
-  version "1.4.7"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.7.tgz#a8a83535e8c00a316e403a5db4ac1b9b853ae278"
-  integrity sha512-d3uaVyzDB9tQoSXFvuSUNFibTd9zxd2bkVrDRvF5TmvWWQwqE4lgYJ5m+x1DbecWkw+LK4RNl2CU1hHuOKPVlg==
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.10.tgz#9d3c2f736c1d75dd3bd2be507dcc111f1e2ea9c1"
+  integrity sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"

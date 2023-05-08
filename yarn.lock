@@ -6454,9 +6454,9 @@ fast-glob@^2.0.2:
     micromatch "^3.1.10"
 
 fast-json-patch@^3.0.0-1:
-  version "3.0.0-1"
-  resolved "https://registry.yarnpkg.com/fast-json-patch/-/fast-json-patch-3.0.0-1.tgz#4c68f2e7acfbab6d29d1719c44be51899c93dabb"
-  integrity sha512-6pdFb07cknxvPzCeLsFHStEy+MysPJPgZQ9LbQ/2O67unQF93SNqfdSqnPPl71YMHX+AD8gbl7iuoGFzHEdDuw==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/fast-json-patch/-/fast-json-patch-3.1.1.tgz#85064ea1b1ebf97a3f7ad01e23f9337e72c66947"
+  integrity sha512-vf6IHUX2SBcA+5/+4883dsIjpBTqmfBjmYiWK1savxQmFk4JfBMLa7ynTYOs1Rolp/T1betJxHiGD3g1Mn8lUQ==
 
 fast-json-stable-stringify@^2.0.0, fast-json-stable-stringify@~2.1.0:
   version "2.1.0"
@@ -9565,18 +9565,18 @@ param-case@^3.0.3:
     dot-case "^3.0.3"
     tslib "^1.10.0"
 
-parametric-components@^2.1.36:
-  version "2.1.36"
-  resolved "https://registry.yarnpkg.com/parametric-components/-/parametric-components-2.1.36.tgz#fd574388dc11fd161efa44f79c2968c37fa6ce84"
-  integrity sha512-B4vB58YIJXTfoMIPbmiIlzn5Hh2O/qCdBRNaq8Rzja4ebc2zT4htVR7tRDiDfSgPSxjDN3JLSUtvZ4h7IBtWoQ==
+parametric-components@^2.1.40:
+  version "2.1.40"
+  resolved "https://registry.yarnpkg.com/parametric-components/-/parametric-components-2.1.40.tgz#9886feff341183ed971db80b480326ce08e4ee77"
+  integrity sha512-D8kcIT84w4SqAqctzKpXuTWogIfsdPMKvAqDEA8SGyjLleNI8e5Oazp2Lx13wS5zQvBnegQ8/Ew22nEA31PaFg==
   dependencies:
     idyll-components "^3.12.1"
     react-tooltip "^3.11.6"
 
-parametric-styles@^2.2.27:
-  version "2.2.27"
-  resolved "https://registry.yarnpkg.com/parametric-styles/-/parametric-styles-2.2.27.tgz#2fc68dc594f028ce1da32615fd46810d9b17e6a3"
-  integrity sha512-eOduRHvO4E/yJg7TvC/LQILZOEZQCr01FohrS/nfG4QBCbzKDqhBE7rr2Dyb6+djDe82XFRkZdvvj5El4uFQQQ==
+parametric-styles@^2.2.31:
+  version "2.2.31"
+  resolved "https://registry.yarnpkg.com/parametric-styles/-/parametric-styles-2.2.31.tgz#b2985c18e3e6ee7226e74f8998b2b6af0bb65a0b"
+  integrity sha512-I+XHnOHANYtE89Pr0UhGbReMznFXwNjVVOeCKT8CXMIwY/cI9otBaaBNa8DA9RTEbYG7cU4E+sH5l753W483dQ==
 
 parent-module@^1.0.0:
   version "1.0.1"
